@@ -6035,3 +6035,10 @@
 <?PHP exit;?>	1342666721	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
 <?PHP exit;?>	1342666724	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; step=2; type={0=data; 1=tpl; 2=blockclass; }; confirmed=确定; }; POST={type={0=data; 1=tpl; 2=blockclass; }; confirmed=确定; };
 <?PHP exit;?>	1342666725	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; step=3; type=data_tpl_blockclass; }; POST={};
+<?PHP exit;?>	1342685536	zhanglu	1	127.0.0.1		GET={}; POST={};
+<?PHP exit;?>	1342685537	zhanglu	1	127.0.0.1	index	GET={}; POST={};
+<?PHP exit;?>	1342685540	zhanglu	1	127.0.0.1	members	GET={operation=search; }; POST={};
+<?PHP exit;?>	1342685546	zhanglu	1	127.0.0.1	members	GET={operation=search; username=浮游生物; }; POST={username=浮游生物; };
+<?PHP exit;?>	1342685550	zhanglu	1	127.0.0.1	members	GET={operation=group; uid=292854; }; POST={};
+<?PHP exit;?>	1342685569	zhanglu	1	127.0.0.1	members	GET={operation=group; uid=292854; groupidnew=1; adminidnew={}; extgroupexpirynew={}; extgroupidsnew={0=22; }; editsubmit=提交; }; POST={groupidnew=1; adminidnew={}; extgroupexpirynew={}; extgroupidsnew={0=22; }; editsubmit=提交; };
+<?PHP exit;?>	1342685579	zhanglu	1	127.0.0.1	members	GET={operation=group; uid=292854; }; POST={};
