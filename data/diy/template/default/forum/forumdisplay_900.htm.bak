@@ -95,7 +95,7 @@
 			<!--{if $subexists && $_G['page'] == 1}--><!--{template forum/forumdisplay_subforum}--><!--{/if}-->
 
 			<div class="drag">
-				<!--[diy=diy4]--><div id="diy4" class="area"><div id="frameW69piZ" class="frame move-span cl frame-1-3"><div class="title frame-title"><span class="titletext">1-3¿ò¼Ü</span></div><div id="frameW69piZ_left" class="column frame-1-3-l"><div id="frameW69piZ_left_temp" class="move-span temp"></div><!--{block/26}--></div><div id="frameW69piZ_center" class="column frame-1-3-r"><div id="frameW69piZ_center_temp" class="move-span temp"></div><!--{block/27}--></div></div></div><!--[/diy]-->
+				<!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]-->
 			</div>
 
 			<!--{if !empty($_G['forum']['recommendlist'])}-->
