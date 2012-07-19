@@ -1,0 +1,70 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd {margin:0;padding:0;border:0;}
+body	{ background-color:#323232;}
+ul,ol{list-style-type:none;}
+a	{ color:#FFFFFF; font-size:12px; text-decoration:none;}
+
+#FlashContainer	{ width:812px;margin:0 auto;}
+	#FlashA	{ width:812px; float:left;}
+		#FlashALogo	{ width:812px;float:left;}
+		#FlashAGloballink	{ width:790px; height:22px; padding-right:22px;line-height:22px; background-image:url(gameimg004.gif); float:left;}
+	#FlashB	{ width:758px; padding-left:27px; padding-top:15px; float:left;}
+		#FlashBTZ	{ width:221px; float:left; background-image:url(gameimg007.gif);}
+			#FlashBTZ dd	{ width:221px; float:left; background-image:url(gameimg006.gif); text-align:center;  }
+			.FlashBText	{height:24px;padding-top:23px;color:#FFFFFF; font-weight:bold; font-size:12px;}
+			#FlashBTZ dt	{ text-align:center;}
+			#FlashBTZ dt img	{ border:#ff8500 1px solid;}
+			#FlashBTZ ul	{ width:133px; float:left; padding-left:44px; padding-top:4px;}
+			#FlashBTZ li	{ width:133px; height:24px; font-size:12px; line-height:24px; float:left; text-align:center; border-bottom:#000000 1px solid;}
+		#FlashBVS	{ width:316px; float:left; text-align:center; padding-top:40px;}
+		#FlashBBC	{ width:221px; float:left; background-image:url(gameimg011.gif);}
+			#FlashBBC dd	{ width:221px; float:left; background-image:url(gameimg010.gif); text-align:center;  }
+			.FlashBText	{height:24px;padding-top:23px;color:#FFFFFF; font-weight:bold; font-size:12px;}
+			#FlashBBC dt	{ text-align:center;}
+			#FlashBBC dt img	{ border:#ff8500 1px solid;}
+			#FlashBBC ul	{ width:133px; float:left; padding-left:44px; padding-top:4px;}
+			#FlashBBC li	{ width:133px; height:24px; font-size:12px; line-height:24px; float:left; text-align:center; border-bottom:#000000 1px solid;}
+	#FlashC	{ width:758px; padding-left:27px; padding-top:15px; float:left;}
+		#FlashCBt	{ width:758px; height:36px; font-size:14px; font-weight:bold; color:#FFFFFF; text-align:center; background-image:url(gameimg013.gif); line-height:36px;}
+		#FlashCSm	{ width:758px; height:26px; line-height:26px; font-size:12px; color:#FFFFFF; text-align:center; float:left; background-image:url(gameimg015.gif);}
+		#FlashCFlash{ width:758px; float:left; text-align:center; background-image:url(gameimg015.gif);}
+		#FlashCImg	{}
+	#FlashD	{ float:left; margin-top:15px; padding-left:27px; background-image:url(gameimg024.gif);}
+		#FlashDLeft	{ width:133px; float:left;}
+		#FlashDMiddle	{ float:left;}
+		#FlashDRight	{ width:59px; float:left;}
+		#FlashDBottom	{ width:758px; float:left;}
+			#FlashDBottomFY	{ height:30px; padding:15px 15px 0 10px; font-weight:bold; float:right;}
+			#FlashDBottomFY span.leftA	{ font-size:14px; padding:2px 5px 0px; float:left;}
+			#FlashDBottomFY span.leftB	{ height:18px; line-height:18px; font-size:12px; color:#c6c6c6; padding:2px 5px 0px; float:left;}
+			#FlashDBottomFY a	{ border:#000 1px solid; padding:0px 5px 0px; margin:0 2px; float:left; color:#FFFFFF; background:#353535; }
+			.FlashDInputA	{ width:20px; height:14px; border:#000 1px solid; line-height:14px; color:#000; font-size:12px; float:left;}
+			.FlashDInputB	{ width:30px; height:18px; background:url(gameimg030.gif) no-repeat; margin:0 2px; cursor:hand; border:0; float:left;}
+			.FlashDInputC	{ width:18px; height:18px; background:url(gameimg032.gif) no-repeat; margin:0 2px; cursor:hand; border:0; float:left;}
+			.FlashDInputD	{ width:57px; height:18px; background:url(gameimg031.gif) no-repeat; margin:0 2px; cursor:hand; border:0; float:left;}
+			
+		.FlashDHuangse	{ color:#ffc100; font-weight:bold;}
+		#FlashDUl	{ padding-left:15px; float:left;}
+			#FlashDUl li	{ width:177px; float:left; padding-right:7px; padding-bottom:7px;}
+			#FlashDOne	{ width:169px; padding-left:8px; height:25px; line-height:25px; color:#FFFFFF; font-size:12px; background-image:url(gameimg019.gif); float:left;}
+			#FlashDTwo	{ width:177px; height:9px;float:left;}
+			#FlashDThree	{ width:177px;float:left; text-align:center; background-image:url(gameimg021.gif);}
+			#FlashDFour	{ width:177px;float:left;background-image:url(gameimg021.gif); color:#FFFFFF; font-size:12px; padding-top:10px;}
+				#FlashDFour ul	{ padding-left:6px;}
+				#FlashDFour li	{ width:140px; margin-bottom:-5px;padding-top:4px; padding-left:15px;border-top:#373737 1px solid; background-image:url(gameimg025.gif); background-repeat:no-repeat;}
+			#FlashDFive	{ width:177px;float:left;}
+	
+/*滑动门*/ 	
+UL		{list-style-type:none; margin:0px;} 
+/*标准盒模型*/ 
+.ttl	{height:18px;} 
+.ctt	{height:auto;clear:both;} 
+.w936	{width:566px;margin:2px 0;clear:both;}
+/*TAB 切换效果*/ 
+.tb_	{ background-image: url('http://www.dc18.com/barbg_tab.gif'); background-repeat: repeat-x;} 
+.tb_ ul	{height:24px;width:566px; height:35px; background-image:url(gameimg018.gif);} 
+.tb_ li	{float:left;height: 16px; padding:6px;cursor:pointer; font-size:12px; color:#FFFFFF; padding-top:7px;} 
+.normaltab    { background-repeat: no-repeat; color:#1F3A87 ;} 
+.hovertab     { background-image: url('http://www.dc18.com/hover_tab.gif'); background-repeat: no-repeat; color:#1F3A87; } 
+.dis	{display:block; background-image:url(gameimg015.gif);} 
+.undis	{display:none;}
+	

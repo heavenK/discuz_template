@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[waterfall.plugin]]></item>
+	<item id="SN"><![CDATA[2012070417Hs3CTBT1z1]]></item>
+	<item id="RevisionID"><![CDATA[2670]]></item>
+	<item id="RevisionDateline"><![CDATA[1339488645]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_waterfall_SC_GBK.xml"><![CDATA[8ed0b868bd95c9e6ee38c45871d8e5b8]]></item>
+		<item id="/discuz_plugin_waterfall_SC_UTF8.xml"><![CDATA[dd3d364da3a8fae767a3d23e838fc29c]]></item>
+		<item id="/discuz_plugin_waterfall_TC_BIG5.xml"><![CDATA[f93de562649dcddcb75bcd70f255b1c8]]></item>
+		<item id="/discuz_plugin_waterfall_TC_UTF8.xml"><![CDATA[054c969d364f02fcd4152902fdeab746]]></item>
+		<item id="/function.inc.php"><![CDATA[2a5ad98e235d98b86ed4034a9e0bff78]]></item>
+		<item id="/template/css.htm"><![CDATA[c2798b30700fae36aecf295ec437c7d4]]></item>
+		<item id="/template/image/background.gif"><![CDATA[0b8c61a29a47c0865ef45ee8e2697465]]></item>
+		<item id="/template/image/icons.png"><![CDATA[d1baa757eafa6745bd5d8be9b73c52d0]]></item>
+		<item id="/template/js/jquery.masonry.min.js"><![CDATA[1ee41d9981d2179e97f9fb9fc12821d1]]></item>
+		<item id="/template/js/jquery.min.js"><![CDATA[acc0adc6c188845a409bf158d2de4451]]></item>
+		<item id="/template/threads.htm"><![CDATA[7878ccdee3519c4c83a64618d387f174]]></item>
+		<item id="/template/waterfall.htm"><![CDATA[3c2964d4035e93ec8667a2063c215daa]]></item>
+		<item id="/threads.inc.php"><![CDATA[e40bcd9207838a836d819f53334eba44]]></item>
+		<item id="/waterfall.inc.php"><![CDATA[92761e52ef12456f821e4eb3bdeeeb5b]]></item>
+	</item>
+</root>
