@@ -6089,3 +6089,9 @@
 <?PHP exit;?>	1342690964	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; }; POST={};
 <?PHP exit;?>	1342690966	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; step=2; type={0=data; 1=tpl; 2=blockclass; }; confirmed=确定; }; POST={type={0=data; 1=tpl; 2=blockclass; }; confirmed=确定; };
 <?PHP exit;?>	1342690966	zhanglu	1	127.0.0.1	tools	GET={operation=updatecache; step=3; type=data_tpl_blockclass; }; POST={};
+<?PHP exit;?>	1342749866	zhanglu	1	127.0.0.1		GET={}; POST={};
+<?PHP exit;?>	1342749867	zhanglu	1	127.0.0.1	index	GET={}; POST={};
+<?PHP exit;?>	1342749869	zhanglu	1	127.0.0.1	nav	GET={}; POST={};
+<?PHP exit;?>	1342749870	zhanglu	1	127.0.0.1	styles	GET={}; POST={};
+<?PHP exit;?>	1342749876	zhanglu	1	127.0.0.1	setting	GET={operation=styles; }; POST={};
+<?PHP exit;?>	1342749877	zhanglu	1	127.0.0.1	styles	GET={}; POST={};
