@@ -18,3 +18,4 @@
 <?PHP exit;?>	1342751671	zhanglu	1	127.0.0.1	styles	GET={}; POST={};
 <?PHP exit;?>	1342751672	zhanglu	1	127.0.0.1	styles	GET={updatecsscache=1; namenew={1=默认风格; 13=we54; }; defaultnew=13; stylesubmit=更新 CSS 缓存; }; POST={updatecsscache=1; namenew={1=默认风格; 13=we54; }; defaultnew=13; stylesubmit=更新 CSS 缓存; };
 <?PHP exit;?>	1342751674	zhanglu	1	127.0.0.1	styles	GET={}; POST={};
+<?PHP exit;?>	1342754790	zhanglu	1	127.0.0.1	styles	GET={}; POST={};
