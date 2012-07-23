@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5]]></item>
+	<item id="Time"><![CDATA[2012-05-06 11:58]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/discuzx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[bShare分享按钮]]></item>
+			<item id="identifier"><![CDATA[bshare]]></item>
+			<item id="description"><![CDATA[bShare是全球中文互联网最强大的社交分享引擎！只需一个按钮，就能为您的网站注入社交化功能，并提供强大的数据统计分析功能！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[bshare/]]></item>
+			<item id="copyright"><![CDATA[bShare Team]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[插件设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[data]]></item>
+					<item id="menu"><![CDATA[数据统计]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="message1"><![CDATA[请输入正确的邮箱地址！]]></item>
+				<item id="message2"><![CDATA[请输入六位以上用户密码！]]></item>
+				<item id="message3"><![CDATA[很抱歉，windows用户：您需要改一改您的php.ini文件的设置，找到php_curl.dll，并取消前面的分号注释就行了；Linux用户：您需要重新编译您的PHP，打开编译参数，在configure命令上加上“–with-curl”参数就行了！]]></item>
+				<item id="message4"><![CDATA[您的网站已经注册，请选择登陆]]></item>
+				<item id="message5"><![CDATA[您email已经注册，请重新输入]]></item>
+				<item id="message6"><![CDATA[您输入的密码错误，请重新输入]]></item>
+				<item id="message7"><![CDATA[远程获取BShare的uuid错误，您需要重新尝试。]]></item>
+				<item id="message8"><![CDATA[信息保存失败！请重新登录]]></item>
+				<item id="message9"><![CDATA[已经开通bShare服务，下面我们来进行体验吧。]]></item>
+				<item id="message10"><![CDATA[您已退出bShare服务。请再次登录，以便享用bShare强大的数据统计功能！]]></item>
+				<item id="message11"><![CDATA[请选择好按钮样式再设定！]]></item>
+				<item id="message12"><![CDATA[按钮样式设定失败！]]></item>
+				<item id="message13"><![CDATA[按钮样式设定成功！]]></item>
+				<item id="message14"><![CDATA[成功设定bShare按钮显示位置]]></item>
+                                
+			</item>
+			<item id="templatelang">
+                                <item id="message1"><![CDATA[请输入正确的邮箱地址！]]></item>
+				<item id="message2"><![CDATA[请输入六位以上用户密码！]]></item>
+                                <item id="message3"><![CDATA[密码需保持一致]]></item>
+				<item id="buttonSwitch"><![CDATA[更换帐号]]></item>
+				<item id="buttonLogin"><![CDATA[登录]]></item>
+				<item id="buttonRegister"><![CDATA[注册]]></item>
+				<item id="buttonStyle"><![CDATA[设置样式]]></item>
+				<item id="buttonPosition"><![CDATA[设置位置]]></item>
+				<item id="buttonSimpleShare"><![CDATA[bShare基本分享功能]]></item>
+				<item id="buttonGoBack"><![CDATA[返回登录]]></item>
+				<item id="buttonGuide"><![CDATA[示例]]></item>
+				<item id="buttonNotice"><![CDATA[您也可以直接享用：]]></item>
+				
+				<item id="messageAuthed"><![CDATA[您已登陆bShare服务]]></item>
+				<item id="messageNoAuth"><![CDATA[请您注册或登录bShare，以便享用bShare强大的数据统计功能！]]></item>
+				<item id="messageStyle"><![CDATA[您可以通过选择【简单样式】中的样式，或者通过【自定义样式】直接修改样式代码来修改按钮样式，点击设置样式按钮保存后，直接刷新前台页面您就会看到分享按钮以您设定的样式出现。]]></item>
+				<item id="messageStyle1"><![CDATA[您可以通过修改下框中的代码来修改按钮样式，更多样式代码请参考<a target="_blank" href="http://www.bshare.cn/moreStyles" class="highlight" style="text-decoration: underline;">bShare网站</a>。<span class="text-orange">(注：选择完样式不要忘记粘贴到下面保存哦)</span>]]></item>
+				<item id="messageStyle2"><![CDATA[<b>UUID</b>：追踪分享数据必须提供此选项，如果您没有设置该参数，您目前登录的uuid将被设置在代码中。]]></item>
+				<item id="messageStyle3"><![CDATA[<p>&nbsp;&nbsp;查找uuid方法：</p><p>&nbsp;&nbsp;①登录后见此页面上方UUID</p><p>&nbsp;&nbsp;②登录bShare官方网站站长后台【<a class="highlight" style="text-decoration: underline;" href="http://www.bshare.cn/websiteManage" target="_blank">管理中心</a>】查看</p>]]></item>
+				<item id="messagePosition"><![CDATA[bShare分享按钮可以嵌入您的帖子页面的多个位置，具体步骤请参考]]></item>
+				<item id="messageGuide1"><![CDATA[分享按钮可以在本应用的【插件设置】栏目下设置日志与帖子中显示的位置，如下图：]]></item>
+				<item id="messageGuide2"><![CDATA[设置相应的位置后，点击【设置位置】即可设置成功。然后点击页面上方的【工具】更新缓存，如下图：]]></item>
+				<item id="messageGuide3"><![CDATA[缓存更新后就可以在前台的帖子与日志中查看按钮的显示位置。]]></item>
+				
+				<item id="accountUsername"><![CDATA[用户名]]></item>
+				<item id="accountUuid"><![CDATA[UUID]]></item>
+				<item id="accountDomain"><![CDATA[网站域名]]></item>
+				<item id="accountType"><![CDATA[登录类型]]></item>
+				<item id="accountTypeNew"><![CDATA[新注册]]></item>
+				<item id="accountTypeExist"><![CDATA[已经有账号]]></item>
+				<item id="accountEmail"><![CDATA[(E-Mail地址)]]></item>
+				<item id="accountPassword"><![CDATA[密码]]></item>
+				<item id="accountRepass"><![CDATA[确认密码]]></item>
+				<item id="styleSimple"><![CDATA[简单样式]]></item>
+				<item id="styleComplex"><![CDATA[自定义样式]]></item>
+				<item id="positionTopic"><![CDATA[主帖显示位置设置]]></item>
+				<item id="positionBlog"><![CDATA[日志显示位置设置]]></item>
+				<item id="positionSite0"><![CDATA[不启用]]></item>
+				<item id="positionSite1"><![CDATA[主帖正文上方]]></item>
+				<item id="positionSite2"><![CDATA[主帖正文下方]]></item>
+				<item id="positionSite3"><![CDATA[日志正文上方]]></item>
+				<item id="positionSite4"><![CDATA[日志正文下方]]></item>
+				
+				<item id="headingStyle"><![CDATA[步骤一：设置样式]]></item>
+				<item id="headingPosition"><![CDATA[步骤二：设置位置]]></item>
+				
+				<item id="introAuthed"><![CDATA[<p>注册了bShare的会员可以免费享用更多额外功能：</p><div class="verticalradio-spacer"></div><ul><li>您可以利用bShare数据分析系统进行追踪，知道哪些文章最经常被分享、被分享到哪里、带回多少流量等数据。还能告诉您这些文章在全球的bShare网络中，被多少人分享过！</li><li>您可以随时回顾所分享过的内容，并将它转贴给更多的人！</li><li>可以将喜欢的网页暂存在bShare！</li><li>在50,000多个网站中更快速地分享！</li><li>一键同步分享到多个社交网络平台！</li></ul>]]></item>
+				<item id="introbShare"><![CDATA[<p>bShare特色介绍：</p><div class="verticalradio-spacer"></div><ul><li>利用bShare吸引来自社交网站的流量。每次分享可带来的流量，平均可达7倍以上！</li><li>随心所欲选择最符合您网站风格及用户属性的按钮设计、分享功能。</li><li>行业内最轻盈的代码，不为您的网站造成负担。</li><li>轻松设置，让您的用户分享完顺便关注您一下，将您的网站与微博、社交网站紧密结合</li><li>一次同步多个平台，让您的用户更快、更广泛地将您的优质内容覆盖整个社交网络，带来更大的曝光量！</li></ul>]]></item>
+			    <item id="bShareHelp"><![CDATA[在安装或使用中，如有任何问题需要<a class="text-orange" href="http://www.bshare.cn/help/installDiscuz" target="_blank">帮助与咨询</a>，欢迎随时联系<a class="text-orange" href="http://wpa.qq.com/msgrd?v=3&uin=800087176&site=qq&menu=yes" target="_blank">bShare客服QQ</a>：800087176 或来信到<a class="text-orange" href="mailto:feedback@bshare.cn" target="_blank">feedback@bshare.cn.</a>]]></item>
+			
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

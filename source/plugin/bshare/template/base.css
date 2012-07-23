@@ -1,0 +1,245 @@
+/* common */
+* html .ie6floatfix { 
+	*height: 0; 
+	*width: 0; 
+	*white-space: nowrap;
+}
+
+.floatFix { 
+	_height: 0; 
+	*zoom: 1; 
+}
+
+.fixed {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+* html .fixed {
+	position: absolute;
+	top: expression(eval(document.compatMode&&document.compatMode=="CSS1Compat")?documentElement.scrollTop+((documentElement.clientHeight-this.clientHeight)/2 ):document.body.scrollTop+((document.body.clientHeight-this.clientHeight)/2));
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* space */
+.verticalradio-spacer {
+    padding-top: 15px;
+}
+
+.heading {
+	background-color: #ff5c00;
+    color: #FFFFFF;
+    font-family: 'Microsoft YaHei',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    padding: 3px 20px;
+}
+
+.buttonStyle {
+	vertical-align: top; 
+	margin: 3px;
+}
+
+#closeGuide {
+	background-color: #000000;
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    margin-right: -40px;
+    margin-top: -35px;
+    opacity: 0.5;
+    width: 40px;
+}
+
+#closeGuide:hover {
+	opacity: 0.8;
+}
+
+#guidePosition {
+	display: none;
+	border: 10px solid #BABABA;
+	margin: 30px 0 40px 40px;
+	padding: 15px; width: 800px;
+}
+
+.module {
+	width: 1000px;
+	padding: 20px;
+	overflow: hidden;
+}
+
+/* Font */
+.text-orange { color: #ff5c00; }
+
+.section { padding: 15px; overflow: hidden; *display: inline; }
+.border-gray { border: 1px solid #e9e9e9; }
+.border-orange { border: 1px solid #ff5c00; }
+#tableRegister {
+	font-size: 14px;
+}
+
+#tableRegister td {
+	height: 36px;
+	vertical-align: bottom;
+}
+
+.cellTitle {
+	width: 50px;
+}
+
+.cellColon {
+	width: 40px;
+	text-align: left;
+}
+
+.highlight {
+	color: #ff5c00;
+}
+
+.allText {
+	padding: 5px;
+	width: 200px;
+	border-color: #bababa #e9e9e9 #e9e9e9 #bababa;
+	background-color: #fff;
+}
+
+/* button */
+.bButton-gray {
+	background: #e9e9e9;
+	background: -webkit-gradient(linear, 0% 20%, 0% 90%, from(#ffffff), to(#e9e9e9));
+    background: -moz-linear-gradient(center top , #ffffff, #e9e9e9) repeat scroll 0 0 transparent;
+    border: 1px solid #9a9a9a;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+	cursor: pointer;
+}
+
+.bButton-orange {
+	background: #FF9D29;
+	background: -webkit-gradient(linear, 0% 20%, 0% 90%, from(#FF9D29), to(#FF5C00));
+    background: -moz-linear-gradient(center top , #FF9D29, #FF5C00) repeat scroll 0 0 transparent;
+    border: 1px solid #F89C2F;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+	cursor: pointer;
+}
+
+h1, h2, h3, h4 h5, h6 { font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif; color: #3a3a3a; }
+
+.feature {
+	color: #9a9a9a;
+}
+
+.feature p {
+	font-weight: bold;
+	font-size: 14px; 
+}
+
+.feature ul {
+	margin-left: 10px;
+}
+
+.feature li {
+	*displsy: inline;
+	line-height: 30px;
+	list-style: circle outside none;
+}
+
+/* tab */
+
+ul.tabs {
+    border-bottom: 1px solid #ff5c00;
+    height: 30px;
+    margin: 0 !important;
+    padding: 0;
+    width: 732px;
+}
+
+ul.tabs li {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.tabs a.current {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #FF5C00 #FF5C00 #FFFFFF;
+    border-left: 1px solid #FF5C00;
+    border-right: 1px solid #FF5C00;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    color: #000000;
+    cursor: default;
+    font-weight: bold;
+    padding: 5px 0 2px;
+}
+
+ul.tabs a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #CCCCCC #CCCCCC -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 18px;
+    margin-right: 5px;
+    outline: 0 none;
+    padding: 8px 0 2px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+    width: 270px;
+}
+
+.panes {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 20px 15px 10px;
+    width: 700px;
+}
+
+.panes .panediv {
+    display: none;
+}
+
+.imageBoard {
+	overflow: hidden;
+}
+
+.imageBoard li {
+	float: left;
+}
+
+.imageBoard img {
+	border: 1px solid #e9e9e9;
+}
