@@ -1,0 +1,487 @@
+<link href="source/plugin/bshare/template/base.css" rel="stylesheet" type="text/css" />
+<link href="source/plugin/bshare/template/normalize.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="source/plugin/bshare/template/jquery-1.4.2.min.js"></script>
+<script language="javascript" src="source/plugin/bshare/template/jquery.tools.min.1.2.4.js"></script>
+<body>
+
+<div id="accountModule" class="module" style="display: none; font-size: 14px;">
+	<div class="section left" style="width: 640px;">
+		<table style="width: 400px;">
+			<tr>
+				<td class="heading2" colspan="3">
+					<div class="text-orange">{lang bshare:messageAuthed}</div>
+					<div class="verticalradio-spacer"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="cellTitle">{lang bshare:accountUsername}</td><td class="cellColon">:</td>
+				<td id="userP">{if isset($cfg_bshare['user'])}{$cfg_bshare['user']}{/if}</td>
+			</tr>
+			<tr>
+				<td class="cellTitle">{lang bshare:accountUuid}</td><td class="cellColon">:</td>
+				<td id="uuidP">{if isset($cfg_bshare['uuid'])}{$cfg_bshare['uuid']}{/if}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="section left" style="width: 300px;">
+	<form id="formLogout" name="formLogout" action="{ADMINSCRIPT}?action=plugins&operation=config&do={$pluginid}&mod=switchShare" method="post">
+		<button type="submit" name="pluginsubmit" id="switchShare" value="{lang bshare:buttonSwitch}" class="bButton-gray right" style="padding: 5px 40px; margin: 20px 30px 0; *background: #e9e9e9;">{lang bshare:buttonSwitch}</button>
+	</form>
+	</div>
+</div>
+
+<div id="loginModule" class="module" style="display: none; width: 1200px;">
+	<div class="left" style="width: 520px; margin: 20px 0; display: inline-block;">
+	<form id="formRegister" name="formRegister" action="{ADMINSCRIPT}?action=plugins&operation=config&do={$pluginid}&mod=openShare" method="post">
+		<div class="section border-gray" style="padding: 30px; display: inline-block; *height: 265px;">
+			<div>
+				<table id="tableRegister" class="left">
+					<tr><td colspan="3"><div class="heading2 text-orange">{lang bshare:messageNoAuth}</div></td></tr>
+					<tr>
+						<td class="cellTitle">{lang bshare:accountDomain}</td><td class="cellColon">:</td>
+						<td>{$_SERVER['HTTP_HOST']}</td>
+					</tr>
+					<tr id="bindtypes">
+						<td class="cellTitle">{lang bshare:accountType}</td><td class="cellColon">:</td>
+						<td>
+							<input name="bindtype" type="radio" value="0" checked="checked" />
+							<label>{lang bshare:accountTypeNew}</label>
+							<input name="bindtype" type="radio" value="1" />
+							<label>{lang bshare:accountTypeExist}</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="cellTitle">{lang bshare:accountUsername}</td><td class="cellColon">:</td>
+						<td style="width: 315px;">
+							<input name="user" type="text" id="user" size="30" class='allText' />
+							<label for="user" style="margin-left: 10px; width: 100px;">{lang bshare:accountEmail}</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="cellTitle" style="word-spacing: 5pt;">{lang bshare:accountPassword}</td><td class="cellColon">:</td>
+						<td><input name="pwd" type="password" id="pwd" size="30" class='allText' /></td>
+					</tr>
+					<tr id="repassword">
+						<td class="cellTitle">{lang bshare:accountRepass}</td><td class="cellColon">:</td>
+						<td><input name="repwd" type="password" id="repwd" size="30" class='allText' /></td>
+					</tr>
+					<tr id="placeholder" style="display: none;">
+						<td clospan="3"> </td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<input name="submode" type="hidden" value="0" id="submode" />
+							<button type="submit" name="pluginsubmit" id="openShare" value="{lang bshare:buttonRegister}" class="bButton-orange" style="padding: 5px 80px; margin: 10px 0 0 80px; *background: #FF9D29;">{lang bshare:buttonRegister}</button>
+						</td>
+					</tr>
+				</table>
+				<div class="verticalradio-spacer"></div>
+			</div>
+		</div>
+		<div class="verticalradio-spacer"></div>
+		<div class="section feature">
+			{lang bshare:introAuthed}
+			<div class="verticalradio-spacer"></div>
+		</div>
+	</form>
+	</div>
+	<div class="left" style="width: 1px; background-color: #ff5c00; height: 400px; margin: 40px 60px 0 20px; display: inline-block;"></div>
+	<div class="left" style="margin: 100px 0; width: 500px; display: inline-block;">
+		<div class="section border-gray" style="padding: 30px; display: inline-block;">
+			<div style="font-size: 20px; font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;">{lang bshare:buttonNotice}</div>
+			<div class="verticalradio-spacer"></div>
+			<input type="button" id="simpleShare" value="{lang bshare:buttonSimpleShare}" class="bButton-orange" style="padding: 5px 40px; margin: 27px 40px 0; *background: #FF9D29;" />
+		</div>
+		<div class="verticalradio-spacer"></div>
+		<div class="section feature">
+			{lang bshare:introbShare}
+			
+	    <div class="verticalradio-spacer"></div>	    
+	    </div>
+	 </div>
+	    <div style="float:right;margin-right:110px;">	
+	     <li class="feature" style="list-style: circle outside none;">{lang bshare:bShareHelp}</li>
+	    </div>
+		
+	
+</div>
+
+<div id="goBackModule" class="module" style="display: block; padding-top: 0; padding-bottom: 0;">
+	<div id="goBack" class="section right text-orange" style=" padding: 0; font-size: 16px; font-weight: bold; font-family: 'Microsoft YaHei',Helvetica,Arial,sans-serif; cursor: pointer;">
+		<span style="font-size: 20px;">&lt;&lt;&lt; </span>{lang bshare:buttonGoBack}
+	</div>
+</div>
+
+<div id="styleModule" class="module" style="margin-bottom: 20px;">
+	<div class="heading">{lang bshare:headingStyle}&nbsp;<a href="http://www.bshare.cn/help/installDiscuz" target="_blank"><img src="source/plugin/bshare/template/images/help.gif" /></a></div>
+	<div class="section border-orange" style="padding-bottom: 30px; display: inline-block;">
+	<form id="formStyle" name="formStyle" action="{ADMINSCRIPT}?action=plugins&operation=config&do={$pluginid}&mod=setStyles" method="post">
+		<input type="hidden" id="tab" name="tab" value="{if isset($cfg_bshare['tab'])}{$cfg_bshare['tab']}{/if}" />
+		<input type="hidden" id="option" name="option" value="{if isset($cfg_bshare['option'])}{$cfg_bshare['option']}{/if}" />		
+		<div class="verticalradio-spacer"></div>
+		<div style="font-size: 14px;">{lang bshare:messageStyle}</div>
+		<div class="verticalradio-spacer"></div>
+		
+		<ul class="tabs left">
+			<li><a title="{lang bshare:styleSimple}" class="current">{lang bshare:styleSimple}</a></li>
+			<li><a title="{lang bshare:styleComplex}">{lang bshare:styleComplex}</a></li>
+		</ul>
+		<div class="panes left">
+			<div class="panediv" style="display: block;">
+				<div class="left" style="width: 450px;">
+					<input type="radio" class="buttonStyle" id="buttonStyleC1:false:x" value="C1:false:x" /><label for="buttonStyleC1:false:x"><img src="source/plugin/bshare/template/images/custom-c1.gif" /></label>
+					<div class="verticalradio-spacer"></div>
+					<input type="radio" class="buttonStyle" id="buttonStyleC2:x:x" value="C2:x:x" /><label for="buttonStyleC2:x:x"><img src="source/plugin/bshare/template/images/custom-c2.gif" /></label>
+					<div class="verticalradio-spacer"></div>
+					<input type="radio" class="buttonStyle" id="buttonStyleC2P:x:x" value="C2P:x:x" /><label for="buttonStyleC2P:x:x"><img src="source/plugin/bshare/template/images/custom-c2p.gif" /></label>
+					<div class="verticalradio-spacer"></div>
+					<input type="radio" class="buttonStyle" id="buttonStyle2:false:true" value="2:false:true" /><label for="buttonStyle2:false:true"><img src="source/plugin/bshare/template/images/style2-name-zh.gif" /></label>
+					<div class="verticalradio-spacer"></div>
+				</div>
+				<div class="left" style="width: 220px;">
+					<input type="radio" class="buttonStyle" id="buttonStyle3:DarkOrange:x" value="3:DarkOrange:x" /><label for="buttonStyle3:DarkOrange:x"><img src="source/plugin/bshare/template/images/button_custom3-zh-DarkOrange.gif" /></label>
+					<input type="radio" class="buttonStyle" id="buttonStyle3:Blue:x" value="3:Blue:x" /><label for="buttonStyle3:Blue:x"><img src="source/plugin/bshare/template/images/button_custom3-zh-Blue.gif" /></label>
+					<input type="radio" class="buttonStyle" id="buttonStyle3:Grey:x" value="3:Grey:x" /><label for="buttonStyle3:Grey:x"><img src="source/plugin/bshare/template/images/button_custom3-zh-Grey.gif" /></label>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="panediv" id="paneStyleMore">
+				<div>
+					<p>{lang bshare:messageStyle1}</p>
+					<div class="verticalradio-spacer"></div>
+				</div>
+				<div>
+					<textarea name="bscode" id="bscode" rows="10" cols="98">{if isset($cfg_bshare['styles'])}{$cfg_bshare['styles']}{/if}</textarea>
+					<div class="verticalradio-spacer"></div>
+				</div>
+				<div>
+					<p style="color: green;">{lang bshare:messageStyle2}<a id="uuidhelp" style="cursor: pointer;" title="how to find"><img src="source/plugin/bshare/template/images/help.gif"/></a></p>
+					<div id="uuidguide" style="display:none;color: green;">
+                      {lang bshare:messageStyle3}
+                    </div>
+					<div class="verticalradio-spacer"></div>
+				</div>			
+			</div>
+		</div>
+		<div class="right">
+			<button type="submit" name="pluginsubmit" id="setStyles" value="{lang bshare:buttonStyle}" class="bButton-orange" style="padding: 6px 40px; margin-right: 18px; *background: #FF9D29;">{lang bshare:buttonStyle}</button>
+		</div>
+	</form>
+	</div>
+</div>
+	
+<div id="positionModule" class="module">
+	<div class="heading">{lang bshare:headingPosition}&nbsp;<a href="http://www.bshare.cn/help/installDiscuz" target="_blank"><img src="source/plugin/bshare/template/images/help.gif" /></a></div>
+	<div class="section border-orange" style="padding-bottom: 30px; *display: inline-block; height: 150px;">
+	<form action="{ADMINSCRIPT}?action=plugins&operation=config&do={$pluginid}&mod=setShow" method="post" >
+		<div class="text-orange" style="font-weight: bold; margin: 20px 0pt; font-size: 16px;">{lang bshare:messagePosition}[<a style="text-decoration: underline;" href="javascript:" id="openGuide">{lang bshare:buttonGuide}</a>]&nbsp;<a href="http://www.bshare.cn/help/installDiscuz" target="_blank"><img src="source/plugin/bshare/template/images/help.gif" /></a></div>
+		<div id="guidePosition">
+			<div id="closeGuide" style="background: url(source/plugin/bshare/template/images/button-close.png) no-repeat 0px 0px;"></div>
+			<p>{lang bshare:messageGuide1}</p>
+			<div class="verticalradio-spacer"></div>
+			<ul class="imageBoard">
+				<li><img src="source/plugin/bshare/template/images/help1.png"></li>
+				<li><img style="margin: 15px 0 0 40px;" src="source/plugin/bshare/template/images/help2.png"></li>
+			</ul>
+			<div class="verticalradio-spacer"></div>
+			<p>{lang bshare:messageGuide2}</p>
+			<div class="verticalradio-spacer"></div>
+			<ul class="imageBoard">
+				<li><img src="source/plugin/bshare/template/images/help3.png"></li>
+				<li><img style="margin: 40px;" src="source/plugin/bshare/template/images/help4.png"></li>
+			</ul>
+			<div class="verticalradio-spacer"></div>
+			<p>{lang bshare:messageGuide3}</p>
+			<div class="verticalradio-spacer"></div>
+		</div>
+		<table class="left">		
+			<tr >
+				<td colspan="2" class="td27" >
+					{lang bshare:positionTopic}:
+					<div class="verticalradio-spacer"></div>
+				</td>
+				<td class="vtop rowform">
+					<select name="position" class="allText">
+						<option value="0" {if isset($cfg_show['position']) && $cfg_show['position']== 0} selected="selected" {/if} >{lang bshare:positionSite0}</option>
+						<option value="1" {if isset($cfg_show['position']) && $cfg_show['position']== 1} selected="selected" {/if} >{lang bshare:positionSite1}</option>
+						<option value="2" {if isset($cfg_show['position']) && $cfg_show['position']== 2} selected="selected" {/if} >{lang bshare:positionSite2}</option>
+					</select>
+					<div class="verticalradio-spacer"></div>
+				</td>
+			</tr>
+			<tr >
+				<td colspan="2" class="td27" >
+					{lang bshare:positionBlog}:
+					<div class="verticalradio-spacer"></div>
+				</td>
+				<td class="vtop rowform">					
+					<select name="blog" class="allText">
+						<option value="0" {if isset($cfg_show['blog']) && $cfg_show['blog']== 0} selected="selected" {/if}>{lang bshare:positionSite0}</option>
+						<option value="1" {if isset($cfg_show['blog']) && $cfg_show['blog']== 1} selected="selected" {/if}>{lang bshare:positionSite3}</option>
+						<option value="2" {if isset($cfg_show['blog']) && $cfg_show['blog']== 2} selected="selected" {/if}>{lang bshare:positionSite4}</option>
+					</select>
+					<div class="verticalradio-spacer"></div>
+				</td>
+			</tr>
+		</table>
+		<div class="right">
+			<button type="submit" name="pluginsubmit" id="setPosition" value="{lang bshare:buttonPosition}" class="bButton-orange" style="padding: 6px 40px; margin: 10px 18px 0; *background: #FF9D29;">{lang bshare:buttonPosition}</button>
+		</div>
+	</form>
+	
+	</div>
+	<div style="float:right;margin-right:10px;">
+	{lang bshare:bShareHelp}
+	</div>
+</div>
+
+<script type="text/javascript">
+(function ($) {
+	// Cookie valid for 2 weeks
+	var cookieDays = 14;
+	var regular = /((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?/;
+	var regular1 = /([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/;
+	
+	function createCookie(name, value, days) {
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			var expires = '; expires=' + date.toGMTString();
+		}
+		else var expires = '';
+		document.cookie = name + '=' + value + expires + '; path=/';
+	}
+
+	function readCookie(name) {
+		var nameEQ = name + '=';
+		var ca = document.cookie.split(';');
+		for (var i=0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1, c.length);
+			}
+			if (c.indexOf(nameEQ) == 0) {
+				return c.substring(nameEQ.length, c.length);
+			}
+		}
+		return null;
+	}
+
+	var share = function () {
+		$('#styleModule').fadeIn();
+		$('#positionModule').fadeIn();
+		$('#goBackModule').show();
+		$('#loginModule').hide();
+		createCookie('phpcms_bshare_shareonly', 1, cookieDays);
+	};
+	
+	var authed = function () {
+		$('#loginModule').hide();		
+		$('#accountModule').show();
+		$('#styleModule').show();
+		$('#positionModule').show();
+		$('#goBackModule').hide();
+	};
+	
+	var noAuth = function () {
+		$('#userP').text('');
+		$('#uuidP').text('');
+		$('#dataFrame').attr('src', '');
+		$('#accountModule').hide();
+		$('#goBackModule').hide();
+		$('#styleModule').hide();
+		$('#positionModule').hide();
+		$('#loginModule').fadeIn();
+		$('#bindtypes').find('input:radio:checked').trigger('change');
+		createCookie('phpcms_bshare_shareonly', 0, cookieDays);
+	};
+		
+	var insertUuid = function (uuid, style) {
+		// Insert UUID
+		// 1. No action if no uuid cached in session
+		// 2. When there's uuid in session, and the uuid in style code is empty, assgin the value in session to the style code
+		if (uuid != null && uuid != '') {
+			if (style.indexOf('uuid=') < 0) {
+				style = style.replace('js#', 'js#uuid=' + uuid + '&amp;');
+			}
+			if (style.indexOf('uuid=&') > 0) {
+				style = style.replace('uuid=&', 'uuid=' + uuid + '&');
+			}
+			if (style.indexOf('uuid="') > 0) {
+				style = style.replace('uuid=', 'uuid=' + uuid + '"');
+			}
+		}
+		return style;
+		
+	};
+	
+	var configAccount = function () {		
+		// Bindings
+		$('#bindtypes').find('input:radio').change(function () {
+			var type = $(this).val();
+			$('#submode').val(type);
+			if (type == 1) {
+				$('#repassword').hide();
+				$('#placeholder').show();
+				$('#openShare').text('{lang bshare:buttonLogin}');
+			} else {
+				$('#repassword').show();
+				$('#placeholder').hide();
+				$('#openShare').text('{lang bshare:buttonRegister}');
+			}
+		});
+
+	$('#openShare').click(function () {
+			if (!regular.test($('#user').val())) {
+				var a = $('#user').val();
+				alert('{lang bshare:message1}');
+				$('#user').focus();
+				return false;
+			} else if ($('#pwd').val().length < 6) {
+			
+				alert('{lang bshare:message2}');
+				$('#pwd').focus();
+				return false;
+			} else if ($('#submode').val() == 0 && $('#pwd').val() != $('#repwd').val()) {
+				alert('{lang bshare:message3}');
+				$('#repwd').focus();
+				return false;
+			} else {
+			    return true;
+			}
+		});
+				
+		$('#simpleShare').click(function () {			
+			share();
+		});
+		
+		$('#goBack').click(function () {			
+			noAuth();
+		});
+	};
+	
+	var configStyle = function () {
+		var stylesMap = {
+			'C1:false:x': '%3Cdiv%20class%3D%22bshare-custom%22%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0QQ%E7%A9%BA%E9%97%B4%22%20class%3D%22bshare-qzone%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-sinaminiblog%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%BA%E4%BA%BA%E7%BD%91%22%20class%3D%22bshare-renren%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%85%BE%E8%AE%AF%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-qqmb%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%B1%86%E7%93%A3%22%20class%3D%22bshare-douban%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E6%9B%B4%E5%A4%9A%E5%B9%B3%E5%8F%B0%22%20class%3D%22bshare-more%20bshare-more-icon%22%3E%3C%2Fa%3E%3Cspan%20class%3D%22BSHARE_COUNT%20bshare-share-count%22%3E0%3C%2Fspan%3E%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23style%3D-1%26amp%3Buuid%3D%26amp%3Bpophcol%3D2%26amp%3Blang%3Dzh%22%3E%3C%2Fscript%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbshareC0.js%22%3E%3C%2Fscript%3E',
+			
+			'C2:x:x': '%3Cdiv%20class%3D%22bshare-custom%22%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0QQ%E7%A9%BA%E9%97%B4%22%20class%3D%22bshare-qzone%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-sinaminiblog%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%BA%E4%BA%BA%E7%BD%91%22%20class%3D%22bshare-renren%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%85%BE%E8%AE%AF%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-qqmb%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%B1%86%E7%93%A3%22%20class%3D%22bshare-douban%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E6%9B%B4%E5%A4%9A%E5%B9%B3%E5%8F%B0%22%20class%3D%22bshare-more%20bshare-more-icon%22%3E%3C%2Fa%3E%3Cspan%20class%3D%22BSHARE_COUNT%20bshare-share-count%22%3E0%3C%2Fspan%3E%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23style%3D-1%26amp%3Buuid%3D%26amp%3Bpophcol%3D2%26amp%3Blang%3Dzh%22%3E%3C%2Fscript%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbshareC2.js%22%3E%3C%2Fscript%3E',
+			
+			'C2P:x:x': '%3Cdiv%20class%3D%22bshare-custom%22%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0QQ%E7%A9%BA%E9%97%B4%22%20class%3D%22bshare-qzone%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-sinaminiblog%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E4%BA%BA%E4%BA%BA%E7%BD%91%22%20class%3D%22bshare-renren%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%85%BE%E8%AE%AF%E5%BE%AE%E5%8D%9A%22%20class%3D%22bshare-qqmb%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E5%88%86%E4%BA%AB%E5%88%B0%E8%B1%86%E7%93%A3%22%20class%3D%22bshare-douban%22%3E%3C%2Fa%3E%3Ca%20title%3D%22%E6%9B%B4%E5%A4%9A%E5%B9%B3%E5%8F%B0%22%20class%3D%22bshare-more%20bshare-more-icon%22%3E%3C%2Fa%3E%3Cspan%20class%3D%22BSHARE_COUNT%20bshare-share-count%22%3E0%3C%2Fspan%3E%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23style%3D-1%26amp%3Buuid%3D%26amp%3Bpophcol%3D2%26amp%3Blang%3Dzh%22%3E%3C%2Fscript%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbshareC2P.js%22%3E%3C%2Fscript%3E',
+			
+			'2:false:true': '%3Ca%20class%3D%22bshareDiv%22%20href%3D%22http%3A%2F%2Fwww.bshare.cn%2Fshare%22%3E%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%3C%2Fa%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23uuid%3D%26amp%3Bstyle%3D2%26amp%3Btextcolor%3D%23000%26amp%3Bbgcolor%3Dnone%26amp%3Bbp%3Dsinaminiblog%2Cqzone%2Crenren%2Cqqmb%26amp%3Bssc%3Dfalse%26amp%3Bsn%3Dtrue%26amp%3Btext%3D%E5%88%86%E4%BA%AB%E5%88%B0%22%3E%3C%2Fscript%3E',
+			
+			'3:DarkOrange:x': '%3Ca%20class%3D%22bshareDiv%22%20href%3D%22http%3A%2F%2Fwww.bshare.cn%2Fshare%22%3E%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%3C%2Fa%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23uuid%3D%26amp%3Bstyle%3D3%26amp%3Bfs%3D4%26amp%3Btextcolor%3D%23fff%26amp%3Bbgcolor%3D%23F60%26amp%3Btext%3D%E5%88%86%E4%BA%AB%E5%88%B0...%22%3E%3C%2Fscript%3E',
+			
+			'3:Blue:x': '%3Ca%20class%3D%22bshareDiv%22%20href%3D%22http%3A%2F%2Fwww.bshare.cn%2Fshare%22%3E%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%3C%2Fa%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23uuid%3D%26amp%3Bstyle%3D3%26amp%3Bfs%3D4%26amp%3Btextcolor%3D%23fff%26amp%3Bbgcolor%3D%2306C%26amp%3Btext%3D%E5%88%86%E4%BA%AB%E5%88%B0...%22%3E%3C%2Fscript%3E',
+			
+			'3:Grey:x': '%3Ca%20class%3D%22bshareDiv%22%20href%3D%22http%3A%2F%2Fwww.bshare.cn%2Fshare%22%3E%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE%3C%2Fa%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20charset%3D%22utf-8%22%20src%3D%22http%3A%2F%2Fstatic.bshare.cn%2Fb%2FbuttonLite.js%23uuid%3D%26amp%3Bstyle%3D3%26amp%3Bfs%3D4%26amp%3Btextcolor%3D%23000%26amp%3Bbgcolor%3D%23DDD%26amp%3Btext%3D%E5%88%86%E4%BA%AB%E5%88%B0...%22%3E%3C%2Fscript%3E'
+		};
+	
+		$('input.buttonStyle').click(function () {
+			$('input.buttonStyle').attr('checked', false);
+			$(this).attr('checked', true);
+			
+			var name = $(this).val();
+			
+			var style = decodeURIComponent(stylesMap[name].replace(/\+/g,  ' '));
+			style = insertUuid($('#uuidP').text(), style);
+			$('#bscode').val(style);
+			
+			$('input#option').val(name);
+		});
+		
+		$('ul.tabs').tabs('div.panes > div.panediv', { initialIndex: $('input#tab').val() });
+
+		$('#setStyles').click(function () {
+			var tabs = $('ul.tabs').data('tabs');
+			var tabIndex = tabs.getIndex();
+			$('input#tab').val(tabIndex);
+			
+			if (tabIndex != '0') {
+				$('input#option').val('null');
+			} else {
+				$('input#option').val($('input.buttonStyle:checked').val());
+			}
+			if ($('#bscode').val() == '' && $('input#option').val() != 'null') {
+				$('input.buttonStyle[value=' + $('input#option').val() + ']').trigger('click');
+			}
+		});
+	};
+	
+	var configInstall = function () {
+		$('#openGuide').click(function () {
+			var guide = $('#guidePosition');
+			// hack for ie
+			$(this).closest('div.section').height(720);
+			if (guide.is(':visible')) {
+				guide.hide();
+				$(this).closest('div.section').height(150);
+			} else {
+				guide.slideDown();
+			}			
+		});
+		$('#closeGuide').click(function () {
+			$('#guidePosition').fadeOut();
+			$(this).closest('div.section').height(150);
+		});
+		
+		
+		$('#uuidhelp').click(function () {
+			var uuidguide = $('#uuidguide');
+			
+			if (uuidguide.is(':visible')) {
+				uuidguide.hide();
+				
+		    $(this).closest('div.section').height(370);
+			      
+				    
+			 } else {
+			$(this).closest('div.section').height(420);
+				uuidguide.slideDown();
+				uuidguide.show();
+	
+			}			
+		});
+		
+		
+		
+	};
+	
+	var initConfig = function () {
+		var user = $('#userP').text().toString().replace(/(^\s*)|(\s*$)/g, '');
+		var uuid = $('#uuidP').text().toString().replace(/(^\s*)|(\s*$)/g, '');
+		var shareOnly = readCookie('phpcms_bshare_shareonly') || 0;
+		if (shareOnly == 0) {
+			$('#goBack').hide();
+			if (regular.test(user) && regular1.test(uuid)) {
+				authed();
+			} else {
+				noAuth();
+			}
+		} else {
+			share();
+		}	
+	};
+	
+	var initInstall = function () {
+		$('#closeGuide').trigger('click');	
+	}
+	
+	var initStyle = function () {
+		var tabs = $('ul.tabs').data('tabs');
+		if ($('input#tab').val() == '0' || $('#bscode').val() == '') {
+			$('input.buttonStyle[value=' + $('input#option').val() + ']').trigger('click');
+		}
+	};
+	
+	configAccount();
+	configInstall();
+	configStyle();
+	
+	initConfig();
+	initInstall();
+	initStyle();
+})(jQuery);
+</script>
+
+</body>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5]]></item>
+	<item id="Time"><![CDATA[2012-05-06 11:58]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/discuzx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[bShare分享按鈕]]></item>
+			<item id="identifier"><![CDATA[bshare]]></item>
+			<item id="description"><![CDATA[bShare是全球中文互聯網最強大的社交分享引擎！只需一個按鈕，就能為您的網站注入社交化功能，並提供強大的數據統計分析功能！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[bshare/]]></item>
+			<item id="copyright"><![CDATA[bShare Team]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[插件設置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[data]]></item>
+					<item id="menu"><![CDATA[數據統計]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="message1"><![CDATA[請輸入正確的郵箱地址！]]></item>
+				<item id="message2"><![CDATA[請輸入六位以上用戶密碼！]]></item>
+				<item id="message3"><![CDATA[很抱歉，windows用戶︰您需要改一改您的php.ini文件的設置，找到php_curl.dll，並取消前面的分號注釋就行了；Linux用戶︰您需要重新編譯您的PHP，打開編譯參數，在configure命令上加上“

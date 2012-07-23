@@ -568,11 +568,13 @@ CSS 写作注意事项：
 		.pmfl			PM friend list (Window)
 		*/
 
+
 /* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 960px; } #wp .wp { width: auto; }
 
 /* 页头 */
 	#toptb { line-height: 24px; }
 		/*#toptb a { float: left; padding: 0 4px; height: 24px; }最近才改的*/
+
 		#toptb a.showmenu { padding-right: 15px; }
 		#toptb a.hover { background-color: #FFF; }
 		#toptb .pipe { float: left; display: none; }

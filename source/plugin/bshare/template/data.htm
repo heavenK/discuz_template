@@ -1,0 +1,23 @@
+<link href="source/plugin/bshare/template/base.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="source/plugin/bshare/template/jquery-1.4.2.min.js"></script>
+
+<div id="dataModule" class="module" style="width: 855px;">
+	<div id="chart" class="section border-orange" style="display: block;">
+		<iframe src="{$dataUrl}" name="bshare" scrolling=no style="width: 823px; height: 2000px; border: 0px;"></iframe>
+	</div>
+	<input id="uuidD" type="hidden" value="{if isset($cfg_bshare['uuid'])}{$cfg_bshare['uuid']}{/if}" />
+	<div style="float:right;margin-right:10px;">	
+	{lang bshare:bShareHelp}
+	</div>
+</div>
+<script type="text/javascript">
+(function($){
+	var u = $('#uuidD').val().toString().replace(/(^\s*)|(\s*$)/g, '');;
+	var regular = /^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/ ;
+		
+	if(!regular.test(u))
+		$('#chart').hide();
+
+})(jQuery);
+
+</script>

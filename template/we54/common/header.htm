@@ -26,6 +26,7 @@
 	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
 	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
 	<!--{/if}-->
+
     <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}/template/kaiser/common/kaiser.css" />
     <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
@@ -53,6 +54,7 @@
 	
 	});
 	</script>
+
 
 </head>
 
@@ -90,10 +92,10 @@
                 </div>
             
             	<div class="nav" id="show"></div>
-            	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onsubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
+            	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
                 <div class="dl_zc">
                 	
-                    您好！欢迎来到新青年网站论坛 请 <a href="javascript:;" class="xi2" onclick="lsSubmit_tt()">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
+                    您好！欢迎来到新青年网站论坛 请 <a href="javascript:;" class="xi2" onClick="lsSubmit_tt()">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
                 </div>
                 </form>
                 <div class="y">
@@ -178,7 +180,7 @@
                         	<span><a href="#"></a></span>
                         	<p><a href="#"></a></p>
                         </div>
-                        <input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onfocus="if (value =='输入你想要搜索的内容'){value =''}" onblur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
+                        <input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onFocus="if (value =='输入你想要搜索的内容'){value =''}" onBlur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
                         <input style="border:none" type="submit" value="" class="aaa"/>
                     </div>
                 
