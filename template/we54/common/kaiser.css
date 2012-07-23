@@ -2,12 +2,24 @@
 /* CSS Document */
 
 /*ÄÚÈÝÒ³*/
-.bm .z					{ font-family:"ËÎÌå"; font-size:14px; color:#333333;}
-.bm .z b				{ font-weight:normal; float:left;}
-.bm .z a				{ color:#005bac;}
-.wp .pgt				{ float:left;}
-.wp .pgb				{ float:left;}
-.wp .pgt .pg			{ float:left;}
-.pgb a					{ margin-left:0;}
-.pgs #newspecial, .pgs #post_reply{ margin:0 0 0 5px; float:right;}
-.pg a.nxt				{ background-image:url(../static/image/common/kaiser_arw_r.gif);}
+#kaiser_pt							{ height:20px; margin:0;}
+.kaiser_bm							{ position:relative;}
+.kaiser_bm .z						{ font-size:14px; color:#333333; position:absolute; top:5px;}
+.kaiser_bm .z b						{ font-weight:normal; float:left;}
+.kaiser_bm .z a						{ color:#005bac;}
+.wp .pgt							{ float:left;}
+.wp .pgb							{ float:left;}
+.wp .pgt .pg						{ float:left;}
+.pgb a								{ margin-left:0;}
+.pgs #newspecial, .pgs #post_reply	{ margin:0 0 0 5px; float:right;}
+.pg a.nxt							{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
+.pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
+#pgt .pg, #pgt .pgb					{ margin-top:26px;}
+.kaiser_tr_top						{ background:#FFF url(../../../static/image/common/kaiser_view_top_bg.png) repeat-x; zoom:1;}
+.kaiser_pl_bm						{ border:1px solid #e7e7cb;}
+.kaiser_plc_ptm_pbn_vwthd a			{ color:#663300;}
+.kaiser_hm .xg1						{ color:#000 !important;}
+.pls								{ background:#f9f9f9; border-right-color:#d9d9d9;}
+.pls .pi							{ border-bottom:none; margin-bottom:0; padding-bottom:0px;}
+.kaiser_pls							{ background:#FFF url(../../../static/image/common/kaiser_view_top_bg.png) repeat-x; border-right:0;}
+.pls .avatar img					{ background:none; padding:0; border:1px solid #cacaca;}
