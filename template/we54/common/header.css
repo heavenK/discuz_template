@@ -1,0 +1,110 @@
+@charset "gb2312";
+/* CSS Document */
+
+body		{ background: url(/template/we54/images/header_bg.jpg) repeat-x top;}
+
+.wp { margin: 0 auto; width: 1000px; position:relative; }
+
+
+/*通用调图*/
+.nav,
+.nav_second,
+.bankuai,
+.bankuai:hover,
+.nav_three,
+.nav_nav i a,
+.nav_nav em a,
+.nav_nav b a,
+.nav_nav span a,
+.nav_nav p a,
+.ggg,
+.aaa,
+.aaa:hover{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
+
+
+#toptb a { padding:0; }
+
+
+.top_header { width:1000px; height:36px; overflow:hidden; }
+.zzz { width:125px; height:36px; float:left;}
+.dl_zc { line-height:40px; float:right; color:#666666; }
+.dl_zc a { text-decoration:none; color:#0035a0; float:none;}
+.dl_zc span { float:right;}
+.dl_zc i { float:right;}
+.nav { width:90px; height:28px; float:right; cursor:pointer; background-position:0 -75px; margin-left:15px; margin-top:8px; display:inline; }
+.nav:hover { background-position:-90px -75px; }
+
+
+/*顶部主导航*/
+.main_nav				 { width:998px; height:64px; border-bottom:1px #f5f5f5 solid; border-left:1px #f5f5f5 solid; border-right:1px #f5f5f5 solid; z-index:99999; background:#FFFFFF; display:none; position:absolute; top:36px; left:0; float:left; overflow:hidden;}
+	.main_nav li		 { margin:2px 0 0 11px; display:inline; float:left;}
+	.main_nav li a		 { color:#333333; text-decoration:none;  }
+	.main_nav li a:hover { color:#ff0000;}
+	.main_nav h1 		 { width:1px; height:64px; overflow:hidden; float:left;}
+	.nav_a 				 { width:166px; height:54px; margin-top:4px; margin-left:15px; _margin-left:5px; _margin-right:10px;  display:inline; overflow:hidden; float:left;}
+	.nav_b 				 { width:178px; height:54px; margin-top:4px; margin-left:7px; _margin-right:7px; display:inline; overflow:hidden; float:left;}
+	.nav_c 				 { width:348px; height:54px; margin-top:4px; margin-left:7px; _margin-right:7px; display:inline; overflow:hidden; float:left;}
+	.nav_d				 { width:240px; height:54px; margin-top:4px; margin-left:7px; display:inline; overflow:hidden; float:left;}
+
+
+.top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left;}
+.top_ad { width:1000px; height:70px; margin:5px 0 5px 0; display:inline; overflow:hidden; float:left;}
+.top_ad_02 { width:200px; height:70px; overflow:hidden; float:left;}
+.top_ad_03 { width:590px; height:70px; margin:0 5px 0 5px; display:inline; overflow:hidden; float:left;}
+.top_ad_04 { width:200px; height:70px; overflow:hidden; float:left;}
+.top_ad_05 { width:1000px; height:90px; margin:25px 0 0 0; _margin:5px 0 0 0; display:inline; overflow:hidden; float:left;}
+
+
+
+.nav_st { width:1000px; height:20px; position:relative; float:left; }
+	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
+	.bankuai { width:104px; height:35px; background-position:-104px -143px; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
+	.bankuai:hover { background-position:0 -143px;}
+	.nav_nav { width:600px; height:40px; margin-left:12px; display:inline; overflow:hidden; float:left;}	
+	.nav_nav i { width:80px; height:40px; overflow:hidden; float:left;}
+	.nav_nav i a { width:80px; height:40px; background-position:-208px -143px; overflow:hidden; float: left; padding:0; height:40px;}
+	.nav_nav i a:hover { background-position:-288px -143px;}
+	.nav_nav em { width:80px; height:40px; margin:0 35px 0 16px; display:inline; overflow:hidden; float:left;}
+	.nav_nav em a { width:80px; height:40px; background-position:-368px -143px; overflow:hidden; float: left; padding:0; height:40px;}
+	.nav_nav em a:hover { background-position:-448px -143px;}
+	.nav_nav em a:active  { background-position:-448px -143px;}
+	.nav_nav b { width:80px; height:40px; overflow:hidden; float:left;}
+	.nav_nav b a { width:80px; height:40px; background-position:-528px -143px; overflow:hidden; float: left; padding:0; height:40px;}
+	.nav_nav b a:hover { background-position:-608px -143px;}
+	.nav_nav span { width:100px; height:40px; margin:0 33px 0 34px; display:inline; overflow:hidden; float:left;}
+	.nav_nav span a { width:100px; height:40px; background-position:-688px -143px; overflow:hidden; float: left; padding:0; height:40px;}
+	.nav_nav span a:hover { background-position:-788px -143px;}
+	.nav_nav p { width:80px; height:40px; overflow:hidden; float:left;}
+	.nav_nav p a { width:80px; height:40px; background-position:-888px -143px; overflow:hidden; float: left; padding:0; height:40px;}
+	.nav_nav p a:hover { background-position:0 -178px;}
+	.ggg { width:149px; _width:149px; text-indent:1em; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; background-position:-334px -75px; overflow:hidden; float:left;}
+	.aaa { width:77px; height:26px; margin:6px 0 0 3px; display:inline; overflow:hidden; float:left; background-position:-180px -74px; cursor:pointer;}
+	.aaa:hover { background-position:-257px -74px;}
+	.nav_three { width:1000px; height:75px; z-index:99999; background-position:0 0; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
+	.nav_three ul { width:988px; height:66px; margin:4px 0 0 10px; display:inline; overflow:hidden; float:left;}	
+	.nav_three ul li { width:122px; height:22px; overflow:hidden; float:left; font-size:14px; line-height:22px;}
+	.nav_three ul li a { text-decoration:none; color:#663300; margin-left:35px;}
+	.nav_three ul li a:hover { font-weight:bold; text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
