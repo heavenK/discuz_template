@@ -17,9 +17,16 @@
 #pgt .pg, #pgt .pgb					{ margin-top:26px;}
 .kaiser_tr_top						{ background:#FFF url(../../../static/image/common/kaiser_view_top_bg.png) repeat-x; zoom:1;}
 .kaiser_pl_bm						{ border:1px solid #e7e7cb;}
+.kaiser_plc_ptm_pbn_vwthd			{ height:24px;}
 .kaiser_plc_ptm_pbn_vwthd a			{ color:#663300;}
 .kaiser_hm .xg1						{ color:#000 !important;}
 .pls								{ background:#f9f9f9; border-right-color:#d9d9d9;}
 .pls .pi							{ border-bottom:none; margin-bottom:0; padding-bottom:0px;}
 .kaiser_pls							{ background:#FFF url(../../../static/image/common/kaiser_view_top_bg.png) repeat-x; border-right:0;}
 .pls .avatar img					{ background:none; padding:0; border:1px solid #cacaca;}
+.kaiser_ext							{ padding:0 0 10px 15px;}
+.xl2 li								{ width:69px; height:22px; padding:8px 0 11px 0;}
+.kaiser_pm2 a						{ width:63px; height:22px; background:url(../../../static/image/common/kaiser_pmto.png) no-repeat; float:left;}
+.kaiser_addflw a					{ width:63px; height:22px; background:url(../../../static/image/common/kaiser_flw.png) no-repeat; float:left;}
+#p_btn i, #p_btn a					{ background:none;}
+#p_btn a							{ margin-right:0; padding:0;}
