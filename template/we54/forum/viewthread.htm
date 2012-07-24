@@ -146,7 +146,7 @@
 	<table cellspacing="0" cellpadding="0">
 		<tr class="kaiser_tr_top">
 			
-			<td class="plc ptm pbn vwthd kaiser_plc_ptm_pbn_vwthd">
+			<td class="plc ptm pbn vwthd kaiser_plc_ptm_pbn_vwthd" style=" border-left:1px solid #e7e7cb; border-top:1px solid #e7e7cb;">
 				<!--{if !IS_ROBOT}-->
 					<div class="y" style=" display:none;">
 						<!--{if $post['invisible'] == 0}--><a href="forum.php?mod=viewthread&action=printable&tid=$_G[tid]" title="{lang thread_printable}" target="_blank"><img src="{IMGDIR}/print.png" alt="{lang thread_printable}" class="vm" /></a>
@@ -187,7 +187,7 @@
 				<!--{hook/viewthread_title_extra}-->
 			</td>
             
-            <td class="pls ptm kaiser_pls">
+            <td class="pls ptm kaiser_pls" style=" border-top:1px solid #e7e7cb; border-right:1px solid #e7e7cb;">
 				<!--{if $_G['page'] > 1}-->
 				<div id="tath" class="cl">
 					<!--{if $_G[forum_thread][authorid] && $_G[forum_thread][author]}-->
@@ -287,7 +287,7 @@
 			<!--{if $rushreply && $_GET['checkrush'] && $post['rewardfloor'] != 1}-->
 				<!--{eval continue;}-->
 			<!--{/if}-->
-			<div id="post_$post[pid]">
+			<div id="post_$post[pid]" style=" border:1px solid #d9d9d9; margin-bottom:8px;">
 				<!--{subtemplate forum/viewthread_node}-->
 			</div>
 			<!--{eval $postcount++;}-->
@@ -315,14 +315,14 @@
 
 $_G['forum_tagscript']
 
-<div class="pgs mtm mbm cl">
-	$multipage
+<div class="pgs mtm mbm cl kaiser_pgs">
 	<span class="pgb y"{if $_G['setting']['visitedforums']} id="visitedforumstmp" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'21'})"{/if}><a href="$upnavlink">{lang return_forumdisplay}</a></span>
-	<!--{if !$_G['forum_thread']['is_archived']}-->
-		<a id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} href="javascript:;" title="{lang send_posts}"><img src="{IMGDIR}/pn_post.png" alt="{lang send_posts}" /></a>
+    <div class="pgt">$multipage</div>
+    <!--{if $allowpostreply && !$_G['forum_thread']['archiveid']}-->
+		<a id="post_replytmp" onclick="showWindow('reply', 'forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]')" href="javascript:;" title="{lang reply}"><img src="{IMGDIR}/kaiser_pn_reply.png" alt="{lang reply}" /></a>
 	<!--{/if}-->
-	<!--{if $allowpostreply && !$_G['forum_thread']['archiveid']}-->
-		<a id="post_replytmp" onclick="showWindow('reply', 'forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]')" href="javascript:;" title="{lang reply}"><img src="{IMGDIR}/pn_reply.png" alt="{lang reply}" /></a>
+	<!--{if !$_G['forum_thread']['is_archived']}-->
+		<a id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} href="javascript:;" title="{lang send_posts}"><img src="{IMGDIR}/kaiser_pn_post.png" alt="{lang send_posts}" /></a>
 	<!--{/if}-->
 </div>
 
