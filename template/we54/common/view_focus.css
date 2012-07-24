@@ -1,0 +1,8 @@
+@charset "gb2312";
+/* CSS Document */
+
+.view_focus .title						{ border-bottom:1px solid #e3e3e3;}
+.view_focus .view_focus_pic				{ width:272px; height:110px; margin:0; overflow:hidden; float:left;}
+.view_focus .view_focus_pic dl			{ width:120px; height:110px; margin:0 0 0 16px; display:inline; overflow:hidden; float:left;}
+.view_focus .view_focus_pic dl dd		{ width:120px; height:90px; overflow:hidden; float:left;}
+.view_focus .view_focus_pic dl dt		{ width:120px; height:20px; overflow:hidden; float:left;}
