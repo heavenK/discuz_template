@@ -7,7 +7,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 /*kaiser*/
 #toptb #diy-tg_menu{ margin:-2px 0 0 -18px;}
 .xg2 img{ width:763px; height:165px;}
-
+.wp { margin: 0 auto; width: 1000px; position:relative; }
 
 /*Í¨ÓÃµ÷Í¼*/
 .nav,
