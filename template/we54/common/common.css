@@ -577,7 +577,7 @@ CSS 写作注意事项：
 
 		#toptb a.showmenu { padding-right: 15px; }
 		#toptb a.hover { background-color: #FFF; }
-		#toptb .pipe { float: left; display: none; }
+		/*#toptb .pipe { float: left; display: none; }最近才改的*/
 	#hd { border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} }
 		#hd .wp { padding: 10px 0 0; }
 			#diy-tg { float: right; width: 55px; background: url({STATICURL}image/diy/panel-toggle.png) no-repeat 100% 1px; text-indent: -9999px; overflow: hidden; }

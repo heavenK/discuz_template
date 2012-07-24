@@ -15,15 +15,10 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 .bankuai,
 .bankuai:hover,
 .nav_three,
-.nav_nav i a,
-.nav_nav em a,
-.nav_nav b a,
-.nav_nav span a,
-.nav_nav p a,
 .ggg,
 .aaa,
 .aaa:hover{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
-
+ 
 
 #toptb a { padding:0; }
 
@@ -64,23 +59,22 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
 	.bankuai { width:104px; height:35px; background-position:-104px -143px; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.bankuai:hover { background-position:0 -143px;}
-	.nav_nav { width:600px; height:40px; margin-left:12px; display:inline; overflow:hidden; float:left;}	
-	.nav_nav i { width:80px; height:40px; overflow:hidden; float:left;}
-	.nav_nav i a { width:80px; height:40px; background-position:-208px -143px; overflow:hidden; float: left; padding:0; height:40px;}
-	.nav_nav i a:hover { background-position:-288px -143px;}
-	.nav_nav em { width:80px; height:40px; margin:0 35px 0 16px; display:inline; overflow:hidden; float:left;}
-	.nav_nav em a { width:80px; height:40px; background-position:-368px -143px; overflow:hidden; float: left; padding:0; height:40px;}
-	.nav_nav em a:hover { background-position:-448px -143px;}
-	.nav_nav em a:active  { background-position:-448px -143px;}
-	.nav_nav b { width:80px; height:40px; overflow:hidden; float:left;}
-	.nav_nav b a { width:80px; height:40px; background-position:-528px -143px; overflow:hidden; float: left; padding:0; height:40px;}
-	.nav_nav b a:hover { background-position:-608px -143px;}
-	.nav_nav span { width:100px; height:40px; margin:0 33px 0 34px; display:inline; overflow:hidden; float:left;}
-	.nav_nav span a { width:100px; height:40px; background-position:-688px -143px; overflow:hidden; float: left; padding:0; height:40px;}
-	.nav_nav span a:hover { background-position:-788px -143px;}
-	.nav_nav p { width:80px; height:40px; overflow:hidden; float:left;}
-	.nav_nav p a { width:80px; height:40px; background-position:-888px -143px; overflow:hidden; float: left; padding:0; height:40px;}
-	.nav_nav p a:hover { background-position:0 -178px;}
+	.nav_nav { width:600px; height:40px; line-height:42px; font-size:18px; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; margin-left:12px; display:inline; overflow:hidden; float:left;}	
+	.nav_nav i { width:80px; height:40px; text-align:center; overflow:hidden; float:left;}
+	.nav_nav i a { width:80px; height:40px; overflow:hidden; float: left; padding:0; height:40px; color:#663300;}
+	.nav_nav i a:hover { width:80px; height:40px; text-decoration:none;  overflow:hidden; float: left; background:url(/template/we54/images/size_bg.jpg) repeat-x; }
+	.nav_nav em { width:80px; height:40px;text-align:center;  margin:0 35px 0 16px; display:inline; overflow:hidden; float:left;}
+	.nav_nav em a { width:80px; height:40px; overflow:hidden; float: left; padding:0; height:40px; color:#663300;}
+	.nav_nav em a:hover { width:80px; height:40px; text-decoration:none;  overflow:hidden; float: left; background:url(/template/we54/images/size_bg.jpg) repeat-x; }
+	.nav_nav b { width:80px; height:40px; text-align:center; font-weight:normal; overflow:hidden; float:left;}
+	.nav_nav b a { width:80px; height:40px; overflow:hidden; float: left; padding:0; height:40px; color:#663300;} 
+	.nav_nav b a:hover { width:80px; height:40px; text-decoration:none;  overflow:hidden; float: left; background:url(/template/we54/images/size_bg.jpg) repeat-x;}
+	.nav_nav span { width:100px; height:40px;text-align:center;  margin:0 33px 0 34px; display:inline; overflow:hidden; float:left;}
+	.nav_nav span a { width:100px; height:40px; overflow:hidden; float: left; padding:0; height:40px; color:#663300;}
+	.nav_nav span a:hover { width:100px; height:40px; text-decoration:none;  overflow:hidden; float: left; background:url(/template/we54/images/size_bg.jpg) repeat-x; }
+	.nav_nav p { width:80px; height:40px; text-align:center; overflow:hidden; float:left;}
+	.nav_nav p a { width:80px; height:40px; overflow:hidden; float: left; padding:0; height:40px; color:#663300;}
+	.nav_nav p a:hover { width:80px; height:40px; text-decoration:none;  overflow:hidden; float: left; background:url(/template/we54/images/size_bg.jpg) repeat-x; }
 	.ggg { width:149px; _width:149px; text-indent:1em; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; background-position:-334px -75px; overflow:hidden; float:left;}
 	.aaa { width:77px; height:26px; margin:6px 0 0 3px; display:inline; overflow:hidden; float:left; background-position:-180px -74px; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
