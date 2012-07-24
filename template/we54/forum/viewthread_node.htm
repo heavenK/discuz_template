@@ -334,7 +334,7 @@
 			<!--{hook/viewthread_modaction}-->
 
 			<!--{if $post['invisible'] == 0}-->
-				<div id="p_btn" class="mtw mbm cl">
+				<div id="p_btn" class="mtw mbm cl" style="text-align:center;">
 					<!--{if !empty($_G['setting']['pluginhooks']['viewthread_share_method'])}-->
 						<div class="tshare cl">
 							<strong>{lang viewthread_share_to}:</strong>
@@ -361,11 +361,11 @@
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{if $_G['group']['raterange'] && $post['authorid']}-->
-						<a href="javascript:;" id="ak_rate" onclick="showWindow('rate', 'forum.php?mod=misc&action=rate&tid=$_G[tid]&pid=$post[pid]', 'get', -1);return false;" title="{echo count($postlist[$post[pid]][totalrate]);} {lang people_score}"><i><img src="{IMGDIR}/kaiser_pingfen_btn.png" alt="{lang rate}" /></i></a>
+						<a href="javascript:;" id="ak_rate" onclick="showWindow('rate', 'forum.php?mod=misc&action=rate&tid=$_G[tid]&pid=$post[pid]', 'get', -1);return false;" title="{echo count($postlist[$post[pid]][totalrate]);} {lang people_score}"><img src="{IMGDIR}/kaiser_pingfen_btn.png" /></a>
 					<!--{/if}-->
                     <!--{if $post['invisible'] == 0}-->
 						<!--{if (!$_G['uid'] || $allowpostreply) && !$needhiddenreply}-->
-							<a class="fastre" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"><i><img src="{IMGDIR}/kaiser_reply_btn.png" alt="»Ø¸´" /></i></a>
+							<a class="fastre" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"><img src="{IMGDIR}/kaiser_reply_btn.png" alt="»Ø¸´" /></a>
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{hook/viewthread_useraction}-->
@@ -501,21 +501,6 @@
 	</td>
 </tr>
 <!--{/if}-->
-<tr class="ad">
-	<td class="pls"></td>
-	<td class="plc">
-		<!--{if $post['first'] && $_G[forum_thread][special] == 5 && $_G[forum_thread][displayorder] >= 0}-->
-			<ul class="ttp cl">
-				<li style="display:inline;margin-left:12px"><strong class="bw0 bg0_all">{lang debate_filter}: </strong></li>
-				<li{if !isset($_GET['stand'])} class="xw1 a"{/if}><a href="forum.php?mod=viewthread&tid=$_G[tid]&extra=$_GET[extra]" hidefocus="true">{lang all}</a></li>
-				<li{if $_GET['stand'] == 1} class="xw1 a"{/if}><a href="forum.php?mod=viewthread&tid=$_G[tid]&extra=$_GET[extra]&stand=1" hidefocus="true">{lang debate_square}</a></li>
-				<li{if $_GET['stand'] == 2} class="xw1 a"{/if}><a href="forum.php?mod=viewthread&tid=$_G[tid]&extra=$_GET[extra]&stand=2" hidefocus="true">{lang debate_opponent}</a></li>
-				<li{if isset($_GET['stand']) && $_GET['stand'] == 0} class="xw1 a"{/if}><a href="forum.php?mod=viewthread&tid=$_G[tid]&extra=$_GET[extra]&stand=0" hidefocus="true">{lang debate_neutral}</a></li>
-			</ul>
-		<!--{/if}-->
-		<!--{if $_G['forum_thread']['replies']}--><!--{ad/interthread/a_p/$postcount}--><!--{/if}-->
-	</td>
-</tr>
 </table>
 <!--{if !empty($aimgs[$post[pid]])}-->
 <script type="text/javascript" reload="1">
