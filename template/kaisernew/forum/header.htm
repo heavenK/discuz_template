@@ -26,6 +26,7 @@
 	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
 	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
 	<!--{/if}-->
+    <link href="/template/kaisernew/styles/header.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
@@ -58,10 +59,7 @@
 			<!--{hook/global_cpnav_top}-->
 			<div class="wp">
 				<div class="z">
-					<!--{loop $_G['setting']['topnavs'][0] $nav}-->
-						<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
-					<!--{/loop}-->
-					<!--{hook/global_cpnav_extra1}-->
+					<a><img src="template/kaisernew/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
 				</div>
 				<div class="y">
 					<!--{hook/global_cpnav_extra2}-->

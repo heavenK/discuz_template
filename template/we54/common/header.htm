@@ -26,6 +26,36 @@
 	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
 	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
 	<!--{/if}-->
+
+    <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}/template/kaiser/common/kaiser.css" />
+    <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
+    <script src="template/we54/js/logging.js" type="text/javascript"></script>
+	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	var jq = jQuery.noConflict(); 
+    jq(document).ready(function(){
+      
+      jq("#ss, #show").hover(function(){
+      jq(".main_nav").show();
+      },function (){jq(".main_nav").hide();});
+    
+    });
+    </script>
+	
+    <script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+	  
+	  jq("#bk, #ycbk").hover(function(){
+	  jq(".nav_three").show();
+	  },function (){jq(".nav_three").hide();});
+	
+	});
+	</script>
+
+
 </head>
 
 <body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
@@ -57,25 +87,137 @@
 		<div id="toptb" class="cl">
 			<!--{hook/global_cpnav_top}-->
 			<div class="wp">
-				<div class="z">
-					<!--{loop $_G['setting']['topnavs'][0] $nav}-->
-						<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
-					<!--{/loop}-->
-					<!--{hook/global_cpnav_extra1}-->
-				</div>
-				<div class="y">
-					<!--{hook/global_cpnav_extra2}-->
-					<!--{loop $_G['setting']['topnavs'][1] $nav}-->
-						<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
-					<!--{/loop}-->
-					<!--{if empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']}-->
-						<a href="javascript:;" onClick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
-					<!--{/if}-->
-					<!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onMouseOver="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
-					<!--{if check_diy_perm($topic)}-->
-						$diynav
-					<!--{/if}-->
-				</div>
+                <div class="zzz">
+                    <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
+                </div>
+            
+            	<div class="nav" id="show"></div>
+            	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
+                <div class="dl_zc">
+                	
+                    您好！欢迎来到新青年网站论坛 请 <a href="javascript:;" class="xi2" onClick="lsSubmit_tt()">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
+                </div>
+                </form>
+                <div class="y">
+                    <!--{hook/global_cpnav_extra2}-->
+                    <!--{loop $_G['setting']['topnavs'][1] $nav}-->
+                        <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{if empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']}-->
+                        <a href="javascript:;" onClick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
+                    <!--{/if}-->
+                    <!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onMouseOver="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
+                    <!--{if check_diy_perm($topic)}-->
+                        $diynav
+                    <!--{/if}-->
+                </div>
+               
+                <div class="main_nav" id="ss"><!--顶部主导航-->
+                    <ul class="nav_a">
+                        <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
+                        <li><a href="#" target="_blank">专题</a></li>
+                        <li><a href="#" target="_blank">图片</a></li>
+                        <li><a href="#" target="_blank" style="color:#ff0000;">评论</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold;">视频</a></li>
+                        <li><a href="#" target="_blank">独家</a></li>
+                        <li><a href="#" target="_blank">娱乐</a></li>
+                        <li><a href="#" target="_blank">访谈</a></li>
+                    </ul>
+                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                    <ul class="nav_b">
+                        <li><a href="#" target="_blank" style="font-weight:bold;">美达</a></li>
+                        <li><a href="#" target="_blank">五年四班</a></li>
+                        <li><a href="#" target="_blank">荔枝先生</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
+                        <li><a href="#" target="_blank">原创节目</a></li>
+                        <li><a href="#" target="_blank">非常夜店</a></li>
+                    </ul>
+                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                    <ul class="nav_c">
+                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
+                        <li><a href="#" target="_blank">理财</a></li>
+                        <li><a href="#" target="_blank">镀金时代</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold;">职场充电</a></li>
+                        <li><a href="#" target="_blank">人在学途</a></li>
+                        <li><a href="#" target="_blank">天才宝贝</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold;">爱车</a></li>
+                        <li><a href="#" target="_blank">高校</a></li>
+                        <li><a href="#" target="_blank">美食探店</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold;">心随我动</a></li>
+                        <li><a href="#" target="_blank">故地新游</a></li>
+                        <li><a href="#" target="_blank" style="color:#ff0000;">玩转大连</a></li>
+                    </ul>
+                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                    <ul class="nav_d">
+                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">论坛</a></li>
+                        <li><a href="#" target="_blank">大连你好</a></li>
+                        <li><a href="#" target="_blank" >不惜泡吧</a></li>
+                        <li><a href="#" target="_blank" >偶秀偶拍</a></li>
+                        <li><a href="#" target="_blank" style="font-weight:bold;">精华</a></li>
+                        <li><a href="#" target="_blank" >纯粹女人</a></li>
+                        <li><a href="#" target="_blank" >亲亲宝贝</a></li>
+                        <li><a href="#" target="_blank" >视频社区</a></li>
+                    </ul>
+                </div>
+                
+                <div class="top_ad_01">
+                    <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="70" border="0"/></a>
+                </div> 
+                
+                <div class="top_ad">
+                    <div class="top_ad_02"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="200" height="70" border="0"/></a></div>	
+                    <div class="top_ad_03"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="590" height="70" border="0"/></a></div>
+                    <div class="top_ad_04"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="200" height="70" border="0"/></a></div>
+                </div>
+                
+                <div class="nav_st">
+                    <div class="nav_second">
+                        <div class="bankuai" id="bk"></div>
+                    	<div class="nav_nav">
+                    		<i><a href="#"></a></i>
+                    		<em><a href="#"></a></em>
+                        	<b><a href="#"></a></b>
+                        	<span><a href="#"></a></span>
+                        	<p><a href="#"></a></p>
+                        </div>
+                        <input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onFocus="if (value =='输入你想要搜索的内容'){value =''}" onBlur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
+                        <input style="border:none" type="submit" value="" class="aaa"/>
+                    </div>
+                
+                    <div class="nav_three" id="ycbk">
+                        <ul>
+                            <li><a href="#" target="_blank">大连你好</a></li>
+                            <li><a href="#" target="_blank">纯粹女人</a></li>
+                            <li><a href="#" target="_blank">法律咨询</a></li>
+                            <li><a href="#" target="_blank">欢乐时光</a></li>
+                            <li><a href="#" target="_blank">非常夜店</a></li>
+                            <li><a href="#" target="_blank">谈车论驾</a></li>
+                            <li><a href="#" target="_blank">君子爱财</a></li>
+                            <li><a href="#" target="_blank">新青年歌友会</a></li>
+                            <li><a href="#" target="_blank">不惜泡吧</a></li>
+                            <li><a href="#" target="_blank">美容达人</a></li>
+                            <li><a href="#" target="_blank">两性咨询</a></li>
+                            <li><a href="#" target="_blank">全城热恋 </a></li>
+                            <li><a href="#" target="_blank">体坛风云</a></li>
+                            <li><a href="#" target="_blank">教育培训</a></li>
+                            <li><a href="#" target="_blank">人在旅途</a></li>
+                            <li><a href="#" target="_blank">淘宝大连街</a></li>
+                            <li><a href="#" target="_blank">偶秀偶拍</a></li>
+                            <li><a href="#" target="_blank">妈 妈 团</a></li>
+                            <li><a href="#" target="_blank">寻医问诊</a></li>
+                            <li><a href="#" target="_blank">好片同享 </a></li>
+                            <li><a href="#" target="_blank">买房卖房</a></li>
+                            <li><a href="#" target="_blank">学 院 派</a></li>
+                            <li><a href="#" target="_blank">饭统大连</a></li>
+                            <li><a href="#" target="_blank">五四宜家人</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="top_ad_05">
+                    <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="90" border="0"/></a>
+                </div>
+                
 			</div>
 		</div>
 
@@ -110,108 +252,7 @@
 				</div>
 		<!--{/if}-->
 
-		<!--{ad/headerbanner/wp a_h}-->
-		<div id="hd">
-			<div class="wp">
-				<div class="hdc cl">
-					<!--{eval $mnid = getcurrentnav();}-->
-					<h2><!--{if !isset($_G['setting']['navlogos'][$mnid])}--><a href="./" title="$_G['setting']['bbname']">{$_G['style']['boardlogo']}</a><!--{else}-->$_G['setting']['navlogos'][$mnid]<!--{/if}--></h2>
-
-					<!--{if $_G['uid']}-->
-					<div id="um">
-						<div class="avt y"><a href="home.php?mod=space&uid=$_G[uid]"><!--{avatar($_G[uid],small)}--></a></div>
-						<p>
-							<strong class="vwmy{if $_G['setting']['connect']['allow'] && $_G[member][conisbind]} qq{/if}"><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a></strong>
-							<!--{if $_G['group']['allowinvisible']}-->
-							<span id="loginstatus">
-								<a id="loginstatusid" href="member.php?mod=switchstatus" title="{lang login_switch_invisible_mode}" onClick="ajaxget(this.href, 'loginstatus');return false;" class="xi2"></a>
-							</span>
-							<!--{/if}-->
-							<!--{hook/global_usernav_extra1}-->
-							<span class="pipe">|</span><!--{hook/global_usernav_extra4}--><a href="home.php?mod=spacecp">{lang setup}</a>
-							<span class="pipe">|</span><a href="home.php?mod=space&do=pm" id="pm_ntc"{if $_G[member][newpm]} class="new"{/if}>{lang pm_center}</a>
-							<span class="pipe">|</span><a href="home.php?mod=space&do=notice" id="myprompt"{if $_G[member][newprompt]} class="new"{/if}>{lang remind}<!--{if $_G[member][newprompt]}-->($_G[member][newprompt])<!--{/if}--></a><span id="myprompt_check"></span>
-							<!--{if $_G['setting']['taskon'] && !empty($_G['cookie']['taskdoing_'.$_G['uid']])}--><span class="pipe">|</span><a href="home.php?mod=task&item=doing" id="task_ntc" class="new">{lang task_doing}</a><!--{/if}-->
-							<!--{if ($_G['group']['allowmanagearticle'] || $_G['group']['allowpostarticle'] || $_G['group']['allowdiy'] || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 6) || getstatus($_G['member']['allowadmincp'], 2) || getstatus($_G['member']['allowadmincp'], 3))}-->
-								<span class="pipe">|</span><a href="portal.php?mod=portalcp"><!--{if $_G['setting']['portalstatus'] }-->{lang portal_manage}<!--{else}-->{lang portal_block_manage}<!--{/if}--></a>
-							<!--{/if}-->
-							<!--{if $_G['uid'] && $_G['group']['radminid'] > 1}-->
-								<span class="pipe">|</span><a href="forum.php?mod=modcp&fid=$_G[fid]" target="_blank">{lang forum_manager}</a>
-							<!--{/if}-->
-							<!--{if $_G['uid'] && $_G['adminid'] == 1 && $_G['setting']['cloud_status']}-->
-								<span class="pipe">|</span><a href="admin.php?frames=yes&action=cloud&operation=applist" target="_blank">{lang cloudcp}</a>
-							<!--{/if}-->
-							<!--{if $_G['uid'] && getstatus($_G['member']['allowadmincp'], 1)}-->
-								<span class="pipe">|</span><a href="admin.php" target="_blank">{lang admincp}</a>
-							<!--{/if}-->
-							<!--{hook/global_usernav_extra2}-->
-							<span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
-						</p>
-						<p>
-							<!--{hook/global_usernav_extra3}-->
-							<!--{eval $upgradecredit = $_G['uid'] && $_G['group']['grouptype'] == 'member' && $_G['group']['groupcreditslower'] != 999999999 ? $_G['group']['groupcreditslower'] - $_G['member']['credits'] : false;}-->
-							<a href="home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu"{if !$_G[setting][bbclosed]} onMouseOver="delayShow(this, showCreditmenu);" class="showmenu"{/if}>{lang credits}: $_G[member][credits]</a>
-							<span class="pipe">|</span>{lang usergroup}: <a href="home.php?mod=spacecp&ac=usergroup"{if $upgradecredit !== 'false'} id="g_upmine" class="xi2" onMouseOver="delayShow(this, showUpgradeinfo)"{/if}>$_G[group][grouptitle]</a>
-						</p>
-					</div>
-					<!--{elseif !empty($_G['cookie']['loginuser'])}-->
-					<p>
-						<strong><a id="loginuser" class="noborder"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></strong>
-						<span class="pipe">|</span><a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a>
-						<span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
-					</p>
-					<!--{elseif !$_G[connectguest]}-->
-						<!--{template member/login_simple}-->
-					<!--{else}-->
-					<div id="um">
-						<div class="avt y"><!--{avatar(0,small)}--></div>
-						<p>
-							<strong class="vwmy qq">{$_G[member][username]}</strong>
-							<!--{hook/global_usernav_extra1}-->
-							<span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
-						</p>
-						<p>
-							<a href="home.php?mod=spacecp&ac=credit&showcredit=1">{lang credits}: 0</a>
-							<span class="pipe">|</span>{lang usergroup}: $_G[group][grouptitle]
-						</p>
-					</div>
-					<!--{/if}-->
-				</div>
-
-				<div id="nv">
-					<a href="javascript:;" id="qmenu" onMouseOver="showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});">{lang my_nav}</a>
-					<ul>
-						<!--{loop $_G['setting']['navs'] $nav}-->
-							<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {if $mnid == $nav[navid]}class="a" {/if}$nav[nav]></li><!--{/if}-->
-						<!--{/loop}-->
-					</ul>
-					<!--{hook/global_nav_extra}-->
-				</div>
-				<!--{if !empty($_G['setting']['plugins']['jsmenu'])}-->
-					<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
-					<!--{loop $_G['setting']['plugins']['jsmenu'] $module}-->
-						 <!--{if !$module['adminid'] || ($module['adminid'] && $_G['adminid'] > 0 && $module['adminid'] >= $_G['adminid'])}-->
-						 <li>$module[url]</li>
-						 <!--{/if}-->
-					<!--{/loop}-->
-					</ul>
-				<!--{/if}-->
-				$_G[setting][menunavs]
-				<div id="mu" class="cl">
-				<!--{if $_G['setting']['subnavs']}-->
-					<!--{loop $_G[setting][subnavs] $navid $subnav}-->
-						<!--{if $_G['setting']['navsubhover'] || $mnid == $navid}-->
-						<ul class="cl {if $mnid == $navid}current{/if}" id="snav_$navid" style="display:{if $mnid != $navid}none{/if}">
-						$subnav
-						</ul>
-						<!--{/if}-->
-					<!--{/loop}-->
-				<!--{/if}-->
-				</div>
-				<!--{ad/subnavbanner/a_mu}-->
-				<!--{subtemplate common/pubsearchform}-->
-			</div>
-		</div>
+		
 
 		<!--{hook/global_header}-->
 	<!--{/if}-->
