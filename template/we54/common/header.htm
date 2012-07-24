@@ -91,7 +91,7 @@
                     <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
                 </div>
             
-            	<div class="nav" id="show"></div>
+            	<div class="nav" id="show" onmouseover="this.style.background='url(/template/we54/images/dh_02.jpg) no-repeat'" onmouseout="this.style.background='url(/template/we54/images/dh_01.jpg) no-repeat'"></div>
             	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
                 <div class="dl_zc">
                 	
@@ -159,7 +159,7 @@
                         <li><a href="#" target="_blank" >视频社区</a></li>
                     </ul>
                 </div>
-                 
+                
                 <div class="top_ad_01">
                     <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="70" border="0"/></a>
                 </div> 
@@ -172,13 +172,13 @@
                 
                 <div class="nav_st">
                     <div class="nav_second">
-                        <div class="bankuai" id="bk"></div>
+                        <div class="bankuai" id="bk" onmouseover="this.style.background='url(/template/we54/images/bk_02.jpg) no-repeat'" onmouseout="this.style.background='url(/template/we54/images/bk_01.jpg) no-repeat'"></div>
                     	<div class="nav_nav">
-                    		<i><a href="#">首页</a></i>
-                    		<em><a href="#">偶秀偶拍</a></em>
-                        	<b><a href="#">美达贴吧</a></b>
-                        	<span><a href="#">新青年摄影</a></span>
-                        	<p><a href="#">贴图专区</a></p>
+                    		<li onmouseover="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onmouseout="this.style.background=''"><a href="#">首页</a></li>
+							<li onmouseover="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onmouseout="this.style.background=''"><a href="#">偶秀偶拍</a></li>
+                            <li onmouseover="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onmouseout="this.style.background=''"><a href="#">美达贴吧</a></li>
+							<li onmouseover="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onmouseout="this.style.background=''"><a href="#">新青年摄影</a></li>
+                            <li onmouseover="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onmouseout="this.style.background=''"><a href="#">贴图专区</a></li>
                         </div>
                         <input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onFocus="if (value =='输入你想要搜索的内容'){value =''}" onBlur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
                         <input style="border:none" type="submit" value="" class="aaa"/>
