@@ -569,7 +569,7 @@ CSS 写作注意事项：
 		*/
 
 
-/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 960px; } #wp .wp { width: auto; }
+/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 1000px;} #wp .wp { width: auto; }
 
 /* 页头 */
 	#toptb { line-height: 24px; }
