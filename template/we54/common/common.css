@@ -1663,3 +1663,8 @@ DIYÍ¼Æ¬»ÃµÆÆ¬Î´¼ÓÔØÊ±Òþ²Ø,Ä£¿é±êÊ¶Òþ²Ø
 	.unfixed { color: #F26C4F; }
 .plugin { width: 300px; }
 	.plugin .bm_h { border-color: {COMMONBORDER}; color: {TABLETEXT}; background: {COMMONBG}; }
+	
+/*
+kaiser
+*/
+.kaiser_pl{ border:1px solid #d9d9d9; margin-bottom:8px;}

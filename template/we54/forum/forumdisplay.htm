@@ -1,5 +1,8 @@
 <!--{subtemplate common/header}-->
 
+<link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/kaiser.css" />
+<script src="{$_G[siteurl]}template/we54/js/loopedcarousel.js" type="text/javascript"></script>
+
 <!--{if $_G['forum']['ismoderator']}-->
 	<script type="text/javascript" src="{$_G[setting][jspath]}forum_moderate.js?{VERHASH}"></script>
 <!--{/if}-->
@@ -18,13 +21,17 @@
 <div class="boardnav">
 	<div id="ct" class="wp cl{if $_G['forum']['allowside']} ct2{/if}"{if $leftside} style="margin-left:{$_G['leftsidewidth_mwidth']}px"{/if}>
 		<!--{if $leftside}-->
-			<div id="sd_bdl" class="bdl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'dz'});" style="width:{$_G['setting']['leftsidewidth']}px;margin-left:-{$_G['leftsidewidth_mwidth']}px">
+			<div id="sd_bdl" class="bdl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'dz'});" style="width:{$_G['setting']['leftsidewidth']}px;margin-left:-{$_G['leftsidewidth_mwidth']}px; border:none; background:none;">
 				<!--{hook/forumdisplay_leftside_top}-->
 				<!--[diy=diyleftsidetop]--><div id="diyleftsidetop" class="area"></div><!--[/diy]-->
 
-				<div class="tbn" id="forumleftside">
-					<!--{subtemplate forum/forumdisplay_leftside}-->
-				</div>
+				<div class="kaiser_banzhu">
+                    <div class="kaiser_banzhu_box">
+                        <div class="kaiser_banzhu_t">±¾°æ°æÖ÷</div>
+                        <div class="kaiser_banzhu_b"></div>
+                        <div class="kaiser_banzhu_n"></div>
+                    </div>
+                </div>
 
 				<!--[diy=diyleftsidebottom]--><div id="diyleftsidebottom" class="area"></div><!--[/diy]-->
 				<!--{hook/forumdisplay_leftside_bottom}-->

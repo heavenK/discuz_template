@@ -89,11 +89,56 @@
                     <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
                 </div>
             
-
-            	<div class="nav" id="show" onMouseOver="this.style.background='url(/template/we54/images/dh_02.jpg) no-repeat'" onMouseOut="this.style.background='url(/template/we54/images/dh_01.jpg) no-repeat'"></div>
-            	
-                
-                <form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
+            	<div class="nav" id="show">
+                    <div class="main_nav" id="ss" style=" z-index:10000;"><!--顶部主导航-->
+                        <ul class="nav_a">
+                            <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
+                            <li><a href="#" target="_blank">专题</a></li>
+                            <li><a href="#" target="_blank">图片</a></li>
+                            <li><a href="#" target="_blank" style="color:#ff0000;">评论</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold;">视频</a></li>
+                            <li><a href="#" target="_blank">独家</a></li>
+                            <li><a href="#" target="_blank">娱乐</a></li>
+                            <li><a href="#" target="_blank">访谈</a></li>
+                        </ul>
+                        <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                        <ul class="nav_b">
+                            <li><a href="#" target="_blank" style="font-weight:bold;">美达</a></li>
+                            <li><a href="#" target="_blank">五年四班</a></li>
+                            <li><a href="#" target="_blank">荔枝先生</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
+                            <li><a href="#" target="_blank">原创节目</a></li>
+                            <li><a href="#" target="_blank">非常夜店</a></li>
+                        </ul>
+                        <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                        <ul class="nav_c">
+                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
+                            <li><a href="#" target="_blank">理财</a></li>
+                            <li><a href="#" target="_blank">镀金时代</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold;">职场充电</a></li>
+                            <li><a href="#" target="_blank">人在学途</a></li>
+                            <li><a href="#" target="_blank">天才宝贝</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold;">爱车</a></li>
+                            <li><a href="#" target="_blank">高校</a></li>
+                            <li><a href="#" target="_blank">美食探店</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold;">心随我动</a></li>
+                            <li><a href="#" target="_blank">故地新游</a></li>
+                            <li><a href="#" target="_blank" style="color:#ff0000;">玩转大连</a></li>
+                        </ul>
+                        <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
+                        <ul class="nav_d">
+                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">论坛</a></li>
+                            <li><a href="#" target="_blank">大连你好</a></li>
+                            <li><a href="#" target="_blank" >不惜泡吧</a></li>
+                            <li><a href="#" target="_blank" >偶秀偶拍</a></li>
+                            <li><a href="#" target="_blank" style="font-weight:bold;">精华</a></li>
+                            <li><a href="#" target="_blank" >纯粹女人</a></li>
+                            <li><a href="#" target="_blank" >亲亲宝贝</a></li>
+                            <li><a href="#" target="_blank" >视频社区</a></li>
+                        </ul>
+                    </div>
+                </div>
+            	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
                 <!--{if $_G['uid']}-->
                 <div id="um" style=" float:right;">
                     <p>
@@ -138,55 +183,7 @@
                     <!--{/if}-->
                 </div>
                
-
-                <div class="main_nav" id="ss"><!--顶部主导航-->
-                    <ul class="nav_a">
-                        <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
-                        <li><a href="#" target="_blank">专题</a></li>
-                        <li><a href="#" target="_blank">图片</a></li>
-                        <li><a href="#" target="_blank" style="color:#ff0000;">评论</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold;">视频</a></li>
-                        <li><a href="#" target="_blank">独家</a></li>
-                        <li><a href="#" target="_blank">娱乐</a></li>
-                        <li><a href="#" target="_blank">访谈</a></li>
-                    </ul>
-                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
-                    <ul class="nav_b">
-                        <li><a href="#" target="_blank" style="font-weight:bold;">美达</a></li>
-                        <li><a href="#" target="_blank">五年四班</a></li>
-                        <li><a href="#" target="_blank">荔枝先生</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
-                        <li><a href="#" target="_blank">原创节目</a></li>
-                        <li><a href="#" target="_blank">非常夜店</a></li>
-                    </ul>
-                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
-                    <ul class="nav_c">
-                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
-                        <li><a href="#" target="_blank">理财</a></li>
-                        <li><a href="#" target="_blank">镀金时代</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold;">职场充电</a></li>
-                        <li><a href="#" target="_blank">人在学途</a></li>
-                        <li><a href="#" target="_blank">天才宝贝</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold;">爱车</a></li>
-                        <li><a href="#" target="_blank">高校</a></li>
-                        <li><a href="#" target="_blank">美食探店</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold;">心随我动</a></li>
-                        <li><a href="#" target="_blank">故地新游</a></li>
-                        <li><a href="#" target="_blank" style="color:#ff0000;">玩转大连</a></li>
-                    </ul>
-                    <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
-                    <ul class="nav_d">
-                        <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">论坛</a></li>
-                        <li><a href="#" target="_blank">大连你好</a></li>
-                        <li><a href="#" target="_blank" >不惜泡吧</a></li>
-                        <li><a href="#" target="_blank" >偶秀偶拍</a></li>
-                        <li><a href="#" target="_blank" style="font-weight:bold;">精华</a></li>
-                        <li><a href="#" target="_blank" >纯粹女人</a></li>
-                        <li><a href="#" target="_blank" >亲亲宝贝</a></li>
-                        <li><a href="#" target="_blank" >视频社区</a></li>
-                    </ul>
-                </div>
-
+                
                 
                 <div class="top_ad_01">
                     <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="70" border="0"/></a>
@@ -200,16 +197,43 @@
                 
                 <div class="nav_st">
                     <div class="nav_second">
-                        <div class="bankuai" id="bk" onMouseOver="this.style.background='url(/template/we54/images/bk_02.jpg) no-repeat'" onMouseOut="this.style.background='url(/template/we54/images/bk_01.jpg) no-repeat'"></div>
+                        <div class="bankuai" id="bk"></div>
                     	<div class="nav_nav">
-                    		<li onMouseOver="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">首页</a></li>
-							<li onMouseOver="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">偶秀偶拍</a></li>
-                            <li onMouseOver="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">美达贴吧</a></li>
-							<li onMouseOver="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">新青年摄影</a></li>
-                            <li onMouseOver="this.style.background='url(/template/we54/images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">贴图专区</a></li>
+                    		<i><a href="#"></a></i>
+                    		<em><a href="#"></a></em>
+                        	<b><a href="#"></a></b>
+                        	<span><a href="#"></a></span>
+                        	<p><a href="#"></a></p>
                         </div>
-                        <input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onFocus="if (value =='输入你想要搜索的内容'){value =''}" onBlur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
-                        <input style="border:none" type="submit" value="" class="aaa"/>
+                        <!--{if $_G['setting']['search']}-->
+                        <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onsubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
+                            <input type="hidden" name="mod" id="scbar_mod" value="forum" />
+                            <input type="hidden" name="formhash" value="{FORMHASH}" />
+                            <input type="hidden" name="srchtype" value="title" />
+                            <input type="hidden" name="srhfid" value="$_G[fid]" />
+                            <input type="hidden" name="srhlocality" value="$_G['basescript']::{CURMODULE}" />
+                            <!--{if !empty($searchparams[params])}-->
+                                <!--{loop $searchparams[params] $key $value}-->
+                                <!--{eval $srchotquery .= '&' . $key . '=' . rawurlencode($value);}-->
+                                <input type="hidden" name="$key" value="$value" />
+                                <!--{/loop}-->
+                                <input type="hidden" name="source" value="discuz" />
+                                <input type="hidden" name="fId" id="srchFId" value="$_G[fid]" />
+                                <input type="hidden" name="q" id="cloudsearchquery" value="" />
+                            <!--{/if}-->
+                    
+                            <input style="border:none;" type="text" name="srchtxt" id="scbar_txt" value="{lang enter_content}" onFocus="if (value =='{lang enter_content}'){value =''}" onBlur="if (value ==''){value='{lang enter_content}'}" class="ggg" autocomplete="off" x-webkit-speech speech />
+                            <button style="border:none;" type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="aaa" value="true"></button>
+                        </form>
+                        <!--{/if}-->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                 
                     <div class="nav_three" id="ycbk">

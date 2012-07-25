@@ -33,3 +33,18 @@
 #p_btn i, #p_btn a					{ background:none;}
 #p_btn a							{ margin-right:0; padding:0; float:none;}
 #p_btn img							{ float:none;}
+
+/*ÁÐ±íÒ³*/
+/*°æÖ÷*/
+.kaiser_banzhu						{ width:196px; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
+.kaiser_banzhu_box					{ width:196px; background:#f7f7ef; overflow:hidden; float:left;}
+.kaiser_banzhu_t					{ width:196px; height:45px; text-align:center; font-size:20px; color:#000; line-height:42px; overflow:hidden; float:left;}
+
+
+
+
+
+
+
+
+

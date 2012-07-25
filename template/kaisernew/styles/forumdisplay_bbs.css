@@ -1,7 +1,0 @@
-/* CSS Document */
-/*通用样式*/
-*			{ margin:0; padding:0; border:0;}
-body		{ background: url(../images/header_bg.jpg) repeat-x top; font-size:12px; font-family:"宋体"; color:#262932;}
-
-/*整体*/
-#box		{ width:980px; margin:0 auto;}

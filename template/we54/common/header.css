@@ -7,7 +7,8 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 /*kaiser*/
 #toptb #diy-tg_menu{ margin:-2px 0 0 -18px;}
 .xg2 img{ width:763px; height:165px;}
-.wp { margin: 0 auto; width: 1000px; position:relative; }
+#scbar_txt{ width:149px; font-family:"微软雅黑", "黑体";}
+#scbar_btn{ margin:6px 0 0 3px; background:url(/template/we54/images/all_bg.jpg) no-repeat -180px -74px;}
 
 /*通用调图*/
 .nav,
@@ -15,10 +16,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 .bankuai,
 .bankuai:hover,
 .nav_three,
-
-.ggg,
-.aaa,
-.aaa:hover{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
+.ggg{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
 
 
 #toptb a { padding:0; }
@@ -41,10 +39,10 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 	.main_nav li a		 { color:#333333; text-decoration:none;  }
 	.main_nav li a:hover { color:#ff0000;}
 	.main_nav h1 		 { width:1px; height:64px; overflow:hidden; float:left;}
-	.nav_a 				 { width:166px; height:54px; margin-top:4px; margin-left:15px; _margin-left:5px; _margin-right:10px;  display:inline; overflow:hidden; float:left;}
-	.nav_b 				 { width:178px; height:54px; margin-top:4px; margin-left:7px; _margin-right:7px; display:inline; overflow:hidden; float:left;}
-	.nav_c 				 { width:348px; height:54px; margin-top:4px; margin-left:7px; _margin-right:7px; display:inline; overflow:hidden; float:left;}
-	.nav_d				 { width:240px; height:54px; margin-top:4px; margin-left:7px; display:inline; overflow:hidden; float:left;}
+	.nav_a 				 { width:166px; height:54px; margin-top:4px; margin-left:15px; _margin-right:5px;  display:inline; overflow:hidden; float:left;}
+	.nav_b 				 { width:178px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; _margin-right:5px; display:inline; overflow:hidden; float:left;}
+	.nav_c 				 { width:338px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; _margin-right:10px; display:inline; overflow:hidden; float:left;}
+	.nav_d				 { width:240px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; display:inline; overflow:hidden; float:left;}
 
 
 .top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left;}
@@ -69,7 +67,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 
 
 	.ggg { width:149px; _width:149px; text-indent:1em; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; background-position:-334px -75px; overflow:hidden; float:left;}
-	.aaa { width:77px; height:26px; margin:6px 0 0 3px; display:inline; overflow:hidden; float:left; background-position:-180px -74px; cursor:pointer;}
+	.aaa { width:77px; height:26px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
 	.nav_three { width:1000px; height:75px; z-index:99999; background-position:0 0; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
 	.nav_three ul { width:988px; height:66px; margin:4px 0 0 10px; display:inline; overflow:hidden; float:left;}	
