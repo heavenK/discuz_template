@@ -1,0 +1,57 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*°æÖ÷*/
+.kaiser_banzhu						{ width:196px; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
+.kaiser_banzhu_box					{ width:196px; padding:0 0 10px 0; background:#f7f7ef; overflow:hidden; float:left;}
+.kaiser_banzhu_t					{ width:196px; height:45px; text-align:center; font-size:20px; color:#000; line-height:42px; overflow:hidden; float:left;}
+.kaiser_banzhu_b					{ width:177px; height:26px; padding:0 0 0 19px; font-size:14px; font-weight:bold; color:#ff6633; overflow:hidden; float:left;}
+.kaiser_banzhu_n					{ width:180px; height:45px; margin:0 0 0 8px; display:inline; background:url(../../../static/image/common/kaiser_banzhu_01.png) no-repeat; overflow:hidden; float:left;}
+.kaiser_banzhu_n_a					{ width:61px; height:40px; padding:5px 0 0 0; text-align:center; color:#000; line-height:18px; overflow:hidden; float:left;}
+.kaiser_banzhu_n_b					{ width:65px; height:40px; padding:5px 0 0 0; text-align:center; color:#000; line-height:18px; overflow:hidden; float:left;}
+.kaiser_banzhu_n_c					{ width:54px; height:40px; padding:5px 0 0 0; text-align:center; color:#000; line-height:18px; overflow:hidden; float:left;}
+.kaiser_banzhu_n_a em				{ font-size:14px; font-weight:bold; color:#ff6633;}
+.kaiser_banzhu_n_b em				{ font-size:14px; font-weight:bold; color:#ff6633;}
+.kaiser_banzhu_n_c em				{ font-size:14px; font-weight:bold; color:#ff6633;}
+
+/*°æÖ÷ÂÖ²¥*/
+.container 							{ height:162px; overflow:hidden; position:relative; margin:0 0 0 28px;}
+.slides 							{ position:absolute; top:0; left:0; }
+.slides a 							{ position:absolute; top:0; width:130px; height:162px; display:none;}
+.slides a img						{ border:1px solid #dadada;}
+.pagination							{ display:none;}
+#container 							{ position:relative; width:196px;}
+#loopedCarousel 					{ margin:0 auto; width:196px;  position:relative; clear:both;}
+a.previous							{ position:absolute; top:50px; left:10px; display:block; width:15px; height:15px; overflow:hidden; background-image:url(../../../static/image/common/arw_l.gif); background-repeat:no-repeat;}
+a.previous:hover 					{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
+a.next 								{ position:absolute; top:50px; right:10px; display:block; width:15px; height:15px; overflow:hidden; background-image:url(../../../static/image/common/arw_r.gif); background-repeat:no-repeat;}
+a.next:hover 						{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
+p.caption 							{ height:20px; font-size:14px; color:#333333; text-align:center; margin-top:8px; overflow:hidden;}
+
+/*»î¶¯*/
+.kaiser_huodong						{ width:196px; margin:10px 0 0 0; display:inline; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
+.kaiser_huodong_box					{ width:196px; padding:0 0 10px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
+.kaiser_huodong_m					{ width:196px; height:32px; padding:0 0 0 13px; font-size:14px; font-weight:bold; color:#666666; line-height:32px; overflow:hidden; float:left;}
+.kaiser_huodong_p					{ width:160px; height:90px; margin:11px 0 0 18px; display:inline; overflow:hidden; float:left;}
+.kaiser_huodong_t					{ width:160px; height:20px; margin:8px 0 0 18px; display:inline; text-align:center; overflow:hidden; float:left;}
+.kaiser_huodong_t a					{ color:#000;}
+
+/*ÏÂÄ£¿é*/
+.kaiser_other_a						{ width:196px; margin:10px 0 0 0; display:inline; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
+
+/*ÈÈÌùÅÅÐÐ*/
+.kaiser_retie						{ width:196px; padding:0 0 13px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
+.kaiser_retie .title				{ background:none;}
+.kaiser_retie_cont					{ height:240px; margin:0 10px; background:url(../../../static/image/common/kaiser_retie_01.png) no-repeat;}
+.kaiser_retie .xl ul li				{ width:153px; height:15px; margin:0; padding:9px 0 0 21px; background:none; overflow:hidden; float:left;}
+
+/*×îÐÂÈÈÍ¼*/
+.kaiser_retu						{ width:196px; padding:0 0 5px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
+.kaiser_retu .title					{ background:none;}
+.kaiser_retu_cont					{ margin:0;}
+.kaiser_retu_cont dl				{ width:160px; margin:13px 0 0 18px; display:inline; float:left;}
+.kaiser_retu_cont dt				{ height:16px; background:none; border:none; line-height:20px; float:left;}
+.kaiser_retu_cont dt a				{ font-weight:normal; color:#000;}
+.kaiser_retu_cont dt a:hover		{ text-decoration:underline;}
+.kaiser_retu_cont .m				{ width:160px; height:120px; margin:0; display:inline; overflow:hidden; float:left;}
+.kaiser_retu_cont dd a				{ height:auto; display:inline; padding:0; margin:0;}
