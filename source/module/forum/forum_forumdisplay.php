@@ -864,6 +864,20 @@ foreach($banzhulist as $val){
 	$kaiser_avatar = avatar($kaiser_uid, 'middle');
 	$kaiser_banzhu .= '<a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'<p class="caption">'.$kaiser_username.'</p></a>';
 }
+if(empty($_GET['k'])){
+	if(empty($_G['cookie']['forumdefstyle'])){
+		if(empty($_G['forum']['picstyle'])){
+			$kaiser_k = 1;
+		}else{
+			$kaiser_k = 2;
+		}
+	}else{
+		$kaiser_k = 1;
+	}
+}else{
+	$kaiser_k = $_GET['k'];
+}
+//$kaiser_k = $_GET['k'];
 //end add
 
 if(!defined('IN_ARCHIVER')) {

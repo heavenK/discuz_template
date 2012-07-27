@@ -89,7 +89,7 @@
                     <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
                 </div>
             
-            	<div class="nav" id="show">
+            	<div class="nav" id="show" onmouseover="this.style.background='url(/template/we54/images/dh_02.jpg) no-repeat'" onmouseout="this.style.background='url(/template/we54/images/dh_01.jpg) no-repeat'">
                     <div class="main_nav" id="ss" style=" z-index:10000;"><!--顶部主导航-->
                         <ul class="nav_a">
                             <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
@@ -197,16 +197,17 @@
                 
                 <div class="nav_st">
                     <div class="nav_second">
-                        <div class="bankuai" id="bk"></div>
+                        <div class="bankuai" id="bk" onmouseover="this.style.background='url(/template/we54/images/bk_02.jpg) no-repeat'" onmouseout="this.style.background='url(/template/we54/images/bk_01.jpg) no-repeat'"></div>
                     	<div class="nav_nav">
-                    		<i><a href="#"></a></i>
-                    		<em><a href="#"></a></em>
-                        	<b><a href="#"></a></b>
-                        	<span><a href="#"></a></span>
-                        	<p><a href="#"></a></p>
+                    		<li <!--{if empty($_G['forum']['name'])}-->style=" background:url(/template/we54/images/size_bg.jpg) repeat-x;"<!--{/if}-->><a href="./">首页</a></li>
+                            <!--{loop $_G['cache']['forums'] $bforum}-->
+                                <!--{if $bforum['fup'] == $_G['forum']['fup'] && $bforum['status']}-->
+                                    <li <!--{if $_G['forum']['name'] == $bforum['name']}-->style=" background:url(/template/we54/images/size_bg.jpg) repeat-x;"<!--{/if}-->><a href="forum.php?mod=forumdisplay&fid=$bforum[fid]">$bforum['name']</a></li>
+                                <!--{/if}-->
+                            <!--{/loop}-->
                         </div>
                         <!--{if $_G['setting']['search']}-->
-                        <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onsubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
+                        <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
                             <input type="hidden" name="mod" id="scbar_mod" value="forum" />
                             <input type="hidden" name="formhash" value="{FORMHASH}" />
                             <input type="hidden" name="srchtype" value="title" />

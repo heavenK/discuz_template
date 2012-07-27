@@ -53,6 +53,14 @@
 .pg a.nxt							{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
 .pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
 #pgt .pg, #pgt .pgb					{ margin-top:26px;}
+.kaiser_tl_bm_bmw					{ border:none;}
+.kaiser_bm_c						{ padding:0 0 0 10px;}
+.kaiser_ml_mlt_mtw_cl li			{ margin:0 15px 20px;}
+.kaiser_th							{ height:31px; margin:0 0 0 10px; padding:0; background:url(../../../static/image/common/kaiser_list_nav_bg.gif) repeat-x; border-bottom:2px solid #0080cc;}
+.kaiser_nav_btn						{ height:31px; float:left;}
+.kaiser_nav_btn a					{}
+.kaiser_tuji						{ background:none;}
+.kaiser_nav_on						{ color:#F00;}
 
 
 

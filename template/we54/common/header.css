@@ -57,9 +57,9 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 .nav_st { width:1000px; height:20px; position:relative; float:left; _float:none;}
 	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
 	.bankuai { width:104px; height:35px; background-position:-104px -143px; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
-	.bankuai:hover { background-position:0 -143px;}
+	.bankuai:hover { background-position:0 -143px;}	
 	.nav_nav { width:600px; height:40px; line-height:42px; font-size:18px; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; margin-left:12px; display:inline; overflow:hidden; float:left;}	
-	.nav_nav li { height:40px; padding:0 15px 0 15px;text-align:center; overflow:hidden; float:left;}
+	.nav_nav li { height:40px; padding:0 15px 0 15px;text-align:center; list-style-type:none; overflow:hidden; float:left;}
 	.nav_nav li a { height:40px; color:#663300; }
 	.nav_nav li a:hover { text-decoration:none;}
 	.nav_nav li:hover {  height:40px; text-decoration:none; background:url(/template/we54/images/size_bg.jpg) repeat-x; *background:url(/template/we54/images/size_bg.jpg) repeat-x !important; float:left; overflow:hidden;}
