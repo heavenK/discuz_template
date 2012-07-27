@@ -32,8 +32,8 @@
 
 				<div class="kaiser_banzhu">
                     <div class="kaiser_banzhu_box">
+                    	<!--{if $_G['forum']['moderators']}-->
                         <div class="kaiser_banzhu_t">本版版主</div>
-                        <!--{if $_G['forum']['moderators']}-->
                         <div id="container">
                             <div id="loopedCarousel">
                                 <a href="#" class="previous"></a>
@@ -62,7 +62,7 @@
                         <div class="kaiser_banzhu_n">
                         	<div class="kaiser_banzhu_n_a">帖子数<br /><em>$_G[forum][threads]</em></div>
                             <div class="kaiser_banzhu_n_b">24时新帖<br /><em>$_G[forum][todayposts]</em></div>
-                            <div class="kaiser_banzhu_n_c">成员<br /><em>2397</em></div>
+                            <div class="kaiser_banzhu_n_c">成员<br /><em>$onlinenum</em></div>
                         </div>
                     </div>
                 </div>

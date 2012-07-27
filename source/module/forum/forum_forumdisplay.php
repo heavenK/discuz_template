@@ -430,7 +430,7 @@ $_GET['ascdesc'] = isset($_G['cache']['forums'][$_G['fid']]['ascdesc']) ? $_G['c
 $check = array();
 $check[$filter] = $check[$_GET['orderby']] = $check[$_GET['ascdesc']] = 'selected="selected"';
 
-if(($_G['forum']['status'] != 3 && $_G['forum']['allowside']) || !empty($_G['forum']['threadsorts']['templatelist'])) {
+if($_G['forum']['status'] != 3 || !empty($_G['forum']['threadsorts']['templatelist'])) {
 	updatesession();
 	$onlinenum = C::app()->session->count_by_fid($_G['fid']);
 	if(!IS_ROBOT && ($_G['setting']['whosonlinestatus'] == 2 || $_G['setting']['whosonlinestatus'] == 3)) {
@@ -857,12 +857,11 @@ if(!empty($_G['forum']['threadsorts']['templatelist']) && $_G['forum']['status']
 //add by kaiser
 $banzhuname = explode("\t", $_G['forum']['moderators']);
 $banzhulist = C::t('common_member')->fetch_all_by_username($banzhuname);
-//var_dump($banzhulist);
+
 foreach($banzhulist as $val){
 	$kaiser_username = $val['username'];
 	$kaiser_uid = $val['uid'];
 	$kaiser_avatar = avatar($kaiser_uid, 'middle');
-	//var_dump($kaiser_avatar);
 	$kaiser_banzhu .= '<a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'<p class="caption">'.$kaiser_username.'</p></a>';
 }
 //end add
