@@ -9,10 +9,15 @@
 <!--{/if}-->
 <style id="diy_style" type="text/css"></style>
 <!--[diy=diynavtop]--><div id="diynavtop" class="area"></div><!--[/diy]-->
-<div id="pt" class="bm cl">
+<div id="pt kaiser_pt" class="bm cl kaiser_bm">
 	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php"{if $_G['setting']['forumjump']} id="fjump" onmouseover="delayShow(this, 'showForummenu($_G[fid])');" class="showmenu" {/if}>{$_G[setting][navs][2][navname]}</a>$navigation
+		<b>当前位置：</b><a href="http://www.we54.com/" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="./"{if $_G['setting']['forumjump']} id="fjump" onmouseover="delayShow(this, 'showForummenu($_G[fid])');" class="showmenu" {/if}>{$_G[setting][navs][2][navname]}</a>$navigation
 	</div>
+</div>
+<div id="pgt" class="bm bw0 pgs cl">
+    <!--[diy=kaiser_diy_a]--><div id="kaiser_diy_a" class="area"></div><!--[/diy]-->
+    <!--{if !$_GET['archiveid']}--><a href="javascript:;" id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} title="{lang send_posts}"><img src="{IMGDIR}/kaiser_pn_post.png" alt="{lang send_posts}" /></a><!--{/if}-->
+    <!--{hook/forumdisplay_postbutton_top}-->
 </div>
 
 <!--{ad/text/wp a_t}-->
@@ -28,32 +33,14 @@
 				<div class="kaiser_banzhu">
                     <div class="kaiser_banzhu_box">
                         <div class="kaiser_banzhu_t">本版版主</div>
+                        <!--{if $_G['forum']['moderators']}-->
                         <div id="container">
                             <div id="loopedCarousel">
                                 <a href="#" class="previous"></a>
                                 <a href="#" class="next"></a>
                                 <div class="container">
                                     <div class="slides">
-                                        <a href="#" target="_blank">
-                                            <img src="template/we54/images/ad01.jpg" width="128" height="128" alt="Video" />
-                                            <p class="caption">Lorem ipsum dododolor</p>
-                                        </a>
-                                        <a href="#" target="_blank">
-                                            <img src="template/we54/images/ad01.jpg" width="128" height="128" alt="Video" />
-                                            <p class="caption">Lorem ipsum dolor</p>
-                                        </a>
-                                        <a href="#" target="_blank">
-                                            <img src="template/we54/images/ad01.jpg" width="128" height="128" alt="Video" />
-                                            <p class="caption">Lorem ipsum dolor</p>
-                                        </a>
-                                        <a href="#" target="_blank">
-                                            <img src="template/we54/images/ad02.jpg" width="128" height="128" alt="Video" />
-                                            <p class="caption">Lorem ipsum dolor</p>
-                                        </a>
-                                        <a href="#" target="_blank">
-                                            <img src="template/we54/images/ad01.jpg" width="128" height="128" alt="Video" />
-                                            <p class="caption">Lorem ipsum dolor</p>
-                                        </a>
+                                        $kaiser_banzhu
                                     </div>
                                 </div>	
                             </div>
@@ -70,21 +57,25 @@
                                 });
                             });
                         </script>
+                        <!--{/if}-->
                         <div class="kaiser_banzhu_b">本版人气指数</div>
                         <div class="kaiser_banzhu_n">
-                        	<div class="kaiser_banzhu_n_a">帖子数<br /><em>92726</em></div>
-                            <div class="kaiser_banzhu_n_b">24时新帖<br /><em>583</em></div>
+                        	<div class="kaiser_banzhu_n_a">帖子数<br /><em>$_G[forum][threads]</em></div>
+                            <div class="kaiser_banzhu_n_b">24时新帖<br /><em>$_G[forum][todayposts]</em></div>
                             <div class="kaiser_banzhu_n_c">成员<br /><em>2397</em></div>
                         </div>
                     </div>
                 </div>
-                <div class="kaiser_huodong">
+                <div class="kaiser_other_a">
+                	<!--[diy=diyleftsidebottom_a]--><div id="diyleftsidebottom_a" class="area"></div><!--[/diy]-->
+                </div>
+                <!--<div class="kaiser_huodong">
                 	<div class="kaiser_huodong_box">
                     	<div class="kaiser_huodong_m">社区最新活动</div>
                         <div class="kaiser_huodong_p"><a href="#" target="_blank"><img src="template/we54/images/ad01.jpg" width="160" height="90" alt="$_G['forum'][name]" /></a></div>
                         <div class="kaiser_huodong_t"><a href="#" target="_blank">随手拍"阿芙"大奖带回家随手拍"阿芙"大奖带回家</a></div>
                     </div>
-                </div>
+                </div>-->
 				<div class="kaiser_other_a">
                 	<!--[diy=diyleftsidebottom]--><div id="diyleftsidebottom" class="area"></div><!--[/diy]-->
                 </div>
@@ -93,65 +84,8 @@
                 </div>
 			</div>
 		<!--{/if}-->
-
+		
 		<div class="mn">
-			<div class="bm bml pbn">
-				<!--{if $_G[forum][banner] && !$subforumonly}--><img src="$_G[forum][banner]" alt="$_G['forum'][name]" /><!--{/if}-->
-				<div class="bm_h cl">
-					<!--{if $_G['page'] == 1 && $_G['forum']['rules']}--><span class="o"><img id="forum_rules_{$_G[fid]}_img" src="{IMGDIR}/collapsed_{$collapse[forum_rulesimg]}.gif" title="{lang spread}" alt="{lang spread}" onclick="toggle_collapse('forum_rules_{$_G[fid]}')" /></span><!--{/if}-->
-					<span class="y">
-						<a href="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="fa_fav" onclick="showWindow(this.id, this.href, 'get', 0);">{lang forum_favorite}</a>
-						<!--{if rssforumperm($_G['forum']) && $_G[setting][rssstatus] && !$_GET['archiveid'] && !$subforumonly}--><span class="pipe">|</span><a href="forum.php?mod=rss&fid=$_G[fid]&auth=$rssauth" class="fa_rss" target="_blank" title="RSS">{lang rss_subscribe_this}</a><!--{/if}-->
-						<!--{if !empty($forumarchive)}-->
-							<span class="pipe">|</span><a id="forumarchive" href="javascript:;" class="fa_achv" onmouseover="showMenu(this.id)"><!--{if $_GET['archiveid']}-->$forumarchive[$_GET['archiveid']]['displayname']<!--{else}-->{lang forum_archive}<!--{/if}--></a>
-						<!--{/if}-->
-						<!--{hook/forumdisplay_forumaction}-->
-
-						<!--{if $_G['forum']['ismoderator']}-->
-						<!--{if $_G['forum']['recyclebin']}-->
-							<span class="pipe">|</span><a href="{if $_G['adminid'] == 1}admin.php?mod=forum&action=recyclebin&frames=yes{elseif $_G['forum']['ismoderator']}forum.php?mod=modcp&action=recyclebin&fid=$_G[fid]{/if}" class="fa_bin" target="_blank">{lang forum_recyclebin}</a>
-						<!--{/if}-->
-						<!--{if $_G['forum']['ismoderator'] && !$_GET['archiveid']}-->
-							<span class="pipe">|</span><strong>
-							<!--{if $_G['forum']['status'] != 3}-->
-								<a href="forum.php?mod=modcp&fid=$_G[fid]">{lang modcp}</a>
-							<!--{else}-->
-								<a href="forum.php?mod=group&action=manage&fid=$_G[fid]">{lang modcp}</a>
-							<!--{/if}-->
-							</strong>
-						<!--{/if}-->
-						<!--{hook/forumdisplay_modlink}-->
-						<!--{/if}-->
-					</span>
-					<h1 class="xs2">
-						<a href="forum.php?mod=forumdisplay&fid=$_G[fid]">$_G['forum'][name]</a>
-						<!--{if !$subforumonly}--><span class="xs1 xw0 i">{lang index_today}: <strong class="xi1">$_G[forum][todayposts]</strong><span class="pipe">|</span>{lang index_threads}: <strong class="xi1">$_G[forum][threads]</strong></span><!--{/if}-->
-					</h1>
-				</div>
-				<!--{if (!empty($_G[forum][domain]) && !empty($_G['setting']['domain']['root']['forum'])) || $moderatedby || ($_G['page'] == 1 && $_G['forum']['rules'])}-->
-					<div class="bm_c cl pbn">
-						<!--{if !empty($_G[forum][domain]) && !empty($_G['setting']['domain']['root']['forum'])}-->
-							<div class="pbn">{lang forum_domain}: <a href="http://{$_G[forum][domain]}.{$_G['setting']['domain']['root']['forum']}" id="group_link">http://{$_G[forum][domain]}.{$_G['setting']['domain']['root']['forum']}</a></div>
-						<!--{/if}-->
-						<!--{if $moderatedby}--><div>{lang forum_modedby}: <span class="xi2">$moderatedby</span></div><!--{/if}-->
-						<!--{if $_G['page'] == 1 && $_G['forum']['rules']}-->
-							<div id="forum_rules_{$_G[fid]}" style="$collapse['forum_rules'];">
-								<div class="ptn xg2">$_G['forum'][rules]</div>
-							</div>
-						<!--{/if}-->
-					</div>
-				<!--{/if}-->
-				<!--{if !empty($forumarchive)}-->
-					<div id="forumarchive_menu" class="p_pop" style="display:none">
-						<ul>
-							<li><a href="forum.php?mod=forumdisplay&fid=$_G[fid]">{lang threads_all}</a></li>
-							<!--{loop $forumarchive $id $info}-->
-							<li><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&archiveid=$id">{$info['displayname']} ({$info['threads']})</a></li>
-							<!--{/loop}-->
-						</ul>
-					</div>
-				<!--{/if}-->
-			</div>
 
 			<!--{hook/forumdisplay_top}-->
 
@@ -242,12 +176,6 @@
 
 				<!--{if $threadmodcount}--><div class="bm"><div class="ntc_l hm xi2"><strong>{lang forum_moderate_unhandled}</strong></div></div><!--{/if}-->
 
-				<div id="pgt" class="bm bw0 pgs cl">
-					<span id="fd_page_top">$multipage</span>
-					<span class="pgb y" {if $_G[setting][visitedforums]}id="visitedforums" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'34'})"{/if} ><a href="forum.php">{lang return_index}</a></span>
-					<!--{if !$_GET['archiveid']}--><a href="javascript:;" id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} title="{lang send_posts}"><img src="{IMGDIR}/pn_post.png" alt="{lang send_posts}" /></a><!--{/if}-->
-					<!--{hook/forumdisplay_postbutton_top}-->
-				</div>
 				<!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
 					<ul id="thread_types" class="ttp bm cl">
 						<!--{hook/forumdisplay_threadtype_inner}-->

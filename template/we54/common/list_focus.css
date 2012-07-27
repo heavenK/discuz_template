@@ -18,7 +18,7 @@
 .container 							{ height:162px; overflow:hidden; position:relative; margin:0 0 0 28px;}
 .slides 							{ position:absolute; top:0; left:0; }
 .slides a 							{ position:absolute; top:0; width:130px; height:162px; display:none;}
-.slides a img						{ border:1px solid #dadada;}
+.slides a img						{ width:128px; height:128px; border:1px solid #dadada;}
 .pagination							{ display:none;}
 #container 							{ position:relative; width:196px;}
 #loopedCarousel 					{ margin:0 auto; width:196px;  position:relative; clear:both;}
@@ -39,6 +39,17 @@ p.caption 							{ height:20px; font-size:14px; color:#333333; text-align:center
 /*下模块*/
 .kaiser_other_a						{ width:196px; margin:10px 0 0 0; display:inline; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"微软雅黑"; float:left;}
 
+/*社区最新活动*/
+.kaiser_huodong						{ width:196px; padding:0 0 10px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
+.kaiser_huodong .title				{ background:none;}
+.kaiser_huodong_cont				{ margin:0;}
+.kaiser_huodong_cont dl				{ width:160px; margin:13px 0 0 18px; display:inline; float:left;}
+.kaiser_huodong_cont dt				{ width:160px; height:auto; background:none; padding:5px 0 0 0; border:none; text-align:center; line-height:20px; overflow:hidden; float:left;}
+.kaiser_huodong_cont dt a			{ padding:0; font-weight:normal; color:#000;}
+.kaiser_huodong_cont dt a:hover		{ text-decoration:underline;}
+.kaiser_huodong_cont .m				{ width:160px; height:90px; margin:0; display:inline; overflow:hidden; float:left;}
+.kaiser_huodong_cont dd a			{ height:auto; display:inline; padding:0; margin:0;}
+
 /*热贴排行*/
 .kaiser_retie						{ width:196px; padding:0 0 13px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
 .kaiser_retie .title				{ background:none;}
@@ -46,12 +57,27 @@ p.caption 							{ height:20px; font-size:14px; color:#333333; text-align:center
 .kaiser_retie .xl ul li				{ width:153px; height:15px; margin:0; padding:9px 0 0 21px; background:none; overflow:hidden; float:left;}
 
 /*最新热图*/
-.kaiser_retu						{ width:196px; padding:0 0 5px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
+.kaiser_retu						{ width:196px; padding:0 0 10px 0; background:#f7f7ef url(../../../static/image/common/kaiser_huodong_01.png) no-repeat left top; overflow:hidden; float:left;}
 .kaiser_retu .title					{ background:none;}
 .kaiser_retu_cont					{ margin:0;}
 .kaiser_retu_cont dl				{ width:160px; margin:13px 0 0 18px; display:inline; float:left;}
-.kaiser_retu_cont dt				{ height:16px; background:none; border:none; line-height:20px; float:left;}
-.kaiser_retu_cont dt a				{ font-weight:normal; color:#000;}
+.kaiser_retu_cont dt				{ width:160px; height:20px; background:none; border:none; padding:5px 0 0 0; text-align:center; line-height:20px; overflow:hidden; float:left;}
+.kaiser_retu_cont dt a				{ padding:0; font-weight:normal; color:#000;}
 .kaiser_retu_cont dt a:hover		{ text-decoration:underline;}
 .kaiser_retu_cont .m				{ width:160px; height:120px; margin:0; display:inline; overflow:hidden; float:left;}
 .kaiser_retu_cont dd a				{ height:auto; display:inline; padding:0; margin:0;}
+
+/*推荐*/
+.kaiser_tuijian						{ width:680px; margin:29px 0 0 0; display:inline; border:none; overflow:hidden; float:left;}
+.kaiser_tuijian_cont				{ margin:0;}
+.kaiser_tuijian_cont .xl1 ul li		{ width:84px; height:24px; margin:0 10px 0 0; display:inline; padding:0; background:none; border:none; line-height:22px; overflow:hidden; float:left;}
+.kaiser_tuijian_cont .xl1 ul li a	{ width:82px; height:22px; background:#FFF; border:1px solid #cfcfcf; text-align:center; font-size:12px; color:#000; overflow:hidden; float:left;}
+.kaiser_tuijian_cont .xl1 ul li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
+
+
+
+
+
+
+
+

@@ -221,7 +221,7 @@
 					<!--{/if}-->
 					<!--{if $post['invisible'] == 0}-->
 						<!--{if !IS_ROBOT && !$_GET['authorid'] && !$_G['forum_thread']['archiveid']}-->
-							<span class="pipe">|</span><a href="forum.php?mod=viewthread&tid=$post[tid]&page=$page&authorid=$post[authorid]" rel="nofollow">{if $post[first]}<b style="font-size:14px; color:#ff6600;">只看楼主</b>{else}{lang thread_show_author}{/if}</a>
+							<span class="pipe">|</span><a href="forum.php?mod=viewthread&tid=$post[tid]&page=$page&authorid=$post[authorid]" rel="nofollow" style="font-size:14px; color:#ff6600;">{if $post[first]}<b>只看楼主</b>{else}{lang thread_show_author}{/if}</a>
 						<!--{elseif !$_G['forum_thread']['archiveid']}-->
 							<span class="pipe">|</span><a href="forum.php?mod=viewthread&tid=$post[tid]&page=$page" rel="nofollow">{lang thread_show_all}</a>
 						<!--{/if}-->

@@ -6,7 +6,7 @@
 */
 #kaiser_pt							{ height:20px; margin:0;}
 .kaiser_bm							{ position:relative;}
-.kaiser_bm .z						{ font-size:14px; color:#333333; position:absolute; top:5px;}
+.kaiser_bm .z						{ font-size:14px; color:#333333; position:absolute; top:8px;}
 .kaiser_bm .z b						{ font-weight:normal; float:left;}
 .kaiser_bm .z a						{ color:#005bac;}
 .wp .pgt							{ float:left;}
@@ -40,8 +40,19 @@
 ¡–±Ì“≥
 */
 
-
-
+.kaiser_list_bm						{ position:inherit; border:none;}
+.kaiser_list_bm .z					{ font-size:14px; color:#333333;}
+.kaiser_list_bm .z b				{ font-weight:normal; float:left;}
+.kaiser_list_bm .z a				{ color:#005bac;}
+#pgt .pgt							{ float:left;}
+#pgt .pgb							{ float:left;}
+#pgt .pgt .pg						{ float:left;}
+.pgb a								{ margin-left:0;}
+.pgs #newspecial, .pgs #post_reply	{ margin:0 0 0 5px; float:right;}
+.pgs #newspecialtmp, .pgs #post_replytmp	{ margin:0 0 0 5px; float:right;}
+.pg a.nxt							{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
+.pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
+#pgt .pg, #pgt .pgb					{ margin-top:26px;}
 
 
 
