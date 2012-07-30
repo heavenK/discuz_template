@@ -35,7 +35,7 @@
 	<!--{/if}-->
 	<!--{if check_diy_perm($topic)}-->
 		<!--{block diynav}-->
-			<a id="diy-tg" href="javascript:openDiy();" title="{lang open_diy}" class="xi1 xw1" onmouseover="showMenu(this.id)"><img src="{STATICURL}image/diy/panel-toggle.png" alt="DIY" /></a>
+			<a id="diy-tg" href="javascript:openDiy();" title="{lang open_diy}" class="xi1 xw1" onMouseOver="showMenu(this.id)"><img src="{STATICURL}image/diy/panel-toggle.png" alt="DIY" /></a>
 			<div id="diy-tg_menu" style="display: none;">
 				<ul>
 					<li><a href="javascript:saveUserdata('diy_advance_mode', '');openDiy();" class="xi2">{lang header_diy_mode_simple}</a></li>
@@ -69,9 +69,9 @@
 						<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
 					<!--{/loop}-->
 					<!--{if empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']}-->
-						<a href="javascript:;" onclick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
+						<a href="javascript:;" onClick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
 					<!--{/if}-->
-					<!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onmouseover="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
+					<!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onMouseOver="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
 					<!--{if check_diy_perm($topic)}-->
 						$diynav
 					<!--{/if}-->
@@ -82,9 +82,9 @@
 		<!--{if !IS_ROBOT}-->
 			<!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}-->
 				<div id="sslct_menu" class="cl p_pop" style="display: none;">
-					<!--{if !$_G[style][defaultextstyle]}--><span class="sslct_btn" onclick="extstyle('')" title="{lang default}"><i></i></span><!--{/if}-->
+					<!--{if !$_G[style][defaultextstyle]}--><span class="sslct_btn" onClick="extstyle('')" title="{lang default}"><i></i></span><!--{/if}-->
 					<!--{loop $_G['style']['extstyle'] $extstyle}-->
-						<span class="sslct_btn" onclick="extstyle('$extstyle[0]')" title="$extstyle[1]"><i style='background:$extstyle[2]'></i></span>
+						<span class="sslct_btn" onClick="extstyle('$extstyle[0]')" title="$extstyle[1]"><i style='background:$extstyle[2]'></i></span>
 					<!--{/loop}-->
 				</div>
 			<!--{/if}-->
@@ -124,7 +124,7 @@
 							<strong class="vwmy{if $_G['setting']['connect']['allow'] && $_G[member][conisbind]} qq{/if}"><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a></strong>
 							<!--{if $_G['group']['allowinvisible']}-->
 							<span id="loginstatus">
-								<a id="loginstatusid" href="member.php?mod=switchstatus" title="{lang login_switch_invisible_mode}" onclick="ajaxget(this.href, 'loginstatus');return false;" class="xi2"></a>
+								<a id="loginstatusid" href="member.php?mod=switchstatus" title="{lang login_switch_invisible_mode}" onClick="ajaxget(this.href, 'loginstatus');return false;" class="xi2"></a>
 							</span>
 							<!--{/if}-->
 							<!--{hook/global_usernav_extra1}-->
@@ -150,14 +150,14 @@
 						<p>
 							<!--{hook/global_usernav_extra3}-->
 							<!--{eval $upgradecredit = $_G['uid'] && $_G['group']['grouptype'] == 'member' && $_G['group']['groupcreditslower'] != 999999999 ? $_G['group']['groupcreditslower'] - $_G['member']['credits'] : false;}-->
-							<a href="home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu"{if !$_G[setting][bbclosed]} onmouseover="delayShow(this, showCreditmenu);" class="showmenu"{/if}>{lang credits}: $_G[member][credits]</a>
-							<span class="pipe">|</span>{lang usergroup}: <a href="home.php?mod=spacecp&ac=usergroup"{if $upgradecredit !== 'false'} id="g_upmine" class="xi2" onmouseover="delayShow(this, showUpgradeinfo)"{/if}>$_G[group][grouptitle]</a>
+							<a href="home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu"{if !$_G[setting][bbclosed]} onMouseOver="delayShow(this, showCreditmenu);" class="showmenu"{/if}>{lang credits}: $_G[member][credits]</a>
+							<span class="pipe">|</span>{lang usergroup}: <a href="home.php?mod=spacecp&ac=usergroup"{if $upgradecredit !== 'false'} id="g_upmine" class="xi2" onMouseOver="delayShow(this, showUpgradeinfo)"{/if}>$_G[group][grouptitle]</a>
 						</p>
 					</div>
 					<!--{elseif !empty($_G['cookie']['loginuser'])}-->
 					<p>
 						<strong><a id="loginuser" class="noborder"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></strong>
-						<span class="pipe">|</span><a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)">{lang activation}</a>
+						<span class="pipe">|</span><a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a>
 						<span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
 					</p>
 					<!--{elseif !$_G[connectguest]}-->
@@ -179,7 +179,7 @@
 				</div>
 
 				<div id="nv">
-					<a href="javascript:;" id="qmenu" onmouseover="showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});">{lang my_nav}</a>
+					<a href="javascript:;" id="qmenu" onMouseOver="showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});">{lang my_nav}</a>
 					<ul>
 						<!--{loop $_G['setting']['navs'] $nav}-->
 							<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {if $mnid == $nav[navid]}class="a" {/if}$nav[nav]></li><!--{/if}-->

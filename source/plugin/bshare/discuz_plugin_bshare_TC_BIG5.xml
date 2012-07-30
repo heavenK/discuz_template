@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5]]></item>
+	<item id="Time"><![CDATA[2012-05-06 11:58]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/discuzx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[bShare¤À¨É«ö¶s]]></item>
+			<item id="identifier"><![CDATA[bshare]]></item>
+			<item id="description"><![CDATA[bShare¬O¥þ²y¤¤¤å¤¬Ápºô³Ì±j¤jªºªÀ¥æ¤À¨É¤ÞÀº¡I¥u»Ý¤@­Ó«ö¶s¡A´N¯à¬°±zªººô¯¸ª`¤JªÀ¥æ¤Æ¥\¯à¡A¨Ã´£¨Ñ±j¤jªº¼Æ¾Ú²Î­p¤ÀªR¥\¯à¡I]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[bshare/]]></item>
+			<item id="copyright"><![CDATA[bShare Team]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[´¡¥ó³]¸m]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[data]]></item>
+					<item id="menu"><![CDATA[¼Æ¾Ú²Î­p]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[bshare]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="message1"><![CDATA[½Ð¿é¤J¥¿½Tªº¶l½c¦a§}¡I]]></item>
+				<item id="message2"><![CDATA[½Ð¿é¤J¤»¦ì¥H¤W¥Î¤á±K½X¡I]]></item>
+				<item id="message3"><![CDATA[«Ü©êºp¡Awindows¥Î¤á¡J±z»Ý­n§ï¤@§ï±zªºphp.ini¤å¥óªº³]¸m¡A§ä¨ìphp_curl.dll¡A¨Ã¨ú®ø«e­±ªº¤À¸¹ª`ÄÀ´N¦æ¤F¡FLinux¥Î¤á¡J±z»Ý­n­«·s½sÄ¶±zªºPHP¡A¥´¶}½sÄ¶°Ñ¼Æ¡A¦bconfigure©R¥O¤W¥[¤W¡§€€with-curl¡¨°Ñ¼Æ´N¦æ¤F¡I]]></item>
+				<item id="message4"><![CDATA[±zªººô¯¸¤w¸gª`¥U¡A½Ð¿ï¾Üµn³°]]></item>
+				<item id="message5"><![CDATA[±zemail¤w¸gª`¥U¡A½Ð­«·s¿é¤J]]></item>
+				<item id="message6"><![CDATA[±z¿é¤Jªº±K½X¿ù»~¡A½Ð­«·s¿é¤J]]></item>
+				<item id="message7"><![CDATA[»·µ{Àò¨úBShareªºuuid¿ù»~¡A±z»Ý­n­«·s¹Á¸Õ¡C]]></item>
+				<item id="message8"><![CDATA[«H®§«O¦s¥¢±Ñ¡I½Ð­«·sµn¿ý]]></item>
+				<item id="message9"><![CDATA[¤w¸g¶}³qbShareªA°È¡A¤U­±§Ú­Ì¨Ó¶i¦æÅéÅç§a¡C]]></item>
+				<item id="message10"><![CDATA[±z¤w°h¥XbShareªA°È¡C½Ð¦A¦¸µn¿ý¡A¥H«K¨É¥ÎbShare±j¤jªº¼Æ¾Ú²Î­p¥\\¯à¡I]]></item>
+				<item id="message11"><![CDATA[½Ð¿ï¾Ü¦n«ö¶s¼Ë¦¡¦A³]©w¡I]]></item>
+				<item id="message12"><![CDATA[«ö¶s¼Ë¦¡³]©w¥¢±Ñ¡I]]></item>
+				<item id="message13"><![CDATA[«ö¶s¼Ë¦¡³]©w¦¨¥\\¡I]]></item>
+				<item id="message14"><![CDATA[¦¨¥\\³]©wbShare«ö¶sÅã¥Ü¦ì¸m]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="message1"><![CDATA[½Ð¿é¤J¥¿½Tªº¶l½c¦a§}¡I]]></item>
+				<item id="message2"><![CDATA[½Ð¿é¤J¤»¦ì¥H¤W¥Î¤á±K½X¡I]]></item>
+				<item id="message3"><![CDATA[±K½X»Ý«O«ù¤@­P]]></item>
+				<item id="buttonSwitch"><![CDATA[§ó´«±b¸¹]]></item>
+				<item id="buttonLogin"><![CDATA[µn¿ý]]></item>
+				<item id="buttonRegister"><![CDATA[ª`¥U]]></item>
+				<item id="buttonStyle"><![CDATA[³]¸m¼Ë¦¡]]></item>
+				<item id="buttonPosition"><![CDATA[³]¸m¦ì¸m]]></item>
+				<item id="buttonSimpleShare"><![CDATA[bShare°ò¥»¤À¨É¥\\¯à]]></item>
+				<item id="buttonGoBack"><![CDATA[ªð¦^µn¿ý]]></item>
+				<item id="buttonGuide"><![CDATA[¥Ü¨Ò]]></item>
+				<item id="buttonNotice"><![CDATA[±z¤]¥i¥Hª½±µ¨É¥Î¡J]]></item>
+				<item id="messageAuthed"><![CDATA[±z¤wµn³°bShareªA°È]]></item>
+				<item id="messageNoAuth"><![CDATA[½Ð±zª`¥U©Îµn¿ýbShare¡A¥H«K¨É¥ÎbShare±j¤jªº¼Æ¾Ú²Î­p¥\\¯à¡I]]></item>
+				<item id="messageStyle"><![CDATA[±z¥i¥H³q¹L¿ï¾Ü¡iÂ²³æ¼Ë¦¡¡j¤¤ªº¼Ë¦¡¡A©ÎªÌ³q¹L¡i¦Û©w¸q¼Ë¦¡¡jª½±µ­×§ï¼Ë¦¡¥N½X¨Ó­×§ï«ö¶s¼Ë¦¡¡AÂIÀ»³]¸m¼Ë¦¡«ö¶s«O¦s«á¡Aª½±µ¨ê·s«e¥x­¶­±±z´N·|¬Ý¨ì¤À¨É«ö¶s¥H±z³]©wªº¼Ë¦¡¥X²{¡C]]></item>
+				<item id="messageStyle1"><![CDATA[±z¥i¥H³q¹L­×§ï¤U®Ø¤¤ªº¥N½X¨Ó­×§ï«ö¶s¼Ë¦¡¡A§ó¦h¼Ë¦¡¥N½X½Ð°Ñ¦Ò<a target="_blank" href="http://www.bshare.cn/moreStyles" class="highlight" style="text-decoration: underline;">bShareºô¯¸</a>¡C<span class="text-orange">(ª`¡J¿ï¾Ü§¹¼Ë¦¡¤£­n§Ñ°OÖß¶K¨ì¤U­±«O¦s®@)</span>]]></item>
+				<item id="messageStyle2"><![CDATA[<b>UUID</b>¡J°lÂÜ¤À¨É¼Æ¾Ú¥²¶·´£¨Ñ¦¹¿ï¶µ¡A¦pªG±z¨S¦³³]¸m¸Ó°Ñ¼Æ¡A±z¥Ø«eµn¿ýªºuuid±N³Q³]¸m¦b¥N½X¤¤¡C]]></item>
+				<item id="messageStyle3"><![CDATA[<p>&nbsp;&nbsp;¬d§äuuid¤èªk¡J</p><p>&nbsp;&nbsp;Æ¡µn¿ý«á¨£¦¹­¶­±¤W¤èUUID</p><p>&nbsp;&nbsp;Æ¢µn¿ýbShare©x¤èºô¯¸¯¸ªø«á¥x¡i<a class="highlight" style="text-decoration: underline;" href="http://www.bshare.cn/websiteManage" target="_blank">ºÞ²z¤¤¤ß</a>¡j¬d¬Ý</p>]]></item>
+				<item id="messagePosition"><![CDATA[bShare¤À¨É«ö¶s¥i¥H´O¤J±zªº©«¤l­¶­±ªº¦h­Ó¦ì¸m¡A¨ãÅé¨BÆJ½Ð°Ñ¦Ò]]></item>
+				<item id="messageGuide1"><![CDATA[¤À¨É«ö¶s¥i¥H¦b¥»À³¥Îªº¡i´¡¥ó³]¸m¡jÄæ¥Ø¤U³]¸m¤é§Ó»P©«¤l¤¤Åã¥Üªº¦ì¸m¡A¦p¤U¹Ï¡J]]></item>
+				<item id="messageGuide2"><![CDATA[³]¸m¬ÛÀ³ªº¦ì¸m«á¡AÂIÀ»¡i³]¸m¦ì¸m¡j§Y¥i³]¸m¦¨¥\\¡CµM«áÂIÀ»­¶­±¤W¤èªº¡i¤u¨ã¡j§ó·s½w¦s¡A¦p¤U¹Ï¡J]]></item>
+				<item id="messageGuide3"><![CDATA[½w¦s§ó·s«á´N¥i¥H¦b«e¥xªº©«¤l»P¤é§Ó¤¤¬d¬Ý«ö¶sªºÅã¥Ü¦ì¸m¡C]]></item>
+				<item id="accountUsername"><![CDATA[¥Î¤á¦W]]></item>
+				<item id="accountUuid"><![CDATA[UUID]]></item>
+				<item id="accountDomain"><![CDATA[ºô¯¸°ì¦W]]></item>
+				<item id="accountType"><![CDATA[µn¿ýÃþ«¬]]></item>
+				<item id="accountTypeNew"><![CDATA[·sª`¥U]]></item>
+				<item id="accountTypeExist"><![CDATA[¤w¸g¦³½ã¸¹]]></item>
+				<item id="accountEmail"><![CDATA[(E-Mail¦a§})]]></item>
+				<item id="accountPassword"><![CDATA[±K½X]]></item>
+				<item id="accountRepass"><![CDATA[½T»{±K½X]]></item>
+				<item id="styleSimple"><![CDATA[Â²³æ¼Ë¦¡]]></item>
+				<item id="styleComplex"><![CDATA[¦Û©w¸q¼Ë¦¡]]></item>
+				<item id="positionTopic"><![CDATA[¥D©«Åã¥Ü¦ì¸m³]¸m]]></item>
+				<item id="positionBlog"><![CDATA[¤é§ÓÅã¥Ü¦ì¸m³]¸m]]></item>
+				<item id="positionSite0"><![CDATA[¤£±Ò¥Î]]></item>
+				<item id="positionSite1"><![CDATA[¥D©«¥¿¤å¤W¤è]]></item>
+				<item id="positionSite2"><![CDATA[¥D©«¥¿¤å¤U¤è]]></item>
+				<item id="positionSite3"><![CDATA[¤é§Ó¥¿¤å¤W¤è]]></item>
+				<item id="positionSite4"><![CDATA[¤é§Ó¥¿¤å¤U¤è]]></item>
+				<item id="headingStyle"><![CDATA[¨BÆJ¤@¡J³]¸m¼Ë¦¡]]></item>
+				<item id="headingPosition"><![CDATA[¨BÆJ¤G¡J³]¸m¦ì¸m]]></item>
+				<item id="introAuthed"><![CDATA[<p>ª`¥U¤FbShareªº·|­û¥i¥H§K¶O¨É¥Î§ó¦hÃB¥~¥\\¯à¡J</p><div class="verticalradio-spacer"></div><ul><li>±z¥i¥H§Q¥ÎbShare¼Æ¾Ú¤ÀªR¨t²Î¶i¦æ°lÂÜ¡Aª¾¹D­þ¨Ç¤å³¹³Ì¸g±`³Q¤À¨É¡B³Q¤À¨É¨ì­þ¨½¡B±a¦^¦h¤Ö¬y¶qµ¥¼Æ¾Ú¡CÁÙ¯à§i¶D±z³o¨Ç¤å³¹¦b¥þ²yªºbShareºôµ¸¤¤¡A³Q¦h¤Ö¤H¤À¨É¹L¡I</li><li>±z¥i¥HÀH®É¦^ÅU©Ò¤À¨É¹Lªº¤º®e¡A¨Ã±N¥¦Âà¶Kµ¹§ó¦hªº¤H¡I</li><li>¥i¥H±N³ßÅwªººô­¶¼È¦s¦bbShare¡I</li><li>¦b50,000¦h­Óºô¯¸¤¤§ó§Ö³t¦a¤À¨É¡I</li><li>¤@Áä¦P¨B¤À¨É¨ì¦h­ÓªÀ¥æºôµ¸¥­¥x¡I</li></ul>]]></item>
+				<item id="introbShare"><![CDATA[<p>bShare¯S¦â¤¶²Ð¡J</p><div class="verticalradio-spacer"></div><ul><li>§Q¥ÎbShare§l¤Þ¨Ó¦ÛªÀ¥æºô¯¸ªº¬y¶q¡C¨C¦¸¤À¨É¥i±a¨Óªº¬y¶q¡A¥­§¡¥i¹F7­¿¥H¤W¡I</li><li>ÀH¤ß©Ò±ý¿ï¾Ü³Ì²Å¦X±zºô¯¸­·®æ¤Î¥Î¤áÄÝ©Êªº«ö¶s³]­p¡B¤À¨É¥\\¯à¡C</li><li>¦æ·~¤º³Ì»´¬Õªº¥N½X¡A¤£¬°±zªººô¯¸³y¦¨­t¾á¡C</li><li>»´ªQ³]¸m¡AÅý±zªº¥Î¤á¤À¨É§¹¶¶«KÃöª`±z¤@¤U¡A±N±zªººô¯¸»P·L³Õ¡BªÀ¥æºô¯¸ºò±Kµ²¦X</li><li>¤@¦¸¦P¨B¦h­Ó¥­¥x¡AÅý±zªº¥Î¤á§ó§Ö¡B§ó¼sªx¦a±N±zªºÀu½è¤º®eÂÐ»\\¾ã­ÓªÀ¥æºôµ¸¡A±a¨Ó§ó¤jªºÃn¥ú¶q¡I</li></ul>]]></item>
+				<item id="bShareHelp"><![CDATA[¦b¦w¸Ë©Î¨Ï¥Î¤¤¡A¦p¦³¥ô¦ó°ÝÃD»Ý­n<a class="text-orange" href="http://www.bshare.cn/help/installDiscuz" target="_blank">À°§U»P«t¸ß</a>¡AÅwªïÀH®ÉÁp¨t<a class="text-orange" href="http://wpa.qq.com/msgrd?v=3&uin=800087176&site=qq&menu=yes" target="_blank">bShare«ÈªAQQ</a>¡J800087176 ©Î¨Ó«H¨ì<a class="text-orange" href="mailto:feedback@bshare.cn" target="_blank">feedback@bshare.cn.</a>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

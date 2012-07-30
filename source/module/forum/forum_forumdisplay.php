@@ -70,7 +70,7 @@ $forum_up = $_G['cache']['forums'][$_G['forum']['fup']];
 if($_G['forum']['type'] == 'forum') {
 	$fgroupid = $_G['forum']['fup'];
 	if(empty($_GET['archiveid'])) {
-		$navigation = ' <em>&rsaquo;</em> <a href="forum.php?gid='.$forum_up['fid'].'">'.$forum_up['name'].'</a><em>&rsaquo;</em> <a href="forum.php?mod=forumdisplay&fid='.$_G['forum']['fid'].'">'.$_G['forum']['name'].'</a>';
+		$navigation = ' <em>&rsaquo;</em> <a href="forum.php?mod=forumdisplay&fid='.$_G['forum']['fid'].'">'.$_G['forum']['name'].'</a>';
 	} else {
 		$navigation = ' <em>&rsaquo;</em> '.'<a href="forum.php?mod=forumdisplay&fid='.$_G['fid'].'">'.$_G['forum']['name'].'</a> <em>&rsaquo;</em> '.$forumarchive[$_GET['archiveid']]['displayname'];
 	}
@@ -430,7 +430,7 @@ $_GET['ascdesc'] = isset($_G['cache']['forums'][$_G['fid']]['ascdesc']) ? $_G['c
 $check = array();
 $check[$filter] = $check[$_GET['orderby']] = $check[$_GET['ascdesc']] = 'selected="selected"';
 
-if(($_G['forum']['status'] != 3 && $_G['forum']['allowside']) || !empty($_G['forum']['threadsorts']['templatelist'])) {
+if($_G['forum']['status'] != 3 || !empty($_G['forum']['threadsorts']['templatelist'])) {
 	updatesession();
 	$onlinenum = C::app()->session->count_by_fid($_G['fid']);
 	if(!IS_ROBOT && ($_G['setting']['whosonlinestatus'] == 2 || $_G['setting']['whosonlinestatus'] == 3)) {
@@ -853,6 +853,32 @@ if(!empty($_G['forum']['threadsorts']['templatelist']) && $_G['forum']['status']
 	write_groupviewed($_G['fid']);
 	$template = 'diy:group/group:'.$_G['fid'];
 }
+
+//add by kaiser
+$banzhuname = explode("\t", $_G['forum']['moderators']);
+$banzhulist = C::t('common_member')->fetch_all_by_username($banzhuname);
+
+foreach($banzhulist as $val){
+	$kaiser_username = $val['username'];
+	$kaiser_uid = $val['uid'];
+	$kaiser_avatar = avatar($kaiser_uid, 'middle');
+	$kaiser_banzhu .= '<a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'<p class="caption">'.$kaiser_username.'</p></a>';
+}
+if(empty($_GET['k'])){
+	if(empty($_G['cookie']['forumdefstyle'])){
+		if(empty($_G['forum']['picstyle'])){
+			$kaiser_k = 1;
+		}else{
+			$kaiser_k = 2;
+		}
+	}else{
+		$kaiser_k = 1;
+	}
+}else{
+	$kaiser_k = $_GET['k'];
+}
+//$kaiser_k = $_GET['k'];
+//end add
 
 if(!defined('IN_ARCHIVER')) {
 	include template($template);
