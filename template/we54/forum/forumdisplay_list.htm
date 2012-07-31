@@ -4,49 +4,74 @@
 	<!--{/if}-->
     <div class="kaiser_th">
 		<div class="kaiser_nav_btn">
-            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=1&forumdefstyle=yes" {if $kaiser_k==1} class="kaiser_nav_on"{/if}>帖子</a>
+            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=1&forumdefstyle=yes" {if $kaiser_k==1} class="kaiser_nav_on"{else}class="kaiser_nav_out"{/if}>帖子</a>
             <!--{if !empty($_G['forum']['picstyle'])}-->
-                <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=2&forumdefstyle=no" title="{lang view_thread_imagemode}{lang view_thread}" {if $kaiser_k==2} class="kaiser_nav_on"{/if}>图集</a>
+                <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=2&forumdefstyle=no" title="{lang view_thread_imagemode}{lang view_thread}" {if $kaiser_k==2} class="kaiser_nav_on"{else}class="kaiser_nav_out"{/if}>图集</a>
             <!--{/if}-->
-            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=3&filter=digest&digest=1{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" {if $kaiser_k==3}class="kaiser_nav_on"{/if}>精华</a>
-            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=4&filter=specialtype&specialtype=poll{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" {if $kaiser_k==4}class="kaiser_nav_on"{/if}>投票</a>
+            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=3&filter=digest&digest=1{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" {if $kaiser_k==3}class="kaiser_nav_on"{else}class="kaiser_nav_out"{/if}>精华</a>
+            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&k=4&filter=specialtype&specialtype=poll{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" {if $kaiser_k==4}class="kaiser_nav_on"{else}class="kaiser_nav_out"{/if}>投票</a>
             
             <!--href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}"-->
 		</div>
+        <div class="kaiser_nav_search">
+        	<!--{if $_G['setting']['search']}-->
+            <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
+                <input type="hidden" name="mod" id="scbar_mod" value="forum" />
+                <input type="hidden" name="formhash" value="{FORMHASH}" />
+                <input type="hidden" name="srchtype" value="title" />
+                <input type="hidden" name="srhfid" value="$_G[fid]" />
+                <input type="hidden" name="srhlocality" value="$_G['basescript']::{CURMODULE}" />
+                <!--{if !empty($searchparams[params])}-->
+                    <!--{loop $searchparams[params] $key $value}-->
+                    <!--{eval $srchotquery .= '&' . $key . '=' . rawurlencode($value);}-->
+                    <input type="hidden" name="$key" value="$value" />
+                    <!--{/loop}-->
+                    <input type="hidden" name="source" value="discuz" />
+                    <input type="hidden" name="fId" id="srchFId" value="$_G[fid]" />
+                    <input type="hidden" name="q" id="cloudsearchquery" value="" />
+                <!--{/if}-->
+        		<button style="border:none;" type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="kaiser_nav_search_btn" value="true"></button>
+                <input type="text" name="srchtxt" id="scbar_txt" value="{lang enter_content}" onFocus="if (value =='{lang enter_content}'){value =''}" onBlur="if (value ==''){value='{lang enter_content}'}" class="kaiser_nav_search_text" autocomplete="off" x-webkit-speech speech />
+            </form>
+            <!--{/if}-->
+        </div>
 	</div>
-	<div class="th" style=" margin:0 0 0 10px; padding:0 0 0 10px;">
+    <!--{if ($_G['forum']['threadtypes'] && $_G['forum']['threadtypes']['listable']) || count($_G['forum']['threadsorts']['types']) > 0}-->
+        <ul id="thread_types" class="ttp bm cl kaiser_ttp_bm_cl">
+            <!--{hook/forumdisplay_threadtype_inner}-->
+            <li style=" padding:0 0 0 5px;">主题标签：</li>
+            <li id="ttp_all" {if !$_GET['typeid'] && !$_GET['sortid']}class="xw1 a"{/if}><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_G['forum']['threadsorts']['defaultshow']}&filter=sortall&sortall=1{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">{lang forum_viewall}</a></li>
+            <!--{if $_G['forum']['threadtypes']}-->
+                <!--{loop $_G['forum']['threadtypes']['types'] $id $name}-->
+                    <!--{if $_GET['typeid'] == $id}-->
+                    <li class="xw1 a"><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['sortid']}&filter=sortid&sortid=$_GET['sortid']{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}"><!--{if $_G[forum][threadtypes][icons][$id] && $_G['forum']['threadtypes']['prefix'] == 2}--><img class="vm" src="$_G[forum][threadtypes][icons][$id]" alt="" /> <!--{/if}-->$name</a></li>
+                    <!--{else}-->
+                    <li><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$id$forumdisplayadd[typeid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}"><!--{if $_G[forum][threadtypes][icons][$id] && $_G['forum']['threadtypes']['prefix'] == 2}--><img class="vm" src="$_G[forum][threadtypes][icons][$id]" alt="" /> <!--{/if}-->$name</a></li>
+                    <!--{/if}-->
+                <!--{/loop}-->
+            <!--{/if}-->
+
+            <!--{if $_G['forum']['threadsorts']}-->
+                <!--{if $_G['forum']['threadtypes']}--><li><span class="pipe">|</span></li><!--{/if}-->
+                <!--{loop $_G['forum']['threadsorts']['types'] $id $name}-->
+                    <!--{if $_GET['sortid'] == $id}-->
+                    <li class="xw1 a"><a href="forum.php?mod=forumdisplay&fid=$_G[fid]{if $_GET['typeid']}&filter=typeid&typeid=$_GET['typeid']{/if}{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
+                    <!--{else}-->
+                    <li><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=sortid&sortid=$id$forumdisplayadd[sortid]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}">$name</a></li>
+                    <!--{/if}-->
+                <!--{/loop}-->
+            <!--{/if}-->
+            <!--{hook/forumdisplay_filter_extra}-->
+        </ul>
+        <script type="text/javascript">showTypes('thread_types');</script>
+    <!--{/if}-->
+	<div class="th kaiser_list_pailie_th">
 		<table cellspacing="0" cellpadding="0">
 			<tr>
-				<th colspan="{if !$_GET['archiveid'] && $_G['forum']['ismoderator']}3{else}2{/if}">
-				<!--{if CURMODULE != 'guide'}-->
-					<div class="tf">
-						<span id="atarget" {if $_G['cookie']['atarget'] > 0}onclick="setatarget(-1)" class="y atarget_1"{else}onclick="setatarget(1)" class="y"{/if} title="{lang new_window_thread}">{lang new_window}</span>
-						{lang screening}:
-						<a id="filter_special" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">
-							<!--{if $_GET['specialtype'] == 'poll'}-->{lang thread_poll}<!--{elseif $_GET['specialtype'] == 'trade'}-->{lang thread_trade}<!--{elseif $_GET['specialtype'] == 'reward'}-->{lang thread_reward}<!--{elseif $_GET['specialtype'] == 'activity'}-->{lang thread_activity}<!--{elseif $_GET['specialtype'] == 'debate'}-->{lang thread_debate}<!--{else}-->{lang threads_all}<!--{/if}-->
-						</a>
-						<!--{if $_GET['specialtype'] == 'reward'}-->
-						<a id="filter_reward" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">
-							<!--{if $_GET['rewardtype'] == ''}-->{lang all_reward}<!--{elseif $_GET['rewardtype'] == '1'}-->{lang rewarding}<!--{elseif $_GET['rewardtype'] == '2'}-->{lang reward_solved}<!--{/if}-->
-						</a>
-						<!--{/if}-->
-						<a id="filter_dateline" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">
-							<!--{if $_GET['dateline'] == 86400}-->{lang last_1_days}<!--{elseif $_GET['dateline'] == 172800}-->{lang last_2_days}<!--{elseif $_GET['dateline'] == 604800}-->{lang list_one_week}<!--{elseif $_GET['dateline'] == 2592000}-->{lang list_one_month}<!--{elseif $_GET['dateline'] == 7948800}-->{lang list_three_month}<!--{else}-->{lang search_any_date}<!--{/if}-->
-						</a>
-						<!--{if !$_G['setting']['closeforumorderby']}-->
-						{lang orderby}:
-						<a id="filter_orderby" href="javascript:;" class="showmenu xi2" onclick="showMenu(this.id)">
-							<!--{if $_GET['orderby'] == 'dateline'}-->{lang list_post_time}<!--{elseif $_GET['orderby'] == 'replies'}-->{lang replies}<!--{elseif $_GET['orderby'] == 'views'}-->{lang views}<!--{elseif $_GET['orderby'] == 'lastpost'}-->{lang lastpost}<!--{elseif $_GET['orderby'] == 'heats'}-->{lang order_heats}<!--{else}-->{lang list_default_sort}<!--{/if}-->
-						<!--{/if}-->
-						</a><span class="pipe">|</span><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=digest&digest=1$forumdisplayadd[digest]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2">{lang digest_posts}</a><!--{if !empty($_G[setting][recommendthread][status])}--><span class="pipe">|</span><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=recommend&orderby=recommends&recommend=1$forumdisplayadd[recommend]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="xi2">{lang order_recommends}</a><!--{/if}-->
-						<!--{if empty($_G['forum']['picstyle']) && $_GET['orderby'] == 'lastpost' && (!$_G['setting']['forumseparator'] || !$separatepos) && !$_GET['filter']}--><span class="pipe">|</span><a href="javascript:;" onclick="checkForumnew_btn('{$_G['fid']}')" title="{lang showupgrade}" class="forumrefresh"></a><!--{/if}-->
-						<!--{hook/forumdisplay_filter_extra}-->
-					</div>
-				<!--{else}-->
-					{lang title}
-				<!--{/if}-->
+				<th colspan="{if !$_GET['archiveid'] && $_G['forum']['ismoderator']}3{else}2{/if}" class="kaiser_pailie" style=" padding:0 0 0 10px;">
+					<a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=author&orderby=dateline" {if $_GET['orderby'] == 'dateline'}style=" font-weight:bold;"{/if}>按最新发表</a><em>|</em><a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost" {if $_GET['orderby'] == 'lastpost'}style=" font-weight:bold;"{/if}>按最后回复</a><em>|</em><a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=replies" {if $_GET['orderby'] == 'replies'}style=" font-weight:bold;"{/if}>按最多回帖</a>
 				</th>
-				<!--{if $forumdefstyle == 'yes'}-->
+				<!--{if $kaiser_k == 1}-->
 					<!--{if CURMODULE == 'guide'}-->
 						<td class="by">{lang forum_group}</td>
 					<!--{/if}-->
@@ -99,7 +124,7 @@
 							<!--{if $separatepos <= $key + 1}-->
 								<!--{ad/threadlist}-->
 							<!--{/if}-->
-							<tbody id="$thread[id]">
+							<tbody id="$thread[id]" <!--{if $key % 2 == 1}--> class="kaiser_list_bg" <!--{/if}-->>
 								<tr>
 									<td class="icn">
 										<a href="forum.php?mod=viewthread&tid=$thread[icontid]&{if $_GET['archiveid']}archiveid={$_GET['archiveid']}&{/if}extra=$extra" title="{if $thread['displayorder'] == 1}{lang thread_type1} - {/if}
@@ -346,9 +371,9 @@
 	<!--{/if}-->
 <!--{/if}-->
 
-<div class="bm bw0 pgs cl">
-	<span id="fd_page_bottom">$multipage</span>
+<div class="bm bw0 pgs cl kaiser_list_bm_bw0_pgs_cl">
 	<span {if $_G[setting][visitedforums]}id="visitedforumstmp" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'21'})"{/if} class="pgb y"><a href="forum.php">{lang return_index}</a></span>
-	<!--{if !$_GET['archiveid']}--><a href="javascript:;" id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} title="{lang send_posts}"><img src="{IMGDIR}/pn_post.png" alt="{lang send_posts}" /></a><!--{/if}-->
+	<span id="fd_page_bottom" class="pgt">$multipage</span>
+	<!--{if !$_GET['archiveid']}--><a href="javascript:;" id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})"{if !$_G['forum']['allowspecialonly'] && empty($_G['forum']['picstyle']) && !$_G['forum']['threadsorts']['required']} onclick="showWindow('newthread', 'forum.php?mod=post&action=newthread&fid=$_G[fid]')"{else} onclick="location.href='forum.php?mod=post&action=newthread&fid=$_G[fid]';return false;"{/if} title="{lang send_posts}"><img src="{IMGDIR}/kaiser_pn_post.png" alt="{lang send_posts}" /></a><!--{/if}-->
 	<!--{hook/forumdisplay_postbutton_bottom}-->
 </div>
