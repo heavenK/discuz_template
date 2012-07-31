@@ -123,6 +123,7 @@ class block_article extends discuz_block {
 				'id' => array('name' => lang('blockclass', 'blockclass_field_id'), 'formtype' => 'text', 'datatype' => 'int'),
 				'uid' => array('name' => lang('blockclass', 'blockclass_article_field_uid'), 'formtype' => 'text', 'datatype' => 'int'),
 				'username' => array('name' => lang('blockclass', 'blockclass_article_field_username'), 'formtype' => 'text', 'datatype' => 'string'),
+				'author' => array('name' => lang('blockclass', 'blockclass_article_field_author'), 'formtype' => 'text', 'datatype' => 'string'),
 				'avatar' => array('name' => lang('blockclass', 'blockclass_article_field_avatar'), 'formtype' => 'text', 'datatype' => 'string'),
 				'avatar_middle' => array('name' => lang('blockclass', 'blockclass_article_field_avatar_middle'), 'formtype' => 'text', 'datatype' => 'string'),
 				'avatar_big' => array('name' => lang('blockclass', 'blockclass_article_field_avatar_big'), 'formtype' => 'text', 'datatype' => 'string'),
@@ -312,6 +313,7 @@ class block_article extends discuz_block {
 				'fields' => array(
 					'uid'=>$data['uid'],
 					'username'=>$data['username'],
+					'author'=>$data['author'],
 					'avatar' => avatar($data['uid'], 'small', true, false, false, $_G['setting']['ucenterurl']),
 					'avatar_middle' => avatar($data['uid'], 'middle', true, false, false, $_G['setting']['ucenterurl']),
 					'avatar_big' => avatar($data['uid'], 'big', true, false, false, $_G['setting']['ucenterurl']),
