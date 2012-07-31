@@ -9,18 +9,25 @@
 
 define('IN_DISCUZ', TRUE);
 
-$smsapi = "a1.chanyoo.cn";
+//$smsapi = "a1.chanyoo.cn";
+$smsapi = "202.165.181.81:8021";		//add by zh
 $charset = "utf8";
 $username = $_GET['username'];
 $password = $_GET['password'];
 
-$url = "http://".$smsapi."/".$charset."/interface/user_info.aspx?username=".$username."&password=".$password."";
+//$url = "http://".$smsapi."/".$charset."/interface/user_info.aspx?username=".$username."&password=".$password."";
+$url = "http://".$smsapi."/HttpInterface/GetMyFree.php?uname=".$username."&pwd=".$password."&balance=1";	//add by zh
 
 require_once('smstong.func.php');
 
 $ret = httprequest($url);
 
-$xml = simplexml_load_string($ret);
+if(!empty($ret)){
+	$sms_left = $ret;
+}
+
+
+/*$xml = simplexml_load_string($ret);
 
 $uid = intval($xml->result);
 
@@ -33,7 +40,7 @@ if ($uid > 0)
 	$sms_send = $xml->sms_send;
 	$sms_receive = $xml->sms_receive;
 	$expired_date = $xml->expired_date;
-}
+}*/
 
 ?>
 
@@ -61,7 +68,8 @@ a{ color:#f8505c; text-decoration:none;}
 <body>
 
 <?php
-if($uid > 0){
+//if($uid > 0){
+if(!empty($ret)){
 ?>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -76,7 +84,7 @@ if($uid > 0){
     <td align="right"><strong>剩余条数：</strong></td>
     <td><?php echo $sms_left ?> 条</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td width="13%" align="right"><strong>已发条数：</strong></td>
     <td width="87%"><?php echo $sms_send ?> 条</td>
   </tr>
@@ -101,7 +109,7 @@ if($uid > 0){
   <tr>
     <td align="right"><strong><br />免费短信：</strong></td>
     <td><span class="result"><br /><a href="http://app.offer99.com/?pid=z3f0c289df9b385b90383dbdefdbe461&userid=<?php echo $uid ?>&order=time_delay&asc_desc=asc" target="_blank" title="通过完成广告任务获取免费短信条数：请先登录开源软件增值服务平台到短信管理-短信提醒里面设置自己的真实手机号，然后在新打开的页面选择即时认证的广告，按照提示完成广告，当广告商审核通过后会给你的帐号加短信并发送提醒到您设置的手机号上。">点击此处获取免费短信</a></span></td>
-  </tr>
+  </tr> -->
   
 </table>
 

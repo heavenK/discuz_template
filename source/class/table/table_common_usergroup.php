@@ -130,6 +130,17 @@ class table_common_usergroup extends discuz_table
 		}
 		return $datas;
 	}
+	//---------add-----°´gourptitle²éÕÒ-----------------------------------------------------
+	public function findgroupid_by($title,$order='',$ordersc='DESC',$start=0,$limit=0){
+		$wheresql=DB::field('grouptitle',$title);
+		if($orderby = DB::order($orderby, $ordersc)) {
+			$wheresql .= ' ORDER BY '.$orderby;
+		}
+		if($limit) {
+			$wheresql .= DB::limit($start, $limit);
+		}
+		return DB::fetch_first('SELECT groupid FROM %t WHERE %i',array($this->_table,$wheresql));
+	}
 }
 
 ?>

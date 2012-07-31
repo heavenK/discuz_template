@@ -6,7 +6,7 @@
  *
  *      $Id: class_member.php 30840 2012-06-25 09:12:00Z zhangjie $
  */
-
+session_start();//add
 if(!defined('IN_DISCUZ')) {
 	exit('Access Denied');
 }
@@ -118,6 +118,19 @@ class logging_ctl {
 				setloginstatus($result['member'], $_GET['cookietime'] ? 2592000 : 0);
 				checkfollowfeed();
 
+				//----------add by zh-------------
+				$psptuser=passport::passport_setsession($result['member'], $_GET['cookietime'] ? 2592000 : 0,$_G['clientip']);
+				if($psptuser==false){
+					$pass=passport::useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);
+					if(is_array($pass)){
+						$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);
+					}else{
+						showmessage('login_invalid');
+					}
+				}
+				
+				//--------------------------------
+
 				C::t('common_member_status')->update($_G['uid'], array('lastip' => $_G['clientip'], 'lastvisit' =>TIMESTAMP, 'lastactivity' => TIMESTAMP));
 				$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';
 
@@ -219,6 +232,7 @@ class logging_ctl {
 		}
 
 		clearcookies();
+		passport::logout();			//add
 		$_G['groupid'] = $_G['member']['groupid'] = 7;
 		$_G['uid'] = $_G['member']['uid'] = 0;
 		$_G['username'] = $_G['member']['username'] = $_G['member']['password'] = '';
@@ -610,6 +624,7 @@ class register_ctl {
 				showmessage('profile_uid_duplicate', '', array('uid' => $uid));
 			}
 
+			$passportpwd=$password;				//add
 			$password = md5(random(10));
 			$secques = $questionid > 0 ? random(8) : '';
 
@@ -664,6 +679,26 @@ class register_ctl {
 			$init_arr = array('credits' => explode(',', $this->setting['initcredits']), 'profile'=>$profile, 'emailstatus' => $emailstatus);
 
 			C::t('common_member')->insert($uid, $username, $password, $email, $_G['clientip'], $groupinfo['groupid'], $init_arr);
+
+			//----------------add--------------------------
+			$pass=passport::useradd($uid, $username, $passportpwd, $email, $_G['clientip'], $groupinfo['groupid'], $init_arr);	//add
+			
+			if(is_array($pass)){
+				$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
+			}else if($pass=="userisexist"){
+				uc_user_delete($uid);
+				C::t('common_member')->delete_no_validate($uid);
+				showmessage('profile_username_duplicate');
+			}else{
+				uc_user_delete($uid);
+				C::t('common_member')->delete_no_validate($uid);
+				showmessage('system_error_action');
+			}
+			if(!empty($profile['mobile'])){
+				 C::t('common_member')->update_extgroupids_by_uid($uid,22);
+			}
+			//--------------add end-------------------------
+
 			if($emailstatus) {
 				updatecreditbyaction('realemail', $uid);
 			}
@@ -772,6 +807,12 @@ class register_ctl {
 			dsetcookie('invite_auth', '');
 
 			$url_forward = dreferer();
+
+			//-------------------add-------------------------------------
+			if($_G['setting']['verify']['enabled'] && passport::p_allowverify() || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
+				$url_forward=passport::url_sms();
+			}
+			//-----------------------------------------------------------
 			$refreshtime = 3000;
 			switch($this->setting['regverify']) {
 				case 1:

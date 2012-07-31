@@ -499,6 +499,15 @@ class table_common_member extends discuz_table_archive
 	public function range_by_uid($from, $limit) {
 		return DB::fetch_all('SELECT * FROM %t WHERE uid >= %d ORDER BY uid LIMIT %d', array($this->_table, $from, $limit), $this->_pk);
 	}
+
+	//---------add-----ÐÞ¸Äextgroupids-----------------------------------------------------
+	public function update_extgroupids_by_uid($uid,$extgroupids=22){
+	     if($uid) {
+			$data = array('extgroupids'=>intval($extgroupids));
+			DB::update($this->_table, $data, array('uid' => intval($uid)), 'UNBUFFERED');
+			$this->update_cache($uid, $data);
+		}
+	}
 }
 
 ?>

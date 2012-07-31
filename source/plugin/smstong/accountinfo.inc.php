@@ -27,6 +27,6 @@ if (empty($_G['cache']['plugin']['smstong']['smsusername']) || empty($_G['cache'
 	cpmsg($Plang['smstong_username_password_empty'], "action=plugins&operation=config&do=$_G[gp_do]", 'error');
 }
 
-echo '<iframe id="frame_content" src="source/plugin/smstong/accountinfo.php?username='.$_G['cache']['plugin']['smstong']['smsusername'].'&password='.$_G['cache']['plugin']['smstong']['smspassword'].'" scrolling="no" frameborder="0" onload="this.height=this.contentWindow.document.documentElement.scrollHeight" style="position:absolute; left:0px; top:50px; width:100%; border:0px;"></iframe>';
+echo '<iframe id="frame_content" src="source/plugin/smstong/accountinfo.php?username='.$_G['cache']['plugin']['smstong']['smsusername'].'&password='.md5($_G['cache']['plugin']['smstong']['smspassword']).'" scrolling="no" frameborder="0" onload="this.height=this.contentWindow.document.documentElement.scrollHeight" style="position:absolute; left:0px; top:50px; width:100%; border:0px;"></iframe>';
 
 ?>
