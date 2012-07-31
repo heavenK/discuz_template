@@ -15,8 +15,8 @@
 		</div>
         <div class="kaiser_nav_search">
         	<!--{if $_G['setting']['search']}-->
-            <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
-                <input type="hidden" name="mod" id="scbar_mod" value="forum" />
+            <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank">
+                <input type="hidden" name="mod" id="scbar_mod" value="curforum" />
                 <input type="hidden" name="formhash" value="{FORMHASH}" />
                 <input type="hidden" name="srchtype" value="title" />
                 <input type="hidden" name="srhfid" value="$_G[fid]" />

@@ -74,6 +74,19 @@ p.caption 							{ height:20px; font-size:14px; color:#333333; text-align:center
 .kaiser_tuijian_cont .xl1 ul li a	{ width:82px; height:22px; background:#FFF; border:1px solid #cfcfcf; text-align:center; font-size:12px; color:#000; overflow:hidden; float:left;}
 .kaiser_tuijian_cont .xl1 ul li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
 
+/*±¾°æÍÆ¼ö*/
+.kaiser_list_benban_cont			{ width:321px; height:118px; margin:0; margin:13px 0 12px 9px; display:inline; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dl			{ width:321px; height:118px; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dt			{ width:161px; height:118px; padding:0 0 0 10px; font-weight:normal; float:left;}
+.kaiser_list_benban_cont dd			{ width:120px; height:118px; margin:0 0 0 19px; display:inline; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dd em		{ width:120px; height:90px; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dd i		{ width:120px; height:24px; text-align:center; line-height:28px; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dd i a		{ color:#000;}
+.kaiser_list_benban_cont dt em		{ width:161px; height:75px; color:#000; line-height:24px; overflow:hidden; float:left;}
+.kaiser_list_benban_cont dt em b	{ font-size:14px; color:#ff0000;}
+.kaiser_list_benban_cont dt i		{ width:161px; height:42px; color:#666666; line-height:20px; overflow:hidden; float:left;}
+
+
 
 
 
