@@ -145,6 +145,7 @@ $lang = array(
 	'blockclass_article_field_dateline' => '发布时间',
 	'blockclass_article_field_uid' => '作者UID',
 	'blockclass_article_field_username' => '作者名',
+	'blockclass_article_field_author' => '原作者',
 	'blockclass_article_field_avatar' => '用户头像',
 	'blockclass_article_field_avatar_middle' => '用户头像(中)',
 	'blockclass_article_field_avatar_big' => '用户头像(大)',
