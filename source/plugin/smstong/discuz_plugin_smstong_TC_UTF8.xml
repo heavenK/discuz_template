@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5]]></item>
+	<item id="Time"><![CDATA[2012-03-05 10:39]]></item>
+	<item id="From"><![CDATA[開源軟件增值服務平台 (http://s1.chanyoo.cn/)]]></item>
+	<item id="Data">
+		<item id="license"><![CDATA[使用本插件用戶必須遵守相關法律法規以及開源軟件增值服務平台相關規定，嚴禁發送含有以下內容的短信︰
+
+1.損害國家榮譽和利益的。
+
+2.代_開_發_票，六_合_彩，6_+_1 等違法詐騙類信息的。
+
+3.違反中華人民共和國法律、行政法規所禁止的一切其它內容的。
+
+4.危害國家安全，泄露國家秘密，顛覆國家政權，破壞國家統一的。
+
+5.侮辱、謾罵、誹謗、騷擾他人以及給他人學習生活工作帶來嚴重干擾的。
+
+6.反動、色情、淫穢、賭博、暴力、凶殺、恐怖、恐嚇、詐騙或者教唆犯罪的。
+
+7.拒絕任何人以任何形式在本平台發送與中華人民共和國法律相抵觸的短信內容。
+
+8.煽動民族仇恨、民族歧視，破壞民族團結的，破壞國家宗教政策，宣揚邪教和封建迷信的。
+
+9.造謠中傷，擾亂社會秩序，破壞社會穩定的，違反中華人民共和國憲法所確定的基本原則的。
+
+10.禁止通過本平台發送一切個人交流類的信息，本平台只能發送會員通知公告以及行業應用信息。
+
+如果發現違反以上規定的，凍結開源軟件增值服務平台帳號並沒收帳號余額和短信條數，情節嚴重的短信記錄存檔並報送相關部門依法處理。
+		]]></item>
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[Discuz! X2.5 SMSTong]]></item>
+			<item id="identifier"><![CDATA[smstong]]></item>
+			<item id="description"><![CDATA[Discuz! X2.5 短信通是武漢暢友網絡發展有限公司推出的一套基于Discuz! X2.5系統的短信插件程序。Chanyoo旗下的Discuz! X2.5 短信通產品，無論在功能、穩定性、負載能力、安全保障等方面都居于同類產品領先地位。插件功能︰手機短信驗證注冊，手機短信找回密碼，手機號登錄帳號，手機號綁定任務，注冊修改密碼短信提醒，指定版塊強制綁定手機號指定用戶組可以除外，參加活動短信通知，活動帖審核短信通知，活動貼發通知短信，取消參加活動短信通知，顯示會員綁定手機狀態，後台發送短信通知。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[smstong/]]></item>
+			<item id="copyright"><![CDATA[Chanyoo Inc.]]></item>
+			<item id="version"><![CDATA[7.6]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[smstong]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[accountinfo]]></item>
+					<item id="menu"><![CDATA[帳號信息]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[verifymgr]]></item>
+					<item id="menu"><![CDATA[驗證管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[sendsms]]></item>
+					<item id="menu"><![CDATA[短信通知]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[qunfasms]]></item>
+					<item id="menu"><![CDATA[發送短信]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[sended]]></item>
+					<item id="menu"><![CDATA[發送列表]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[recved]]></item>
+					<item id="menu"><![CDATA[接收列表]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="7">
+					<item id="name"><![CDATA[checkenv]]></item>
+					<item id="menu"><![CDATA[環境檢測]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="8">
+					<item id="name"><![CDATA[help]]></item>
+					<item id="menu"><![CDATA[插件幫助]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[平台帳號]]></item>
+				<item id="description"><![CDATA[請填寫開源軟件增值服務平台（http://s1.chanyoo.cn）注冊的帳號]]></item>
+				<item id="variable"><![CDATA[smsusername]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[demo]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[平台密碼]]></item>
+				<item id="description"><![CDATA[請填寫開源軟件增值服務平台（http://s1.chanyoo.cn）帳號的密碼]]></item>
+				<item id="variable"><![CDATA[smspassword]]></item>
+				<item id="type"><![CDATA[password]]></item>
+				<item id="value"><![CDATA[demo]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[通訊密鑰]]></item>
+				<item id="description"><![CDATA[請確保此值跟開源軟件增值服務平台對應帳號的“短信接口-通訊密鑰”中所設置的值一致，默認為“smstong”，否則用戶回復信息可能無法正確推送。
+請先到開源軟件增值服務平台“短信接口-通訊密鑰”中設置“接收到短信主動通知地址”為︰http://您的論壇域名/plugin.php?id=smstong:notify
+請先到開源軟件增值服務平台“短信接口-通訊密鑰”中設置“接收短信主動通知地址編碼”為您的論壇程序對應的編碼，設置錯誤會導致接收的回復亂碼]]></item>
+				<item id="variable"><![CDATA[key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[smstong]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[發送短信間隔]]></item>
+				<item id="description"><![CDATA[前台會員同一IP客戶端兩次請求發送短信時間間隔單位秒]]></item>
+				<item id="variable"><![CDATA[mobilegap]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[180]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[短信驗證碼有效期]]></item>
+				<item id="description"><![CDATA[前台會員獲取短信驗證碼後多長時間內提交有效默認一天內提交有效單位秒]]></item>
+				<item id="variable"><![CDATA[periodofvalidity]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[86400]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[獲取短信驗證碼鏈接文字]]></item>
+				<item id="description"><![CDATA[設置開啟手機短信驗證注冊和手機綁定後獲取手機短信驗證碼的鏈接文字]]></item>
+				<item id="variable"><![CDATA[getverifycodetext]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[獲取短信驗證碼]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[短信內容簽名]]></item>
+				<item id="description"><![CDATA[網站下發短信所帶在短信內容結尾的簽名信息，不填寫默認為網站名稱，填寫簽名不用帶括號，盡量簡短有意義表達力強]]></item>
+				<item id="variable"><![CDATA[smstongsign]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[是否開啟手機號可以登錄]]></item>
+				<item id="description"><![CDATA[開啟後前台會員登錄頁面可以通過手機號和密碼登錄網站，必須保證手機號只在一個帳號的資料里面]]></item>
+				<item id="variable"><![CDATA[mobilelog]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[是否開啟注冊手機短信驗證]]></item>
+				<item id="description"><![CDATA[開啟後前台會員注冊頁面必須通過短信驗證手機號才能完成注冊]]></item>
+				<item id="variable"><![CDATA[mobilereg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[是否開啟QQ注冊手機短信驗證]]></item>
+				<item id="description"><![CDATA[開啟後前台會員QQ注冊頁面必須通過短信驗證手機號才能完成注冊]]></item>
+				<item id="variable"><![CDATA[qqmobilereg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[手機短信注冊驗證內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰手機號︰$mobile 驗證碼︰$verifycode]]></item>
+				<item id="variable"><![CDATA[mobileregmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您的手機號︰$mobile，注冊驗證碼︰$verifycode，一天內提交有效！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[是否限制所在地區手機短信驗證]]></item>
+				<item id="description"><![CDATA[開啟後前台會員只有指定地區的手機號和IP才能完成驗證注冊和綁定手機]]></item>
+				<item id="variable"><![CDATA[areacons]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[限制手機短信驗證所在地區類型]]></item>
+				<item id="description"><![CDATA[填寫限制手機短信驗證所在地區類型是限制所在省還是限制所在市，例如要限制只有湖北省地區的手機和IP才能注冊和驗證就選擇“省”，要限制只有武漢市的手機和IP才能注冊和驗證就選擇“市”，默認為市]]></item>
+				<item id="variable"><![CDATA[areatype]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=市
+2=省]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[限制手機短信驗證所在地區名稱]]></item>
+				<item id="description"><![CDATA[填寫要限制手機短信驗證的地區名稱，例如要限制只有湖北省地區的手機和IP才能注冊和驗證就填寫“湖北”，要限制只有武漢市的手機和IP才能注冊和驗證就填寫“武漢”，不需要帶“省，市”，多個地區名之間用 | 分隔開，為空即不限制任何地區所有手機和IP都可以注冊和驗證]]></item>
+				<item id="variable"><![CDATA[areavalue]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[北京]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[手機短信驗證用戶組]]></item>
+				<item id="description"><![CDATA[前台會員手機短信驗證注冊以及綁定手機號後所屬用戶分組，為空不選擇還是默認的會員用戶組，只能選擇自定義用戶組和系統用戶組，因為會員用戶組直接跟積分掛鉤的，即使你選擇了一個會員用戶組注冊成功後會自動升級為默認的會員用戶組，綁定手機號後變更用戶組只對會員用戶組用戶有效，如果手機短信驗證所在用戶組被刪除，請到此處設置新的手機短信驗證用戶組，否則還是默認的會員用戶組。]]></item>
+				<item id="variable"><![CDATA[mobilegroup]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[是否開啟購買邀請碼短信接收]]></item>
+				<item id="description"><![CDATA[開啟後前台會員可以用手機短信接收購買的邀請碼，必須關閉普通注冊開啟邀請碼注冊，並且開通電子商務功能允許充值購買邀請碼。]]></item>
+				<item id="variable"><![CDATA[invitepayment]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[短信接收邀請碼內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰訂單號︰$orderid 邀請碼︰$codetext 多個邀請碼以空格分隔]]></item>
+				<item id="variable"><![CDATA[invitepaymentmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您的訂單︰$orderid已經支付完成，訂單已確認有效。以下是您獲得的邀請碼︰$codetext]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[是否開啟注冊短信提醒]]></item>
+				<item id="description"><![CDATA[開啟後前台會員注冊成功後發短信提醒會員注冊成功]]></item>
+				<item id="variable"><![CDATA[registernotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[注冊短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 密碼︰$password 必須開啟手機短信注冊，否則無法獲取用戶手機號發送短信提醒]]></item>
+				<item id="variable"><![CDATA[registernotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的用戶您已經注冊成功，用戶名︰$username 密碼︰$password 感謝您的注冊！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[是否開啟修改密碼短信提醒]]></item>
+				<item id="description"><![CDATA[開啟後前台會員修改帳號密碼後發短信提醒用戶]]></item>
+				<item id="variable"><![CDATA[modpasswordnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[修改密碼短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 新密碼︰$newpassword]]></item>
+				<item id="variable"><![CDATA[modpasswordnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的會員︰$username 您已經成功修改密碼，您的新密碼︰$newpassword 請牢記新密碼！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[是否開啟短信找回密碼]]></item>
+				<item id="description"><![CDATA[開啟後前台找回密碼頁面可以通過輸入手機號短信找回密碼]]></item>
+				<item id="variable"><![CDATA[mobilepwd]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[短信找回密碼內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 密碼︰$password]]></item>
+				<item id="variable"><![CDATA[mobilepwdmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的會員，您的用戶名︰$username，密碼︰$password。請及時登陸網站修改密碼！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[是否開啟綁定手機號]]></item>
+				<item id="description"><![CDATA[開啟後前台會員登錄網站到個人中心頁面可以綁定（重新）手機號]]></item>
+				<item id="variable"><![CDATA[mobilebind]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[綁定手機短信內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰手機號︰$mobile 驗證碼︰$verifycode]]></item>
+				<item id="variable"><![CDATA[mobilebindmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[您的手機號︰$mobile，綁定驗證碼︰$verifycode，一天內提交有效！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[是否開啟強制綁定手機]]></item>
+				<item id="description"><![CDATA[開啟後前台會員要回復發帖必須先綁定手機號否則提示用戶綁定]]></item>
+				<item id="variable"><![CDATA[mobilecons]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[開啟強制綁定手機版塊]]></item>
+				<item id="description"><![CDATA[需要強制綁定手機的版塊，選擇空則所有版塊需要強制綁定手機才能發帖和回復，必須開啟強制綁定手機。]]></item>
+				<item id="variable"><![CDATA[consfids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[不限制強制綁定手機用戶組]]></item>
+				<item id="description"><![CDATA[若某些版塊開啟了強制綁定手機才能發帖和回復選擇的用戶組不受限制，選擇空則指定需要強制綁定手機的版塊所有會員必須綁定手機才能發帖和回復。]]></item>
+				<item id="variable"><![CDATA[consusergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[是否開啟參加活動短信通知]]></item>
+				<item id="description"><![CDATA[開啟後前台會員參加活動會短信通知活動發起者讓活動發起者能做到盡快審核參加活動的人。]]></item>
+				<item id="variable"><![CDATA[activityapp]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[參加活動短信通知內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 活動帖標題︰$activityname]]></item>
+				<item id="variable"><![CDATA[activityappmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username申請參加活動︰$activityname請盡快審核！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[是否開啟活動帖審核短信通知]]></item>
+				<item id="description"><![CDATA[開啟後前台活動貼發起者審核報名參加活動的會員會以短信通知形式把審核結果發送到參加活動的人手機上。]]></item>
+				<item id="variable"><![CDATA[activityaudit]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[活動帖審核短信通知內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 活動帖標題︰$activityname 審核狀態︰$auditstatus 附言︰$reason]]></item>
+				<item id="variable"><![CDATA[activityauditmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username申請參加活動︰$activityname審核︰$auditstatus附言︰$reason]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[是否開啟活動帖發送短信通知]]></item>
+				<item id="description"><![CDATA[開啟後前台活動貼發起者發通知會以短信形式發送到參加活動的人手機上。]]></item>
+				<item id="variable"><![CDATA[activitymessageon]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[活動帖發送短信通知內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰活動帖標題︰$activityname 通知內容︰$message]]></item>
+				<item id="variable"><![CDATA[activitymessage]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[活動︰$activityname通知︰$message]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[是否開啟取消參加活動短信通知]]></item>
+				<item id="description"><![CDATA[開啟後前台會員取消參加活動會短信通知活動發起者讓活動發起者能盡快知道有人取消參加活動。]]></item>
+				<item id="variable"><![CDATA[activitycancal]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[取消參加活動短信通知內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 活動帖標題︰$activityname]]></item>
+				<item id="variable"><![CDATA[activitycancalmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username取消參加活動︰$activityname請盡快核實！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[37]]></item>
+				<item id="title"><![CDATA[是否開啟回復短信通知]]></item>
+				<item id="description"><![CDATA[開啟後前台會員回復主題會短信通知樓主。]]></item>
+				<item id="variable"><![CDATA[replynotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[回復短信通知內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 主題︰$subject]]></item>
+				<item id="variable"><![CDATA[replynotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username回復了您的主題︰$subject，內容︰$content]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="38">
+				<item id="displayorder"><![CDATA[39]]></item>
+				<item id="title"><![CDATA[是否開啟站內短消息提醒]]></item>
+				<item id="description"><![CDATA[開啟後前台會員收到站內短消息會主動提醒會員收到新的站內短消息。]]></item>
+				<item id="variable"><![CDATA[sitemsgnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[站內短消息提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 內容︰$message]]></item>
+				<item id="variable"><![CDATA[sitemsgnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username發來新的站內短消息︰$message請盡快查看！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="40">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[是否開啟留言板短信提醒]]></item>
+				<item id="description"><![CDATA[開啟後前台會員空間收到留言會主動提醒會員收到新的留言板留言。]]></item>
+				<item id="variable"><![CDATA[leavemsgnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="41">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[留言板短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 內容︰$message請盡快查看！]]></item>
+				<item id="variable"><![CDATA[leavemsgnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username在您的空間留言︰$message請盡快查看！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="42">
+				<item id="displayorder"><![CDATA[43]]></item>
+				<item id="title"><![CDATA[手機注冊綁定黑名單]]></item>
+				<item id="description"><![CDATA[如果需要禁止某手機號在本站注冊綁定請把需要禁止的手機號填寫在此，多個手機號用英文半角逗號分隔，為空即不限制任何手機號]]></item>
+				<item id="variable"><![CDATA[blackmobile]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="43">
+				<item id="displayorder"><![CDATA[44]]></item>
+				<item id="title"><![CDATA[是否開啟登錄後顯示手機綁定]]></item>
+				<item id="description"><![CDATA[開啟後前台會員登錄網站後如果個人資料-聯系方式里面沒有手機號就顯示手機綁定。]]></item>
+				<item id="variable"><![CDATA[displaymobilecons]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="44">
+				<item id="displayorder"><![CDATA[45]]></item>
+				<item id="title"><![CDATA[是否開啟舉報通知站長手機]]></item>
+				<item id="description"><![CDATA[開啟後前台會員在帖子列表里面提交舉報信息會即時通知站長設置的手機號站長收到通知後可及時處理。]]></item>
+				<item id="variable"><![CDATA[reportmsgnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="45">
+				<item id="displayorder"><![CDATA[46]]></item>
+				<item id="title"><![CDATA[舉報通知站長手機號]]></item>
+				<item id="description"><![CDATA[舉報通知站長設置的手機號可以設置多個手機號之間用英文半角逗號分隔。]]></item>
+				<item id="variable"><![CDATA[reportmsgnotifymobile]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="46">
+				<item id="displayorder"><![CDATA[47]]></item>
+				<item id="title"><![CDATA[舉報短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 帖子編號︰$tid 舉報內容︰$message]]></item>
+				<item id="variable"><![CDATA[reportmsgnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username舉報帖子編號︰$tid內容︰$message]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="47">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[是否開啟登錄短信提醒]]></item>
+				<item id="description"><![CDATA[開啟後前台會員登錄登錄網站後發送短信提示到會員手機號。]]></item>
+				<item id="variable"><![CDATA[loggingmsgnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="48">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[登錄短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 登錄時間︰$logtime IP地址︰$ipaddress IP所在位置︰$location]]></item>
+				<item id="variable"><![CDATA[loggingmsgnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[帳號︰$username于$logtime位于IP︰$ipaddress($location)登錄網站！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="49">
+				<item id="displayorder"><![CDATA[50]]></item>
+				<item id="title"><![CDATA[限制所在地區手機短信驗證時段]]></item>
+				<item id="description"><![CDATA[每天該時間段內用戶不能手機短信驗證包括注冊和綁定，請使用 24 小時時段格式，每個時間段一行，如需要也可跨越零點，留空為全部時間都會限制所在地區手機短信驗證功能。例如:
+每日晚 11:25 到次日早 5:05 可設置為: 23:25-5:05
+每日早 9:00 到當日下午 2:30 可設置為: 9:00-14:30
+注意: 請先到限制手機短信驗證所在地區類型和限制手機短信驗證所在地區名稱中設置對應地區信息並且開啟此功能開關
+注意: 格式不正確將可能導致意想不到的問題，所有時間段設置均以站點系統默認時區為準，不受用戶自定義時區的影響]]></item>
+				<item id="variable"><![CDATA[areaconstime]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="50">
+				<item id="displayorder"><![CDATA[51]]></item>
+				<item id="title"><![CDATA[是否開啟可選手機短信驗證注冊]]></item>
+				<item id="description"><![CDATA[開啟後前台會員注冊頁面通過手機號短信驗證注冊可以選擇輸入手機號獲取驗證碼完成注冊，如果不願意也可以不輸入手機號一樣可以完成注冊(注意︰此開關開啟後已經無法攔截各類注冊機，開啟綁定手機和強制綁定手機才能有效杜絕各類發貼機的灌水)]]></item>
+				<item id="variable"><![CDATA[voluntaryverifyreg]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="51">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[是否開啟手機短信驗證圖形驗證碼]]></item>
+				<item id="description"><![CDATA[開啟後前台會員注冊頁面通過手機號短信綁定需要輸入圖形驗證碼防止惡意攻擊刷短信，本開關跟全局-防灌水設置-驗證碼設置里面的新用戶注冊勾選只能選擇其一，否則會出現驗證碼不顯示]]></item>
+				<item id="variable"><![CDATA[openverifycode]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="52">
+				<item id="displayorder"><![CDATA[53]]></item>
+				<item id="title"><![CDATA[是否開啟新用戶注冊通知站長]]></item>
+				<item id="description"><![CDATA[開啟後前台會員注冊成功會即時通知站長設置的手機號站長收到通知後可及時處理。]]></item>
+				<item id="variable"><![CDATA[newregnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="53">
+				<item id="displayorder"><![CDATA[54]]></item>
+				<item id="title"><![CDATA[新用戶注冊通知站長手機號]]></item>
+				<item id="description"><![CDATA[新用戶注冊通知站長設置的手機號可以設置多個手機號之間用英文半角逗號分隔。]]></item>
+				<item id="variable"><![CDATA[newregnotifymobile]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="54">
+				<item id="displayorder"><![CDATA[55]]></item>
+				<item id="title"><![CDATA[新用戶注冊短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username]]></item>
+				<item id="variable"><![CDATA[newregnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username注冊成功請及時處理！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="55">
+				<item id="displayorder"><![CDATA[56]]></item>
+				<item id="title"><![CDATA[是否開啟會員發新貼通知站長]]></item>
+				<item id="description"><![CDATA[開啟後前台會員發新貼成功會即時通知站長設置的手機號站長收到通知後可及時處理。]]></item>
+				<item id="variable"><![CDATA[newthreadnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="56">
+				<item id="displayorder"><![CDATA[57]]></item>
+				<item id="title"><![CDATA[會員發新貼通知站長手機號]]></item>
+				<item id="description"><![CDATA[前台會員發新貼通知站長設置的手機號可以設置多個手機號之間用英文半角逗號分隔。]]></item>
+				<item id="variable"><![CDATA[newthreadnotifymobile]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="57">
+				<item id="displayorder"><![CDATA[58]]></item>
+				<item id="title"><![CDATA[會員發新貼通知站長短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 主題︰$subject]]></item>
+				<item id="variable"><![CDATA[newthreadnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username發表新帖子︰$subject請及時處理！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="58">
+				<item id="displayorder"><![CDATA[59]]></item>
+				<item id="title"><![CDATA[是否開啟注冊頁面顯示手機注冊提示信息]]></item>
+				<item id="description"><![CDATA[開啟後前台注冊頁面顯示手機短信驗證注冊提示信息。]]></item>
+				<item id="variable"><![CDATA[openregnotify]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="59">
+				<item id="displayorder"><![CDATA[60]]></item>
+				<item id="title"><![CDATA[注冊頁面顯示手機注冊提示信息內容]]></item>
+				<item id="description"><![CDATA[設置開啟注冊頁面顯示手機注冊提示信息的內容]]></item>
+				<item id="variable"><![CDATA[openregnotifymsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[如果5分鐘內沒收到短信驗證碼，請撥打客服電話︰18942907527 （工作時間︰09:00--18:00）]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="60">
+				<item id="displayorder"><![CDATA[61]]></item>
+				<item id="title"><![CDATA[是否開啟論壇首頁顯示已經綁定手機會員]]></item>
+				<item id="description"><![CDATA[開啟後前台論壇首頁顯示已經綁定手機會員數字提示。]]></item>
+				<item id="variable"><![CDATA[displaybindmobile]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="61">
+				<item id="displayorder"><![CDATA[62]]></item>
+				<item id="title"><![CDATA[是否開啟會員發新貼通知對應板塊版主]]></item>
+				<item id="description"><![CDATA[開啟後前台會員發新貼成功會即時通知對應板塊版主的手機號版主收到通知後可及時處理。]]></item>
+				<item id="variable"><![CDATA[newthreadnotifys]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="62">
+				<item id="displayorder"><![CDATA[63]]></item>
+				<item id="title"><![CDATA[會員發新貼通知對應板塊版主短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 主題︰$subject]]></item>
+				<item id="variable"><![CDATA[newthreadnotifysmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username發表新帖子︰$subject請及時處理！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="63">
+				<item id="displayorder"><![CDATA[64]]></item>
+				<item id="title"><![CDATA[是否開啟帖子列表顯示綁定手機圖標]]></item>
+				<item id="description"><![CDATA[開啟後前台論壇帖子列表顯示綁定手機圖標。]]></item>
+				<item id="variable"><![CDATA[displaythreadmobile]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="64">
+				<item id="displayorder"><![CDATA[65]]></item>
+				<item id="title"><![CDATA[是否開啟強制綁定手機才能查看帖子]]></item>
+				<item id="description"><![CDATA[開啟後前台論壇帖子強制綁定手機後才能查看帖子。]]></item>
+				<item id="variable"><![CDATA[threadmobilecons]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="65">
+				<item id="displayorder"><![CDATA[66]]></item>
+				<item id="title"><![CDATA[是否限制短信驗證注冊綁定IP所在地區]]></item>
+				<item id="description"><![CDATA[開啟後前台會員手機短信驗證注冊或者綁定會限制IP所地區，設置在限制手機短信驗證所在地區名稱。]]></item>
+				<item id="variable"><![CDATA[ipareacons]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="66">
+				<item id="displayorder"><![CDATA[67]]></item>
+				<item id="title"><![CDATA[限制IP獲取短信次數]]></item>
+				<item id="description"><![CDATA[前台會員同一IP客戶端一天內最多請求發送短信次數，一天內超過這個次數視為惡意獲取短信會封IP拒絕發送短信驗證碼，發送短信驗證碼請求的記錄在網站根目錄request.log文件中，拒絕發送短信驗證碼的記錄在denied.log文件中。]]></item>
+				<item id="variable"><![CDATA[deniedip]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="67">
+				<item id="displayorder"><![CDATA[68]]></item>
+				<item id="title"><![CDATA[會員手機接收短信消耗積分類型]]></item>
+				<item id="description"><![CDATA[前台會員手機每收到一條短信所消耗的用戶積分類型，默認消耗金錢。]]></item>
+				<item id="variable"><![CDATA[extcredittype]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="68">
+				<item id="displayorder"><![CDATA[69]]></item>
+				<item id="title"><![CDATA[會員手機接收短信消耗積分數量]]></item>
+				<item id="description"><![CDATA[前台會員手機每收到一條短信所消耗的用戶積分數量，0為不消耗積分。]]></item>
+				<item id="variable"><![CDATA[extcreditamount]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="69">
+				<item id="displayorder"><![CDATA[70]]></item>
+				<item id="title"><![CDATA[是否開啟會員積分充值通知站長]]></item>
+				<item id="description"><![CDATA[開啟後前台會員積分充值成功會即時通知站長設置的手機號站長收到通知後可及時處理。]]></item>
+				<item id="variable"><![CDATA[creditpayment]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="70">
+				<item id="displayorder"><![CDATA[71]]></item>
+				<item id="title"><![CDATA[會員積分充值通知站長手機號]]></item>
+				<item id="description"><![CDATA[前台會員積分充值通知站長設置的手機號可以設置多個手機號之間用英文半角逗號分隔。]]></item>
+				<item id="variable"><![CDATA[creditpaymentmobile]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="71">
+				<item id="displayorder"><![CDATA[72]]></item>
+				<item id="title"><![CDATA[會員積分充值通知站長短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰積分充值訂單編號︰$orderid 價格︰$price 詳情︰$message]]></item>
+				<item id="variable"><![CDATA[creditpaymentmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[積分充值訂單號︰$orderid $message 金額︰$price 充值成功請及時處理！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="72">
+				<item id="displayorder"><![CDATA[73]]></item>
+				<item id="title"><![CDATA[是否開啟會員積分變動短信通知會員手機]]></item>
+				<item id="description"><![CDATA[開啟後前台會員積分變動會發短信通知會員手機。]]></item>
+				<item id="variable"><![CDATA[creditchange]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="73">
+				<item id="displayorder"><![CDATA[74]]></item>
+				<item id="title"><![CDATA[會員積分變動短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 詳情︰$message]]></item>
+				<item id="variable"><![CDATA[creditchangemsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的會員︰$username 您的賬戶積分發生變動︰$message 請知悉！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="74">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[是否開啟申請加入群組短信通知群組管理員手機]]></item>
+				<item id="description"><![CDATA[開啟後前台會員申請加入群組會短信通知群組管理員手機。]]></item>
+				<item id="variable"><![CDATA[applicationgroup]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="75">
+				<item id="displayorder"><![CDATA[76]]></item>
+				<item id="title"><![CDATA[申請加入群組短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰用戶名︰$username 群組名︰$groupname]]></item>
+				<item id="variable"><![CDATA[applicationgroupmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[會員︰$username 申請加入群組︰$groupname 請盡快審核！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="76">
+				<item id="displayorder"><![CDATA[77]]></item>
+				<item id="title"><![CDATA[是否開啟加入群組審核短信通知會員手機]]></item>
+				<item id="description"><![CDATA[開啟後前台會員申請加入群組管理員審核通過會發短信通知會員手機。]]></item>
+				<item id="variable"><![CDATA[auditgroupuser]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="77">
+				<item id="displayorder"><![CDATA[78]]></item>
+				<item id="title"><![CDATA[加入群組審核短信提醒內容]]></item>
+				<item id="description"><![CDATA[可用變量說明︰群組名︰$groupname]]></item>
+				<item id="variable"><![CDATA[auditgroupusermsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[尊敬的會員您申請加入群組︰$groupname 已經通過審核！]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="smstong_search"><![CDATA[搜索]]></item>
+				<item id="smstong_status_all"><![CDATA[所有狀態]]></item>
+				<item id="smstong_status"><![CDATA[狀態記錄]]></item>
+				<item id="smstong_viewall"><![CDATA[查看全部]]></item>
+				<item id="smstong_verifycode_notice"><![CDATA[用戶手機短信驗證注冊和綁定手機驗證以及找回密碼獲取的短信記錄在此列表中，如有會員沒有收到短信或延時比較久的情況可以在此搜索對應的手機號查詢對應驗證碼或密碼！]]></item>
+				<item id="smstong_verifycode_exportmobile"><![CDATA[導出手機號，導出所有完成驗證的手機號！]]></item>
+				<item id="smstong_verifycode_exportverify"><![CDATA[導出驗證數據，導出所有的驗證數據作備份！]]></item>
+				<item id="smstong_verifycode_cleardata"><![CDATA[請空數據，本操作不可恢復請謹慎操作！]]></item>
+				<item id="smstong_get_register_verifycode"><![CDATA[獲取注冊驗證碼]]></item>
+				<item id="smstong_register_completed"><![CDATA[已提交完成注冊]]></item>
+				<item id="smstong_get_bindmobile_verifycode"><![CDATA[獲取綁定驗證碼]]></item>
+				<item id="smstong_bindmobile_completed"><![CDATA[已提交完成綁定]]></item>
+				<item id="smstong_get_password"><![CDATA[已短信找回密碼]]></item>
+				<item id="smstong_record_id"><![CDATA[編號]]></item>
+				<item id="smstong_record_mobile"><![CDATA[手機號]]></item>
+				<item id="smstong_record_mobileaddr"><![CDATA[歸屬地]]></item>
+				<item id="smstong_record_getip"><![CDATA[IP地址]]></item>
+				<item id="smstong_record_getipaddr"><![CDATA[地區]]></item>
+				<item id="smstong_record_verifycode"><![CDATA[短信碼]]></item>
+				<item id="smstong_record_dateline"><![CDATA[獲取時間]]></item>
+				<item id="smstong_record_regdateline"><![CDATA[提交時間]]></item>
+				<item id="smstong_record_reguid"><![CDATA[用戶名]]></item>
+				<item id="smstong_record_status"><![CDATA[操作狀態]]></item>
+				<item id="smstong_register_uncommitted"><![CDATA[獲取還未提交]]></item>
+				<item id="smstong_register_uncertainty"><![CDATA[不能確定用戶]]></item>
+				<item id="smstong_unknown_option"><![CDATA[未知操作]]></item>
+				<item id="smstong_deleted"><![CDATA[- 已刪除 -]]></item>
+				<item id="smstong_record_mobileerror"><![CDATA[手機號有誤]]></item>
+				<item id="smstong_record_getiperror"><![CDATA[IP地址有誤]]></item>
+				<item id="smstong_members_sendsms_members"><![CDATA[通知會員]]></item>
+				<item id="smstong_members_sendsms_notice1"><![CDATA[]]></item>
+				<item id="smstong_members_sendsms_notice2"><![CDATA[通知短信默認1065通道，發送前先給一個號碼測試確認，不要通過通知短信通道發送個人交流類短信，通知短信內容會帶簽名請自行設置短信簽名！<br/>只有在網站用手機短信驗證注冊或者綁定了手機的會員才會收到此處發送的通知，短信內容請盡量簡短明了，最多提交300字數，64字數計費一條包含簽名！]]></item>
+				<item id="smstong_nav_members_sendsms"><![CDATA[短信通知]]></item>
+				<item id="smstong_nav_members_smscontent"><![CDATA[填寫通知內容]]></item>
+				<item id="smstong_members_sendsms_message"><![CDATA[通知內容]]></item>
+				<item id="smstong_notice_count"><![CDATA[每條短信最多64個字符，一次最多提交500個手機號碼超過500個手機號碼分批發送]]></item>
+				<item id="smstong_members_sendsms_sm_invalid"><![CDATA[您沒有輸入通知內容，請返回修改。]]></item>
+				<item id="smstong_mobile_invalid"><![CDATA[ 不正確]]></item>
+				<item id="smstong_sendsms_failured"><![CDATA[短信發送失敗︰]]></item>
+				<item id="smstong_members_sendsms_notify_succeed"><![CDATA[短信發送成功\]]></item>
+				<item id="smstong_notice_failured"><![CDATA[您的空間不支持發送短信或者所在服務器繁忙，請確認空間支持curl或者fsocket，聯系您的空間商解決或者更換空間！]]></item>
+				<item id="smstong_checkmobile_error"><![CDATA[檢查手機號歸屬地失敗]]></item>
+				<item id="smstong_checkmobile_areatype_province"><![CDATA[省]]></item>
+				<item id="smstong_checkmobile_areatype_city"><![CDATA[市]]></item>
+				<item id="smstong_checkmobile_default"><![CDATA[您輸入的手機號或者您IP所在地不屬于]]></item>
+				<item id="smstong_nav_members_qunfasms"><![CDATA[群發短信]]></item>
+				<item id="smstong_nav_members_select"><![CDATA[輸入接收短信的手機號，以英文半角逗號分隔或者一行一個手機號，確保手機號格式正確不要輸入無關字符，然後填寫短信內容提交即可群發！]]></item>
+				<item id="smstong_members_qunfasms_mobile"><![CDATA[接收手機]]></item>
+				<item id="smstong_members_qunfasms_content"><![CDATA[短信內容]]></item>
+				<item id="smstong_members_qunfasms_getmobile"><![CDATA[獲取所有用戶手機號]]></item>
+				<item id="smstong_members_qunfasms_notice"><![CDATA[群發短信有人工審核，大量群發請先給兩個號碼群發測試確認群發通道暢通再來群發，群發測試內容應該跟正式群發內容一致，64個字數算一條包含簽名最多300字數！<br/>通道暢通情況下推薦每次群發的號碼不要超過100個，超過100個號碼的可以分幾次發送，這樣能保證群發短信能及時的收到，群發字數越多號碼越多接收越慢！]]></item>
+				<item id="smstong_members_qunfasms_mobile_invalid"><![CDATA[您沒有輸入接收手機，請返回修改。]]></item>
+				<item id="smstong_members_qunfasms_content_invalid"><![CDATA[您沒有輸入短信內容，請返回修改。]]></item>
+				<item id="smstong_mobilereg_closed"><![CDATA[手機號短信驗證注冊未開啟]]></item>
+				<item id="smstong_mobilereg_mobile_invalid"><![CDATA[手機號格式不正確]]></item>
+				<item id="smstong_mobilereg_content_invalid"><![CDATA[內容超過最大長度300]]></item>
+				<item id="smstong_mobilereg_mobile_sended"><![CDATA[每IP每手機號每{mobilegap}秒只能獲取一次驗證碼]]></item>
+				<item id="smstong_mobilereg_mobile_exists"><![CDATA[手機號已經注冊或者綁定了本站帳號]]></item>
+				<item id="smstong_mobilereg_getverifycode_succeed"><![CDATA[驗證碼短信成功\發送到手機號︰{mobile} 請稍候輸入收到的驗證碼]]></item>
+				<item id="smstong_mobilereg_getverifycode_failured"><![CDATA[驗證碼短信發送失敗︰{ret}]]></item>
+				<item id="smstong_mobilereg_verifycode_empty"><![CDATA[短信驗證碼不能為空]]></item>
+				<item id="smstong_mobilereg_mobile_verifycode_invalid"><![CDATA[手機號與驗證碼不匹配或者驗證碼已過期]]></item>
+				<item id="smstong_mobilereg_qqregpwd"><![CDATA[密碼︰]]></item>
+				<item id="smstong_buyinvitecode_notice"><![CDATA[接收郵箱和接收手機必須輸入其中一個]]></item>
+				<item id="smstong_buyinvitecode_mobile_error"><![CDATA[接收手機未填或格式錯誤]]></item>
+				<item id="smstong_mobilereg_registernotify_failured"><![CDATA[注冊短信提醒發送失敗︰{ret}]]></item>
+				<item id="smstong_modpassword_notify_failured"><![CDATA[修改密碼短信提醒發送失敗︰{ret}]]></item>
+				<item id="smstong_mobilepwd_username_empty"><![CDATA[用戶名不能為空]]></item>
+				<item id="smstong_mobilepwd_mobile_email_empty"><![CDATA[手機號和Email必須輸入其中一項]]></item>
+				<item id="smstong_mobilepwd_closed"><![CDATA[手機短信找回密碼未開啟]]></item>
+				<item id="smstong_mobilepwd_mobile_sended"><![CDATA[每IP每手機號每{mobilegap}秒只能找回一次密碼]]></item>
+				<item id="smstong_mobilepwd_succeed"><![CDATA[成功\發送找回密碼短信到手機號︰{mobile} 請稍候查看短信及時修改密碼]]></item>
+				<item id="smstong_mobilepwd_failured"><![CDATA[找回密碼短信發送失敗︰{ret}]]></item>
+				<item id="smstong_mobilepwd_username_mobile_invalid"><![CDATA[用戶名與手機號不匹配]]></item>
+				<item id="smstong_mobilepwd_mobile_notexists"><![CDATA[手機號不存在]]></item>
+				<item id="smstong_mobilepwd_username_notexists"><![CDATA[用戶名不存在]]></item>
+				<item id="smstong_mobilebind_closed"><![CDATA[手機綁定未開啟]]></item>
+				<item id="smstong_mobilebind_mobile_empty"><![CDATA[手機號不能為空]]></item>
+				<item id="smstong_mobilebind_mobile_exists"><![CDATA[此手機號已經綁定了本站帳號]]></item>
+				<item id="smstong_mobilebind_sendsms_succeed"><![CDATA[驗證碼短信發送成功\]]></item>
+				<item id="smstong_mobilebind_sendsms_failured"><![CDATA[驗證碼短信發送失敗︰{ret}]]></item>
+				<item id="smstong_mobilebind_succeed"><![CDATA[綁定手機成功\]]></item>
+				<item id="smstong_consfids_notice"><![CDATA[您需要綁定自己的手機後才能進行本操作！<br /><a href="home.php?mod=spacecp&ac=profile&op=contact" target="_blank"><font color="red"><b>到個人資料聯系方式里綁定手機號操作</b></font></a>]]></item>
+				<item id="smstong_activityapp_sendsms_failured"><![CDATA[參加活動短信發送失敗︰{ret}]]></item>
+				<item id="smstong_activitycancal_sendsms_failured"><![CDATA[取消參加活動短信發送失敗︰{ret}]]></item>
+				<item id="smstong_activityaudit_approve_msg"><![CDATA[已批準]]></item>
+				<item id="smstong_activityaudit_replenish_msg"><![CDATA[需完善]]></item>
+				<item id="smstong_activityaudit_delete_msg"><![CDATA[被拒絕]]></item>
+				<item id="smstong_activityaudit_reason_msg"><![CDATA[附言︰]]></item>
+				<item id="smstong_activityaudit_sendsms_failured"><![CDATA[活動審核短信發送失敗︰{ret}]]></item>
+				<item id="smstong_activitymessage_sendsms_failured"><![CDATA[活動通知短信發送失敗︰{ret}]]></item>
+				<item id="smstong_sitemsgnotify_sendsms_failured"><![CDATA[站內短消息提醒短信發送失敗︰{ret}]]></item>
+				<item id="smstong_mobilebind_bindimage"><![CDATA[已綁定手機]]></item>
+				<item id="smstong_function_sign_left"><![CDATA[【]]></item>
+				<item id="smstong_function_sign_right"><![CDATA[】]]></item>
+				<item id="smstong_plugin_closed"><![CDATA[短信通插件未啟用請先啟用插件]]></item>
+				<item id="smstong_username_password_empty"><![CDATA[請先設置開源軟件增值服務平台帳號和密碼]]></item>
+				<item id="smstong_help_check"><![CDATA[版本信息]]></item>
+				<item id="smstong_help_check_desc"><![CDATA[
+				
+				<li>插件當前版本︰<b><font color="green">{version}</font></b></li>
+				<li>官方最新版本︰<span id="smstong_version"></span></li>
+				<li>是否需要更新︰<span id="smstong_upgrade"></span></li>
+				
+				]]></item>
+				<item id="smstong_help_question"><![CDATA[常見問題]]></item>
+				<item id="smstong_help_question_desc"><![CDATA[
+				
+				<li>
+				1. 以前安裝過老版本短信通插件的怎麼安裝這個最新的版本？
+				<br />先把Discuz! X2.5升級到官方的最新版本，然後安裝我們的這個短信通插件即可。
+				<br />2. 安裝的時候出現SQL錯誤︰Duplicate column name 'mobilestatus'怎麼解決？
+				<br />是以前安裝了老版本的插件導致的，解決辦法是先安裝，出錯了不管直接到插件列表卸載，然後再安裝就可以了。
+				<br />3. 安裝後前台操作的地方出現內部錯誤怎麼解決？
+				<br />解決的辦法是安裝完插件後設置好參數和功\能開關，更新網站緩存，然後清空瀏覽器緩存，關閉瀏覽器重新打開瀏覽器就可以了。
+				<br />4. 以前安裝過老版本短信通插件安裝新版後注冊頁面出現了兩個手機號和驗證碼輸入框怎麼解決？
+				<br />解決辦法是把官方原版的\template\default\member\register.htm傳到網站覆蓋\，然後更新緩存。
+				<br />5. 以前安裝過老版本短信通插件安裝新版後網站後台-全局里面的短信設置和發送短信菜單還在怎麼去掉？
+				<br />解決辦法是把官方原版的\source\admincp\admincp_menu.php傳到網站覆蓋\，然後更新緩存。
+				<br />6. 發送短信的時候如果提示發送失敗空間不支持CURL或者FSOCKET或者點擊沒反應怎麼解決？
+				<br />解決的辦法是編輯php.ini配置文件，分別找到配置項extension=php_curl.dll extension=php_sockets.dll extension=php_mbstring.dll 把這三項配置前面的分號刪除，修改php.ini配置文件里的allow_url_fopen = On 然後保存php.ini配置文件，重啟web服務器，然後再試就應該可以了。
+				<br />7. 如果extension=php_curl.dll extension=php_sockets.dll extension=php_mbstring.dll三個配置項都是開啟的，但是還是提示發送失敗怎麼解決？
+				<br />那麼就是網站所在服務器太繁忙了或者網站服務器和我們平台服務器之間網絡通訊慢造成的一般如果是網通線路遠程調用失敗，請先優化服務器性能，或者重啟服務器。實在不行請更換空間。
+				<br />8. 發送短信提示失敗內容超過最大長度300，怎麼解決？
+				<br />網站提交一條短信計費一條。每條信息64字數計費一條，不區分英文數字符號，超過64字數計費第二條，最多300個字數。
+				<br /><font color="red">注意︰此插件卸載重新安裝會刪除手機綁定任務數據，所以請不要輕易嘗試。卸載或者安裝前請備份數據庫。</font>
+				</li>
+				
+				]]></item>
+				<item id="smstong_help_doc"><![CDATA[官方信息]]></item>
+				<item id="smstong_help_doc_desc"><![CDATA[
+				
+				<li>官方網站︰<a href="http://s1.chanyoo.cn" target="_blank">開源軟件增值服務平台</a></li>
+				<li>安裝使用︰<a href="http://bbs.chanyoo.cn/forum-37-1.html" target="_blank">http://bbs.chanyoo.cn/forum-37-1.html</a></li>
+				<li>BUG反饋︰<a href="http://bbs.chanyoo.cn/forum-38-1.html" target="_blank">http://bbs.chanyoo.cn/forum-38-1.html</a></li>
+				<li>官方QQ群︰<b><a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/60047662" title="點擊這里加入此群">60047662</a> <a target="_blank" href="http://qun.qq.com/#jointhegroup/gid/165464675" title="點擊這里加入此群">165464675</a></b></li>
+				
+				]]></item>
+				<item id="smstong_blackmobile_existed"><![CDATA[您的手機號已被管理員列入黑名單]]></item>
+				<item id="smstong_sended_notice"><![CDATA[發送列表中保存站點所有發出的短信記錄]]></item>
+				<item id="smstong_sended_wait"><![CDATA[等待發送]]></item>
+				<item id="smstong_sended_success"><![CDATA[發送成功\]]></item>
+				<item id="smstong_sended_failure"><![CDATA[發送失敗]]></item>
+				<item id="smstong_sended_recved"><![CDATA[接收成功\]]></item>
+				<item id="smstong_sended_blackphone"><![CDATA[黑名單過濾]]></item>
+				<item id="smstong_sended_blackdict"><![CDATA[黑字典過濾]]></item>
+				<item id="smstong_sended_content"><![CDATA[短信內容]]></item>
+				<item id="smstong_sended_addtime"><![CDATA[寫入時間]]></item>
+				<item id="smstong_sended_senttime"><![CDATA[發送時間]]></item>
+				<item id="smstong_sended_count"><![CDATA[短信條數]]></item>
+				<item id="smstong_sended_status"><![CDATA[發送狀態]]></item>
+				<item id="smstong_sended_port"><![CDATA[端口網關]]></item>
+				<item id="smstong_sended_remark"><![CDATA[備注]]></item>
+				<item id="smstong_sended_none"><![CDATA[無]]></item>
+				<item id="smstong_sended_resend"><![CDATA[重發]]></item>
+				<item id="smstong_sended_exportsended"><![CDATA[導出發送列表，導出發送列表作數據備份]]></item>
+				<item id="smstong_history_notice"><![CDATA[發送歷史只保存以前的發送記錄，今天的發送記錄請到發送列表中查詢]]></item>
+				<item id="smstong_history_exporthistory"><![CDATA[導出發送歷史，導出發送歷史作數據備份]]></item>
+				<item id="smstong_recved_notice"><![CDATA[接收列表保存所有接收到的短信回復]]></item>
+				<item id="smstong_recved_mobile"><![CDATA[對方號碼]]></item>
+				<item id="smstong_recved_recvedtime"><![CDATA[接收時間]]></item>
+				<item id="smstong_recved_type"><![CDATA[回復類型]]></item>
+				<item id="smstong_recved_type_one"><![CDATA[直接回復]]></item>
+				<item id="smstong_recved_type_two"><![CDATA[發帖回復]]></item>
+				<item id="smstong_recved_type_three"><![CDATA[消息回復]]></item>
+				<item id="smstong_recved_reply"><![CDATA[回復]]></item>
+				<item id="smstong_recved_exportrecved"><![CDATA[導出接收列表，導出接收列表作數據備份]]></item>
+				<item id="smstong_notify_type_one"><![CDATA[來自手機短信回帖]]></item>
+				<item id="smstong_notify_type_two"><![CDATA[來自手機短信消息]]></item>
+				<item id="smstong_stat_hour"><![CDATA[時段發送量]]></item>
+				<item id="smstong_stat_day"><![CDATA[每天發送量]]></item>
+				<item id="smstong_stat_month"><![CDATA[每月發送量]]></item>
+				<item id="smstong_stat_year"><![CDATA[每年發送量]]></item>
+				<item id="smstong_stat_unit"><![CDATA[（單位︰條）]]></item>
+				<item id="smstong_stat_wan"><![CDATA[ , ,萬,千萬]]></item>
+				<item id="smstong_mobilereg_verifycode_seccode"><![CDATA[輸入下圖中的字符]]></item>
+				<item id="smstong_mobilearea_ip138"><![CDATA[/卡號歸屬地(.*?)&nbsp;(.*?)卡/]]></item>
+				<item id="smstong_ipcheck_access_denied"><![CDATA[超過獲取最多次數拒絕發送短信]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="smstong_mobilereg_mobile"><![CDATA[手機號]]></item>
+				<item id="smstong_mobilereg_mobile_tip"><![CDATA[請輸入您的常用手機號]]></item>
+				<item id="smstong_mobilereg_verifycode"><![CDATA[短信驗證碼]]></item>
+				<item id="smstong_mobilereg_verifycode_tip"><![CDATA[請輸入您獲取到的短信驗證碼]]></item>
+				<item id="smstong_mobilereg_verifycode_desc"><![CDATA[驗證碼將以免費短信的形式發送到您的手機]]></item>
+				<item id="smstong_mobilereg_verifycode_other"><![CDATA[短信驗證碼已發送到 <span id="mobileNumber"></span> <br />如果多次獲取都還未收到短信驗證碼<br />您可以更換號碼重新獲取短信驗證碼<br /><br />
+				<p><button class="pn" type="button" id="timeRemainTips"><strong><font color="red">$_G['cache']['plugin']['smstong']['mobilegap']秒</font>後重新獲取短信驗證碼</strong></button> <span id="modifyMobile"></span></p>]]></item>
+				<item id="smstong_mobilereg_checktime_second"><![CDATA[秒]]></item>
+				<item id="smstong_mobilereg_checktime_after"><![CDATA[後重新獲取短信驗證碼]]></item>
+				<item id="smstong_mobilereg_checktime_retry"><![CDATA[重獲短信驗證碼]]></item>
+				<item id="smstong_mobilereg_checktime_change"><![CDATA[更換號碼]]></item>
+				<item id="smstong_mobilereg_sendsms_succeed"><![CDATA[成功\]]></item>
+				<item id="smstong_mobilereg_mobile_error_tip"><![CDATA[手機號包含敏感字符]]></item>
+				<item id="smstong_mobilereg_mobile_empty"><![CDATA[手機號不能為空]]></item>
+				<item id="smstong_mobilereg_verifycode_error_tip"><![CDATA[驗證碼包含敏感字符]]></item>
+				<item id="smstong_mobilereg_verifycode_msg"><![CDATA[到後台-全局-防灌水設置-驗證碼設置-啟用驗證碼中勾選新用戶注冊]]></item>
+				<item id="smstong_mobilebind_mobile_bind"><![CDATA[綁定手機]]></item>
+				<item id="smstong_mobilebind_mobile_rebind"><![CDATA[重新綁定]]></item>
+				<item id="smstong_mobilebind_submit"><![CDATA[綁 定]]></item>
+				<item id="smstong_mobilebind_submit_refresh"><![CDATA[如果頁面沒有響應，請點這里刷新]]></item>
+				<item id="smstong_invitepayment_mobile"><![CDATA[接收手機]]></item>
+				<item id="smstong_invitepayment_mobile_tip"><![CDATA[必填，用來接收邀請碼短信的手機]]></item>
+				<item id="smstong_invitecode_mobile"><![CDATA[我們還將邀請碼發送到了您填寫的手機 <span class="xi1">$order[email]</span> 以備查閱\]]></item>
+				<item id="smstong_bindmobile_number"><![CDATA[已綁定手機會員]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>
