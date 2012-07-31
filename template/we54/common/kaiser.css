@@ -79,6 +79,7 @@
 .tl .th td, .tl .th th				{ height:auto; vertical-align:inherit;}
 .kaiser_list_bg						{ background:#f7f7f7;}
 .kaiser_list_bm_bw0_pgs_cl .pgt ,.kaiser_list_bm_bw0_pgs_cl .pgb{ margin-top:26px;}
+.kaiser_list_bm_bw0_pgs_cl a:hover	{ text-decoration:none;}
 
 
 
