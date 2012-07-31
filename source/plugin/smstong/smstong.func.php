@@ -54,7 +54,8 @@ function sendsms($user, $pass, $mobile, $content, $checkmobile=true, $refno='', 
 		$content = str_replace('12590','1 2 5 9 0',$content);
 		$content = str_replace('10086','1 0 0 8 6',$content);
 
-		$smsapi = "api.chanyoo.cn";
+	//	$smsapi = "api.chanyoo.cn";
+		$smsapi = "202.165.181.81:8021";	//add by zh
 		$charset = "gbk";
 
 		if ($_G['charset'] != "gbk") {
@@ -67,13 +68,50 @@ function sendsms($user, $pass, $mobile, $content, $checkmobile=true, $refno='', 
 			$content = $content.lang('plugin/smstong','smstong_function_sign_left').$_G['cache']['plugin']['smstong']['smstongsign'].lang('plugin/smstong','smstong_function_sign_right');
 		}
 
-		$sendurl = "http://".$smsapi."/".$charset."/interface/send_sms.aspx?username=".urlencode($user)."&password=".urlencode($pass)."&receiver=".urlencode($mobile)."&content=".urlencode($content)."";
+	//	$sendurl = "http://".$smsapi."/".$charset."/interface/send_sms.aspx?username=".urlencode($user)."&password=".urlencode($pass)."&receiver=".urlencode($mobile)."&content=".urlencode($content)."";
+//----------------add by zh-----------------------------------------------------------------
+		$sendurl = "http://".$smsapi."/HttpInterface/SendSms.php";
 
-		$result = httprequest($sendurl);
+		$argv = array( 
+			 'uname'=>$user, //提供的账号
+			 'pwd'=>md5($pass), //此处密码需要加密 加密方式为 md5(sn+password) 32位大写
+			 'numbers'=>$mobile,//手机号 多个用英文的逗号隔开 post理论没有长度限制.推荐群发一次小于等于10000个手机号
+			 'content'=>$content,//短信内容
+			 'smsid'=>'',
+			 'act'=>'send',//默认空 如果空返回系统生成的标识串 如果传值保证值唯一 成功则返回传入的值
+			 'ext'=>'5454'
+		 );
+		 $result = httprequest($sendurl,$argv);
+//--------------------------------------------------------------------------------------------
+	//	$result = httprequest($sendurl);
 
 		if (empty($result)) return lang('plugin/smstong','smstong_notice_failured');
 
-		$xml = simplexml_load_string($result);
+		$res=explode('|',$result);
+
+		if($res[1]<0){
+			return lang('plugin/smstong',$res[1]);
+		}else{
+			$length = mb_strlen($content, $_G['charset']);
+			$count = ceil($length/64);
+			$addtime = date('Y-m-d H:i:s', TIMESTAMP);
+
+			$mobiles = explode(',', $mobile);
+
+			foreach($mobiles as $k => $v) {
+				if(empty($refno)) {
+					DB::query("INSERT INTO sms_send (mobile,content,addtime,senttime,count,status,port) values('$v', '$content', '$addtime', '$addtime', $count, 1, 'feixin')");
+				}
+				else if(strpos($refno, ',')) {
+					DB::query("INSERT INTO sms_send (mobile,content,addtime,senttime,count,status,port,remark) values('$v', '$content', '$addtime', '$addtime', $count, 1, 'feixin', '$refno')");
+				} else {
+					DB::query("INSERT INTO sms_send (mobile,content,addtime,senttime,count,status,port,refno) values('$v', '$content', '$addtime', '$addtime', $count, 1, 'feixin', $refno)");
+				}
+			}
+
+			return true;
+		}
+	/*	$xml = simplexml_load_string($result);
 
 		if ($xml->result >= 0)
 		{
@@ -102,7 +140,7 @@ function sendsms($user, $pass, $mobile, $content, $checkmobile=true, $refno='', 
 				return iconv("utf-8", "gbk", $xml->message);
 			else
 				return $xml->message;
-		}
+		}*/
 	}
 	 else {
 		return $ret;
