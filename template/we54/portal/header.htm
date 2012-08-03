@@ -26,11 +26,12 @@
 	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
 	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
 	<!--{/if}-->
-    <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
+    <link href="template/we54/portal/header.css" rel="stylesheet" type="text/css" />
+    <link href="template/we54/portal/portal_bbs.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
     <script src="template/we54/js/logging.js" type="text/javascript"></script>
 	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
-
+	
 	<script type="text/javascript">
 	var jq = jQuery.noConflict(); 
     jq(document).ready(function(){
@@ -53,10 +54,110 @@
 	});
 	</script>
 
+	<!--焦点图JS_a-->
+	<script type="text/javascript" language="javascript"> 
+    jq(document).ready(function(){ 	
+        var t=false;
+        var j=0; 
+        jq("#btn").find("span").each(function(i){
+        jq("#btn").find("span").eq(i).mouseover( 
+        function(){	
+           var cur=jq("#img").find("img:visible").parent().prevAll().length;
+        
+           if(i!==cur){
+           j=i;
+        
+           jq(this).addClass("hov").siblings().removeClass("hov");
+        
+           jq("#img").find("img:visible").fadeOut(200,
+            function(){
+             jq("#img").find("img").eq(i).fadeIn(300,function(){})  
+             }); 
+           }}  
+           ) 
+        })
+        var func_play=function(){   
+            jq("#btn").find("span").eq(j).mouseover()
+            j++;
+            if(j==5){j=0;}  
+           }
+           t=setInterval(func_play,3000);
+           jq("#imgnav").hover(function(){
+            clearInterval(t);   
+            return j;
+            },function(){
+             t=setInterval(func_play,3000);
+             })
+    })
+     
+    </script>
+    
+    <!--幻灯片JS-->
+	<script type="text/javascript" language="javascript"> 	
+        jq(document).ready(function(){
+		  jq(".hdp_01, .hdp_01_display").hover(function(){
+		  jq(".hdp_01_display").show();
+		  },function (){jq(".hdp_01_display").hide();});
+		  
+		  jq(".hdp_02, .hdp_02_display").hover(function(){
+		  jq(".hdp_02_display").show();
+		  },function (){jq(".hdp_02_display").hide();});
+		  
+		  jq(".hdp_03, .hdp_03_display").hover(function(){
+		  jq(".hdp_03_display").show();
+		  },function (){jq(".hdp_03_display").hide();});
+		  
+		  jq(".hdp_04, .hdp_04_display").hover(function(){
+		  jq(".hdp_04_display").show();
+		  },function (){jq(".hdp_04_display").hide();});
+			
+		  jq(".hdp_05, .hdp_05_display").hover(function(){
+		  jq(".hdp_05_display").show();
+		  },function (){jq(".hdp_05_display").hide();});
+		  
+		  jq(".hdp_06, .hdp_06_display").hover(function(){
+		  jq(".hdp_06_display").show();
+		  },function (){jq(".hdp_06_display").hide();});
+		  
+		  jq(".hdp_07, .hdp_07_display").hover(function(){
+		  jq(".hdp_07_display").show();
+		  },function (){jq(".hdp_07_display").hide();});
+		  
+		  jq(".hdp_08, .hdp_08_display").hover(function(){
+		  jq(".hdp_08_display").show();
+		  },function (){jq(".hdp_08_display").hide();});
+		  
+		  jq(".hdp_09, .hdp_09_display").hover(function(){
+		  jq(".hdp_09_display").show();
+		  },function (){jq(".hdp_09_display").hide();});
+		  
+		  jq(".hdp_10, .hdp_10_display").hover(function(){
+		  jq(".hdp_10_display").show();
+		  },function (){jq(".hdp_10_display").hide();});
+
+		  jq(".hdp_11, .hdp_11_display").hover(function(){
+		  jq(".hdp_11_display").show();
+		  },function (){jq(".hdp_11_display").hide();});
+
+		  jq(".hdp_12, .hdp_12_display").hover(function(){
+		  jq(".hdp_12_display").show();
+		  },function (){jq(".hdp_12_display").hide();});
+
+		  jq(".hdp_13, .hdp_13_display").hover(function(){
+		  jq(".hdp_13_display").show();
+		  },function (){jq(".hdp_13_display").hide();});
+
+		  jq(".hdp_14, .hdp_14_display").hover(function(){
+		  jq(".hdp_14_display").show();
+		  },function (){jq(".hdp_14_display").hide();});
+
+		});
+    </script>
 
 </head>
 
 <body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
+<div class="box_wai">
 	<div id="append_parent"></div><div id="ajaxwaitid"></div>
 	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
 		<!--{template common/header_diy}-->
@@ -86,55 +187,55 @@
 			<!--{hook/global_cpnav_top}-->
 			<div class="wp">
                 <div class="zzz">
-                    <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
+                    <a onclick="setHomepage('http://bbs.we54.com');" href="javascript:;">设为首页</a> | <a onclick="addFavorite(this.href, '大连论坛&mdash;&mdash;新青年论坛');return false;" href="http://bbs.we54.com">收藏本站</a>
                 </div>
             
-            	<div class="nav" id="show" onMouseOver="this.style.background='url(/template/we54/images/dh_02.jpg) no-repeat'" onMouseOut="this.style.background='url(/template/we54/images/dh_01.jpg) no-repeat'">
+            	<div class="nav" id="show" >
                     <div class="main_nav" id="ss" style=" z-index:10000;"><!--顶部主导航-->
                         <ul class="nav_a">
-                            <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
-                            <li><a href="#" target="_blank">专题</a></li>
-                            <li><a href="#" target="_blank">图片</a></li>
-                            <li><a href="#" target="_blank" style="color:#ff0000;">评论</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold;">视频</a></li>
-                            <li><a href="#" target="_blank">独家</a></li>
-                            <li><a href="#" target="_blank">娱乐</a></li>
-                            <li><a href="#" target="_blank">访谈</a></li>
+                            <li><a href="http://news.we54.com/" target="_blank" style="font-weight:bold;">资讯</a></li>
+                            <li><a href="http://news.we54.com/we54/dlnhzt/wq" target="_blank">专题</a></li>
+                            <li><a href="http://pic.we54.com/" target="_blank">图片</a></li>
+                            <li><a href="http://opinion.we54.com/" target="_blank" style="color:#ff0000;">评论</a></li>
+                            <li><a href="http://video.we54.com/" target="_blank" style="font-weight:bold;">视频</a></li>
+                            <li><a href="http://news.we54.com/plus/list.php?tid=931" target="_blank">独家</a></li>
+                            <li><a href="http://video.we54.com/xqnsppd/pdylsp/index.html" target="_blank">娱乐</a></li>
+                            <li><a href="http://video.we54.com/xqnsppd/pdwshsp/index.html" target="_blank">访谈</a></li>
                         </ul>
                         <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
                         <ul class="nav_b">
-                            <li><a href="#" target="_blank" style="font-weight:bold;">美达</a></li>
-                            <li><a href="#" target="_blank">五年四班</a></li>
-                            <li><a href="#" target="_blank">荔枝先生</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
-                            <li><a href="#" target="_blank">原创节目</a></li>
-                            <li><a href="#" target="_blank">非常夜店</a></li>
+                            <li><a href="http://moda.we54.com/" target="_blank" style="font-weight:bold;">美达</a></li>
+                            <li><a href="http://54class.we54.com/" target="_blank">五年四班</a></li>
+                            <li><a href="http://lichi.we54.com/" target="_blank">荔枝先生</a></li>
+                            <li><a href="/forum-898-1.html" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
+                            <li><a href="http://news.we54.com/xqnsppd/pdwshsp/index.html" target="_blank">原创节目</a></li>
+                            <li><a href="http://pub.we54.com/" target="_blank">非常夜店</a></li>
                         </ul>
                         <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
                         <ul class="nav_c">
-                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
-                            <li><a href="#" target="_blank">理财</a></li>
-                            <li><a href="#" target="_blank">镀金时代</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold;">职场充电</a></li>
-                            <li><a href="#" target="_blank">人在学途</a></li>
-                            <li><a href="#" target="_blank">天才宝贝</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold;">爱车</a></li>
-                            <li><a href="#" target="_blank">高校</a></li>
-                            <li><a href="#" target="_blank">美食探店</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold;">心随我动</a></li>
-                            <li><a href="#" target="_blank">故地新游</a></li>
-                            <li><a href="#" target="_blank" style="color:#ff0000;">玩转大连</a></li>
+                            <li><a href="http://house.we54.com/" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
+                            <li><a href="http://licai.we54.com/" target="_blank">理财</a></li>
+                            <li><a href="http://abroad.we54.com/" target="_blank">镀金时代</a></li>
+                            <li><a href="http://edu.we54.com/" target="_blank" style="font-weight:bold;">职场充电</a></li>
+                            <li><a href="http://learning.we54.com/" target="_blank">人在学途</a></li>
+                            <li><a href="http://baby.we54.com/" target="_blank">天才宝贝</a></li>
+                            <li><a href="http://auto.we54.com/" target="_blank" style="font-weight:bold;">爱车</a></li>
+                            <li><a href="http://uni.we54.com/" target="_blank">高校</a></li>
+                            <li><a href="http://eat.we54.com/" target="_blank">美食探店</a></li>
+                            <li><a href="http://wanka.we54.com/" target="_blank" style="font-weight:bold;">心随我动</a></li>
+                            <li><a href="http://travel.we54.com" target="_blank">故地新游</a></li>
+                            <li><a href="http://playdl.we54.com" target="_blank" style="color:#ff0000;">玩转大连</a></li>
                         </ul>
                         <h1><img src="/template/we54/images/top_line.jpg" width="1" height="64" border="0" /></h1>
                         <ul class="nav_d">
-                            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">论坛</a></li>
-                            <li><a href="#" target="_blank">大连你好</a></li>
-                            <li><a href="#" target="_blank" >不惜泡吧</a></li>
-                            <li><a href="#" target="_blank" >偶秀偶拍</a></li>
-                            <li><a href="#" target="_blank" style="font-weight:bold;">精华</a></li>
-                            <li><a href="#" target="_blank" >纯粹女人</a></li>
-                            <li><a href="#" target="_blank" >亲亲宝贝</a></li>
-                            <li><a href="#" target="_blank" >视频社区</a></li>
+                            <li><a href="http://bbs.we54.com/" target="_blank" style="font-weight:bold; color:#ff0000;">社区</a></li>
+                            <li><a href="/forum-743-1.html" target="_blank">大连你好</a></li>
+                            <li><a href="/forum-900-1.html" target="_blank" >不惜泡吧</a></li>
+                            <li><a href="/forum-269-1.html" target="_blank" >偶秀偶拍</a></li>
+                            <li><a href="http://bbs.we54.com/bbs_cms/a/luntan/ltjh/index.html" target="_blank" style="font-weight:bold;">精华</a></li>
+                            <li><a href="/forum-747-1.html" target="_blank" >纯粹女人</a></li>
+                            <li><a href="/forum-974-1.html" target="_blank" >亲亲宝贝</a></li>
+                            <li><a href="/forum-960-1.html" target="_blank" >视频社区</a></li>
                         </ul>
                     </div>
                 </div>
@@ -183,31 +284,21 @@
                     <!--{/if}-->
                 </div>
                
-                
-                
-                <div class="top_ad_01">
-                    <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="70" border="0"/></a>
-                </div> 
-                
                 <div class="top_ad">
-                    <div class="top_ad_02"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="200" height="70" border="0"/></a></div>	
-                    <div class="top_ad_03"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="590" height="70" border="0"/></a></div>
-                    <div class="top_ad_04"><a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="200" height="70" border="0"/></a></div>
+                    <a><img src="/template/we54/por_images/head_ad.jpg" width="1000" height="126" border="0"/></a>
                 </div>
+
                 
                 <div class="nav_st">
                     <div class="nav_second">
-                        <div class="bankuai" id="bk" onMouseOver="this.style.background='url(/template/we54/images/bk_02.jpg) no-repeat'" onMouseOut="this.style.background='url(/template/we54/images/bk_01.jpg) no-repeat'"></div>
-                    	<div class="nav_nav">
-                    		<li <!--{if empty($_G['forum']['name'])}-->style=" background:url(/template/we54/images/size_bg.jpg) repeat-x;"<!--{/if}-->><a href="./">首页</a></li>
-                            <!--{loop $_G['cache']['forums'] $bforum}-->
-                                <!--{if $bforum['fup'] == $_G['forum']['fup'] && $bforum['status']}-->
-                                    <li <!--{if $_G['forum']['name'] == $bforum['name']}-->style=" background:url(/template/we54/images/size_bg.jpg) repeat-x;"<!--{/if}-->><a href="forum.php?mod=forumdisplay&fid=$bforum[fid]">$bforum['name']</a></li>
-                                <!--{/if}-->
-                            <!--{/loop}-->
+                        <div class="nav_nav">
+                            <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="/portal.php">社区入口</a></span>
+                            <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="/forum-743-1.html">大连你好</a></span>
+                            <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="/home.php">社区空间</a></span>
+                            <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="http://weibo.com/we54" target="_blank">微薄</a></span>
                         </div>
                         <!--{if $_G['setting']['search']}-->
-                        <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?searchsubmit=yes{/if}" target="_blank">
+                        <form id="scbar_form" method="{if $_G[fid] && !empty($searchparams[url])}get{else}post{/if}" autocomplete="off" onSubmit="searchFocus($('scbar_txt'))" action="{if $_G[fid] && !empty($searchparams[url])}$searchparams[url]{else}search.php?mod=forum&searchsubmit=yes{/if}" target="_blank">
                             <input type="hidden" name="mod" id="scbar_mod" value="forum" />
                             <input type="hidden" name="formhash" value="{FORMHASH}" />
                             <input type="hidden" name="srchtype" value="title" />
@@ -258,11 +349,11 @@
                         </ul>
                     </div>
                 </div>
-                
-                <div class="top_ad_05">
-                    <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="90" border="0"/></a>
-                </div>
-                
+               	
+                <div class="ad03_ad04">  
+                     <div class="ad03"><!--{ad/custom_2}--></div>
+                     <div class="ad04"><!--{ad/custom_3}--></div>
+                </div> 
 			</div>
 		</div>
 
