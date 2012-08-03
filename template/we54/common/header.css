@@ -39,11 +39,10 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 	.main_nav li a		 { color:#333333; text-decoration:none;  }
 	.main_nav li a:hover { color:#ff0000;}
 	.main_nav h1 		 { width:1px; height:64px; overflow:hidden; float:left;}
-	.nav_a 				 { width:166px; height:54px; margin-top:4px; margin-left:15px; _margin-right:5px;  display:inline; overflow:hidden; float:left;}
-	.nav_b 				 { width:178px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; _margin-right:5px; display:inline; overflow:hidden; float:left;}
-	.nav_c 				 { width:338px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; _margin-right:10px; display:inline; overflow:hidden; float:left;}
-	.nav_d				 { width:240px; height:54px; margin-top:4px; margin-left:15px; _margin-left:10px; display:inline; overflow:hidden; float:left;}
-
+	.nav_a 				 { width:166px; *width:170px !important; height:54px; margin-top:6px; padding:0 0 0 10px; _padding:0; *padding: 0 !important; *margin-right:5px !important; margin-left:5px; _margin-right:5px;  display:inline; overflow:hidden; float:left;}
+	.nav_b 				 { width:178px; *width:180px !important; height:54px; margin-top:6px; padding:0 0 0 10px; _padding:0; *padding: 0 !important; margin-left:5px; _margin-left:10px; _margin-right:5px; display:inline; overflow:hidden; float:left;}
+	.nav_c 				 { width:338px; *width:358px !important; height:54px; margin-top:6px; padding:0 0 0 10px; _padding:0; *padding: 0 !important; margin-left:5px; _margin-right:1px; _margin-left:10px;  display:inline; overflow:hidden; float:left;}
+	.nav_d				 { width:240px; height:54px; margin-top:6px; margin-left:15px; _margin-left:10px; display:inline; overflow:hidden; float:left;}
 
 .top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left;}
 .top_ad { width:1000px; height:70px; margin:5px 0 5px 0; display:inline; overflow:hidden; float:left;}
