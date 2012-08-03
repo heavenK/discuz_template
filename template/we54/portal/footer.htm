@@ -1,0 +1,71 @@
+</div>
+<div id="foot">
+
+    <span>
+        <a href="http://www.we54.com/about/about.html" target="_blank">新青年网介绍</a> <tt>|</tt>
+        <a href="http://www.we54.com/ads/index.html" target="_blank">广告服务</a> <tt>|</tt>
+        <a href="http://www.we54.com/about/hr.htm" target="_blank">诚征英才</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/bhysq.html" target="_blank">保护隐私权</a> <tt>|</tt>
+        <a href="http://www.we54.com/about/mzsm.html" target="_blank">免责条款</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/flsm.html" target="_blank">法律顾问</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/links.html" target="_blank">意见反馈</a> 
+    </span>
+    <em>Copyright &copy; 1996-2001 WE54.COM INC. All RIGHTS RESERVED.新青年(大连)网络信息技术有限公司 版权所有</em>
+    <div class="foot_tupian" style="width:1000px; margin:0 auto;">    
+        <ul class="logo_lianjie">
+            <li><a href="http://www.we54.com/about/znjb.html" target="_blank"><img src="template/we54/por_images/logo1.jpg" width="120px" height="50px" border="0"/></a></li>
+            <li><a href="http://net.china.com.cn/index.htm" target="_blank"><img src="template/we54/por_images/logo2.jpg" width="120px" height="50px" border="0"/></a></li>
+            <li><a href="http://www.bj.cyberpolice.cn/index.js" target="_blank"><img src="template/we54/por_images/logo3.jpg" width="120px" height="50px" border="0"/></a></li>
+        </ul>
+    </div>
+    <em>辽B-2-4-20070064</em>
+</div>
+
+<!--{if !$_G['setting']['bbclosed']}-->
+	<!--{if $_G[uid] && !isset($_G['cookie']['checkpm'])}-->
+	<script type="text/javascript" src="home.php?mod=spacecp&ac=pm&op=checknewpm&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if $_G[uid] && helper_access::check_module('follow') && !isset($_G['cookie']['checkfollow'])}-->
+	<script type="text/javascript" src="home.php?mod=spacecp&ac=follow&op=checkfeed&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if !isset($_G['cookie']['sendmail'])}-->
+	<script type="text/javascript" src="home.php?mod=misc&ac=sendmail&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+	<!--{if $_G[uid] && $_G['member']['allowadmincp'] == 1 && !isset($_G['cookie']['checkpatch'])}-->
+	<script type="text/javascript" src="misc.php?mod=patch&action=checkpatch&rand=$_G[timestamp]"></script>
+	<!--{/if}-->
+
+<!--{/if}-->
+
+<!--{if $_GET['diy'] == 'yes'}-->
+	<!--{if check_diy_perm($topic) && (empty($do) || $do != 'index')}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}common_diy.js?{VERHASH}"></script>
+		<script type="text/javascript" src="{$_G[setting][jspath]}portal_diy{if !check_diy_perm($topic, 'layout')}_data{/if}.js?{VERHASH}"></script>
+	<!--{/if}-->
+	<!--{if $space['self'] && CURMODULE == 'space' && $do == 'index'}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}common_diy.js?{VERHASH}"></script>
+		<script type="text/javascript" src="{$_G[setting][jspath]}space_diy.js?{VERHASH}"></script>
+	<!--{/if}-->
+<!--{/if}-->
+<!--{if $_G['uid'] && $_G['member']['allowadmincp'] == 1 && $_G['setting']['showpatchnotice'] == 1}-->
+	<script type="text/javascript">patchNotice();</script>
+<!--{/if}-->
+<!--{if $_G['uid'] && $_G['member']['allowadmincp'] == 1 && empty($_G['cookie']['pluginnotice'])}-->
+	<div class="focus plugin" id="plugin_notice"></div>
+	<script type="text/javascript">pluginNotice();</script>
+<!--{/if}-->
+<!--{if $_G['member']['newprompt'] && (empty($_G['cookie']['promptstate_'.$_G[uid]]) || $_G['cookie']['promptstate_'.$_G[uid]] != $_G['member']['newprompt']) && $_GET['do'] != 'notice'}-->
+	<script type="text/javascript">noticeTitle();</script>
+<!--{/if}-->
+
+<!--{eval userappprompt();}-->
+<!--{if $_G['basescript'] != 'userapp'}-->
+<span id="scrolltop" onclick="window.scrollTo('0','0')">{lang scrolltop}</span>
+<script type="text/javascript">_attachEvent(window, 'scroll', function(){showTopLink();});</script>
+<!--{/if}-->
+<!--{eval output();}-->
+</body>
+</html>

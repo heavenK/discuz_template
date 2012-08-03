@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>新青年论坛帖子列表页</title>
+<link href="template/we54/portal/index_bbs.css" rel="stylesheet" type="text/css" />
+<script src="template/we54/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="template/we54/hide_show.js" type="text/javascript"></script>
+
+<!--焦点图JS_a-->
+<script type="text/javascript" language="javascript"> 
+$(document).ready(function(){ 	
+	var t=false;
+	var j=0; 
+	$("#btn").find("span").each(function(i){
+	$("#btn").find("span").eq(i).mouseover( 
+	function(){	
+	   var cur=$("#img").find("img:visible").parent().prevAll().length;
+	
+	   if(i!==cur){
+	   j=i;
+	
+	   $(this).addClass("hov").siblings().removeClass("hov");
+	
+	   $("#img").find("img:visible").fadeOut(200,
+		function(){
+		 $("#img").find("img").eq(i).fadeIn(300,function(){})  
+		 }); 
+	   }}  
+	   ) 
+	})
+	var $func_play=function(){   
+		$("#btn").find("span").eq(j).mouseover()
+		j++;
+		if(j==5){j=0;}  
+	   }
+	   t=setInterval($func_play,3000);
+	   $("#imgnav").hover(function(){
+		clearInterval(t);   
+		return j;
+		},function(){
+		 t=setInterval($func_play,3000);
+		 })
+})
+ 
+</script>
+
+
+</head>
+
+<body>
+<div class="box_wai">
+<div class="box">
+	<div class="top_header">
+		<div class="zzz">
+            <a href="#">设为首页</a> | <a href="#">收藏本站</a>
+        </div>
+        
+        <div class="nav" id="show" onMouseOver="this.style.background='url(/template/we54/por_images/dh_02.jpg) no-repeat'" onMouseOut="this.style.background='url(/template/we54/por_images/dh_01.jpg) no-repeat'"></div>
+        
+		<div class="dl_zc">
+			<span>您好！欢迎来到新青年网站论坛 请 <span/><a href="#">[登录]</a> 或 <a href="#">[免费注册]</a>
+        </div>
+	</div>
+
+	<div class="main_nav" id="ss"><!--顶部主导航-->
+        <ul class="nav_a">
+            <li><a href="#" target="_blank" style="font-weight:bold;">资讯</a></li>
+            <li><a href="#" target="_blank">专题</a></li>
+            <li><a href="#" target="_blank">图片</a></li>
+            <li><a href="#" target="_blank" style="color:#ff0000;">评论</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold;">视频</a></li>
+            <li><a href="#" target="_blank">独家</a></li>
+            <li><a href="#" target="_blank">娱乐</a></li>
+            <li><a href="#" target="_blank">访谈</a></li>
+        </ul>
+        <h1><img src="/template/we54/por_images/top_line.jpg" width="1" height="64" border="0" /></h1>
+        <ul class="nav_b">
+            <li><a href="#" target="_blank" style="font-weight:bold;">美达</a></li>
+            <li><a href="#" target="_blank">五年四班</a></li>
+            <li><a href="#" target="_blank">荔枝先生</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">活动</a></li>
+            <li><a href="#" target="_blank">原创节目</a></li>
+            <li><a href="#" target="_blank">非常夜店</a></li>
+        </ul>
+        <h1><img src="/template/we54/por_images/top_line.jpg" width="1" height="64" border="0" /></h1>
+        <ul class="nav_c">
+            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">房产</a></li>
+            <li><a href="#" target="_blank">理财</a></li>
+            <li><a href="#" target="_blank">镀金时代</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold;">职场充电</a></li>
+            <li><a href="#" target="_blank">人在学途</a></li>
+            <li><a href="#" target="_blank">天才宝贝</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold;">爱车</a></li>
+            <li><a href="#" target="_blank">高校</a></li>
+            <li><a href="#" target="_blank">美食探店</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold;">心随我动</a></li>
+            <li><a href="#" target="_blank">故地新游</a></li>
+            <li><a href="#" target="_blank" style="color:#ff0000;">玩转大连</a></li>
+        </ul>
+        <h1><img src="/template/we54/por_images/top_line.jpg" width="1" height="64" border="0" /></h1>
+        <ul class="nav_d">
+            <li><a href="#" target="_blank" style="font-weight:bold; color:#ff0000;">论坛</a></li>
+            <li><a href="#" target="_blank">大连你好</a></li>
+            <li><a href="#" target="_blank" >不惜泡吧</a></li>
+            <li><a href="#" target="_blank" >偶秀偶拍</a></li>
+            <li><a href="#" target="_blank" style="font-weight:bold;">精华</a></li>
+            <li><a href="#" target="_blank" >纯粹女人</a></li>
+            <li><a href="#" target="_blank" >亲亲宝贝</a></li>
+            <li><a href="#" target="_blank" >视频社区</a></li>
+        </ul>
+    </div>
+
+	<div class="top_ad">
+		<a href="#" target="_blank"><img src="/template/we54/por_images/head_ad.jpg" width="1000" height="126" border="0"/></a>
+	</div>
+
+	<div class="nav_st">
+		<div class="nav_second"><!--二级导航-->
+    		<div class="nav_nav">
+                <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">社区入口</a></span>
+                <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">大连你好</a></span>
+                <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">社区空间</a></span>
+                <span onMouseOver="this.style.background='url(/template/we54/por_images/size_bg.jpg) repeat-x'" onMouseOut="this.style.background=''"><a href="#">微薄</a></span>
+            </div>
+    		<input style="border:none"  name="tagcontent" value="输入你想要搜索的内容" onFocus="if (value =='输入你想要搜索的内容'){value =''}" onBlur="if (value ==''){value='输入你想要搜索的内容'}" type="text" class="ggg"/>	
+            <input style="border:none" type="submit" value="" class="aaa"/>
+        </div>
+    
+    	<div class="nav_three"><!--三级导航-->
+    		<ul>
+    			<li><a href="#" target="_blank">大连你好</a></li>
+        		<li><a href="#" target="_blank">纯粹女人</a></li>
+        		<li><a href="#" target="_blank">法律咨询</a></li>
+            	<li><a href="#" target="_blank">欢乐时光</a></li>
+            	<li><a href="#" target="_blank">非常夜店</a></li>
+            	<li><a href="#" target="_blank">谈车论驾</a></li>
+            	<li><a href="#" target="_blank">君子爱财</a></li>
+            	<li><a href="#" target="_blank">新青年歌友会</a></li>
+                <li><a href="#" target="_blank">不惜泡吧</a></li>
+        		<li><a href="#" target="_blank">美容达人</a></li>
+        		<li><a href="#" target="_blank">两性咨询</a></li>
+            	<li><a href="#" target="_blank">全城热恋 </a></li>
+            	<li><a href="#" target="_blank">体坛风云</a></li>
+            	<li><a href="#" target="_blank">教育培训</a></li>
+            	<li><a href="#" target="_blank">人在旅途</a></li>
+            	<li><a href="#" target="_blank">淘宝大连街</a></li>
+                <li><a href="#" target="_blank">偶秀偶拍</a></li>
+        		<li><a href="#" target="_blank">妈 妈 团</a></li>
+        		<li><a href="#" target="_blank">寻医问诊</a></li>
+            	<li><a href="#" target="_blank">好片同享 </a></li>
+            	<li><a href="#" target="_blank">买房卖房</a></li>
+            	<li><a href="#" target="_blank">学 院 派</a></li>
+            	<li><a href="#" target="_blank">饭统大连</a></li>
+            	<li><a href="#" target="_blank">五四宜家人</a></li>
+            </ul>
+        </div>
+    </div>
+  	
+    <div class="ad03_ad04">  
+    	 <a href="#" target="_blank" class="ad03"><img src="/template/we54/por_images/ad02.jpg" width="496" height="60" border="0"/></a>
+         <a href="#" target="_blank" class="ad04"><img src="/template/we54/por_images/ad02.jpg" width="496" height="60" border="0"/></a>
+    </div>
+  
+  	<div class="NO1_moduble"><!--第一板块-->
+  		<div class="NO1_moduble_left"><!--第一板块左侧-->
+  			<div class="NO1_moduble_left_l">	
+  				<div id="left_focus"><!--焦点图-->	
+                    <div id="img" class="img">
+                        <a href="#" title="" target="_blank"><img style="display:block;" src="/template/we54/por_images/ad03.jpg"  width="280" height="360" border="0" /></a>
+                        <a href="#" title="" target="_blank"><img src="/template/we54/por_images/ad03.jpg"  style="display:none;"  width="280" height="360" border="0" /></a>
+                        <a href="#" title="" target="_blank"><img src="/template/we54/por_images/ad03.jpg"  style="display:none;"  width="280" height="360" border="0" /></a>
+                    </div>  
+                    <div id="ctrl" class="ctrl" > 
+                        <div id="btn"> 
+                            <span class="hov">1</span> 
+                            <span>2</span> 
+                            <span>3</span> 
+                        </div> 				  
+                    </div>
+                </div>
+  
+  				<div class="life_guide"><!--生活向导-->
+  					<div class="life_title"></div>
+  					<ul class="life_logo">
+            			<li><p><a href="#" target="_blank"></a></p></li>
+            			<li><i><a href="#" target="_blank"></a></i></li>
+            			<li><em><a href="#" target="_blank"></a></em></li>
+            			<li><b><a href="#" target="_blank"></a></b></li>
+                    	<li><span><a href="#" target="_blank"></a></span></li>
+                        <li><strong><a href="#" target="_blank"></a></strong></li>
+                    </ul>
+            		
+                    <ul class="life_news">
+            			<li><i>[<a href="#" target="_blank">美食</a>]</i> <em><a href="#" target="_blank">这些用过的东西却可以让你保持年轻</a></em></li>
+                    	<li><i>[<a href="#" target="_blank">美食</a>]</i> <em><a href="#" target="_blank">这些用过的东西却可以让你保持年轻</a></em></li>
+                    	<li><i>[<a href="#" target="_blank">美食</a>]</i> <em><a href="#" target="_blank">这些用过的东西却可以让你保持年轻</a></em></li>
+                    	<li><i>[<a href="#" target="_blank">美食</a>]</i> <em><a href="#" target="_blank">这些用过的东西却可以让你保持年轻</a></em></li>
+                        <li><i>[<a href="#" target="_blank">美食</a>]</i> <em><a href="#" target="_blank">这些用过的东西却可以让你保持年轻</a></em></li>
+                    </ul>
+            	</div>
+            </div>
+  
+  			<div class="NO1_moduble_left_r">	 
+        		<div class="news_shequ">
+        			<dl>
+            			<dd><a href="#" target="_blank">给力贴心指导版，欧洲杯观战指南！</a></dd>
+            			<dt>一到放暑假，对于孩子那个欢天喜地啊，可以做自己喜欢的事情，但是有些事对于孩子那个欢天喜地啊，可以做自己喜欢的事情...<a href="#" target="_blank">[点击>>]</a></dt>
+                    </dl>
+            		
+                    <ul>
+            			<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                        <li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+            			<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                        <li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+            		</ul>
+            	</div>
+            
+            	<div class="news_shequ">
+        			<dl>
+            			<dd><a href="#" target="_blank">给力贴心指导版，欧洲杯观战指南！</a></dd>
+            			<dt>一到放暑假，对于孩子那个欢天喜地啊，可以做自己喜欢的事情，但是有些事对于孩子那个欢天喜地啊，可以做自己喜欢的事情...<a href="#" target="_blank">[点击>>]</a></dt>
+                    </dl>
+            		
+                    <ul>
+            			<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                        <li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+            			<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                    	<li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+                        <li><i>[<a href="#" target="_blank">大连你好</a>]</i> <em><a href="#" target="_blank">厦门游船一名男乘客跳海，声称要游去台湾打工</a></em> <strong>不懂先生</strong></li>
+            		</ul>
+            	</div>
+            </div>
+        </div>
+  
+  		<div class="NO1_moduble_right"><!--第一板块右侧-->
+  			<div class="bbs_active"><!--社区活动-->
+  				<div class="active_title"></div>
+  				<div class="active_in">
+  					<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad03.jpg" width="176" height="100" border="0" /></a></b>
+  					<h1><a href="#" target="_blank">千元任务之舌舔胳膊肘</a></h1>
+  					<i>时间：2012-7-19至2012-7-30</i>
+  					<em>只要你能舔到胳膊肘立马1000块到手！如图所示：肘臂中心红点为目标，舔\到为止。（自己舔自己的噢~）参奖图片要求：单人，上半身全</em>
+                    <p><a href="#" target="_blank"></a></p>
+  				</div>
+  
+  				<ul>
+  					<li>
+  						<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad03.jpg" width="60" height="60" border="0" /></a></b>
+                        <h1><a href="#" target="_blank">千元任务之舌舔胳膊肘</a></h1>
+                        <i>厦门游船一名男乘客跳海，声称要游去台湾打工</i>
+                	</li>
+                	<li>
+  						<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad03.jpg" width="60" height="60" border="0" /></a></b>
+                        <h1><a href="#" target="_blank">千元任务之舌舔胳膊肘</a></h1>
+                        <i>厦门游船一名男乘客跳海，声称要游去台湾打工</i>
+                	</li>
+                </ul>
+  			</div>
+  
+  			<div class="bbs_saoke"><!--社区骚客-->
+  				<div class="saoke_title"></div>
+                <div class="soake_ziliao">
+  					<h1>本期骚客：<a href="#" target="_blank">新青年学学</a></h1>
+                    <b><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad03.jpg" width="60" height="60" border="0" /></a></b>
+                    <em>只要你能舔到胳膊肘立马1000块到手！如图所示：肘臂中心红点为目标，舔\到为止。（自己舔自己的噢~）参奖图片要求：单人，上半身全</em>
+  				</div>
+                <p><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></p>
+                <p><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></p>
+  			</div>
+  		</div>
+  	</div>
+  
+  	<div class="NO2_moduble"><!--第二板块-->
+  		<div class="NO2_moduble_left"><!--第二板块左侧-->
+  			<div class="hdp_01_02">
+  				<div class="hdp_01">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="209" height="279" border="0" /></a>
+                    <div class="hdp_01_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>	
+  				<div class="hdp_02">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="209" height="288" border="0" /></a>
+                    <div class="hdp_02_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>	
+			</div>
+    		
+            <div class="hdp_03_08">
+  				<div class="hdp_03">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="156" height="130" border="0" /></a>
+                    <div class="hdp_03_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>	
+  				<div class="hdp_04">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="238" height="130" border="0" /></a>
+                    <div class="hdp_04_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>
+                <div class="hdp_05">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="118" height="130" border="0" /></a>
+                    <div class="hdp_05_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>
+                <div class="hdp_06">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="279" height="144" border="0" /></a>
+                    <div class="hdp_06_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>	
+                <div class="hdp_07">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="126" height="144" border="0" /></a>
+                    <div class="hdp_07_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>
+                <div class="hdp_08">
+                	<a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="107" height="144" border="0" /></a>
+                    <div class="hdp_08_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>				
+			</div>
+    		
+    		<div class="hdp_09_14">
+            	<div class="hdp_09_10">
+                    <div class="hdp_09">
+                        <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="157" height="93" border="0" /></a>
+                        <div class="hdp_09_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                    </div>	
+                    <div class="hdp_10">
+                        <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="157" height="190" border="0" /></a>
+                        <div class="hdp_10_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                    </div>
+                </div>
+                <div class="hdp_11_12">
+                    <div class="hdp_11">
+                        <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="248" height="139" border="0" /></a>
+                        <div class="hdp_11_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                    </div>
+    				<div class="hdp_12">
+                        <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="248" height="144" border="0" /></a>
+                        <div class="hdp_12_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                    </div>
+    			</div>
+    			<div class="hdp_13">
+                    <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="107" height="107" border="0" /></a>
+                    <div class="hdp_13_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>
+    			<div class="hdp_14">
+                    <a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="107" height="176" border="0" /></a>
+                    <div class="hdp_14_display"><a href="#" target="_blank">快递公司为何总迟到令消费者苦恼</a></div>
+                </div>
+    		</div>	
+    	</div>
+    
+    	<div class="NO2_moduble_right"><!--第二板块右侧-->
+    		<div class="bbs_jingpin"><!--论坛精品-->
+    			<div class="jingpin_title"></div>
+            	<ul>
+            		<li><p><a href="#" target="_blank"></a></p></li>
+                    <li><i><a href="#" target="_blank"></a></i></li>
+                    <li><em><a href="#" target="_blank"></a></em></li>
+                    <li><b><a href="#" target="_blank"></a></b></li>
+                    <li><span><a href="#" target="_blank"></a></span></li>
+                    <li><strong><a href="#" target="_blank"></a></strong></li>
+           		</ul> 
+            </div>
+    
+    		<div class="rt_paihang"><!--热帖排行-->
+    			<div class="paihang_title"></div>
+    			<div class="paihang_news">
+            		<div class="rt_news_01">
+            			<i></i>
+            			<p><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="60" border="0" /></a></p>
+                		<h1><a href="#" target="_blank">快递公司为何总迟到令消费者苦</a></h1>
+                    </div>
+                	<ul>
+                		<li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                		<li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                        <li><a href="#" target="_blank">快递公司为何总迟到令消费者到令</a></li>
+                	</ul>
+                </div>
+            </div>
+    	</div>	
+     </div> 
+  
+    <div class="NO3_moduble"><!--第三板块-->
+ 		<div class="NO3_moduble_left"><!--第三板块左侧-->
+    		<div class="buxi_title"><p></p></div>
+    		<div class="buxi_paoba">
+    			<div class="paoba_news">
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="140" height="140" border="0" /></a></b>
+    				<span>6月17日，有“中国第一裸模”之称的干露露从重庆飞抵大连，参加由大连爱特酒吧...<a href="#" target="_blank">[详细]</a></span>
+                </div>
+    			<ul class="paoba_huitie">
+    				<h1><a href="#" target="_blank">干露露来连，你怎么看？</a></h1>
+                    <span>
+                    	<i><a href="#" target="_blank">不管怎么说，她没偷没抢没骗没贪，起码是自食其力。起码比贪官强百倍~</a></i><em>[<a href="#" target="_blank">豆豆和丁丁</a>]</em>
+                    </span>
+                    <p>
+                    	<i><a href="#" target="_blank">不管怎么说，她没偷没抢没骗没贪，起码是自食其力。起码比贪官强百倍~</a></i><em>[<a href="#" target="_blank">豆豆和丁丁</a>]</em>
+                    </p>
+                    <span>
+                    	<i><a href="#" target="_blank">不管怎么说，她没偷没抢没骗没贪，起码是自食其力。起码比贪官强百倍~</a></i><em>[<a href="#" target="_blank">豆豆和丁丁</a>]</em>
+                    </span>
+                    <p>
+                    	<i><a href="#" target="_blank">不管怎么说，她没偷没抢没骗没贪，起码是自食其力。起码比贪官强百倍~</a></i><em>[<a href="#" target="_blank">豆豆和丁丁</a>]</em>
+                    </p>
+    			</ul>
+    		</div>
+    
+    		<div class="bbs_jinghua"><!--社区精华-->
+    			<div class="jinghua_top">
+            		<i></i>
+            		<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="240" height="71" border="0" /></a></b>
+            	</div>
+            	<ul>
+            		<li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+            		<li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+                    <li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+                    <li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+                    <li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+                    <li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+                    <li><a href="#" target="_blank">为追女孩，四天楼道内铺满999朵玫瑰花</a></li>
+            	</ul>
+            </div>
+    	</div>
+    
+    	<div class="NO3_moduble_right"><!--第三板块右侧-->
+    		<div class="house_title"></div>
+    		<div class="house_zt"><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="190" height="85" border="0" /></a></div>
+    		<ul class="house_news">
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+            </ul>
+    	</div>
+    </div>	
+    
+    <div class="NO4_moduble"><!--第四板块-->
+    	<div class="NO4_moduble_left"><!--第四板块左侧-->
+    		<div class="car_title"><p></p></div>
+    		<ul class="car_left">
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="140" height="100" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="140" height="100" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    		</ul>
+    		
+            <div class="car_midle">
+            	<dl>
+                    <dd><a href="#" target="_blank">给力贴心指导版，欧洲杯观战指南！</a></dd>
+                    <dt>一到放暑假，对于孩子那个欢天喜地啊，可以做自己喜欢的事情，但是有些事对于孩子那个欢天喜地啊，可以做自己喜欢的事情...<a href="#" target="_blank">[点击>>]</a></dt>
+                </dl>
+            	<ul>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                </ul>
+            </div>
+    		
+    		<div class="car_right">
+    			<div class="car_right_title">车友会</div>
+    			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+    			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+            	<ul>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活募活活</a></li>
+                </ul>
+            </div>
+   		</div> 
+    
+    	<div class="NO4_moduble_right"><!--第四板块右侧-->
+    		<div class="pinpai_title"></div>
+    		<ul class="pinpai_tip">
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    		</ul>
+    		<ul class="pinpai_news">
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+            </ul>
+    	</div>
+    </div> 
+    
+    <div class="NO5_moduble"><!--第五板块-->
+    	<div class="NO5_moduble_left"><!--第五板块左侧-->
+    		<div class="women_title"><p></p></div>
+    		<ul class="women_pic">
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			<li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    		</ul>
+    		<ul class="women_news">
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+            	<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+            	<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+            	<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+                <li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+                <li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="32" height="32" border="0" /></a></b>
+    				<span><a href="#" target="_blank">又白又水的皮肤是保养出来的---解析正</a></span>
+                    <i>美容保养</i>
+            	</li>
+            </ul>
+    	</div>
+    
+    	<div class="NO5_moduble_right"><!--第五板块右侧-->
+    		<div class="chuncui_title"></div>
+    		<ul class="chuncui_tip">
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    			<li>
+    				<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></b>
+    				<span><a href="#" target="_blank">新青年置业俱乐部</a></span>
+                </li>
+    		</ul>
+    		<ul class="chuncui_news">
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+            </ul>
+    	</div>
+    </div> 
+    
+    <div class="NO6_moduble"><!--第六板块-->
+    	<div class="NO6_moduble_left"><!--第六板块左侧-->
+    		<div class="fantong_dl"><!--饭桶大连-->
+    			<div class="fantong_title"><p></p></div>
+    			<ul class="fantong_pic">
+                    <li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+                    <li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+                    <li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+                    <li><a href="#" target="_blank" title=""><img src="/template/we54/por_images/ad04.jpg" width="94" height="94" border="0" /></a></li>
+    			</ul>
+    			
+                <ul class="fantong_news">
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招募募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招募活</a></li>
+                </ul>
+    		</div>
+    
+    		<div class="relian_qc"><!--全城热恋-->
+    			<div class="relian_title"><p></p></div>
+    			<ul>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                    <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展会员招</a></li>
+                </ul>
+            </div>
+    
+    		<div class="movie_sg"><!--时光影院-->
+    			<div class="movie_title"><p></p><b>6月影讯抢先看</b></div>
+            	<ul>
+            		<li>
+            			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="120" height="160" border="0" /></a></b>
+    					<span><a href="#" target="_blank">《百万巨鳄》</a></span>
+            		</li>
+            		<li>
+            			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="120" height="160" border="0" /></a></b>
+    					<span><a href="#" target="_blank">《百万巨鳄》</a></span>
+            		</li>
+            		<li>
+            			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="120" height="160" border="0" /></a></b>
+    					<span><a href="#" target="_blank">《百万巨鳄》</a></span>
+            		</li>
+            		<li>
+            			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="120" height="160" border="0" /></a></b>
+    					<span><a href="#" target="_blank">《百万巨鳄》</a></span>
+            		</li>
+            		<li>
+            			<b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="120" height="160" border="0" /></a></b>
+    					<span><a href="#" target="_blank">《百万巨鳄》</a></span>
+            		</li>
+            	</ul>
+            </div>
+ 		</div>   
+    
+    	<div class="NO6_moduble_right"><!--第六板块右侧-->
+            <div class="club_title"><p></p></div>
+            <dl>
+                <dd>
+                    <b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="190" height="90" border="0" /></a></b>
+                    <span><a href="#" target="_blank">《百万巨鳄》</a></span>
+                </dd>
+                <dd>
+                    <b><a href="#" target="_blank"><img src="/template/we54/por_images/ad04.jpg" width="190" height="90" border="0" /></a></b>
+                    <span><a href="#" target="_blank">《百万巨鳄》</a></span>
+                </dd>
+            </dl>
+            <ul>
+    			<li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展</a></li>
+                <li><a href="#" target="_blank">新青年置业俱乐部夏展会员招展</a></li>
+    		</ul>		
+    	</div>
+    </div> 
+    
+    <div class="NO7_moduble"><!--第七板块-->
+   		<div class="map_title"><p></p></div> 
+    	<ul>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">大连你好</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_01"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">大连你好</a></p>
+                	<p>2F:<a href="#" target="_blank">江湖救急</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">不惜泡吧</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_02"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">不惜泡吧</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">偶秀偶拍</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_03"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">偶秀偶拍</a></p>
+                    <p>2F:<a href="#" target="_blank">美达贴吧</a></p>
+                    <p>3F:<a href="#" target="_blank">新青年摄影</a></p>
+                    <p>4F:<a href="#" target="_blank">贴图专区</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">纯粹女人</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_04"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">纯粹女人</a></p>
+                    <p>2F:<a href="#" target="_blank">美丽星梦</a></p>
+                </div>
+    		</li>	
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">美容达人</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_05"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">美容达人</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">妈妈团</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_06"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">准妈妈私塾</a></p>
+                    <p>2F:<a href="#" target="_blank">加油宝贝</a></p>
+                    <p>3F:<a href="#" target="_blank">幼儿教育</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">法律咨询</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_07"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">法律咨询</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">两性咨询</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_08"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">两性咨询</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">寻医问药</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_09"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">寻医问药</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">欢乐时光</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_10"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">欢乐时光</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">全城热恋</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_11"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">全城热恋</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">好片同享</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_12"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">好片同享</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">非常夜店</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_13"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">非常夜店</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">体坛风云</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_14"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">体坛风云</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">买房卖房</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_15"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">买房卖房</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">谈车论驾</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_16"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">谈车论驾</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">教育培训</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_17"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">教育培训</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">学院派</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_18"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">学院派</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">君子爱财</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_19"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">君子爱财</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">人在旅途</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_20"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">人在旅途</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">饭桶大连</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_21"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">饭桶大连</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">新青年歌友会</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_22"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">新青年歌友会</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">五四宜家人</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_23"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">五四宜家人</a></p>
+                </div>
+    		</li>
+    		<li>
+    			<span>
+                	<a href="#" target="_blank">淘宝大连街</a>
+                	<i>(24时新帖：2028)</i>
+                </span>
+        		<div class="map_24"></div>
+        		<div class="bankuai_nav">
+    				<p>1F:<a href="#" target="_blank">淘宝大连街</a></p>
+                </div>
+    		</li>
+    	</ul>
+        <div class="map_end_bg"></div>
+    </div>
+    
+    <div class="youqing_lj"><!--友情链接-->
+    	<div class="lj_title"><p></p></div>
+    	<div class="lj_all">
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+    		<a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+            <a href="#" target="_blank">大连新青年</a>
+    	</div>
+    </div>
+</div>
+</div>
+
+<div id="foot">
+
+    <span>
+        <a href="http://www.we54.com/about/about.html" target="_blank">新青年网介绍</a> <tt>|</tt>
+        <a href="http://www.we54.com/ads/index.html" target="_blank">广告服务</a> <tt>|</tt>
+        <a href="http://www.we54.com/about/hr.htm" target="_blank">诚征英才</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/bhysq.html" target="_blank">保护隐私权</a> <tt>|</tt>
+        <a href="http://www.we54.com/about/mzsm.html" target="_blank">免责条款</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/flsm.html" target="_blank">法律顾问</a> <tt>|</tt> 
+        <a href="http://www.we54.com/about/links.html" target="_blank">意见反馈</a> 
+    </span>
+    <em>Copyright &copy; 1996-2001 WE54.COM INC. All RIGHTS RESERVED.新青年(大连)网络信息技术有限公司 版权所有</em>
+    <div class="foot_tupian" style="width:1000px; margin:0 auto;">    
+        <ul class="logo_lianjie">
+            <li><a href="http://www.we54.com/about/znjb.html" target="_blank"><img src="/template/we54/por_images/logo1.jpg" width="120px" height="50px" border="0"/></a></li>
+            <li><a href="http://net.china.com.cn/index.htm" target="_blank"><img src="/template/we54/por_images/logo2.jpg" width="120px" height="50px" border="0"/></a></li>
+            <li><a href="http://www.bj.cyberpolice.cn/index.js" target="_blank"><img src="/template/we54/por_images/logo3.jpg" width="120px" height="50px" border="0"/></a></li>
+        </ul>
+    </div>
+    <em>辽B-2-4-20070064</em>
+</div>
+</body>
+</html>
