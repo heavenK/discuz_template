@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+	<!--{if $_G['config']['output']['iecompatible']}--><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE{$_G['config']['output']['iecompatible']}" /><!--{/if}-->
+	<title><!--{if !empty($navtitle)}-->$navtitle - <!--{/if}--><!--{if empty($nobbname)}--> $_G['setting']['bbname'] - <!--{/if}--> Powered by Discuz!</title>
+	$_G['setting']['seohead']
+
+	<meta name="keywords" content="{if !empty($metakeywords)}{echo dhtmlspecialchars($metakeywords)}{/if}" />
+	<meta name="description" content="{if !empty($metadescription)}{echo dhtmlspecialchars($metadescription)} {/if}{if empty($nobbname)},$_G['setting']['bbname']{/if}" />
+	<meta name="generator" content="Discuz! $_G['setting']['version']" />
+	<meta name="author" content="Discuz! Team and Comsenz UI Team" />
+	<meta name="copyright" content="2001-2012 Comsenz Inc." />
+	<meta name="MSSmartTagsPreventParsing" content="True" />
+	<meta http-equiv="MSThemeCompatible" content="Yes" />
+	<base href="{$_G['siteurl']}" />
+	<!--{csstemplate}-->
+	<script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';</script>
+
+	<!--{if empty($_GET['diy'])}--><!--{eval $_GET['diy'] = '';}--><!--{/if}-->
+	<!--{if !isset($topic)}--><!--{eval $topic = array();}--><!--{/if}-->
+
+	<meta name="application-name" content="$_G['setting']['bbname']" />
+	<meta name="msapplication-tooltip" content="$_G['setting']['bbname']" />
+	<!--{if $_G['setting']['portalstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][1]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G[siteurl].'portal.php'};icon-uri={$_G[siteurl]}{IMGDIR}/portal.ico" /><!--{/if}-->
+	<meta name="msapplication-task" content="name=$_G['setting']['navs'][2]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['forum']) ? 'http://'.$_G['setting']['domain']['app']['forum'] : $_G[siteurl].'forum.php'};icon-uri={$_G[siteurl]}{IMGDIR}/bbs.ico" />
+	<!--{if $_G['setting']['groupstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][3]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['group']) ? 'http://'.$_G['setting']['domain']['app']['group'] : $_G[siteurl].'group.php'};icon-uri={$_G[siteurl]}{IMGDIR}/group.ico" /><!--{/if}-->
+	<!--{if helper_access::check_module('feed')}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][4]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['home']) ? 'http://'.$_G['setting']['domain']['app']['home'] : $_G[siteurl].'home.php'};icon-uri={$_G[siteurl]}{IMGDIR}/home.ico" /><!--{/if}-->
+	<!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
+		<link rel="archives" title="$_G['setting']['bbname']" href="{$_G[siteurl]}archiver/" />
+	<!--{/if}-->
+	<!--{if !empty($rsshead)}-->$rsshead<!--{/if}-->
+	<link rel="stylesheet" id="css_widthauto" type="text/css" href="data/cache/style_{STYLEID}_widthauto.css?{VERHASH}" />
+	<link href="{$_G[siteurl]}template/we54/common/styles/reset.css" rel="stylesheet" type="text/css" />
+	<link href="{$_G[siteurl]}template/we54/common/styles/login.css" rel="stylesheet" type="text/css" />
+	<script src="{$_G[siteurl]}template/we54/common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{$_G[setting][jspath]}common.js?{VERHASH}"></script>
+</head>
+
+<body  id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<dl class="index_header"><!--整体头部-->
+	<dt><a href="./">新青年首页</a></dt>
+  <dd><h2><a href="#" target="_blank">帮助</a></h2><h1>您好！欢迎来到新青年网社区 请 <em>[</em><a href="member.php?mod=logging&action=login">登陆</a><em>]</em> 或 <em>[</em><a href="member.php?mod={$_G[setting][regname]}">免费注册</a><em>]</em></h1></dd>
+</dl>
+<div class="box">
+    <div class="login_header"><!--登陆页头部-->
+        <em><a href="./"><img src="{$_G[siteurl]}template/we54/common/images/logo.png" /></a></em>
+        <ul>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="member.php?mod=sms&action=bindmobile">短信认证</a></li>
+            <li><a href="member.php?mod={$_G[setting][regname]}">注册账号</a></li>
+            <li>登陆</li>
+        </ul>
+    </div>
+</div>
+<!--{eval $loginhash = 'L'.random(4);}-->
+<!--{if empty($_GET['infloat'])}-->
+			<div class="nfl" id="main_succeed" style="display: none">
+				<div class="f_c altw">
+					<div class="alert_right">
+						<p id="succeedmessage"></p>
+						<p id="succeedlocation" class="alert_btnleft"></p>
+						<p class="alert_btnleft"><a id="succeedmessage_href">{lang message_forward}</a></p>
+					</div>
+				</div>
+			</div>
+		<!--{/if}-->
+<div id="login_bg" class="login_bg bg_1"><!--登陆-->
+    <div class="login_box">
+        <a href="member.php?mod={$_G[setting][regname]}" class="login_register"></a>
+        <div class="login_box_bg"></div>
+        <div class="login" id="layer_login_$loginhash">
+		
+		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl" onsubmit="{if $this->setting['pwdsafety']}pwmd5('password3_$loginhash');{/if}pwdclear = 1;ajaxpost('loginform_$loginhash', 'returnmessage_$loginhash', 'returnmessage_$loginhash', 'onerror');return false;" action="member.php?mod=logging&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}{if isset($_GET['frommessage'])}&frommessage{/if}&loginhash=$loginhash">
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+			<input type="hidden" name="referer" value="{echo dreferer()}" />
+			<!--{if $auth}-->
+				<input type="hidden" name="auth" value="$auth" />
+			<!--{/if}-->
+            <span>{lang login_member}</span>
+            <dl>
+                <dt>
+                    <label for="username">账户名：</label><input type="text" id="username" name="username" tabindex="1" autocomplete="off"  />
+                </dt>
+                <dt>
+                    <label for="password">登录密码：</label><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">忘记密码？</a><input type="password" id="password" name="password" tabindex="2" onfocus="clearpwd()" />
+                </dt>
+                <dd>
+					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="1"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">免费注册</a>
+                </dd>
+            </dl>
+			</form>
+        </div>
+
+		<div class="login"  id="layer_lostpw_$loginhash" style="display: none;">
+		<form method="post" autocomplete="off" id="lostpwform_$loginhash" class="cl" onsubmit="ajaxpost('lostpwform_$loginhash', 'returnmessage3_$loginhash', 'returnmessage3_$loginhash', 'onerror');return false;" action="member.php?mod=lostpasswd&lostpwsubmit=yes&infloat=yes">
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+			<input type="hidden" name="handlekey" value="lostpwform" />
+            <span id="returnmessage3_$loginhash">{lang getpassword}</span>
+            <dl>
+                <dt>
+                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
+                </dt>
+				<!--{if $_G['cache']['plugin']['smstong']['mobilepwd'] == 1}-->
+				<!-- <dt>
+                    <label for="username">{lang smstong:smstong_mobilereg_mobile}:</label><input type="text" id="lostpw_mobiles" name="mobiles" size="30" value=""  tabindex="1"  maxlength="12" autocomplete="off"  />
+                </dt> -->
+				<!--{/if}-->
+                <dt>
+                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
+                </dt>
+                <dd>
+					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"></button>
+                </dd>
+            </dl>
+			</form>
+        </div>
+
+    </div>
+</div>
+<div id="chg_bg_btn" class="box">
+    <div class="login_bg_btn"><!--登陆背景切换按钮-->
+        <a onClick="change(1,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png" /></a>
+        <a onClick="change(2,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+        <a onClick="change(3,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+    </div>
+</div>
+<div class="box">
+    <dl class="recommend"><!--推荐-->
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_01.png" /></a></dt>
+        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_02.png" /></a></dt>
+        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_03.png" /></a></dt>
+    </dl>
+</div>
+<div class="index_bottom"><!--底部-->
+<a href="#">新青年网介绍</a> | <a href="#">广告服务</a> | <a href="#">免责声明</a> | <a href="#">法律声明</a> | <a href="#">保护隐私权</a> | <a href="#">BBS论坛许可证</a> | <a href="#">友情链接</a><br /> 
+新青年(大连)网络信息技术有限公司<br />
+Copyright &copy; 2007-2012 WE54.COM INC. All RIGHTS RESERVED.
+</div>
+<div id="layer_message_$loginhash"{if empty($_GET['infloat'])} class="f_c blr nfl"{/if} style="display: none;">
+	<h3 class="flb" id="layer_header_$loginhash">
+		<!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}-->
+		<em>{lang login_member}</em>
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a></span>
+		<!--{/if}-->
+	</h3>
+	<div class="c"><div class="alert_right">
+		<div id="messageleft_$loginhash"></div>
+		<p class="alert_btnleft" id="messageright_$loginhash"></p>
+	</div>
+</div>
+</body>
+</html>
+<script>
+function change(n, obj){
+	var cls = "login_bg bg_" + n;
+		jQuery("#login_bg").fadeOut("slow",function(){
+		jQuery("#login_bg").attr("class",cls);
+		jQuery("#login_bg").fadeIn("slow");
+	 });
+	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
+	jQuery(".login_bg_btn a").attr('class','');
+	jQuery(obj).attr('class','login_bg_btn_on');
+	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
+}
+</script>
+<script type="text/javascript" reload="1">
+<!--{if !isset($_GET['viewlostpw'])}-->
+	var pwdclear = 0;
+	function initinput_login() {
+		document.body.focus();
+		<!--{if !$auth}-->
+			if($('loginform_$loginhash')) {
+				$('loginform_$loginhash').username.focus();
+			}
+			<!--{if !$this->setting['autoidselect']}-->
+				simulateSelect('loginfield_$loginhash');
+			<!--{/if}-->
+		<!--{/if}-->
+	}
+	initinput_login();
+	<!--{if $this->setting['sitemessage']['login']}-->
+	showPrompt('custominfo_login_$loginhash', 'mouseover', '<!--{echo trim($this->setting['sitemessage'][login][array_rand($this->setting['sitemessage'][login])])}-->', $this->setting['sitemessage'][time]);
+	<!--{/if}-->
+
+	function clearpwd() {
+		if(pwdclear) {
+			$('password3_$loginhash').value = '';
+		}
+		pwdclear = 0;
+	}
+<!--{else}-->
+	display('layer_login_$loginhash');
+	display('layer_lostpw_$loginhash');
+	$('lostpw_email').focus();
+<!--{/if}-->
+</script>

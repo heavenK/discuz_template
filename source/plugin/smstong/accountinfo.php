@@ -125,7 +125,8 @@ if(!empty($ret)){
   </tr>
   <tr>
     <td width="13%" align="right"><strong>返回信息：</strong></td>
-    <td width="87%"><?php echo $xml->message ?></td>
+    <!-- <td width="87%"><?php echo $xml->message ?></td> -->
+	<td width="87%">账户信息错误！</td>
   </tr>
 </table>
 

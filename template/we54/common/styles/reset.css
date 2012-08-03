@@ -1,0 +1,45 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*通用样式*/
+*		{ margin:0; padding:0; border:none;}
+body	{ background:#f3f3f3 url(../images/top_bg.gif) repeat-x; font-family:"微软雅黑", "黑体"; font-size:12px; color:#000;}
+li		{ list-style-type:none;}
+a		{ text-decoration:none;}
+a:hover	{ text-decoration:underline;}
+em,i	{ font-style:normal;}
+h1,h2,h3{ font-size:12px; font-weight:normal;}
+.box	{ width:100%; background:#f7f7f7;}
+
+/*整体头部*/
+.index_header	{ width:977px; height:26px; margin:0 auto; padding:10px 12px 0 11px;}
+.index_header dt			{ float:left;}
+.index_header dt a			{ color:#666666;}
+.index_header dd			{ float:right;}
+.index_header dd h1			{ color:#666666; float:right;}
+.index_header dd h1 em		{ color:#0035a0;}
+.index_header dd h1 a		{ color:#0035a0;}
+.index_header dd h2			{ margin:0 0 0 13px; display:inline; padding:0 0 0 13px; background:url(../images/top_line.png) no-repeat 0 2px; float:right;}
+.index_header dd h2 a		{ color:#0035a0;}
+
+/*子页头部*/
+.login_header	{ width:1000px; height:78px; margin:0 auto;}
+.login_header em			{ padding:9px 0 0 9px; float:left;}
+.login_header ul			{ padding:42px 26px 0 0; float:right;}
+.login_header ul li			{ padding:0 0 0 47px; font-size:16px; color:#88c100; float:right;}
+.login_header ul li a		{ color:#6c6c6c;}
+.login_header ul li a:hover	{ color:#88c100; text-decoration:none;}
+
+/*底部*/
+.index_bottom	{ width:100%; height:99px; margin:0 auto; padding:30px 0 0 0; background:url(../images/bottom_bg.gif) repeat-x; text-align:center; color:#666666; line-height:28px;}
+.index_bottom a				{ color:#666666;}
+
+
+
+
+
+
+
+
+
+

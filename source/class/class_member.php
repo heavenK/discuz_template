@@ -121,15 +121,15 @@ class logging_ctl {
 				//----------add by zh-------------
 				$psptuser=passport::passport_setsession($result['member'], $_GET['cookietime'] ? 2592000 : 0,$_G['clientip']);
 				if($psptuser==false){
-					$pass=passport::useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);
+					$pass=passport::useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);	//add
 					if(is_array($pass)){
-						$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);
-					}else{
-						showmessage('login_invalid');
-					}
+						$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
+					}/*else{
+						showmessage('login_passport_invalid');
+					}*/
 				}
 				
-				//--------------------------------
+				//--------add end-----------
 
 				C::t('common_member_status')->update($_G['uid'], array('lastip' => $_G['clientip'], 'lastvisit' =>TIMESTAMP, 'lastactivity' => TIMESTAMP));
 				$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';
@@ -186,7 +186,9 @@ class logging_ctl {
 									'extrajs' => '<script type="text/javascript">'.
 										'setTimeout("window.location.href =\''.$href.'\';", 3000);'.
 										'$(\'succeedmessage_href\').href = \''.$href.'\';'.
-										'$(\'main_message\').style.display = \'none\';'.
+									//	'$(\'main_message\').style.display = \'none\';'.
+										'$(\'login_bg\').style.display = \'none\';'.		//add
+										'$(\'chg_bg_btn\').style.display = \'none\';'.		//add
 										'$(\'main_succeed\').style.display = \'\';'.
 										'$(\'succeedlocation\').innerHTML = \''.lang('message', $loginmessage, $param).'\';</script>'.$ucsynlogin,
 									'striptags' => false,
@@ -624,7 +626,7 @@ class register_ctl {
 				showmessage('profile_uid_duplicate', '', array('uid' => $uid));
 			}
 
-			$passportpwd=$password;				//add
+			$passportpwd=$password;
 			$password = md5(random(10));
 			$secques = $questionid > 0 ? random(8) : '';
 
