@@ -1,0 +1,34 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*µÇÂ½*/
+.login_bg		{ width:100%; height:407px; margin:0 auto; border-top:1px solid #FFF;}
+.bg_1						{ background:url(../images/1.jpg) no-repeat 50% 50%;}
+.bg_2						{ background:url(../images/2.jpg) no-repeat 50% 50%;}
+.bg_3						{ background:url(../images/3.jpg) no-repeat 50% 50%;}
+.login_box					{ width:1000px; height:407px; margin:0 auto; position:relative;}
+.login_register				{ width:100px; height:28px; position:absolute; top:208px; left:81px; overflow:hidden; z-index:9999;}
+.login_box_bg				{ width:280px; height:296px; background-image:url(../images/login_bg.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_bg.png'); _background-image:none; position:absolute; top:59px; right:18px; z-index:9999;}
+.login						{ width:280px; height:360px; position:absolute; top:59px; right:18px; z-index:9999;}
+.login span					{ width:280px; height:37px; padding:18px 0 0 0; text-align:center; font-size:14px; font-weight:bold; color:#FFF; overflow:hidden; float:left;}
+.login dl					{ width:250px; height:300px; padding:0 0 0 30px; overflow:hidden; float:left;}
+.login dl dt				{ width:220px; height:70px; overflow:hidden; float:left;}
+.login dl dt label			{ height:24px; padding:16px 0 0 3px; color:#FFF; float:left;}
+.login dl dt input			{ width:212px; height:14px; padding:7px 3px; background:#FFF; border:1px solid #cacaca; font-size:12px; vertical-align:middle; overflow:hidden; float:left;}
+.login dl dt a				{ margin:16px 0 0 3px; display:inline; color:#9a9c99; float:right;}
+.login dl dt em				{ width:220px; height:30px; overflow:hidden; float:left;}
+.login dl dt .login_check_text{ width:104px;}
+.login dl dt img			{ width:100px; height:30px; overflow:hidden; float:right;}
+.login dl dd				{ width:220px; height:90px; margin:5px 0 0 0; overflow:hidden; float:left;}
+.login dl dd .loginbtn		{ width:220px; height:35px; margin:22px 0 0 0; display:inline; background:url(../images/login_sub_btn.png) no-repeat; cursor:pointer; overflow:hidden; float:left;}
+.login dl dd .lostpwdbtn	{ width:220px; height:35px; margin:22px 0 0 0; display:inline; background:url(../images/lost_pw_btn.png) no-repeat; cursor:pointer; overflow:hidden; float:left;}
+.login dl dd a				{ margin:10px 0 0 3px; display:inline; font-size:14px; font-weight:bold; color:#99cc33; float:left;}
+
+/*µÇÂ½±³¾°ÇÐ»»°´Å¥*/
+.login_bg_btn	{ width:1000px; height:42px; margin:0 auto; padding:12px 0 0 0; text-align:center;}
+.login_bg_btn a				{ width:12px; height:13px; margin:0 8px; display:inline; cursor:pointer;}
+
+/*ÍÆ¼ö*/
+.recommend		{ width:1000px; height:70px; margin:0 auto; padding:0 0 27px 0;}
+.recommend dt				{ width:307px; height:57px; padding:13px 0 0 18px; overflow:hidden; float:left;}
+.recommend dd				{ margin:0 6px 0 0; display:inline; float:left;}

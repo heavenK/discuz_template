@@ -1050,6 +1050,7 @@ $lang = array (
   'magics_thunder_message' => '{magicname} 发布成功 ',
 
   'system_error_action' => '系统未知错误',	//add
+  'login_passport_invalid' => '登录失败,请刷新重试',	//add
 );
 
 ?>
