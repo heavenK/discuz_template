@@ -3,15 +3,16 @@
 
 /*µÇÂ½*/
 .login_bg		{ width:100%; height:407px; margin:0 auto; border-top:1px solid #FFF;}
+.login_bg_line				{ width:100%; height:7px; margin:0 auto; background:url(../images/login_box_bg_line.gif) repeat-x;}
 .bg_1						{ background:url(../images/1.jpg) no-repeat 50% 50%;}
 .bg_2						{ background:url(../images/2.jpg) no-repeat 50% 50%;}
 .bg_3						{ background:url(../images/3.jpg) no-repeat 50% 50%;}
 .login_box					{ width:1000px; height:407px; margin:0 auto; position:relative;}
-.login_register				{ width:100px; height:28px; position:absolute; top:208px; left:81px; overflow:hidden; z-index:9999;}
-.login_box_bg				{ width:280px; height:296px; background-image:url(../images/login_bg.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_bg.png'); _background-image:none; position:absolute; top:59px; right:18px; z-index:9999;}
-.login						{ width:280px; height:360px; position:absolute; top:59px; right:18px; z-index:9999;}
+.login_register				{ width:100px; height:28px; position:absolute; top:202px; left:81px; overflow:hidden; z-index:9999;}
+.login_box_bg				{ width:280px; height:296px; background-image:url(../images/login_bg.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='template/we54/common/images/login_bg.png'); _background-image:none; position:absolute; top:59px; right:18px; z-index:9999;}
+.login						{ width:280px; height:296px; position:absolute; top:59px; right:18px; z-index:9999;}
 .login span					{ width:280px; height:37px; padding:18px 0 0 0; text-align:center; font-size:14px; font-weight:bold; color:#FFF; overflow:hidden; float:left;}
-.login dl					{ width:250px; height:300px; padding:0 0 0 30px; overflow:hidden; float:left;}
+.login dl					{ width:250px; height:241px; padding:0 0 0 30px; overflow:hidden; float:left;}
 .login dl dt				{ width:220px; height:70px; overflow:hidden; float:left;}
 .login dl dt label			{ height:24px; padding:16px 0 0 3px; color:#FFF; float:left;}
 .login dl dt input			{ width:212px; height:14px; padding:7px 3px; background:#FFF; border:1px solid #cacaca; font-size:12px; vertical-align:middle; overflow:hidden; float:left;}
