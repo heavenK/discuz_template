@@ -24,5 +24,14 @@ if(!$metakeywords) {
 if(!$metadescription) {
 	$metadescription = $_G['setting']['navs'][1]['navname'];
 }
+
+// -----为了取各版块24小时发贴数，占用首页首页打开时间的一半。---   by heavenK
+$forums = C::t('forum_forum')->fetch_all_by_status(1);
+foreach($forums as $forum) {
+	$forum_all[$forum['fid']] = $forum;
+}
+//  -----取出结束-----
+
+
 include_once template('diy:portal/index');
 ?>
