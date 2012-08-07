@@ -89,7 +89,7 @@
                     <label for="password">µÇÂ¼ÃÜÂë£º</label><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">Íü¼ÇÃÜÂë£¿</a><input type="password" id="password" name="password" tabindex="2" onfocus="clearpwd()" />
                 </dt>
                 <dd>
-					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="1"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">Ãâ·Ñ×¢²á</a>
+					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="3"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">Ãâ·Ñ×¢²á</a>
                 </dd>
             </dl>
 			</form>
@@ -102,7 +102,7 @@
             <span id="returnmessage3_$loginhash">{lang getpassword}</span>
             <dl>
                 <dt>
-                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
+                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="4" autocomplete="off"  />
                 </dt>
 				<!--{if $_G['cache']['plugin']['smstong']['mobilepwd'] == 1}-->
 				<!-- <dt>
@@ -110,7 +110,7 @@
                 </dt> -->
 				<!--{/if}-->
                 <dt>
-                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
+                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="5"  />
                 </dt>
                 <dd>
 					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"></button>
