@@ -35,6 +35,7 @@
 #p_btn i, #p_btn a					{ background:none;}
 #p_btn a							{ margin-right:0; padding:0; float:none;}
 #p_btn img							{ float:none;}
+.kaiser_pl .pi a					{ border:none;}
 
 /*
 ¡–±Ì“≥
@@ -63,7 +64,7 @@
 .kaiser_tuji						{ background:none;}
 .kaiser_nav_on						{ width:77px; height:31px; background:url(../../../static/image/common/kaiser_nav_btn.png) no-repeat 0 0; color:#FFF; font-weight:bold; font-size:14px; text-align:center; line-height:32px; overflow:hidden; float:left;}
 .kaiser_nav_search					{ padding:5px 0 0 0; float:right;}
-.kaiser_nav_search #scbar_btn		{ width:58px; height:22px; margin:0 13px 0 1px; display:inline; background:url(../../../static/image/common/kaiser_nav_search_btn.png) no-repeat; overflow:hidden; float:right;}
+.kaiser_nav_search #scbar_btn		{ width:58px; height:22px; margin:0 13px 0 1px; display:inline; background:url(../../../static/image/common/kaiser_nav_search_btn.png) no-repeat; cursor:pointer; overflow:hidden; float:right;}
 .kaiser_nav_search #scbar_txt		{ width:159px; height:20px; padding:0 4px; background:#FFF; border:1px solid #dddddd; font-size:12px; color:#999999; line-height:20px; overflow:hidden; float:right;}
 .kaiser_ttp_bm_cl					{ height:31px; margin:0 0 0 10px; padding:0; background:url(../../../static/image/common/kaiser_zhutitag_bg.gif) repeat-x; border:none; overflow:hidden;}
 .kaiser_ttp_bm_cl li				{ line-height:32px; color:#334f67;}
@@ -80,14 +81,3 @@
 .kaiser_list_bg						{ background:#f7f7f7;}
 .kaiser_list_bm_bw0_pgs_cl .pgt ,.kaiser_list_bm_bw0_pgs_cl .pgb{ margin-top:26px;}
 .kaiser_list_bm_bw0_pgs_cl a:hover	{ text-decoration:none;}
-
-
-
-
-
-
-
-
-
-
-

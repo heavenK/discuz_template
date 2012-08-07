@@ -1070,6 +1070,26 @@
 				<item id="smstong_mobilearea_ip138"><![CDATA[/卡号归属地(.*?)&nbsp;(.*?)卡/]]></item>
 
 				<item id="smstong_ipcheck_access_denied"><![CDATA[超过获取最多次数拒绝发送短信]]></item>
+				<item id="-100"><![CDATA[用户名空]]></item>
+				<item id="-101"><![CDATA[密码空]]></item>
+				<item id="-102"><![CDATA[用户名不合法]]></item>
+				<item id="-103"><![CDATA[密码不正确]]></item>
+				<item id="-104"><![CDATA[账户已冻结]]></item>
+				<item id="-105"><![CDATA[用户不正确]]></item>
+				<item id="-106"><![CDATA[balance不正确]]></item>
+				<item id="-107"><![CDATA[账户余额不足]]></item>
+				<item id="-108"><![CDATA[号码格式错误 包括空号在内]]></item>
+				<item id="-109"><![CDATA[通道关闭或者不存在]]></item>
+				<item id="-110"><![CDATA[用户没有分配相应的通道]]></item>
+				<item id="-111"><![CDATA[通道参数格式错误]]></item>
+				<item id="-112"><![CDATA[日期范围错误]]></item>
+				<item id="-113"><![CDATA[getreport参数错误]]></item>
+				<item id="-114"><![CDATA[act参数错误]]></item>
+				<item id="-115"><![CDATA[没有获取到数据]]></item>
+				<item id="-116"><![CDATA[有屏蔽词语]]></item>
+				<item id="-117"><![CDATA[超出提交号码个数范围 ]]></item>
+				<item id="-118"><![CDATA[超出单条发送时间间隔  ]]></item>
+				<item id="-119"><![CDATA[内容超出限定长度 ]]></item> 
 			</item>
 			<item id="templatelang">
 				<item id="smstong_mobilereg_mobile"><![CDATA[手机号]]></item>
