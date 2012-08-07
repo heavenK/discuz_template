@@ -73,12 +73,14 @@
         <div class="login" id="layer_login_$loginhash">
 		
 		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl" onsubmit="{if $this->setting['pwdsafety']}pwmd5('password3_$loginhash');{/if}pwdclear = 1;ajaxpost('loginform_$loginhash', 'returnmessage_$loginhash', 'returnmessage_$loginhash', 'onerror');return false;" action="member.php?mod=logging&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}{if isset($_GET['frommessage'])}&frommessage{/if}&loginhash=$loginhash">
+			
+            <span>
 			<input type="hidden" name="formhash" value="{FORMHASH}" />
 			<input type="hidden" name="referer" value="{echo dreferer()}" />
 			<!--{if $auth}-->
 				<input type="hidden" name="auth" value="$auth" />
 			<!--{/if}-->
-            <span>{lang login_member}</span>
+			{lang login_member}</span>
             <dl>
                 <dt>
                     <label for="username">ÕË»§Ãû£º</label><input type="text" id="username" name="username" tabindex="1" autocomplete="off"  />
