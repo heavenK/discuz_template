@@ -84,13 +84,13 @@
 			{lang login_member}</span>
             <dl>
                 <dt>
-                    <label for="username">账户名：</label><input type="text" id="username" name="username" tabindex="1" autocomplete="off"  />
+                    <label for="username_$loginhash">账户名：</label><input type="text" id="username_$loginhash" name="username" size="30" tabindex="1" autocomplete="off" value="$username" />
                 </dt>
                 <dt>
-                    <label for="password">登录密码：</label><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">忘记密码？</a><input type="password" id="password" name="password" tabindex="2" onfocus="clearpwd()" />
+                    <label for="password3_$loginhash">登录密码：</label><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">忘记密码？</a><input type="password" id="password3_$loginhash" name="password" tabindex="1" size="30" onfocus="clearpwd()" />
                 </dt>
                 <dd>
-					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="3"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">免费注册</a>
+					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="1"><strong style="display:none;">{lang login}</strong></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">免费注册</a>
                 </dd>
             </dl>
 			</form>
@@ -103,7 +103,7 @@
             <span id="returnmessage3_$loginhash">{lang getpassword}</span>
             <dl>
                 <dt>
-                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="4" autocomplete="off"  />
+                    <label for="lostpw_email"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
                 </dt>
 				<!--{if $_G['cache']['plugin']['smstong']['mobilepwd'] == 1}-->
 				<!-- <dt>
@@ -111,10 +111,10 @@
                 </dt> -->
 				<!--{/if}-->
                 <dt>
-                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="5"  />
+                    <label for="lostpw_username">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
                 </dt>
                 <dd>
-					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"></button>
+					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"><span style="display:none;">{lang submit}</span></button>
                 </dd>
             </dl>
 			</form>
@@ -129,34 +129,6 @@
         <a onClick="change(3,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
     </div>
 </div>
-<div class="box">
-    <dl class="recommend"><!--推荐-->
-        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_01.png" /></a></dt>
-        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
-        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_02.png" /></a></dt>
-        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
-        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_03.png" /></a></dt>
-    </dl>
-</div>
-<div class="index_bottom"><!--底部-->
-<a href="#">新青年网介绍</a> | <a href="#">广告服务</a> | <a href="#">免责声明</a> | <a href="#">法律声明</a> | <a href="#">保护隐私权</a> | <a href="#">BBS论坛许可证</a> | <a href="#">友情链接</a><br /> 
-新青年(大连)网络信息技术有限公司<br />
-Copyright &copy; 2007-2012 WE54.COM INC. All RIGHTS RESERVED.
-</div>
-<div id="layer_message_$loginhash"{if empty($_GET['infloat'])} class="f_c blr nfl"{/if} style="display: none;">
-	<h3 class="flb" id="layer_header_$loginhash">
-		<!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}-->
-		<em>{lang login_member}</em>
-		<span><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a></span>
-		<!--{/if}-->
-	</h3>
-	<div class="c"><div class="alert_right">
-		<div id="messageleft_$loginhash"></div>
-		<p class="alert_btnleft" id="messageright_$loginhash"></p>
-	</div>
-</div>
-</body>
-</html>
 <script>
 function change(n, obj){
 	var cls = "login_bg bg_" + n;
@@ -201,3 +173,32 @@ function change(n, obj){
 	$('lostpw_email').focus();
 <!--{/if}-->
 </script>
+<div class="box">
+    <dl class="recommend"><!--推荐-->
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_01.png" /></a></dt>
+        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_02.png" /></a></dt>
+        <dd><img src="{$_G[siteurl]}template/we54/common/images/recommend_line.png" /></dd>
+        <dt><a href="javascript:void(0);" target="_blank"><img src="{$_G[siteurl]}template/we54/common/images/recommend_03.png" /></a></dt>
+    </dl>
+</div>
+<div class="index_bottom"><!--底部-->
+<a href="#">新青年网介绍</a> | <a href="#">广告服务</a> | <a href="#">免责声明</a> | <a href="#">法律声明</a> | <a href="#">保护隐私权</a> | <a href="#">BBS论坛许可证</a> | <a href="#">友情链接</a><br /> 
+新青年(大连)网络信息技术有限公司<br />
+Copyright &copy; 2007-2012 WE54.COM INC. All RIGHTS RESERVED.
+</div>
+<div id="layer_message_$loginhash"{if empty($_GET['infloat'])} class="f_c blr nfl"{/if} style="display: none;">
+	<h3 class="flb" id="layer_header_$loginhash">
+		<!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}-->
+		<em>{lang login_member}</em>
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a></span>
+		<!--{/if}-->
+	</h3>
+	<div class="c"><div class="alert_right">
+		<div id="messageleft_$loginhash"></div>
+		<p class="alert_btnleft" id="messageright_$loginhash"></p>
+	</div>
+</div>
+</body>
+</html>
+
