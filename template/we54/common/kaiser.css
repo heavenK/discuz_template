@@ -94,6 +94,7 @@
 .kaiser_tb_cl						{ background:url(/template/we54/images/kaiser_data_nav_line.gif) repeat-x bottom; border-bottom:none;}
 .kaiser_tb_cl li					{ margin:0 3px 0 0;}
 .kaiser_tb_cl a						{ width:76px; height:27px; padding:0; background:url(/template/we54/images/kaiser_data_bav_bg_not.png) no-repeat; border:none; text-align:center;}
+.kaiser_tb_cl .a a					{ width:80px; height:26px; margin:1px 0 0 0; background:url(/template/we54/images/kaiser_data_bav_bg_on.png) no-repeat;}
 
 
 
