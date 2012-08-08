@@ -117,16 +117,21 @@
 				<!--{if $_GET[vid]}-->
 				<input type="hidden" value="$_GET[vid]" name="vid" />
 				<!--{/if}-->
-				<table cellspacing="0" cellpadding="0" class="tfm" id="profilelist">
+				<table cellspacing="0" cellpadding="0" class="tfm kaiser_tfm" id="profilelist">
 					<tr>
-						<th>{lang username}</th>
+						<th>{lang username}：</th>
 						<td>$_G[member][username]</td>
+						<td>&nbsp;</td>
+					</tr>
+                    <tr>
+						<th>我的认证：</th>
+						<td>$_G[member][extgroupids]</td>
 						<td>&nbsp;</td>
 					</tr>
 				<!--{loop $settings $key $value}-->
 				<!--{if $value[available]}-->
 					<tr id="tr_$key">
-						<th id="th_$key"><!--{if $value[required]}--><span class="rq" title="{lang required}">*</span><!--{/if}-->$value[title]</th>
+						<th id="th_$key"><!--{if $value[required]}--><span class="rq" title="{lang required}">*</span><!--{/if}-->$value[title]：</th>
 						<td id="td_$key">
 							$htmls[$key]
 						</td>

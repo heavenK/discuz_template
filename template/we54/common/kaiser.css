@@ -92,9 +92,13 @@
 .kaiser_btn ul .a					{ padding:0 10px 0 15px; background:url(/template/we54/images/kaiser_data_btn_bg.png) no-repeat; border:none;}
 .kaiser_appl						{ width:119px;}
 .kaiser_tb_cl						{ background:url(/template/we54/images/kaiser_data_nav_line.gif) repeat-x bottom; border-bottom:none;}
-.kaiser_tb_cl li					{ margin:0 3px 0 0;}
-.kaiser_tb_cl a						{ width:76px; height:27px; padding:0; background:url(/template/we54/images/kaiser_data_bav_bg_not.png) no-repeat; border:none; text-align:center;}
-.kaiser_tb_cl .a a					{ width:80px; height:26px; margin:1px 0 0 0; background:url(/template/we54/images/kaiser_data_bav_bg_on.png) no-repeat;}
+.kaiser_tb_cl li					{ margin:0 10px 0 0;}
+.kaiser_tb_cl a						{ width:76px; height:27px; padding:0; background:url(/template/we54/images/kaiser_data_bav_bg_not.png) no-repeat; border:none; text-align:center; font-size:14px; line-height:28px;}
+.kaiser_tb_cl .a a					{ width:80px; height:26px; margin:1px 0 0 0; background:url(/template/we54/images/kaiser_data_bav_bg_on.png) no-repeat; color:#663300;}
+.kaiser_tfm							{ margin:22px 0 0 0; font-size:14px; color:#333;}
+.kaiser_tfm tr						{ border-bottom:1px solid #f2f2f2;}
+.kaiser_tfm tr th					{ padding-top:10px; padding-right:10px; text-align:right;}
+.kaiser_tfm tr td{ padding:10px 0 6px 0; vertical-align:middle;}
 
 
 
