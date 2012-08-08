@@ -87,6 +87,10 @@
 */
 .kaiser_ct2_a_wp_cl					{ margin:0 0 20px 0; background:url(/template/we54/images/kaiser_data_bg.gif) repeat-y; border:1px solid #e6e1c7; border-top:3px solid #e6e1c7;}
 .kaiser_btn							{ padding:53px 0 0 11px;}
+.kaiser_btn ul li					{ margin:0; padding:0 10px 0 15px; border:none;}
+.kaiser_btn ul li a					{ line-height:30px; color:#000;}
+.kaiser_btn ul .a					{ padding:0 10px 0 15px; background:url(/template/we54/images/kaiser_data_btn_bg.png) no-repeat; border:none;}
+.kaiser_appl						{ width:119px;}
 
 
 
