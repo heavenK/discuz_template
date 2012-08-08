@@ -8,8 +8,10 @@ a:hover { text-decoration:underline;}
 .nav_second,
 .nav_three,
 
-.aaa,
-.aaa:hover,
+.zx_nav_bg01,
+.zx_nav_bg02,
+.zx_nav_bg03,
+.zx_nav_bg04,
 .life_title,
 .life_logo li p a,
 .life_logo li i a,
@@ -53,8 +55,11 @@ a:hover { text-decoration:underline;}
 .box		{ width:1000px; margin:0 auto; position:relative;}
 .dl_zc 		{ line-height:40px; float:right; color:#666666; }
 .dl_zc a 	{ text-decoration:none; color:#0035a0; }
-.nav 		{ width:90px; height:28px; float:right; cursor:pointer; background-position:0 -75px; margin-left:15px; margin-top:8px; display:inline; }
-.nav:hover  { background-position:-90px -75px; }
+.nav 		{ width:63px; height:24px; float:right; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:12px; display:inline; }
+	.zx_nav_bg01 { width:62px; height:88px; background-position:-930px -243px; overflow:hidden; float:left;}
+	.zx_nav_bg02 { width:62px; height:88px; background-position:-930px -331px; overflow:hidden; float:left;}
+	.zx_nav_bg03 { width:62px; height:88px; background-position:-930px -419px; overflow:hidden; float:left;}
+	.zx_nav_bg04 { width:62px; height:88px; background-position:-806px -462px; overflow:hidden; float:left;}
 
 /*¶þ¼¶µ¼º½*/
 .nav_st { width:1000px; height:115px; margin-bottom:10px; display:inline; overflow:hidden; float:left; }
