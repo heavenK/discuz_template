@@ -67,18 +67,21 @@
 			</div>
 		<!--{/if}-->
 <div id="login_bg" class="login_bg bg_1"><!--µÇÂ½-->
+	<div class="login_bg_line"></div>
     <div class="login_box">
         <a href="member.php?mod={$_G[setting][regname]}" class="login_register"></a>
         <div class="login_box_bg"></div>
         <div class="login" id="layer_login_$loginhash">
 		
 		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl" onsubmit="{if $this->setting['pwdsafety']}pwmd5('password3_$loginhash');{/if}pwdclear = 1;ajaxpost('loginform_$loginhash', 'returnmessage_$loginhash', 'returnmessage_$loginhash', 'onerror');return false;" action="member.php?mod=logging&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}{if isset($_GET['frommessage'])}&frommessage{/if}&loginhash=$loginhash">
+			
+            <span>
 			<input type="hidden" name="formhash" value="{FORMHASH}" />
 			<input type="hidden" name="referer" value="{echo dreferer()}" />
 			<!--{if $auth}-->
 				<input type="hidden" name="auth" value="$auth" />
 			<!--{/if}-->
-            <span>{lang login_member}</span>
+			{lang login_member}</span>
             <dl>
                 <dt>
                     <label for="username">ÕË»§Ãû£º</label><input type="text" id="username" name="username" tabindex="1" autocomplete="off"  />
@@ -87,7 +90,7 @@
                     <label for="password">µÇÂ¼ÃÜÂë£º</label><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">Íü¼ÇÃÜÂë£¿</a><input type="password" id="password" name="password" tabindex="2" onfocus="clearpwd()" />
                 </dt>
                 <dd>
-					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="1"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">Ãâ·Ñ×¢²á</a>
+					<button class="loginbtn" type="submit" name="loginsubmit" value="true" tabindex="3"></button><a href="member.php?mod={$_G[setting][regname]}" target="_blank">Ãâ·Ñ×¢²á</a>
                 </dd>
             </dl>
 			</form>
@@ -100,7 +103,7 @@
             <span id="returnmessage3_$loginhash">{lang getpassword}</span>
             <dl>
                 <dt>
-                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
+                    <label for="username"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="4" autocomplete="off"  />
                 </dt>
 				<!--{if $_G['cache']['plugin']['smstong']['mobilepwd'] == 1}-->
 				<!-- <dt>
@@ -108,7 +111,7 @@
                 </dt> -->
 				<!--{/if}-->
                 <dt>
-                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
+                    <label for="password">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="5"  />
                 </dt>
                 <dd>
 					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"></button>
