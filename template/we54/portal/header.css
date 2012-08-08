@@ -33,7 +33,7 @@ body		{ background: url(/template/we54/por_images/body_bg.jpg);}
 	.zx_sec_nav { width:210px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
 	.main_nav a { color:#4d4d4d;}
-	.main_nav a:hover { color:#FF0000;}
+	.main_nav a:hover { color:#ff6600;}
 	.tyty { overflow:hidden; float:left;}
 
 	.hd_nav { width:316px; height:88px; background-color:#fff; overflow:hidden; float:left;}
@@ -69,7 +69,7 @@ body		{ background: url(/template/we54/por_images/body_bg.jpg);}
 	.nav_three ul { width:988px; height:66px; margin:4px 0 0 10px; display:inline; overflow:hidden; float:left;}	
 	.nav_three ul li { width:122px; height:22px; overflow:hidden; float:left; font-size:14px; line-height:22px;}
 	.nav_three ul li a { text-decoration:none; color:#663300; margin-left:35px;}
-	.nav_three ul li a:hover { font-weight:bold;}
+	.nav_three ul li a:hover { text-decoration:none; color:#ff6600;}
 
 /*三级导航下广告*/
 .ad03_ad04 { width:1000px; height:60px; overflow:hidden; float:left;}
