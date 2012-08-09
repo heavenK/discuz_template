@@ -1,5 +1,4 @@
 <!--{subtemplate common/header}-->
-<link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/kaiser.css" />
 
 <!--{subtemplate home/spacecp_header}-->
 	<!--{if $validate}-->
@@ -25,7 +24,7 @@
 		</tr>
 		</table>
 		</div></div>
-		<div class="appl kaiser_appl">
+		<div class="appl">
 		<!--{subtemplate home/spacecp_footer}-->
 	</div>
 	<!--{else}-->
@@ -33,29 +32,29 @@
 			<p class="bbda pbm mbm"><!--{if !$_G['setting']['connect']['allow'] || !$conisregister}-->{lang old_password_comment}<!--{else}-->{lang connect_config_newpassword_comment}<!--{/if}--></p>
 			<form action="home.php?mod=spacecp&ac=profile" method="post" autocomplete="off">
 				<input type="hidden" value="{FORMHASH}" name="formhash" />
-				<table summary="{lang memcp_profile}" cellspacing="0" cellpadding="0" class="tfm">
+				<table summary="{lang memcp_profile}" cellspacing="0" cellpadding="0" class="tfm kaiser_tfm">
 					<!--{if !$_G['setting']['connect']['allow'] || !$conisregister}-->
 						<tr>
-							<th><span class="rq" title="{lang required}">*</span>{lang old_password}</th>
+							<th><span class="rq" title="{lang required}">*</span>{lang old_password}：</th>
 							<td><input type="password" name="oldpassword" id="oldpassword" class="px" /></td>
 						</tr>
 					<!--{/if}-->
 					<tr>
-						<th>{lang new_password}</th>
+						<th>{lang new_password}：</th>
 						<td>
 							<input type="password" name="newpassword" id="newpassword" class="px" />
 							<p class="d">{lang memcp_profile_passwd_comment}</p>
 						</td>
 					</tr>
 					<tr>
-						<th>{lang new_password_confirm}</th>
+						<th>{lang new_password_confirm}：</th>
 						<td>
 							<input type="password" name="newpassword2" id="newpassword2"class="px" />
 							<p class="d">{lang memcp_profile_passwd_comment}</p>
 						</td>
 					</tr>
 					<tr id="contact"{if $_GET[from] == 'contact'} style="background-color: {$_G['style']['specialbg']};"{/if}>
-						<th>{lang email}</th>
+						<th>{lang email}：</th>
 						<td>
 							<input type="text" name="emailnew" id="emailnew" value="$space[email]" class="px" />
 							<p class="d">
@@ -70,7 +69,7 @@
 					</tr>
 
 					<tr>
-						<th>{lang security_question}</th>
+						<th>{lang security_question}：</th>
 						<td>
 							<select name="questionidnew" id="questionidnew">
 								<option value="" selected>{lang memcp_profile_security_keep}</option>
@@ -88,19 +87,19 @@
 					</tr>
 
 					<tr>
-						<th>{lang security_answer}</th>
+						<th>{lang security_answer}：</th>
 						<td>
 							<input type="text" name="answernew" id="answernew" class="px" />
 							<p class="d">{lang memcp_profile_security_answer_comment}</p>
 						</td>
 					</tr>
 					<!--{if checkperm('seccode') && ($secqaacheck || $seccodecheck)}-->
-					<!--{eval $sectpl = '<tr><th><sec></th><td><sec><p class="d"><sec></p></td>';}-->
+					<!--{eval $sectpl = '<tr><th><sec>：</th><td><sec><p class="d"><sec></p></td>';}-->
 					<!--{subtemplate common/seccheck}-->
 					<!--{/if}-->
 					<tr>
-						<th>&nbsp;</th>
-						<td><button type="submit" name="pwdsubmit" value="true" class="pn pnc" /><strong>{lang save}</strong></button></td>
+						<th style=" padding-top:30px; border-bottom:none;">&nbsp;</th>
+						<td style=" border-bottom:none;"><button type="submit" name="pwdsubmit" value="true" class="pn pnc kaiser_pn_pnc" /></button></td>
 					</tr>
 				</table>
 				<input type="hidden" name="passwordsubmit" value="true" />
@@ -123,11 +122,13 @@
 						<td>$_G[member][username]</td>
 						<td>&nbsp;</td>
 					</tr>
+                    <!--{if ($_GET[ac]=='profile' && empty($_GET[op])) || $_GET[op]=='base'}-->
                     <tr>
 						<th>我的认证：</th>
-						<td>$_G[member][extgroupids]</td>
+						<td><img src="template/we54/images/kaiser_data_renzheng_cion.png" style=" float:left;" /><!--{if empty($renzheng)}--><em style=" padding:0 0 6px 7px; float:left;">未获得 <a href="#" target="_blank" style=" color:#0657b2;">申请</a></em><!--{else}--><em style=" padding:0 0 6px 7px; float:left;">已获得</em><!--{/if}--></td>
 						<td>&nbsp;</td>
 					</tr>
+                    <!--{/if}-->
 				<!--{loop $settings $key $value}-->
 				<!--{if $value[available]}-->
 					<tr id="tr_$key">
@@ -218,10 +219,10 @@
 				<!--{hook/spacecp_profile_extra}-->
 				<!--{if $showbtn}-->
 				<tr>
-					<th>&nbsp;</th>
-					<td colspan="2">
+					<th style=" padding-top:30px; border-bottom:none;">&nbsp;</th>
+					<td colspan="2" style=" border-bottom:none;">
 						<input type="hidden" name="profilesubmit" value="true" />
-						<button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc" /><strong>{lang save}</strong></button>
+						<button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc kaiser_pn_pnc" /></button>
 						<span id="submit_result" class="rq"></span>
 					</td>
 				</tr>

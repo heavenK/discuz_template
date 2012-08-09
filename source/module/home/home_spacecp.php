@@ -55,6 +55,13 @@ if(lang('core', 'title_memcp_'.$ac)) {
 
 $_G['disabledwidthauto'] = 0;
 
+//add by kaiser
+$kaiser_user = C::t('common_member')->fetch_all_by_username($_G['username']);
+foreach($kaiser_user as $val){
+	$renzheng = $val['extgroupids'];
+}
+//end add
+
 require_once libfile('spacecp/'.$ac, 'include');
 
 ?>
