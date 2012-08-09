@@ -1,9 +1,9 @@
 <?php
 //Discuz! cache file, DO NOT modify me!
-//Identify: 0e3b13c9df2eb28cbc050f5155f210ec
+//Identify: 31d88b92e5af0cfd60801ff9e86b88cf
 
 $domain = array (
-  'defaultindex' => 'forum.php',
+  'defaultindex' => 'portal.php',
   'holddomain' => 'www|*blog*|*space*|*bbs*',
   'list' => 
   array (
