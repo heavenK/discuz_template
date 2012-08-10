@@ -36,7 +36,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 .dl_zc a { text-decoration:none; color:#0035a0; float:none;}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
-.nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; }
+.nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; z-index:9999; }
 .nav:hover  { background:url(/template/we54/por_images/xl_nav02.jpg) no-repeat;}
 #um{ padding:6px 0 0 0;}
 #um a{ color:#0035a0;}

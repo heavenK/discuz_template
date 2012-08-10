@@ -32,7 +32,7 @@
 
 	<div id="toptb" class="cl">
 			<div class="zzz">
-                    <img src="/template/we54/images/space_logo.jpg" width="184" height="47" border="0"/>
+                    <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
                 </div>
             
             	<div class="nav" id="show">
@@ -97,19 +97,19 @@
                 </div>
                 <!--{/if}-->
                 </form>
-            
-            <div class="y kaiser_y" style=" margin-top:8px; margin-right:10px;">
-                <!--{hook/global_cpnav_extra2}-->
-                <!--{loop $_G['setting']['topnavs'][1] $nav}-->
-                    <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
-                <!--{/loop}-->
-                <!--{if empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']}-->
-                    <a href="javascript:;" onClick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
-                <!--{/if}-->
-                <!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onMouseOver="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
-                <!--{if $space['self'] && $do == 'index'}--><a id="diy-tg" href="javascript:openDiy();" title="{lang dress_space}">DIY</a><!--{/if}-->
-            </div>
-				
+                <div class="y kaiser_y" style=" margin-top:8px; margin-right:10px;">
+                    <!--{hook/global_cpnav_extra2}-->
+                    <!--{loop $_G['setting']['topnavs'][1] $nav}-->
+                        <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->$nav[code]<!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{if empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']}-->
+                        <a href="javascript:;" onClick="widthauto(this)"><!--{if widthauto()}-->{lang switch_narrow}<!--{else}-->{lang switch_wide}<!--{/if}--></a>
+                    <!--{/if}-->
+                    <!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}--><a id="sslct" href="javascript:;" onMouseOver="delayShow(this, function() {showMenu({'ctrlid':'sslct','pos':'34!'})});">{lang changestyle}</a><!--{/if}-->
+                    <!--{if check_diy_perm($topic)}-->
+                        $diynav
+                    <!--{/if}-->
+                </div>
 	</div>
 	<!--{if $space['status'] == -1 && $_G['adminid'] == 1 }-->
 		<p class="ptw xw1 xi1 hm"><img src="{IMGDIR}/locked.gif" alt="Locked" class="vm" /> {lang message_banned}</p>
