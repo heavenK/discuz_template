@@ -89,6 +89,10 @@
 .kaiser_list_son_cont .fl_icn_g		{ width:40px; height:40px; margin:13px 0 0 10px; overflow:hidden; float:left;}
 .kaiser_list_son_cont dl			{ width:167px; height:53px; margin:0; padding-top:7px; padding-left:11px; overflow:hidden; float:left;}
 .kaiser_list_son_cont dl dt a:hover	{ text-decoration:underline;}
+.by a								{ color:#888;}
+.by em span							{ color:#aaa;}
+.tl .num a							{ color:#aaa;}
+.tl .num em							{ color:#ff0101;}
 
 /*
 个人资料

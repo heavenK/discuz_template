@@ -1,0 +1,24 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*×¢²á*/
+.p_tip							{z-index:2;display:none;padding-left:10px;width:390px;background:#FFF;color:#666;font-style:normal;font-size:14px;float:left;}
+.register dl dt.tipwide			{height:auto;padding:10px 2px;line-height:24px;}
+.register dl dt em.p_notice		{ width:29px;display:none;}
+.register dl dd em.p_notice		{ width:29px;height:30px;display:none;}
+.p_chk							{z-index:1;padding:4px 6px 0 10px;width:390px;color:red;font-weight:700;font-size:14px;font-family: "Î¢ÈíÑÅºÚ", "ºÚÌå";float:left;}
+.p_chk img						{margin:4px 4px 0 6px;float:left;}
+.register dl dt img				{margin:4px 4px 0 6px;float:left;}
+.p_right						{background:url(../images/register_yes.png) no-repeat 10px 12px;width:30px;}
+#emailmore						{margin-left:135px;}
+.register dd.email_msg			{width:380px; height:30px; padding:0;margin-top:30px;}
+.register dt.email_show			{width:400px; position:relative;}
+.register dd.seccode_show		{height:auto;}
+.register dd.seccode_show span	{height:auto;}
+.register dt.seccodet_show a	{margin:8px 0 0 10px;float:left;}
+.register dt.seccodet_show span	{width:auto;margin:4px 0 0 0;}
+/*¶ÌÐÅÈÏÖ¤*/
+.register dl dt.mobile_msg		{height:25px;padding:0;}
+.register dl dt.mobile_msg kbd	{margin-left:125px;}
+.register dl dt button.pn		{vertical-align:middle;overflow:hidden;margin-right:3px;padding:0;width:200px;border:1px solid #b3b3b3;background:#E5E5E5 url(../images/btn_bg.png) repeat-x 0 0;cursor:pointer;-moz-box-shadow:0 1px 0 #E5E5E5;-webkit-box-shadow:0 1px 0 #E5E5E5;box-shadow:0 1px 0 #E5E5E5;margin-left:-90px;}
+#myauth							{}

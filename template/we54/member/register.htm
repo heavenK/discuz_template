@@ -1,0 +1,115 @@
+<!--{template common/register_head}-->
+<script type="text/javascript">
+	var strongpw = new Array();
+	<!--{if $_G['setting']['strongpw']}-->
+		<!--{loop $_G['setting']['strongpw'] $key $val}-->
+		strongpw[$key] = $val;
+		<!--{/loop}-->
+	<!--{/if}-->
+	var pwlength = <!--{if $_G['setting']['pwlength']}-->$_G['setting']['pwlength']<!--{else}-->0<!--{/if}-->;
+</script>
+
+<script type="text/javascript" src="{$_G[siteurl]}template/we54/common/js/register_add.js?{VERHASH}"></script>
+
+<div class="nfl" id="main_succeed" style="display: none">
+	<div class="f_c altw">
+		<div class="alert_right">
+			<p id="succeedmessage"></p>
+			<p id="succeedlocation" class="alert_btnleft"></p>
+			<p class="alert_btnleft"><a id="succeedmessage_href">{lang message_forward}</a></p>
+		</div>
+	</div>
+</div>
+
+<form method="post" autocomplete="off" name="register" id="registerform" enctype="multipart/form-data" onsubmit="checksubmit();return false;" action="member.php?mod=$regname">
+<div class="register_box"  id="main_message">
+	<input type="hidden" name="regsubmit" value="yes" />
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="referer" value="$dreferer" />
+	<input type="hidden" name="activationauth" value="{if $_GET[action] == 'activation'}$activationauth{/if}" />
+	<!--{if $_G['setting']['sendregisterurl']}-->
+		<input type="hidden" name="hash" value="$_GET[hash]" />
+	<!--{/if}-->
+    <div class="register"><!--注册-->
+        <span class="reg_nav"><img src="{$_G[siteurl]}template/we54/common/images/register_01_nav.png" /></span>
+        <dl class="register_01">
+		<!--{if $sendurl}-->
+			<dt>
+            	<label for="{$this->setting['reginput']['email']}">{lang email}：</label><input type="text" id="{$this->setting['reginput']['email']}" name="$this->setting['reginput']['email']" autocomplete="off" size="25" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" /><input type="hidden" name="handlekey" value="sendregister"/>
+				<i id="tip_{$this->setting['reginput']['email']}" class="p_tip">{lang register_email_tips}</i><kbd id="chk_{$this->setting['reginput']['email']}" class="p_chk"></kbd>
+            </dt>
+			<dt class="tipwide">
+            	<label></label>{lang register_validate_email_tips}
+            </dt>
+			<script type="text/javascript">
+				function succeedhandle_sendregister(url, msg, values) {
+					showDialog(msg, 'notice');
+				}
+			</script>
+			<!--{else}-->
+            <dt>
+            	<label for="{$this->setting['reginput']['username']}">{lang username}：</label><input type="text" id="{$this->setting['reginput']['username']}" name="" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" required /><em class="p_notice"><i id="tip_{$this->setting['reginput']['username']}" class="p_tip"></i></em><kbd id="chk_{$this->setting['reginput']['username']}" class="p_chk"></kbd>
+            </dt>
+            <dt>
+            	<label for="{$this->setting['reginput']['password']}">设置密码：</label><input type="password"  id="{$this->setting['reginput']['password']}" name="" size="25" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
+				<em class="p_notice"><i id="tip_{$this->setting['reginput']['password']}" class="p_tip"></i></em><kbd id="chk_{$this->setting['reginput']['password']}" class="p_chk"></kbd>
+            </dt>
+            <dt>
+            	<label for="{$this->setting['reginput']['password2']}">再输入一次：</label><input type="password" id="{$this->setting['reginput']['password2']}" name="" size="25" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" required />
+				<em class="p_notice"><i id="tip_{$this->setting['reginput']['password2']}" class="p_tip"></i></em><kbd id="chk_{$this->setting['reginput']['password2']}" class="p_chk"></kbd>
+            </dt>
+			<dt class="email_show">
+            	<label for="{$this->setting['reginput']['email']}">{lang email}：</label><input type="text" id="{$this->setting['reginput']['email']}" name="" autocomplete="off" size="25" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" value="$hash[0]" required />
+				<u id="emailmore">&nbsp;</u>
+            </dt>
+			<dd  class="email_msg"><em class="p_notice"><i id="tip_{$this->setting['reginput']['email']}" class="p_tip"></i></em><kbd id="chk_{$this->setting['reginput']['email']}" class="p_chk"></kbd></dd>
+			<!--{loop $_G['cache']['fields_register'] $field}-->
+				<!--{if $htmls[$field['fieldid']]}-->
+            <dt>
+            	<label for="$field['fieldid']">$field[title]：</label><input type="text" id="$field['fieldid']" name="$field['fieldid']" size="25" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};checknickname(this.id)" onmousemove="this.className='input_on'" onmouseout="this.className=''" required /><em class="p_notice"><i id="tip_$field['fieldid']" class="p_tip"></i></em><kbd id="chk_$field['fieldid']" class="p_chk"></kbd>
+                <!-- <em>发帖时所显示的名称</em> -->
+            </dt>
+				<!--{/if}-->
+			<!--{/loop}-->
+		<!--{/if}-->
+			<!--{if $secqaacheck || $seccodecheck}-->
+			<!--{block sectpl}--><dt class="seccodet_show"><label><sec>：</label><sec></dt><dd  class="seccode_show"><sec></dd><!--{/block}-->
+			<!--{subtemplate common/seccheck}-->
+			<!--{/if}-->
+        </dl>
+        <b><button type="submit" id="registerformsubmit" name="regsubmit" value="true" tabindex="1"><strong style="display:none;"><!--{if $_GET[action] == 'activation'}-->{lang activation}<!--{else}-->{lang submit}<!--{/if}--></strong></button></b>
+    </div>
+</div>
+</form>
+<div id="layer_regmessage"class="f_c blr nfl" style="display: none">
+	<div class="c"><div class="alert_right">
+		<div id="messageleft1"></div>
+			<p class="alert_btnleft" id="messageright1"></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+<!--{if $bbrules && $bbrulesforce}-->
+	showBBRule();
+<!--{/if}-->
+<!--{if $this->showregisterform}-->
+	<!--{if $sendurl}-->
+	addMailEvent($('{$this->setting['reginput']['email']}'));
+	<!--{else}-->
+	addFormEvent('registerform', <!--{if $_GET[action] != 'activation' && !($bbrules && $bbrulesforce) && !empty($invitecode)}-->1<!--{else}-->0<!--{/if}-->);
+	<!--{/if}-->
+	<!--{if $this->setting['sitemessage'][register]}-->
+		function showRegprompt() {
+			showPrompt('custominfo_register', 'mouseover', '<!--{echo trim($this->setting['sitemessage'][register][array_rand($this->setting['sitemessage'][register])])}-->', $this->setting['sitemessage'][time]);
+		}
+		<!--{if !($bbrules && $bbrulesforce)}-->
+			showRegprompt();
+		<!--{/if}-->
+	<!--{/if}-->
+	function showBBRule() {
+		showDialog($('layer_bbrule').innerHTML, 'info', '<!--{echo addslashes($this->setting['bbname']);}--> {lang rulemessage}');
+		$('fwin_dialog_close').style.display = 'none';
+	}
+<!--{/if}-->
+</script>
+<!--{template common/register_footer}-->

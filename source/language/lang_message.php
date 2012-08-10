@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: lang_message.php 30846 2012-06-25 10:17:09Z zhangjie $
+ *      $Id: lang_message.php 30384 2012-05-25 04:48:52Z liulanbo $
  *
  *      This file is automatically generate
  */
@@ -163,7 +163,7 @@ $lang = array (
   'eccredit_nofound' => '指定的评价不存在或已被删除',
   'non_normal_operation' => '非正常操作',
   'failed_to_delete_operation' => '抱歉，删除失败，请检查操作',
-  'you_have_friends' => '你们已成为好友',
+  'you_have_friends' => '您们已成为好友',
   'no_privilege_addfriend' => '抱歉，您目前没有权限添加好友，<a href="home.php?mod=spacecp&ac=usergroup" target="_blank">点击这里查看权限</a>',
   'enough_of_the_number_of_friends_with_magic' => '抱歉，您当前的好友数目达到系统限制，<a id="a_magic_friendnum2" href="magic.php?mid=friendnum" onclick="ajaxmenu(event, this.id, 1)">请使用好友增容卡增容</a>',
   'enough_of_the_number_of_friends' => '抱歉，您当前的好友数目达到系统限制，请先删除部分好友',
@@ -206,9 +206,9 @@ $lang = array (
   'magics_target_member_nonexistence' => '抱歉，您指定的用户不存在或被冻结',
   'unknown_magic' => '抱歉，指定的道具不存在或已被禁止使用',
   'magic_groupid_not_allowed' => '抱歉，您所在的用户组没有权限使用道具',
-  'profile_email_illegal' => 'Email 地址无效',
-  'profile_email_domain_illegal' => '抱歉，Email 包含不可使用的邮箱域名',
-  'profile_email_duplicate' => '该 Email 地址已被注册',
+  'profile_email_illegal' => '<img src="template/we54/common/images/register_no.png" />Email 地址无效',			//change
+  'profile_email_domain_illegal' => '<img src="template/we54/common/images/register_no.png" />抱歉，Email 包含不可使用的邮箱域名',	//change
+  'profile_email_duplicate' => '<img src="template/we54/common/images/register_no.png" />该 Email 地址已被注册',	//change
   'article_category_empty' => '抱歉，栏目不能为空',
   'article_edit_nopermission' => '抱歉，您没有权限进行当前文章操作',
   'post_message_toolong' => '抱歉，您的帖子超过 {maxpostsize} 个字符的限制',
@@ -229,7 +229,7 @@ $lang = array (
   'task_nonexistence' => '抱歉，该任务不存在或已被删除',
   'task_not_found' => '任务文件丢失，{taskclassname}',
   'task_not_underway' => '不是进行中的任务',
-  'user_banned' => '抱歉，您的 IP 地址不在允许范围内，或您的账号被禁用，无法访问本站点',
+  'user_banned' => '抱歉，您的 IP 地址不在被允许，或您的账号被禁用，无法访问本站点',
   'submit_seccode_invalid' => '抱歉，验证码填写错误',
   'submit_invalid' => '抱歉，您的请求来路不正确或表单验证串不符，无法提交',
   'word_banned' => '抱歉，您填写的内容包含不良信息而无法提交',
@@ -242,7 +242,7 @@ $lang = array (
 
   'no_privilege_my_app_status' => '对不起，当前站点已经关闭了用户多应用服务。',
 
-  'register_check_found' => '该用户名已注册，请更换用户名或<a href="member.php?mod=logging&action=login" onclick="showWindow(\'login\', this.href);return false;" class="xi2">登录</a>',
+  'register_check_found' => '<img src="template/we54/common/images/register_no.png" />该用户名已注册，请更换用户名或<a href="member.php?mod=logging&action=login" onclick="showWindow(\'login\', this.href);return false;" class="xi2">登录</a>',
   'register_activation' => '用户名已存在',
   'no_invitation_code' => '抱歉，邀请码为空请填写，没有邀请码不允许注册',
   'wrong_invitation_code' => '抱歉，邀请码错误，请重新填写，没有邀请码不允许注册',
@@ -1051,6 +1051,9 @@ $lang = array (
 
   'system_error_action' => '系统未知错误',	//add
   'login_passport_invalid' => '登录失败,请刷新重试',	//add
+  'register_vertify_invalid' => '请先填写认证信息',		//add
+  'nickname_exist' => '<img src="template/we54/common/images/register_no.png" />昵称已经注册',		//add
+  'nickname_exists' => '昵称已经注册',		//add
 );
 
 ?>

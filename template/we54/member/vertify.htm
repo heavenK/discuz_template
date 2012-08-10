@@ -1,90 +1,39 @@
-<!--{template common/header}-->
-<!--{if !$_G[inajax]}-->
-<div id="pt" class="bm cl">
-	<!--{subtemplate common/simplesearchform}-->
-	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="home.php">$_G[setting][navs][4][navname]</a>
-	</div>
-</div>
-	<div id="ct" class="ptm wp cl">
-		<div class="mn">
-			<div class="bm">
-<!--{/if}-->
-<div class="bm_h bbs" id="main_hnav">
-	<span class="y">
-          <!--{hook/register_side_top}-->
-          <!--{if $_GET[action] == 'activation'}-->
-              {lang login_inactive}
-          <!--{else}-->
-              <a href="member.php?mod=logging&action=login&referer={echo rawurlencode($dreferer)}" onclick="showWindow('login', this.href);return false;" class="xi2">{lang login_now}</a>
-          <!--{/if}-->
-      </span>
-    <h3 class="xs2">
-        <em>
-            <!--{if !empty($_GET[mobile])}-->
-                {lang smstong:smstong_mobilebind_mobile_rebind}
-            <!--{else}-->
-                {lang smstong:smstong_mobilebind_mobile_bind}
-            <!--{/if}-->
-        </em>
-        <!--{if $_G[inajax]}--><span><a href="javascript:;" onclick="hideWindow('$_G[gp_handlekey]');if (window.location.href.indexOf('contact') > -1) window.location.reload();" class="flbc" title="{lang close}">{lang close}</a></span><!--{/if}-->
-    </h3>
-</div>
-<form id="bindmobileform" name="bindmobileform" action="member.php?mod=$regname&action=bindmobile" method="post" autocomplete="off" onsubmit="$('flag').value = '1';subvertifycode(this.id);">
-	<input type="hidden" name="refer" value="home.php?mod=space&uid=$space[uid]&do=bindmobile" />
-	<input type="hidden" id="flag" name="flag" value="1" />
-	<input type="hidden" name="formhash" value="{FORMHASH}" />
-	<input type="hidden" name="bindmobilesubmit" value="true" />
-	<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_G[gp_handlekey]" /><!--{/if}-->
-	<div class="bm_c">
-    	<div class="rfm">
-			<table  id="myphone">
-			<tr>
-				<td>
-					<p>{lang smstong:smstong_mobilereg_mobile}:</p>
-					<p class="mtn mbm"><input type="text" size="30" class="px" name="newmobile" onfocus="javascript:if('$_GET[mobile]'==this.value)this.value='';" onblur="javascript:if(''==this.value)this.value='$_GET[mobile]'" id="newmobile" maxlength="12" <!--{if ($verifycodes[getip] == $_G[clientip]) && ($interval <= $mobilegap)}-->value="$verifycodes[mobile]"<!--{else}-->value="$_GET[mobile]"<!--{/if}--> />
-                    </p>
-				</td>
-			</tr>
-			<tr>
-				<td align="center">
-					<button class="pn" type="button" onclick="getbindverifycode();" style="width:70%"><strong>{$_G['cache']['plugin']['smstong']['getverifycodetext']}</strong></button><p><font color="red"> {lang smstong:smstong_mobilereg_verifycode_desc}</font></p>
-				</td>
-			</tr>
-			<!--{if $_G['cache']['plugin']['smstong']['openverifycode']}-->
-			<tr>
-				<td align="center"><span class="rq">*</span>{lang seccode}:<input name="seccodeverify" id="seccodeverify_$sechash" type="text" autocomplete="off" style="width:100px" class="txt px vm" onblur="checksec('code', '$sechash')" tabindex="1" required />
-				<a href="javascript:;" onclick="updateseccode('$sechash');doane(event);" class="xi2">{lang seccode_change}</a>
-				<span id="checkseccodeverify_$sechash"><img src="{STATICURL}image/common/none.gif" width="16" height="16" class="vm" /></span><br />
-				<span id="seccode_$sechash" style="padding:5px;"></span>
-				<script type="text/javascript" reload="1">updateseccode('$sechash');</script></td>
-			</tr>
-			<!--{/if}-->
-		</table>
+<!--{template common/register_head}-->
+<script src="{$_G[siteurl]}template/we54/common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$_G[siteurl]}template/we54/common/js/common_add.js?{VERHASH}"></script>
+<script type="text/javascript" src="{$_G[siteurl]}template/we54/common/js/vertify.js?{VERHASH}"></script>
 
-            <table   id="myauth" style="display:none;">
-                <tr>
-                    <td>
-                        <p>{lang smstong:smstong_mobilereg_verifycode}:</p>
-                        <p class="mtn mbm"><input type="text" size="30" class="px" name="verifycode" maxlength="6" id="verifycode" />
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <p>{lang smstong:smstong_mobilereg_verifycode_other}</p>
-                    </td>
-                </tr>
-            </table>
-             <kbd id="return_$_G[gp_handlekey]" class="p_chk" style=" height:20px;top:312px;left:660px;"></kbd>
-        </div>
-       
+<div class="register_box">
+    <div class="register"><!--注册-->
+        <span><img src="{$_G[siteurl]}template/we54/common/images/register_02_nav.png" /></span>
+	<form id="bindmobileform" name="bindmobileform" action="member.php?mod=$regname&action=bindmobile" method="post" autocomplete="off" onsubmit="$('flag').value = '1';subvertifycode(this.id,'tip_$_G[gp_handlekey]');return false;">
+        <dl class="register_02">
+		<input type="hidden" name="refer" value="home.php?mod=space&uid=$space[uid]&do=bindmobile" />
+		<input type="hidden" id="flag" name="flag" value="1" />
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="bindmobilesubmit" value="true" />
+		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_G[gp_handlekey]" /><!--{/if}-->
+            <dt>
+            	<label for="phone"><u>*</u> 手机号码：</label><input type="text" id="newmobile" name="newmobile" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
+                <button type="button" id="myphone" name="note" value="true" tabindex="2" onclick="getbindverifycode();"></button>
+				<div id="myauth"  style="display:none;">{lang smstong:smstong_mobilereg_verifycode_other}</div>
+            </dt>
+			<dt class="mobile_msg">
+				<kbd id="return_$_G[gp_handlekey]" class="p_chk" ></kbd>
+			</dt>
+            <dt>
+            	<label for="check"><u>*</u> 验证码：</label><input type="text" id="verifycode" name="verifycode" tabindex="3" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
+                <em>请输入手机验证码</em>
+            </dt>
+			<dt class="mobile_msg">
+				<kbd id="tip_$_G[gp_handlekey]" class="p_chk" ></kbd>
+			</dt>
+        </dl>
+        <b><button type="submit"  name="bindmobilesubmit_btn" id="bindmobilesubmit_btn" value="true" tabindex="4"><strong style="display:none;">{lang smstong:smstong_mobilebind_submit}</strong></button><a href="/forum.php" tabindex="5"></a></b>
+	</form>
+	
     </div>
-	<p class="rfm mbw bw0">
-		<button type="submit" name="bindmobilesubmit_btn" id="bindmobilesubmit_btn" value="true" class="pn pnc"><strong>{lang smstong:smstong_mobilebind_submit}</strong></button>
-        <button type="button" name="cancel_btn" id="cancel_btn" value="true" class="pn pnc" onclick="window.location.href='/forum.php'"><strong>跳过</strong></button>
-	</p>
-</form>
+</div>
 <!--{if $_G[inajax]}-->
 <script type="text/javascript">
 	function succeedhandle_$_G['gp_handlekey'](url, message, values) {
@@ -94,14 +43,6 @@
 	}
 </script>
 <!--{/if}-->
-
-<!--{if !$_G[inajax]}-->
-		</div>
-	</div>
-	
-</div>
-<!--{/if}-->
-
 <script type="text/javascript" reload="1">
 
 var intval	= null;
@@ -130,8 +71,8 @@ function getbindverifycode() {
 function checkbindverifycode() {
 	if ($('return_$_G[gp_handlekey]').innerHTML.indexOf('{lang smstong:smstong_mobilereg_sendsms_succeed}') != -1)
 	{
-		$('mobileNumber').innerHTML = trim($('newmobile').value);
-		$('myphone').style.display = "none";
+	//	$('mobileNumber').innerHTML = trim($('newmobile').value);
+		$('myphone').style.visibility = "hidden";
 		$('myauth').style.display = "";	
 		if(intval == null) intval = setInterval(setchecktime,1000);
 	}
@@ -169,12 +110,12 @@ function setchecktime() {
 	}
 }
 //----------add---------------------------
-function subvertifycode(formid){
+/*function subvertifycode(formid){
 	var action = $(formid).getAttribute('action');
 	action = hostconvert(action);
 	$(formid).action = action.replace(/\&inajax\=1/g, '');	
 	$(formid).submit();
-}
+}*/
 <!--{if ($verifycodes[getip] == $_G[clientip]) && ($interval <= $mobilegap)}-->
 	$('mobileNumber').innerHTML = "$sendedmobile";
 	$('myphone').style.display = "none";
@@ -185,6 +126,4 @@ function subvertifycode(formid){
 <!--{/if}-->
 
 </script>
-
-
-<!--{template common/footer}-->
+<!--{template common/register_footer}-->

@@ -691,6 +691,10 @@ class register_ctl {
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
 				showmessage('profile_username_duplicate');
+			}else if($pass=="nicknameexist"){
+				uc_user_delete($uid);
+				C::t('common_member')->delete_no_validate($uid);
+				showmessage('nickname_exists');
 			}else{
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
@@ -810,8 +814,8 @@ class register_ctl {
 
 			$url_forward = dreferer();
 
-			//-------------------add-------------------------------------
-			if($_G['setting']['verify']['enabled'] && passport::p_allowverify() || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
+			//-------------------add-------------------------------------&& passport::p_allowverify()
+			if($_G['setting']['verify']['enabled']  || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
 				$url_forward=passport::url_sms();
 			}
 			//-----------------------------------------------------------

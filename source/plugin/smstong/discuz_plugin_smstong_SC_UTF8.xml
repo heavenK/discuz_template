@@ -1097,7 +1097,8 @@
 				<item id="smstong_mobilereg_verifycode"><![CDATA[短信验证码]]></item>
 				<item id="smstong_mobilereg_verifycode_tip"><![CDATA[请输入您获取到的短信验证码]]></item>
 				<item id="smstong_mobilereg_verifycode_desc"><![CDATA[验证码将以免费短信的形式发送到您的手机]]></item>
-				<item id="smstong_mobilereg_verifycode_other"><![CDATA[短信验证码已发送到 <span id="mobileNumber"></span> <br />如果多次获取都还未收到短信验证码<br />您可以更换号码重新获取短信验证码<br /><br />
+				<!-- <item id="smstong_mobilereg_verifycode_other"><![CDATA[短信验证码已发送到 <span id="mobileNumber"></span> <br />如果多次获取都还未收到短信验证码<br />您可以更换号码重新获取短信验证码<br /><br />-->
+				<item id="smstong_mobilereg_verifycode_other"><![CDATA[
 				<p><button class="pn" type="button" id="timeRemainTips"><strong><font color="red">$_G['cache']['plugin']['smstong']['mobilegap']秒</font>后重新获取短信验证码</strong></button> <span id="modifyMobile"></span></p>]]></item>
 
 				<item id="smstong_mobilereg_checktime_second"><![CDATA[秒]]></item>

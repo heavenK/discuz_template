@@ -31,6 +31,10 @@ class helper_form {
 				}
 				return TRUE;
 			} else {
+				//add by zh
+				if($_GET['mod']=='sms'&&$_GET['flag']==1)
+					exit(lang('message','submit_invalid'));
+				else
 				showmessage('submit_invalid');
 			}
 		}
