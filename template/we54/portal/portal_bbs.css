@@ -55,7 +55,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 .box		{ width:1000px; margin:0 auto; position:relative;}
 .dl_zc 		{ line-height:40px; float:right; color:#666666; }
 .dl_zc a 	{ text-decoration:none; color:#0035a0; }
-.nav 		{ width:63px; height:24px; float:right; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:12px; display:inline; }
+.nav 		{ width:90px; height:28px; float:right; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; }
 	.zx_nav_bg01 { width:62px; height:88px; background-position:-930px -243px; overflow:hidden; float:left;}
 	.zx_nav_bg02 { width:62px; height:88px; background-position:-930px -331px; overflow:hidden; float:left;}
 	.zx_nav_bg03 { width:62px; height:88px; background-position:-930px -419px; overflow:hidden; float:left;}
