@@ -74,7 +74,7 @@
 .kaiser_tanchu_infos				{ width:300px; height:60px; padding:8px 0 0 18px; overflow:hidden; float:left;}
 .kaiser_tanchu_infos em				{ width:280px; height:20px; color:#666666; float:left;}
 .kaiser_tanchu_infos i				{ width:290px; height:36px; color:#666666; line-height:20px; overflow:hidden; float:left;}
-.kaiser_viewthread_jiantou			{ position:absolute; bottom:-41px; right:-1px; z-index:1;}
+.kaiser_viewthread_jiantou			{ position:absolute; bottom:-41px; right:-1px; z-index:1; overflow:hidden;}
 .top_ad_06							{ width:1000px; height:90px; margin:8px 0 0 0; display:inline; overflow:hidden; float:left;}
 .kaiser_viewthread_header			{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:16px; overflow:hidden; float:left;}
 .kaiser_viewthread_header_bav		{ width:998px; height:29px; border-bottom:1px solid #e7e7cb; line-height:31px; overflow:hidden; float:left;}
