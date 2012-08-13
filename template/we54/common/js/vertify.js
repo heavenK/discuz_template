@@ -35,7 +35,7 @@ function subvertifycode(formid,id){
 	var ajaxframe = $(ajaxframeid);
 	var formtarget = $(formid).target;
 	if(verifycode == '') {
-		$(id).innerHTML = "验证码不能为空";
+		$(id).innerHTML = "<img src='template/we54/common/images/register_no.png' />验证码不能为空";
 		$('verifycode').focus();
 	} else {
 		$('flag').value = "1";
@@ -48,7 +48,7 @@ function subvertifycode(formid,id){
 				if(data!="success"){
 					$(id).innerHTML = data;
 				}else{
-					showDialog('绑定手机成功','right','','location.href="member.php?mod=regend"',null,null,null,null,null,null,3);
+					showDialog('绑定手机成功','right','','location.href="member.php?mod=regend"',null,null,null,null,null,null,2);
 				}
 			}
 		});

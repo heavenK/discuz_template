@@ -220,11 +220,11 @@ $lang = array (
   'login_strike' => '密码错误次数过多，请 15 分钟后重新登录',
   'logout_succeed' => '您已退出站点，现在将以游客身份转入退出前页面，请稍候…… <br /><a href="member.php?mod=clearcookies&formhash={formhash}">[ 清除痕迹 ]</a> {ucsynlogout} ',
   'register_activation_invalid' => '抱歉，激活失败，请重新登录验证需要激活的用户',
-  'profile_username_tooshort' => '抱歉，您输入的用户名小于 3 个字符，请输入一个较长的用户名',
-  'profile_username_toolong' => '抱歉，您的用户名超过 15 个字符，请输入一个较短的用户名',
-  'profile_passwd_notmatch' => '抱歉，两次输入的密码不一致',
-  'profile_username_illegal' => '用户名包含敏感字符',
-  'profile_username_duplicate' => '该用户名已被注册',
+  'profile_username_tooshort' => '<img src="template/we54/common/images/register_no.png" />抱歉，您输入的用户名小于 3 个字符，请输入一个较长的用户名',	//change
+  'profile_username_toolong' => '<img src="template/we54/common/images/register_no.png" />抱歉，您的用户名超过 15 个字符，请输入一个较短的用户名',	//change
+  'profile_passwd_notmatch' => '<img src="template/we54/common/images/register_no.png" />抱歉，两次输入的密码不一致',	//change
+  'profile_username_illegal' => '<img src="template/we54/common/images/register_no.png" />用户名包含敏感字符',		//change
+  'profile_username_duplicate' => '<img src="template/we54/common/images/register_no.png" />该用户名已被注册',		//change
   'profile_illegal' => '格式不正确或为空',
   'task_nonexistence' => '抱歉，该任务不存在或已被删除',
   'task_not_found' => '任务文件丢失，{taskclassname}',

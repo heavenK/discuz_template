@@ -17,6 +17,8 @@
 .register dd.seccode_show span	{height:auto;}
 .register dt.seccodet_show a	{margin:8px 0 0 10px;float:left;}
 .register dt.seccodet_show span	{width:auto;margin:4px 0 0 0;}
+#main_succeed					{background-color:white;padding:60px 0 0 460px;}
+#main_succeed .f_c				{margin:0;}
 /*∂Ã–≈»œ÷§*/
 .register dl dt.mobile_msg		{height:25px;padding:0;}
 .register dl dt.mobile_msg kbd	{margin-left:125px;}
