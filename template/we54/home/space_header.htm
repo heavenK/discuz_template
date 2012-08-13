@@ -1,38 +1,13 @@
-<!--{subtemplate common/header_common}-->
-	<meta name="application-name" content="$_G['setting']['bbname']" />
-	<meta name="msapplication-tooltip" content="$_G['setting']['bbname']" />
-	<!--{if $_G['setting']['portalstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][1]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G[siteurl].'portal.php'};icon-uri={$_G[siteurl]}{IMGDIR}/portal.ico" /><!--{/if}-->
-	<meta name="msapplication-task" content="name=$_G['setting']['navs'][2]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['forum']) ? 'http://'.$_G['setting']['domain']['app']['forum'] : $_G[siteurl].'forum.php'};icon-uri={$_G[siteurl]}{IMGDIR}/bbs.ico" />
-	<!--{if $_G['setting']['groupstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][3]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['group']) ? 'http://'.$_G['setting']['domain']['app']['group'] : $_G[siteurl].'group.php'};icon-uri={$_G[siteurl]}{IMGDIR}/group.ico" /><!--{/if}-->
-	<!--{if helper_access::check_module('feed')}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][4]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['home']) ? 'http://'.$_G['setting']['domain']['app']['home'] : $_G[siteurl].'home.php'};icon-uri={$_G[siteurl]}{IMGDIR}/home.ico" /><!--{/if}-->
-	<!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
-		<link rel="archives" title="$_G['setting']['bbname']" href="{$_G[siteurl]}archiver/" />
-	<!--{/if}-->
-	<!--{if !empty($rsshead)}-->$rsshead<!--{/if}-->
-	<!--{if widthauto()}-->
-		<link rel="stylesheet" id="css_widthauto" type="text/css" href="data/cache/style_{STYLEID}_widthauto.css?{VERHASH}" />
-		<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
-	<!--{/if}-->
-	<!--{if $_G['basescript'] == 'forum' || $_G['basescript'] == 'group'}-->
-		<script type="text/javascript" src="{$_G[setting][jspath]}forum.js?{VERHASH}"></script>
-	<!--{elseif $_G['basescript'] == 'home' || $_G['basescript'] == 'userapp'}-->
-		<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
-	<!--{elseif $_G['basescript'] == 'portal'}-->
-		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
-	<!--{/if}-->
-	<!--{if $_G['basescript'] != 'portal' && $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
-		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
-	<!--{/if}-->
-	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
-	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
-	<!--{/if}-->
-    <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="template/we54/common/kaiser.css" />
-    <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
-    <script src="template/we54/js/logging.js" type="text/javascript"></script>
-	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
 
-	<script type="text/javascript">
+<!--{eval $_G[cookie][extstyle] = false;}-->
+<!--{subtemplate common/header_common}-->
+	<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+	<link rel="stylesheet" type="text/css" href="{$_G[setting][csspath]}data/cache/style_{STYLEID}_css_space.css?{VERHASH}" />
+	<link id="style_css" rel="stylesheet" type="text/css" href="{STATICURL}space/{if $space[theme]}$space[theme]{else}t1{/if}/style.css?{VERHASH}">
+    <link rel="stylesheet" type="text/css" href="template/we54/home/space_header.css" />
+    <script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
 	var jq = jQuery.noConflict(); 
     jq(document).ready(function(){
       
@@ -42,51 +17,20 @@
     
     });
     </script>
-	
-    <script type="text/javascript">
-	var jq = jQuery.noConflict();
-	jq(document).ready(function(){
-	  
-	  jq("#bk, #ycbk").hover(function(){
-	  jq(".nav_three").show();
-	  },function (){jq(".nav_three").hide();});
-	
-	});
-	</script>
-
-
+	<style id="diy_style">$space[spacecss]</style>
 </head>
 
-<body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
-	<div id="append_parent"></div><div id="ajaxwaitid"></div>
-	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
-		<!--{template common/header_diy}-->
-	<!--{/if}-->
-	<!--{if check_diy_perm($topic)}-->
-		<!--{block diynav}-->
-			<a id="diy-tg" href="javascript:openDiy();" title="{lang open_diy}" class="xi1 xw1" onMouseOver="showMenu(this.id)"><img src="{STATICURL}image/diy/panel-toggle.png" alt="DIY" /></a>
-			<div id="diy-tg_menu" style="display: none;">
-				<ul>
-					<li><a href="javascript:saveUserdata('diy_advance_mode', '');openDiy();" class="xi2">{lang header_diy_mode_simple}</a></li>
-					<li><a href="javascript:saveUserdata('diy_advance_mode', '1');openDiy();" class="xi2">{lang header_diy_mode_adv}</a></li>
-				</ul>
-			</div>
-		<!--{/block}-->
-	<!--{/if}-->
-	<!--{if CURMODULE == 'topic' && $topic && empty($topic['useheader']) && check_diy_perm($topic)}-->
-		$diynav
-	<!--{/if}-->
-	<!--{if empty($topic) || $topic['useheader']}-->
-		<!--{if $_G['setting']['mobile']['allowmobile'] && (!$_G['setting']['cacheindexlife'] && !$_G['setting']['cachethreadon'] || $_G['uid']) && ($_GET['diy'] != 'yes' || !$_GET['inajax']) && ($_G['mobile'] != '' && $_G['cookie']['mobile'] == '' && $_GET['mobile'] != 'no')}-->
-			<div class="xi1 bm bm_c">
-			    {lang your_mobile_browser}<a href="{$_G['siteurl']}forum.php?mobile=yes">{lang go_to_mobile}</a> <span class="xg1">|</span> <a href="$_G['setting']['mobile']['nomobileurl']">{lang to_be_continue}</a>
-			</div>
-		<!--{/if}-->
+<body id="space" onkeydown="if(event.keyCode==27) return false;">
+	<div id="append_parent"></div>
+	<div id="ajaxwaitid"></div>
 
-		<div id="toptb" class="cl">
-			<!--{hook/global_cpnav_top}-->
-			<div class="wp">
-                <div class="zzz">
+	<!--{if $space['self'] && $_GET['diy'] == 'yes' && $do == 'index' }-->
+	<link rel="stylesheet" type="text/css" href="{$_G[setting][csspath]}data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
+	<!--{subtemplate home/space_diy}-->
+	<!--{/if}-->
+
+	<div id="toptb" class="cl">
+			<div class="zzz">
                     <a><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
                 </div>
             
@@ -148,7 +92,7 @@
                 </div>
                 <!--{elseif !$_G[connectguest]}-->
                 <div class="dl_zc">
-                    您好！欢迎来到新青年网站论坛 请 <a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login" class="xi2">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
+                    您好！欢迎来到新青年网站论坛 请 <a href="member.php?mod=logging&action=login" class="xi2">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
                 </div>
                 <!--{/if}-->
                 </form>
@@ -165,3 +109,65 @@
                         $diynav
                     <!--{/if}-->
                 </div>
+	</div>
+	<!--{if $space['status'] == -1 && $_G['adminid'] == 1 }-->
+		<p class="ptw xw1 xi1 hm"><img src="{IMGDIR}/locked.gif" alt="Locked" class="vm" /> {lang message_banned}</p>
+	<!--{/if}-->
+	<div id="hd" class="wp cl" style="display:none;" >
+
+		<h2 id="spaceinfoshow" >
+			<!--{eval space_merge($space, 'field_home'); $space[domainurl] = space_domain($space);getuserdiydata($space);$personalnv = isset($_G['blockposition']['nv']) ? $_G['blockposition']['nv'] : '';}-->
+			<strong id="spacename" class="mbn">
+				<!--{if $space[spacename]}-->$space[spacename]<!--{else}-->$space[username]{lang somebody_space}<!--{/if}-->
+			</strong>
+			<span class="xs0 xw0">
+				<a id="domainurl" href="$space[domainurl]" onClick="setCopy('$space[domainurl]', '{lang copy_space_address}');return false;">$space[domainurl]</a>
+				<a href="javascript:;" onClick="addFavorite(location.href, document.title)">[{lang favorite}]</a>
+				<a id="domainurl" href="$space[domainurl]" onClick="setCopy('$space[domainurl]', '{lang copy_space_address}');return false;">[{lang copy}]</a>
+				<!--{if !$space['self']}-->
+					<!--{if helper_access::check_module('share')}-->
+					<a id="share_space" href="home.php?mod=spacecp&ac=share&type=space&id=$space[uid]" onClick="showWindow(this.id, this.href, 'get', 0);">[{lang share}]</a>
+					<!--{/if}-->
+					<a href="home.php?mod=rss&uid=$space[uid]">[RSS]</a>
+				<!--{/if}-->
+			</span>
+			<span id="spacedescription" class="xs1 xw0 mtn">$space[spacedescription]</span>
+		</h2>
+		<!--{subtemplate home/space_header_personalnv}-->
+	</div>
+
+	<!--{if !empty($_G['setting']['plugins']['jsmenu'])}-->
+		<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
+		<!--{loop $_G['setting']['plugins']['jsmenu'] $module}-->
+		     <!--{if !$module['adminid'] || ($module['adminid'] && $_G['adminid'] > 0 && $module['adminid'] >= $_G['adminid'])}-->
+		     <li>$module[url]</li>
+		     <!--{/if}-->
+		<!--{/loop}-->
+		</ul>
+	<!--{/if}-->
+	$_G[setting][menunavs]
+
+<!--{eval $mnid = getcurrentnav();}-->
+<ul id="navs_menu" class="p_pop topnav_pop" style="display:none;">
+<!--{loop $_G['setting']['navs'] $nav}-->
+	<!--{eval $nav_showmenu = strpos($nav['nav'], 'onmouseover="showMenu(');}-->
+    <!--{eval $nav_navshow = strpos($nav['nav'], 'onmouseover="navShow(')}-->
+    <!--{if $nav_hidden !== false || $nav_navshow !== false}-->
+	<!--{eval $nav['nav'] = preg_replace("/onmouseover\=\"(.*?)\"/i", '',$nav['nav'])}-->
+    <!--{/if}-->
+    <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {$nav[nav]}></li><!--{/if}-->
+<!--{/loop}-->
+</ul>
+<ul id="myspace_menu" class="p_pop" style="display:none;">
+    <li><a href="home.php?mod=space">{lang my_space}</a></li>
+	<!--{loop $_G['setting']['mynavs'] $nav}-->
+		<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+			<li>$nav[code]</li>
+		<!--{/if}-->
+	<!--{/loop}-->
+</ul>
+
+
+<div class="person_name">
+	<span>awsmnms007的空间</span>
+</div>

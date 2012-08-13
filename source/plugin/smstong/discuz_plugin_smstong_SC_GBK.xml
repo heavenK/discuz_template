@@ -921,14 +921,14 @@
 				<item id="smstong_members_qunfasms_content_invalid"><![CDATA[您没有输入短信内容，请返回修改。]]></item>
 
 				<item id="smstong_mobilereg_closed"><![CDATA[手机号短信验证注册未开启]]></item>
-				<item id="smstong_mobilereg_mobile_invalid"><![CDATA[手机号格式不正确]]></item>
+				<item id="smstong_mobilereg_mobile_invalid"><![CDATA[<img src='template/we54/common/images/register_no.png' />手机号格式不正确]]></item>
 				<item id="smstong_mobilereg_content_invalid"><![CDATA[内容超过最大长度300]]></item>
-				<item id="smstong_mobilereg_mobile_sended"><![CDATA[每IP每手机号每{mobilegap}秒只能获取一次验证码]]></item>
-				<item id="smstong_mobilereg_mobile_exists"><![CDATA[手机号已经注册或者绑定了本站帐号]]></item>
+				<item id="smstong_mobilereg_mobile_sended"><![CDATA[<img src='template/we54/common/images/register_no.png' />每IP每手机号每{mobilegap}秒只能获取一次验证码]]></item>
+				<item id="smstong_mobilereg_mobile_exists"><![CDATA[<img src='template/we54/common/images/register_no.png' />手机号已经注册或者绑定了本站帐号]]></item>
 				<item id="smstong_mobilereg_getverifycode_succeed"><![CDATA[验证码短信成功发送到手机号：{mobile} 请稍候输入收到的验证码]]></item>
-				<item id="smstong_mobilereg_getverifycode_failured"><![CDATA[验证码短信发送失败：{ret}]]></item>
-				<item id="smstong_mobilereg_verifycode_empty"><![CDATA[短信验证码不能为空]]></item>
-				<item id="smstong_mobilereg_mobile_verifycode_invalid"><![CDATA[手机号与验证码不匹配或者验证码已过期]]></item>
+				<item id="smstong_mobilereg_getverifycode_failured"><![CDATA[<img src='template/we54/common/images/register_no.png' />验证码短信发送失败：{ret}]]></item>
+				<item id="smstong_mobilereg_verifycode_empty"><![CDATA[<img src='template/we54/common/images/register_no.png' />短信验证码不能为空]]></item>
+				<item id="smstong_mobilereg_mobile_verifycode_invalid"><![CDATA[<img src='template/we54/common/images/register_no.png' />手机号与验证码不匹配或者验证码已过期]]></item>
 				<item id="smstong_mobilereg_qqregpwd"><![CDATA[密码：]]></item>
 
 				<item id="smstong_buyinvitecode_notice"><![CDATA[接收邮箱和接收手机必须输入其中一个]]></item>
@@ -948,7 +948,7 @@
 				<item id="smstong_mobilepwd_username_notexists"><![CDATA[用户名不存在]]></item>
 
 				<item id="smstong_mobilebind_closed"><![CDATA[手机绑定未开启]]></item>
-				<item id="smstong_mobilebind_mobile_empty"><![CDATA[手机号不能为空]]></item>
+				<item id="smstong_mobilebind_mobile_empty"><![CDATA[<img src='template/we54/common/images/register_no.png' />手机号不能为空]]></item>
 				<item id="smstong_mobilebind_mobile_exists"><![CDATA[此手机号已经绑定了本站帐号]]></item>
 				<item id="smstong_mobilebind_sendsms_succeed"><![CDATA[验证码短信发送成功]]></item>
 				<item id="smstong_mobilebind_sendsms_failured"><![CDATA[验证码短信发送失败：{ret}]]></item>
@@ -1097,7 +1097,8 @@
 				<item id="smstong_mobilereg_verifycode"><![CDATA[短信验证码]]></item>
 				<item id="smstong_mobilereg_verifycode_tip"><![CDATA[请输入您获取到的短信验证码]]></item>
 				<item id="smstong_mobilereg_verifycode_desc"><![CDATA[验证码将以免费短信的形式发送到您的手机]]></item>
-				<item id="smstong_mobilereg_verifycode_other"><![CDATA[短信验证码已发送到 <span id="mobileNumber"></span> <br />如果多次获取都还未收到短信验证码<br />您可以更换号码重新获取短信验证码<br /><br />
+		<!--		<item id="smstong_mobilereg_verifycode_other"><![CDATA[短信验证码已发送到 <span id="mobileNumber"></span> <br />如果多次获取都还未收到短信验证码<br />您可以更换号码重新获取短信验证码<br /><br />-->
+				<item id="smstong_mobilereg_verifycode_other"><![CDATA[
 				<p><button class="pn" type="button" id="timeRemainTips"><strong><font color="red">$_G['cache']['plugin']['smstong']['mobilegap']秒</font>后重新获取短信验证码</strong></button> <span id="modifyMobile"></span></p>]]></item>
 
 				<item id="smstong_mobilereg_checktime_second"><![CDATA[秒]]></item>
@@ -1107,7 +1108,7 @@
 				<item id="smstong_mobilereg_sendsms_succeed"><![CDATA[成功]]></item>
 
 				<item id="smstong_mobilereg_mobile_error_tip"><![CDATA[手机号包含敏感字符]]></item>
-				<item id="smstong_mobilereg_mobile_empty"><![CDATA[手机号不能为空]]></item>
+				<item id="smstong_mobilereg_mobile_empty"><![CDATA[<img src='template/we54/common/images/register_no.png' />手机号不能为空]]></item>
 				<item id="smstong_mobilereg_verifycode_error_tip"><![CDATA[验证码包含敏感字符]]></item>
 				<item id="smstong_mobilereg_verifycode_msg"><![CDATA[到后台-全局-防灌水设置-验证码设置-启用验证码中勾选新用户注册]]></item>
 
