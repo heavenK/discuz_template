@@ -1,4 +1,59 @@
-<!--{subtemplate common/viewthread_header}-->
+<!--{subtemplate common/we54_header}-->
+				<div class="kaiser_viewthread_header">
+                	<div class="kaiser_viewthread_header_bav">
+                    	<b>大秀场</b>
+                        <em>热门推荐：</em>
+                        <i><!--[diy=dxctuijian]--><div id="dxctuijian" class="area"></div><!--[/diy]--></i>
+                    </div>
+                    <div class="kaiser_viewthread_header_cont">
+                    	<!--[diy=dxcneirong]--><div id="dxcneirong" class="area"></div><!--[/diy]-->
+                    </div>
+                </div>
+				
+                <div class="top_ad_06">
+                    <a href="#" target="_blank"><img src="/template/we54/images/ad01.jpg" width="1000" height="90" border="0"/></a>
+                </div>
+                
+			</div>
+		</div>
+
+		<!--{if !IS_ROBOT}-->
+			<!--{if $_G['uid'] && !empty($_G['style']['extstyle'])}-->
+				<div id="sslct_menu" class="cl p_pop" style="display: none;">
+					<!--{if !$_G[style][defaultextstyle]}--><span class="sslct_btn" onClick="extstyle('')" title="{lang default}"><i></i></span><!--{/if}-->
+					<!--{loop $_G['style']['extstyle'] $extstyle}-->
+						<span class="sslct_btn" onClick="extstyle('$extstyle[0]')" title="$extstyle[1]"><i style='background:$extstyle[2]'></i></span>
+					<!--{/loop}-->
+				</div>
+			<!--{/if}-->
+
+				<div id="qmenu_menu" class="p_pop {if !$_G['uid']}blk{/if}" style="display: none;">
+					<!--{if $_G['uid']}-->
+					<ul>
+						<!--{loop $_G['setting']['mynavs'] $nav}-->
+							<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+								<li>$nav[code]</li>
+							<!--{/if}-->
+						<!--{/loop}-->
+					</ul>
+					<!--{elseif $_G[connectguest]}-->
+						<div class="ptm pbw hm">
+							{lang connect_fill_profile_to_visit}
+						</div>
+					<!--{else}-->
+						<div class="ptm pbw hm">
+							{lang my_nav_login}
+						</div>
+					<!--{/if}-->
+				</div>
+		<!--{/if}-->
+
+		
+
+		<!--{hook/global_header}-->
+	<!--{/if}-->
+
+	<div id="wp" class="wp">
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/view_focus.css" />
 
 <script type="text/javascript">var fid = parseInt('$_G[fid]'), tid = parseInt('$_G[tid]');</script>
@@ -146,67 +201,71 @@
 	<table cellspacing="0" cellpadding="0">
 		<tr class="kaiser_tr_top">
 			
-			<td class="plc ptm pbn vwthd kaiser_plc_ptm_pbn_vwthd" style=" border-left:1px solid #e7e7cb; border-top:1px solid #e7e7cb;">
-				<!--{if !IS_ROBOT}-->
-					<div class="y" style=" display:none;">
-						<!--{if $post['invisible'] == 0}--><a href="forum.php?mod=viewthread&action=printable&tid=$_G[tid]" title="{lang thread_printable}" target="_blank"><img src="{IMGDIR}/print.png" alt="{lang thread_printable}" class="vm" /></a>
-						<!--{/if}-->
-						<a href="forum.php?mod=redirect&goto=nextoldset&tid=$_G[tid]" title="{lang last_thread}"><img src="{IMGDIR}/thread-prev.png" alt="{lang last_thread}" class="vm" /></a>
-						<a href="forum.php?mod=redirect&goto=nextnewset&tid=$_G[tid]" title="{lang next_thread}"><img src="{IMGDIR}/thread-next.png" alt="{lang next_thread}" class="vm" /></a>
-					</div>
-				<!--{/if}-->
-				<h1 class="ts">
-					<!--{if $_G['forum_thread']['typeid'] && $_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}-->
-						<!--{if !IS_ROBOT && ($_G['forum']['threadtypes']['listable'] || $_G['forum']['status'] == 3)}-->
-							<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$_G[forum_thread][typeid]">[{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}]</a>
-						<!--{else}-->
-							[{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}]
-						<!--{/if}-->
-					<!--{/if}-->
-					<!--{if $threadsorts && $_G['forum_thread']['sortid']}-->
-						<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=sortid&sortid=$_G[forum_thread][sortid]">[{$_G['forum']['threadsorts']['types'][$_G['forum_thread']['sortid']]}]</a>
-					<!--{/if}-->
-					<a href="forum.php?mod=viewthread&tid=$_G[tid]" id="thread_subject">$_G[forum_thread][subject]</a>
-				</h1>
-				<span class="xg1">
-					<!--{if $_G['forum_thread'][displayorder] == -2}-->({lang moderating})
-					<!--{elseif $_G['forum_thread'][displayorder] == -3}-->({lang have_ignored})
-					<!--{elseif $_G['forum_thread'][displayorder] == -4}-->({lang draft})
-					<!--{/if}-->
-					<!--{if $_G['forum_thread']['recommendlevel']}-->
-						&nbsp;<img src="{IMGDIR}/recommend_$_G['forum_thread']['recommendlevel'].gif" alt="" title="{lang thread_recommend} $_G['forum_thread'][recommends]" />
-					<!--{/if}-->
-					<!--{if $_G['forum_thread'][heatlevel]}-->
-						&nbsp;<img src="{IMGDIR}/hot_$_G['forum_thread'][heatlevel].gif" alt="" title="$_G['forum_thread'][heatlevel] {lang heats}" />
-					<!--{/if}-->
-					<!--{if $_G['forum_thread']['closed'] == 1}-->
-						&nbsp;<img src="{IMGDIR}/locked.gif" alt="{lang close}" title="{lang close}" class="vm" />
-					<!--{/if}-->
-					<a href="forum.php?mod=viewthread&tid=$_G[tid]$fromuid" onclick="return copyThreadUrl(this)" {if $fromuid}title="{lang share_url_copy_comment}"{/if}>[{lang share_url_copy}]</a>
-				</span>
-				<!--{hook/viewthread_title_extra}-->
+			<td class="plc ptm pbn vwthd kaiser_plc_ptm_pbn_vwthd">
+                <div class="kaiser_viewthread_bav">
+                    <!--{if !IS_ROBOT}-->
+                        <div class="y" style=" display:none;">
+                            <!--{if $post['invisible'] == 0}--><a href="forum.php?mod=viewthread&action=printable&tid=$_G[tid]" title="{lang thread_printable}" target="_blank"><img src="{IMGDIR}/print.png" alt="{lang thread_printable}" class="vm" /></a>
+                            <!--{/if}-->
+                            <a href="forum.php?mod=redirect&goto=nextoldset&tid=$_G[tid]" title="{lang last_thread}"><img src="{IMGDIR}/thread-prev.png" alt="{lang last_thread}" class="vm" /></a>
+                            <a href="forum.php?mod=redirect&goto=nextnewset&tid=$_G[tid]" title="{lang next_thread}"><img src="{IMGDIR}/thread-next.png" alt="{lang next_thread}" class="vm" /></a>
+                        </div>
+                    <!--{/if}-->
+                    <h1 class="ts">
+                        <!--{if $_G['forum_thread']['typeid'] && $_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}-->
+                            <!--{if !IS_ROBOT && ($_G['forum']['threadtypes']['listable'] || $_G['forum']['status'] == 3)}-->
+                                <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=typeid&typeid=$_G[forum_thread][typeid]">[{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}]</a>
+                            <!--{else}-->
+                                [{$_G['forum']['threadtypes']['types'][$_G['forum_thread']['typeid']]}]
+                            <!--{/if}-->
+                        <!--{/if}-->
+                        <!--{if $threadsorts && $_G['forum_thread']['sortid']}-->
+                            <a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=sortid&sortid=$_G[forum_thread][sortid]">[{$_G['forum']['threadsorts']['types'][$_G['forum_thread']['sortid']]}]</a>
+                        <!--{/if}-->
+                        <a href="forum.php?mod=viewthread&tid=$_G[tid]" id="thread_subject">$_G[forum_thread][subject]</a>
+                    </h1>
+                    <span class="xg1">
+                        <!--{if $_G['forum_thread'][displayorder] == -2}-->({lang moderating})
+                        <!--{elseif $_G['forum_thread'][displayorder] == -3}-->({lang have_ignored})
+                        <!--{elseif $_G['forum_thread'][displayorder] == -4}-->({lang draft})
+                        <!--{/if}-->
+                        <!--{if $_G['forum_thread']['recommendlevel']}-->
+                            &nbsp;<img src="{IMGDIR}/recommend_$_G['forum_thread']['recommendlevel'].gif" alt="" title="{lang thread_recommend} $_G['forum_thread'][recommends]" />
+                        <!--{/if}-->
+                        <!--{if $_G['forum_thread'][heatlevel]}-->
+                            &nbsp;<img src="{IMGDIR}/hot_$_G['forum_thread'][heatlevel].gif" alt="" title="$_G['forum_thread'][heatlevel] {lang heats}" />
+                        <!--{/if}-->
+                        <!--{if $_G['forum_thread']['closed'] == 1}-->
+                            &nbsp;<img src="{IMGDIR}/locked.gif" alt="{lang close}" title="{lang close}" class="vm" />
+                        <!--{/if}-->
+                        <a href="forum.php?mod=viewthread&tid=$_G[tid]$fromuid" onclick="return copyThreadUrl(this)" {if $fromuid}title="{lang share_url_copy_comment}"{/if}>[{lang share_url_copy}]</a>
+                    </span>
+                    <!--{hook/viewthread_title_extra}-->
+                </div>
 			</td>
             
-            <td class="pls ptm kaiser_pls" style=" border-top:1px solid #e7e7cb; border-right:1px solid #e7e7cb;">
-				<!--{if $_G['page'] > 1}-->
-				<div id="tath" class="cl">
-					<!--{if $_G[forum_thread][authorid] && $_G[forum_thread][author]}-->
-						<a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" title="$_G[forum_thread][author]"><!--{avatar($_G[forum_thread][authorid],small)}--></a>
-						{lang thread_author}: <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" title="$_G[forum_thread][author]">$_G[forum_thread][author]</a>
-					<!--{else}-->
-						{lang thread_author}:
-						<!--{if $_G['forum']['ismoderator']}-->
-							<a href="home.php?mod=space&uid=$_G[forum_thread][authorid]">{lang anonymous}</a>
-						<!--{else}-->
-							{lang anonymous}
-						<!--{/if}-->
-					<!--{/if}-->
-				</div>
-				<!--{else}-->
-				<div class="hm kaiser_hm">
-					<span class="xg1">阅读:</span> <span class="xi1">$_G[forum_thread][views]</span><span class="pipe">|</span><span class="xg1">{lang reply}:</span> <span class="xi1">$_G[forum_thread][replies]</span>
-				</div>
-				<!--{/if}-->
+            <td class="pls ptm kaiser_pls">
+                <div class="kaiser_viewthread_bav_num">
+                    <!--{if $_G['page'] > 1}-->
+                    <!--<div id="tath" class="cl">
+                        <!--{if $_G[forum_thread][authorid] && $_G[forum_thread][author]}-->
+                            <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" title="$_G[forum_thread][author]"><!--{avatar($_G[forum_thread][authorid],small)}--></a>
+                            {lang thread_author}: <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]" title="$_G[forum_thread][author]">$_G[forum_thread][author]</a>
+                        <!--{else}-->
+                            {lang thread_author}:
+                            <!--{if $_G['forum']['ismoderator']}-->
+                                <a href="home.php?mod=space&uid=$_G[forum_thread][authorid]">{lang anonymous}</a>
+                            <!--{else}-->
+                                {lang anonymous}
+                            <!--{/if}-->
+                        <!--{/if}-->
+                    </div>-->
+                    <!--{else}-->
+                    <div class="hm kaiser_hm">
+                        <div class="kaiser_hm_num"><span class="xi1">$_G[forum_thread][views]</span><br /><span class="xg1">阅读</span></div><span class="pipe"></span><div class="kaiser_hm_num"><span class="xi1">$_G[forum_thread][replies]</span><br /><span class="xg1">{lang reply}</span></div>
+                    </div>
+                    <!--{/if}-->
+                </div>
 			</td>
 		</tr>
 	</table>
