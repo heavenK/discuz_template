@@ -162,7 +162,7 @@ class logging_ctl {
 
 				$extra = array(
 					'showdialog' => true,
-					'locationtime' => true,
+					'locationtime' => 2,
 					'extrajs' => $ucsynlogin
 				);
 
@@ -184,11 +184,12 @@ class logging_ctl {
 								array(
 									'showid' => 'succeedmessage',
 									'extrajs' => '<script type="text/javascript">'.
-										'setTimeout("window.location.href =\''.$href.'\';", 3000);'.
+										'setTimeout("window.location.href =\''.$href.'\';", 2000);'.
 										'$(\'succeedmessage_href\').href = \''.$href.'\';'.
 									//	'$(\'main_message\').style.display = \'none\';'.
 										'$(\'login_bg\').style.display = \'none\';'.		//add
 										'$(\'chg_bg_btn\').style.display = \'none\';'.		//add
+										'$(\'reco_show\').style.display = \'none\';'.		//add
 										'$(\'main_succeed\').style.display = \'\';'.
 										'$(\'succeedlocation\').innerHTML = \''.lang('message', $loginmessage, $param).'\';</script>'.$ucsynlogin,
 									'striptags' => false,
@@ -691,6 +692,10 @@ class register_ctl {
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
 				showmessage('profile_username_duplicate');
+			}else if($pass=="nicknameexist"){
+				uc_user_delete($uid);
+				C::t('common_member')->delete_no_validate($uid);
+				showmessage('nickname_exists');
 			}else{
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
@@ -810,12 +815,12 @@ class register_ctl {
 
 			$url_forward = dreferer();
 
-			//-------------------add-------------------------------------
-			if($_G['setting']['verify']['enabled'] && passport::p_allowverify() || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
+			//-------------------add-------------------------------------&& passport::p_allowverify()
+			if($_G['setting']['verify']['enabled']  || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
 				$url_forward=passport::url_sms();
 			}
 			//-----------------------------------------------------------
-			$refreshtime = 3000;
+			$refreshtime = 2000;
 			switch($this->setting['regverify']) {
 				case 1:
 					$idstring = random(6);

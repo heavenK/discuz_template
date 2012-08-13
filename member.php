@@ -16,7 +16,7 @@ $discuz = C::app();
 
 $modarray = array('activate', 'clearcookies', 'emailverify', 'getpasswd',
 	'groupexpiry', 'logging', 'lostpasswd',
-	'register', 'regverify', 'switchstatus','sms');
+	'register', 'regverify', 'switchstatus','sms','regend','new_ajax');
 
 
 $mod = !in_array($discuz->var['mod'], $modarray) && (!preg_match('/^\w+$/', $discuz->var['mod']) || !file_exists(DISCUZ_ROOT.'./source/module/member/member_'.$discuz->var['mod'].'.php')) ? 'register' : $discuz->var['mod'];

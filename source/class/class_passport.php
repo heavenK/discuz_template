@@ -47,6 +47,13 @@ class passport{
 			
 		}else{
 			$profile = isset($extdata['profile']) ? $extdata['profile'] : array();
+			$nicknamesql="select * from passport_user where nickname='".$profile['field1']."'";
+			$nicknames=mysql_query($nicknamesql);
+			$nicknamer=mysql_fetch_array($nicknames);
+			if(!empty($nicknamer)){
+				return "nicknameexist";
+				exit();
+			}
 			$year=!empty($profile['birthyear'])?$profile['birthyear']:0000;
 			$month=!empty($profile['birthmonth'])?$profile['birthmonth']:00;
 			if($month<0){
@@ -87,6 +94,17 @@ class passport{
 		}
 		
 		
+	}
+	function nickname_check($nickname){
+		$this->passport();
+		$searchsql="select * from passport_user where nickname='".$nickname."'";
+		$searchrs=mysql_query($searchsql);
+		$row=mysql_fetch_array($searchrs);
+		if(!empty($row)){
+			return false;
+		}else{
+			return true;
+		}
 	}
 	function passport_setsession($DZuser,$cookietime,$lastip){
 		self::passport();
@@ -263,14 +281,23 @@ class sms_send{
 				$verifycode = trim($_GET['verifycode']);
 
 				if($_G['cache']['plugin']['smstong']['mobilebind'] == 0) {
+					if($_GET['flag']==1){
+						exit(lang('plugin/smstong','smstong_mobilebind_closed'));
+					}
 					showmessage('smstong:smstong_mobilebind_closed');
 				}
 
 				if(empty($mobile)) {
+					if($_GET['flag']==1){
+						exit(lang('plugin/smstong','smstong_mobilebind_mobile_empty'));
+					}
 					showmessage('smstong:smstong_mobilebind_mobile_empty');
 				}
 				
 				if(!ismobile($mobile)) {
+					if($_GET['flag']==1){
+						exit(lang('plugin/smstong','smstong_mobilereg_mobile_invalid'));
+					}
 					showmessage('smstong:smstong_mobilereg_mobile_invalid');
 				}
 				elseif ($_POST['flag'] == "2") {
@@ -329,7 +356,8 @@ class sms_send{
 				}
 				elseif ($_POST['flag'] == "1") {
 					if(empty($verifycode)) {
-						showmessage('smstong:smstong_mobilereg_verifycode_empty');
+					//	showmessage('smstong:smstong_mobilereg_verifycode_empty');
+						exit(lang('plugin/smstong','smstong_mobilereg_verifycode_empty'));
 					}
 
 					$periodofvalidity = $_G['cache']['plugin']['smstong']['periodofvalidity'];
@@ -337,7 +365,8 @@ class sms_send{
 						
 					if (!$verify)
 					{
-						showmessage('smstong:smstong_mobilereg_mobile_verifycode_invalid');
+					//	showmessage('smstong:smstong_mobilereg_mobile_verifycode_invalid');
+						exit(lang('plugin/smstong','smstong_mobilereg_mobile_verifycode_invalid'));
 					}
 					else
 					{
@@ -362,7 +391,8 @@ class sms_send{
 
 					$url_forward = dreferer();
 					$url_forward = 'forum.php';
-					showmessage('smstong:smstong_mobilebind_succeed', $url_forward);
+					exit("success");
+				//	showmessage('smstong:smstong_mobilebind_succeed', $url_forward);
 				//	showmessage('smstong:smstong_mobilebind_succeed', 'home.php?mod=spacecp&ac=profile&op=contact');
 				}
 			} else {
@@ -391,4 +421,46 @@ class sms_send{
 	}
 	    
 }
+class regend{
+	function regend() {
+		global $_G;
+		if($_G['setting']['bbclosed']) {
+			if(($_GET['action'] != 'activation' && !$_GET['activationauth']) || !$_G['setting']['closedallowactivation'] ) {
+				showmessage('register_disable', NULL, array(), array('login' => 1));
+			}
+		}
+		loadcache(array('modreasons', 'stamptypeid', 'fields_required', 'fields_optional', 'fields_register', 'ipctrl', 'plugin'));
+		require_once libfile('function/misc');
+		require_once libfile('function/profile');
+		if(!function_exists('sendmail')) {
+			include libfile('function/mail');
+		}
+		loaducenter();
+	}
+	function show_temp(){
+	    global $_G;
+		if(empty($_G['uid'])){
+			showmessage('to_login', '', array(), array('showmsg' => true, 'login' => 1));
+		}elseif(!$this->setting['regclosed'] && (!$this->setting['regstatus'] || !$this->setting['ucactivation'])) {
+			if($_GET['action'] == 'activation' || $_GET['activationauth']) {
+				if(!$this->setting['ucactivation'] && !$this->setting['closedallowactivation']) {
+					showmessage('register_disable_activation');
+				}
+			} elseif(!$this->setting['regstatus']) {
+				showmessage(!$this->setting['regclosemessage'] ? 'register_disable' : str_replace(array("\r", "\n"), '', $this->setting['regclosemessage']));
+			}
+		}elseif($_G['uid']) {
+			$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';
+			$exists = DB::result_first("SELECT mobile FROM ".DB::table('common_member_profile')." WHERE uid='".trim($_G['uid'])."'");
+			if(empty($exists)){
+				$url_forward = dreferer();
+				$url_forward = 'member.php?mod=sms&action=bindmobile';
+				showmessage('register_vertify_invalid', $url_forward ? $url_forward : './', array('username' => $_G['member']['username'], 'usergroup' => $_G['group']['grouptitle'], 'uid' => $_G['uid']), array('extrajs' => $ucsynlogin));
+			}
+		}
+		$regname = 'regend';
+		include template($this->template);
+		exit();
+	}
+};
 ?>
