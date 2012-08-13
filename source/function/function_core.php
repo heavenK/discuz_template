@@ -1349,7 +1349,7 @@ function submitcheck($var, $allowget = 0, $seccodecheck = 0, $secqaacheck = 0) {
 	}
 }
 
-function multi($num, $perpage, $curpage, $mpurl, $maxpages = 0, $page = 10, $autogoto = FALSE, $simple = FALSE, $jsfunc = FALSE) {
+function multi($num, $perpage, $curpage, $mpurl, $maxpages = 0, $page = 6, $autogoto = FALSE, $simple = FALSE, $jsfunc = FALSE) {
 	return $num > $perpage ? helper_page::multi($num, $perpage, $curpage, $mpurl, $maxpages, $page, $autogoto, $simple, $jsfunc) : '';
 }
 
