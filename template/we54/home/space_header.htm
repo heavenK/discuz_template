@@ -4,7 +4,6 @@
 	<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
 	<link rel="stylesheet" type="text/css" href="{$_G[setting][csspath]}data/cache/style_{STYLEID}_css_space.css?{VERHASH}" />
 	<link id="style_css" rel="stylesheet" type="text/css" href="{STATICURL}space/{if $space[theme]}$space[theme]{else}t1{/if}/style.css?{VERHASH}">
-    <link rel="stylesheet" type="text/css" href="template/we54/portal/foot.css" />
     <link rel="stylesheet" type="text/css" href="template/we54/home/space_header.css" />
     <script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
     
@@ -114,9 +113,9 @@
 	<!--{if $space['status'] == -1 && $_G['adminid'] == 1 }-->
 		<p class="ptw xw1 xi1 hm"><img src="{IMGDIR}/locked.gif" alt="Locked" class="vm" /> {lang message_banned}</p>
 	<!--{/if}-->
-	<div id="hd" class="wp cl">
+	<div id="hd" class="wp cl" style="display:none;" >
 
-		<h2 id="spaceinfoshow">
+		<h2 id="spaceinfoshow" >
 			<!--{eval space_merge($space, 'field_home'); $space[domainurl] = space_domain($space);getuserdiydata($space);$personalnv = isset($_G['blockposition']['nv']) ? $_G['blockposition']['nv'] : '';}-->
 			<strong id="spacename" class="mbn">
 				<!--{if $space[spacename]}-->$space[spacename]<!--{else}-->$space[username]{lang somebody_space}<!--{/if}-->
@@ -167,3 +166,8 @@
 		<!--{/if}-->
 	<!--{/loop}-->
 </ul>
+
+
+<div class="person_name">
+	<span>awsmnms007µÄ¿Õ¼ä</span>
+</div>
