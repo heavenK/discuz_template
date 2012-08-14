@@ -24,12 +24,13 @@ body		{ background: url(/template/we54/por_images/body_bg.jpg);}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; }
-.nav:hover  { background:url(/template/we54/por_images/xl_nav02.jpg) no-repeat;}
+
+
 #um{ padding:6px 0 0 0;}
 #um a{ color:#0035a0;}
 
 /*¶¥²¿Ö÷µ¼º½*/
-.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:99999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; _right:-1px; float:left; overflow:hidden;}
+.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:99999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0;  float:left; overflow:hidden;}
 	.zx_nav { width:316px; height:88px; background-color:#f7f7f7; overflow:hidden; float:left;}
 	.zx_sec_nav { width:210px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}

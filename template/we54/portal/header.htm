@@ -176,6 +176,19 @@
 		  },function (){jq(".wopic_display06").hide();});
 		});
     </script>
+    
+    <script language="javascript">
+	jq(function(){
+	  //当鼠标滑入时将div的class换成divOver
+	  jq('.nav').hover(function(){
+		jq(this).addClass('divOver');  
+	   },function(){
+		//鼠标离开时移除divOver样式
+		jq(this).removeClass('divOver'); 
+	   }
+	  );
+	});
+	</script> 
 
 </head>
 
