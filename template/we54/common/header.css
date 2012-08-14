@@ -1,7 +1,7 @@
 @charset "gb2312";
 /* CSS Document */
 
-body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
+body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
 
 
 /*kaiser*/
@@ -9,10 +9,6 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top;}
 .xg2 img{ width:763px; height:165px;}
 #scbar_txt{ width:149px; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
 #scbar_btn{ margin:6px 0 0 3px; background:url(/template/we54/images/all_bg.jpg) no-repeat -180px -74px;}
-.top_ad_06{ width:1000px; height:90px; margin:8px 0 0 0; display:inline; overflow:hidden; float:left;}
-.kaiser_viewthread_header{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; line-height:16px; overflow:hidden; float:left;}
-.kaiser_viewthread_header_bav{ width:998px; height:29px; border-bottom:1px solid #e7e7cb; overflow:hidden; float:left;}
-.kaiser_viewthread_header_bav b{ padding:6px 0 0 11px; font-size:14px; color:#663300; float:left;}
 
 /*Í¨ÓÃµ÷Í¼*/
 

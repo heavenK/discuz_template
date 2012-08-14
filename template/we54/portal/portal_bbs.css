@@ -449,7 +449,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	.lianjie_endbg { width:1000px; height:4px; background: top url(/template/we54/por_images/lianjie_bottom_bg.jpg) no-repeat #FFFFFF; overflow:hidden; float:left;}
 
 /*µ×²¿*/
-	#foot         	  { width:100%; height:400px;  margin:10px 0 0 0; display:inline; background:url(/template/we54/por_images/footer_bg.jpg) repeat-x; overflow:hidden; float:left; }
+	#foot         	  { width:100%; height:220px;  margin:10px 0 0 0; display:inline; background:url(/template/we54/por_images/footer_bg.jpg) repeat-x; overflow:hidden; float:left; }
 	#foot span        { width:100%; height:20px; margin-top:27px; display:inline; text-align:center; overflow:hidden; float:left;}
 	#foot span a	  { color:#000;}
 	#foot span a:hover{ text-decoration:underline;}
