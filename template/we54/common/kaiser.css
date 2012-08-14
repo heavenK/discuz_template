@@ -15,16 +15,20 @@
 .pgb a								{ margin-left:0;}
 .pgs #newspecial, .pgs #post_reply	{ margin:0 0 0 5px; float:right;}
 .pgs #newspecialtmp, .pgs #post_replytmp	{ margin:0 0 0 5px; float:right;}
-.pg a.nxt							{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
-.pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif); border-color:#e7e7cb; color:#8f8f8f;}
-.pg strong							{ background:#b8af73; border-color:#e7e7cb; font-weight:normal; color:#FFF;}
-.pg a								{ border-color:#e7e7cb; color:#8f8f8f;}
-.pg label							{ border-color:#e7e7cb; color:#8f8f8f;}
-#pgt .pg, #pgt .pgb					{ margin-top:26px;}
+#pgt .pg, #pgt .pgb, .pg, .pgb		{ margin-top:26px; line-height:20px;}
+.pg a, .pg strong, .pgb a, .pg label{ height:19px !important; padding:0 6px;}
+.pg a.nxt							{ padding:0 17px 0 8px; background-image:url(../../../static/image/common/kaiser_arw_r.gif); background-position:93% 50%; font-size:12px; font-family:"Î¢ÈíÑÅºÚ";}
+.pgb a								{ padding:0 8px 0 17px; background-image:url(../../../static/image/common/kaiser_arw_l.gif); background-position:3px 50%; border-color:#e7e7cb; color:#8f8f8f;}
+.pg strong							{ background:#b8af73; border-color:#b8af73; font-weight:normal; color:#FFF;}
+.pg a								{ border-color:#e7e7cb; color:#8f8f8f; font-size:14px; font-family:Arial;}
+.pg label							{ padding:0 6px !important; border-color:#e7e7cb; color:#8f8f8f; overflow:hidden;}
+.pg label .px						{ height:12px; margin:3px 0 0 0; display:inline; line-height:12px; float:left;}
+.pg a.prev							{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
+.pg a.prev:hover					{ background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:50% 50%;}
 .kaiser_pgs .pgb, .kaiser_pgs .pg	{ margin-top:19px;}
-.pg a.nxt:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_r_on.gif); background-position:90% 50%; background-repeat:no-repeat; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
-.pgb a:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:10px 50%; background-repeat:no-repeat; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
-.pg a:hover							{ background:#b8af73; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
+.pg a.nxt:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_r_on.gif); background-position:93% 50%; background-repeat:no-repeat; border-color:#b8af73; color:#FFF; text-decoration:none;}
+.pgb a:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:3px 50%; background-repeat:no-repeat; border-color:#b8af73; color:#FFF; text-decoration:none;}
+.pg a:hover							{ background:#b8af73; border-color:#b8af73; color:#FFF; text-decoration:none;}
 .kaiser_tr_top						{ zoom:1;}
 .kaiser_pl_bm						{ border:none;}
 .kaiser_plc_ptm_pbn_vwthd			{ height:24px; padding:0 !important; border-left:1px solid #e7e7cb; border-top:1px solid #e7e7cb; border-bottom:1px solid #e7e7cb;}
@@ -74,7 +78,11 @@
 .kaiser_tanchu_infos				{ width:300px; height:60px; padding:8px 0 0 18px; overflow:hidden; float:left;}
 .kaiser_tanchu_infos em				{ width:280px; height:20px; color:#666666; float:left;}
 .kaiser_tanchu_infos i				{ width:290px; height:36px; color:#666666; line-height:20px; overflow:hidden; float:left;}
-.kaiser_viewthread_jiantou			{ position:absolute; bottom:-41px; right:-1px; z-index:1;}
+.kaiser_viewthread_jiantou			{ position:absolute; bottom:-41px; right:-1px; z-index:1; overflow:hidden;}
+.kaiser_pn_post_btn					{ width:148px; height:58px; background:url(../../../static/image/common/kaiser_pn_post.png) no-repeat 0 0; overflow:hidden;}
+.kaiser_pn_post_btn:hover			{ background:url(../../../static/image/common/kaiser_pn_post.png) no-repeat -148px 0;}
+.kaiser_pn_reply_btn				{ width:148px; height:58px; background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat 0 0; overflow:hidden;}
+.kaiser_pn_reply_btn:hover			{ background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat -148px 0;}
 .top_ad_06							{ width:1000px; height:90px; margin:8px 0 0 0; display:inline; overflow:hidden; float:left;}
 .kaiser_viewthread_header			{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:16px; overflow:hidden; float:left;}
 .kaiser_viewthread_header_bav		{ width:998px; height:29px; border-bottom:1px solid #e7e7cb; line-height:31px; overflow:hidden; float:left;}
@@ -116,15 +124,14 @@
 .pgs #newspecialtmp, .pgs #post_replytmp	{ margin:0 0 0 5px; float:right;}
 .pg a.nxt							{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
 .pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
-#pgt .pg, #pgt .pgb					{ margin-top:26px;}
 .kaiser_tl_bm_bmw					{ border:none;}
 .kaiser_bm_c						{ padding:0 0 0 10px;}
 .kaiser_ml_mlt_mtw_cl li			{ width:224px; height:319px; margin:0 18px 0 15px; padding:0; border:none;}
 .kaiser_ml_mlt_mtw_cl li .c			{ padding-top:0 !important; padding-left:0 !important;}
 .kaiser_ml_mlt_mtw_cl li .c a		{ width:200px; height:200px; padding:10px 14px 14px 10px; background:url(/template/we54/images/kaiser_list_tuji_pic_bg.png) no-repeat 0 0; overflow:hidden; float:left;}
 .kaiser_ml_mlt_mtw_cl li .c a:hover	{ background:url(/template/we54/images/kaiser_list_tuji_pic_bg.png) no-repeat -224px 0;}
-.kaiser_list_tuji_num				{ width:48px; height:25px; background-image:url(/template/we54/images/kaiser_list_tuji_pic_num.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='template/we54/images/kaiser_list_tuji_pic_num.png'); _background-image:none; color:#FFF; text-align:center; position:absolute; top:179px; right:20px; overflow:hidden;}
-.kaiser_list_tuji_num b				{ font-size:16px;}
+.kaiser_list_tuji_num				{ width:48px; height:25px; background-image:url(/template/we54/images/kaiser_list_tuji_pic_num.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='template/we54/images/kaiser_list_tuji_pic_num.png'); _background-image:none; color:#FFF; text-align:center; position:absolute; top:179px; right:20px; line-height:25px; overflow:hidden;}
+.kaiser_list_tuji_num b				{ font-size:20px; font-family:Arial;}
 .kaiser_ptn							{ padding-left:6px;}
 .kaiser_ptn em						{ display:inline;}
 .kaiser_ptn a						{ display:inline; font-size:14px; color:#333333;}
@@ -156,7 +163,7 @@
 .tl th, .tl td						{ padding:9px 0; border-bottom:1px solid #ededed;}
 .tl .th td, .tl .th th				{ height:auto; vertical-align:inherit;}
 .kaiser_list_bg						{ background:#f7f7f7;}
-.kaiser_list_bm_bw0_pgs_cl .pgt ,.kaiser_list_bm_bw0_pgs_cl .pgb{ margin-top:26px;}
+.kaiser_list_bm_bw0_pgs_cl .pgb{ margin-top:26px;}
 .kaiser_list_bm_bw0_pgs_cl a:hover	{ text-decoration:none;}
 .kaiser_bm_bmw_fl					{ margin-left:10px; padding:1px; border:1px solid #f3edda;}
 .fl .kaiser_bm_h_cl					{ height:24px; background:url(/template/we54/images/kaiser_list_son_bav_bg.gif) repeat-x; border:none; line-height:23px; color:#000;}

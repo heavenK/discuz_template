@@ -2,8 +2,8 @@
 /* CSS Document */
 
 /*µÇÂ½*/
-.login_bg		{ width:100%; height:407px; margin:0 auto; border-top:1px solid #FFF;}
-.login_bg_line				{ width:100%; height:7px; margin:0 auto; background:url(../images/login_box_bg_line.gif) repeat-x;}
+.login_bg		{ width:100%; min-width:1000px; height:407px; margin:0 auto; border-top:1px solid #FFF;}
+.login_bg_line				{ width:100%; min-width:1000px; height:7px; margin:0 auto; background:url(../images/login_box_bg_line.gif) repeat-x; overflow:hidden;}
 .bg_1						{ background:url(../images/1.jpg) no-repeat 50% 50%;}
 .bg_2						{ background:url(../images/2.jpg) no-repeat 50% 50%;}
 .bg_3						{ background:url(../images/3.jpg) no-repeat 50% 50%;}
@@ -32,4 +32,4 @@
 /*ÍÆ¼ö*/
 .recommend		{ width:1000px; height:70px; margin:0 auto; padding:0 0 27px 0;}
 .recommend dt				{ width:307px; height:57px; padding:13px 0 0 18px; overflow:hidden; float:left;}
-.recommend dd				{ margin:0 6px 0 0; display:inline; float:left;}
+.recommend dd				{ margin:0 6px 0 0; display:inline; overflow:hidden; float:left;}
