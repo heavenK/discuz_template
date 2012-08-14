@@ -32,4 +32,4 @@
 /*ÍÆ¼ö*/
 .recommend		{ width:1000px; height:70px; margin:0 auto; padding:0 0 27px 0;}
 .recommend dt				{ width:307px; height:57px; padding:13px 0 0 18px; overflow:hidden; float:left;}
-.recommend dd				{ margin:0 6px 0 0; display:inline; float:left;}
+.recommend dd				{ margin:0 6px 0 0; display:inline; overflow:hidden; float:left;}
