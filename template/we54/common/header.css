@@ -1,22 +1,19 @@
 @charset "gb2312";
 /* CSS Document */
 
-body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
-
+body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå";}
 
 /*kaiser*/
 #toptb #diy-tg_menu{ margin:-2px 0 0 -18px;}
 .xg2 img{ width:763px; height:165px;}
-#scbar_txt{ width:149px; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
+#scbar_txt{ width:149px; font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå";}
 #scbar_btn{ margin:6px 0 0 3px; background:url(/template/we54/images/all_bg.jpg) no-repeat -180px -74px;}
 
 /*Í¨ÓÃµ÷Í¼*/
 
 .nav_second,
-.bankuai,
-.bankuai:hover,
-.nav_three,
-.ggg{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
+.nav_three
+{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
 
 .zx_nav_bg01,
 .zx_nav_bg02,
@@ -28,26 +25,25 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 .top_header { width:1000px; height:36px; overflow:hidden;}
 .zzz { width:125px; height:36px; float:left;}
-.dl_zc { line-height:37px; overflow:hidden; height:36px; float:right; color:#666666; }
-.dl_zc a { text-decoration:none; color:#0035a0; float:none;}
+.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666;}
+.dl_zc a { text-decoration:none; color:#336699; float:none;}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; z-index:9999; }
-.nav:hover  { background:url(/template/we54/por_images/xl_nav02.jpg) no-repeat;}
+.divOver  { background:url(/template/we54/por_images/xl_nav02.jpg) no-repeat;}
 #um{ padding:6px 0 0 0;}
 #um a{ color:#0035a0;}
 
 /*¶¥²¿Ö÷µ¼º½*/
-.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; _right:-1px; float:left; overflow:hidden;}
+.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; float:left; overflow:hidden;}
 	.zx_nav { width:316px; height:88px; background-color:#f7f7f7; overflow:hidden; float:left;}
-	.zx_sec_nav { width:210px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
+	.zx_sec_nav { width:215px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
 	.main_nav a { color:#4d4d4d;}
 	.main_nav a:hover { color:#FF0000;}
 	.tyty { overflow:hidden; float:left;}
 
 	.hd_nav { width:316px; height:88px; background-color:#fff; overflow:hidden; float:left;}
-	.zx_sec_nav { width:210px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:20px; margin-bottom:8px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
 
 
@@ -73,8 +69,8 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 .nav_st { width:1000px; height:20px; position:relative; float:left; _float:none; z-index:999; }
 	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
-	.bankuai { width:104px; height:35px; background-position:-104px -143px; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
-	.bankuai:hover { background-position:0 -143px;}	
+	.bankuai { width:104px; height:35px; background:url(/template/we54/images/bk_01.jpg) no-repeat; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
+	.bankuaiOver { background:url(/template/we54/images/bk_02.jpg) no-repeat;}	
 	.nav_nav { width:600px; height:40px; line-height:42px; font-size:18px; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; margin-left:12px; display:inline; overflow:hidden; float:left;}	
 	.nav_nav li { height:40px; padding:0 15px 0 15px;text-align:center; list-style-type:none; overflow:hidden; float:left;}
 	.nav_nav li a { height:40px; color:#663300; }
@@ -83,14 +79,14 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 
 
-	.ggg { width:149px; _width:149px; text-indent:1em; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; background-position:-334px -75px; overflow:hidden; float:left;}
+	.ggg { width:149px; _width:149px; padding-left:3px; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; border:1px solid #bdb378; background-color:#fffef0; overflow:hidden; float:left;}
 	.aaa { width:77px; height:26px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
-	.nav_three { width:1000px; height:75px; z-index:99999; background-position:0 0; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
-	.nav_three ul { width:988px; height:66px; margin:4px 0 0 10px; display:inline; overflow:hidden; float:left;}	
-	.nav_three ul li { width:122px; height:22px; overflow:hidden; float:left; font-size:14px; line-height:22px;}
-	.nav_three ul li a { text-decoration:none; color:#663300; margin-left:35px;}
-	.nav_three ul li a:hover { font-weight:bold; text-decoration:underline;}
+	.nav_three { width:1000px; height:115px; z-index:99999; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
+	.nav_three ul { width:1000px; height:66px; margin:35px 0 0 0; display:inline; overflow:hidden; float:left;}	
+	.nav_three ul li { width:125px; height:24px; overflow:hidden; float:left; font-size:14px; line-height:22px; text-align:center;}
+	.nav_three ul li a { text-decoration:none; color:#663300; }
+	.nav_three ul li a:hover { text-decoration:none; color:#ff6600;}
 
 /*µ×²¿*/
 .index_bottom	{ width:100%; height:99px; margin:0 auto; background:#f3f3f3 url(/template/we54/images/bottom_bg.gif) repeat-x; text-align:center;}

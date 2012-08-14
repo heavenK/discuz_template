@@ -53,16 +53,17 @@ a:hover { text-decoration:underline; color:#FF6633;}
 
 /*整体*/
 .box		{ width:1000px; margin:0 auto; position:relative;}
-.dl_zc 		{ line-height:40px; float:right; color:#666666; }
-.dl_zc a 	{ text-decoration:none; color:#0035a0; }
+.dl_zc 		{ line-height:36px; float:right; color:#666666; }
+.dl_zc a 	{ text-decoration:none; color:#336699; }
 .nav 		{ width:90px; height:28px; float:right; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; }
+.divOver  { background:url(/template/we54/por_images/xl_nav02.jpg) no-repeat;}
 	.zx_nav_bg01 { width:62px; height:88px; background-position:-930px -243px; overflow:hidden; float:left;}
 	.zx_nav_bg02 { width:62px; height:88px; background-position:-930px -331px; overflow:hidden; float:left;}
 	.zx_nav_bg03 { width:62px; height:88px; background-position:-930px -419px; overflow:hidden; float:left;}
 	.zx_nav_bg04 { width:62px; height:88px; background-position:-806px -462px; overflow:hidden; float:left;}
 
 /*二级导航*/
-.nav_st { width:1000px; height:115px; margin-bottom:10px; display:inline; overflow:hidden; float:left; }
+.nav_st { width:1000px; height:155px; margin-bottom:10px; display:inline; overflow:hidden; float:left; }
 	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
 	.nav_nav { width:600px; height:40px;line-height:44px; font-size:18px; font-family:"微软雅黑","黑体"; margin-left:27px; display:inline; overflow:hidden; float:left;}	
 	.nav_nav span { height:40px; padding:0 15px 0 15px;text-align:center; overflow:hidden; float:left;}
@@ -72,6 +73,13 @@ a:hover { text-decoration:underline; color:#FF6633;}
 
 	.aaa { width:77px; height:26px; margin:6px 0 0 3px; display:inline; overflow:hidden; float:left; background-position:-180px -74px; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
+
+/*三级导航*/
+	.nav_three { width:1000px; height:115px; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; overflow:hidden; float:left; }
+	.nav_three ul { width:1000px; height:66px; margin:35px 0 0 0; display:inline; overflow:hidden; float:left;}	
+	.nav_three ul li { width:125px; height:24px; overflow:hidden; float:left; font-size:14px; line-height:22px; text-align:center;}
+	.nav_three ul li a { text-decoration:none; color:#663300; }
+	.nav_three ul li a:hover { text-decoration:none; color:#ff6600;}
 
 /*第一板块*/
 .NO1_moduble { width:1000px; height:698px; background: url(/template/we54/por_images/bk_bg.jpg) repeat-y; margin-top:10px; margin-bottom:10px; display:inline; overflow:hidden; float:left;}
