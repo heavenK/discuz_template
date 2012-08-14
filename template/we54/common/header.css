@@ -12,8 +12,8 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 /*Í¨ÓÃµ÷Í¼*/
 
 .nav_second,
-.nav_three,
-.ggg{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
+.nav_three
+{ background:url(/template/we54/images/all_bg.jpg) no-repeat;}
 
 .zx_nav_bg01,
 .zx_nav_bg02,
@@ -26,7 +26,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 .top_header { width:1000px; height:36px; overflow:hidden;}
 .zzz { width:125px; height:36px; float:left;}
 .dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666;}
-.dl_zc a { text-decoration:none; color:#0035a0; float:none;}
+.dl_zc a { text-decoration:none; color:#336699; float:none;}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; z-index:9999; }
@@ -79,7 +79,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 
 
-	.ggg { width:149px; _width:149px; text-indent:1em; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; background-position:-334px -75px; overflow:hidden; float:left;}
+	.ggg { width:149px; _width:149px; padding-left:3px; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; border:1px solid #bdb378; background-color:#fffef0; overflow:hidden; float:left;}
 	.aaa { width:77px; height:26px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
 	.nav_three { width:1000px; height:115px; z-index:99999; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
