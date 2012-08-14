@@ -26,9 +26,9 @@
 .pg a.prev							{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
 .pg a.prev:hover					{ background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:50% 50%;}
 .kaiser_pgs .pgb, .kaiser_pgs .pg	{ margin-top:19px;}
-.pg a.nxt:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_r_on.gif); background-position:93% 50%; background-repeat:no-repeat; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
-.pgb a:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:3px 50%; background-repeat:no-repeat; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
-.pg a:hover							{ background:#b8af73; border-color:#e7e7cb; color:#FFF; text-decoration:none;}
+.pg a.nxt:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_r_on.gif); background-position:93% 50%; background-repeat:no-repeat; border-color:#b8af73; color:#FFF; text-decoration:none;}
+.pgb a:hover						{ background:#b8af73; background-image:url(../../../static/image/common/kaiser_arw_l_on.gif); background-position:3px 50%; background-repeat:no-repeat; border-color:#b8af73; color:#FFF; text-decoration:none;}
+.pg a:hover							{ background:#b8af73; border-color:#b8af73; color:#FFF; text-decoration:none;}
 .kaiser_tr_top						{ zoom:1;}
 .kaiser_pl_bm						{ border:none;}
 .kaiser_plc_ptm_pbn_vwthd			{ height:24px; padding:0 !important; border-left:1px solid #e7e7cb; border-top:1px solid #e7e7cb; border-bottom:1px solid #e7e7cb;}
@@ -79,6 +79,10 @@
 .kaiser_tanchu_infos em				{ width:280px; height:20px; color:#666666; float:left;}
 .kaiser_tanchu_infos i				{ width:290px; height:36px; color:#666666; line-height:20px; overflow:hidden; float:left;}
 .kaiser_viewthread_jiantou			{ position:absolute; bottom:-41px; right:-1px; z-index:1; overflow:hidden;}
+.kaiser_pn_post_btn					{ width:148px; height:58px; background:url(../../../static/image/common/kaiser_pn_post.png) no-repeat 0 0; overflow:hidden;}
+.kaiser_pn_post_btn:hover			{ background:url(../../../static/image/common/kaiser_pn_post.png) no-repeat -148px 0;}
+.kaiser_pn_reply_btn				{ width:148px; height:58px; background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat 0 0; overflow:hidden;}
+.kaiser_pn_reply_btn:hover			{ background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat -148px 0;}
 .top_ad_06							{ width:1000px; height:90px; margin:8px 0 0 0; display:inline; overflow:hidden; float:left;}
 .kaiser_viewthread_header			{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:16px; overflow:hidden; float:left;}
 .kaiser_viewthread_header_bav		{ width:998px; height:29px; border-bottom:1px solid #e7e7cb; line-height:31px; overflow:hidden; float:left;}
