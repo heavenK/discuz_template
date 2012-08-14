@@ -508,17 +508,17 @@ function getuserdefaultdiy() {
 							'attr' => array('name'=>'frame1'),
 							'column`frame1_left' => array(
 									'block`profile' => array('attr' => array('name'=>'profile')),
-									'block`statistic' => array('attr' => array('name'=>'statistic')),
-									'block`album' => array('attr' => array('name'=>'album')),
-									'block`doing' => array('attr' => array('name'=>'doing'))
+								//	'block`statistic' => array('attr' => array('name'=>'statistic')),
+								//	'block`album' => array('attr' => array('name'=>'album')),
+								//	'block`doing' => array('attr' => array('name'=>'doing'))
 							),
 							'column`frame1_center' => array(
 									'block`personalinfo' => array('attr' => array('name'=>'personalinfo')),
-									'block`feed' => array('attr' => array('name'=>'feed')),
+								//	'block`feed' => array('attr' => array('name'=>'feed')),
 									'block`share' => array('attr' => array('name'=>'share')),
-									'block`blog' => array('attr' => array('name'=>'blog')),
-									'block`thread' => array('attr' => array('name'=>'thread')),
-									'block`wall' => array('attr' => array('name'=>'wall'))
+								//	'block`blog' => array('attr' => array('name'=>'blog')),
+								//	'block`thread' => array('attr' => array('name'=>'thread')),
+								//	'block`wall' => array('attr' => array('name'=>'wall'))
 							),
 							'column`frame1_right' => array(
 									'block`myapp' => array('attr' => array('name'=>'myapp')),
@@ -529,6 +529,7 @@ function getuserdefaultdiy() {
 					)
 			),
 			'parameters' => array(
+					'profile' => array('title'=>''),
 					'blog' => array('showmessage' => 150, 'shownum' => 6),
 					'doing' => array('shownum' => 15),
 					'album' => array('shownum' => 8),

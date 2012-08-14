@@ -84,7 +84,7 @@
 .kaiser_pn_reply_btn				{ width:148px; height:58px; background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat 0 0; overflow:hidden;}
 .kaiser_pn_reply_btn:hover			{ background:url(../../../static/image/common/kaiser_pn_reply.png) no-repeat -148px 0;}
 .top_ad_06							{ width:1000px; height:90px; margin:8px 0 0 0; display:inline; overflow:hidden; float:left;}
-.kaiser_viewthread_header			{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; line-height:16px; overflow:hidden; float:left;}
+.kaiser_viewthread_header			{ width:998px; height:165px; margin:8px 0 0 0; display:inline; border:1px solid #e7e7cb; font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå"; line-height:16px; overflow:hidden; float:left;}
 .kaiser_viewthread_header_bav		{ width:998px; height:29px; border-bottom:1px solid #e7e7cb; line-height:31px; overflow:hidden; float:left;}
 .kaiser_viewthread_header_bav b		{ padding:0 0 0 11px; font-size:14px; color:#663300; float:left;}
 .kaiser_viewthread_header_bav em	{ padding:0 0 0 11px; color:#999999; font-size:12px; float:left;}
