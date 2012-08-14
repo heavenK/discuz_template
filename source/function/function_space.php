@@ -73,10 +73,11 @@ function getblockhtml($blockname,$parameters = array()) {
 			$titlemore = $space['self'] ? lang('space', 'block_profile_edit') : '';
 			break;
 		case 'profile':
+			space_merge($space, 'count');
 			$do = $blockname;
 			$managehtml = '';
 			$avatar = empty($parameters['banavatar']) ? 'middle' : $parameters['banavatar'];
-			$html .= "<div class=\"hm\"><p><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".avatar($uid,$avatar).'</a></p>';
+			$html .= "<div class=\"hm huiyuan_tx\"><p><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".avatar($uid,$avatar).'</a></p>';
 
 			$memberfieldforum = C::t('common_member_field_forum')->fetch($space['uid']);
 			$space['medals'] = $memberfieldforum['medals'];
@@ -102,15 +103,16 @@ function getblockhtml($blockname,$parameters = array()) {
 					$usermedals = '<p class="md_ctrl"><a href="home.php?mod=medal">'.$usermedals.'</a></p>'.$usermedalmenus;
 				}
 			}
-			$html .= "<h2 class=\"mbn\"><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".$space['username']."</a></h2>$usermedals";
-			$html .= '</div><ul class="xl xl2 cl ul_list">';
+		//	$html .= "<h2 class=\"mbn\"><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".$space['username']."</a></h2>$usermedals";
+		//	$html .= '</div><ul class="xl xl2 cl ul_list">';
+			$html .= '</div>';
 
 			$magicinfo = $showmagicgift = false;
 			if($_G['setting']['magicstatus'] && $_G['setting']['magics']['gift']) {
 				$showmagicgift = true;
 				$magicinfo = !empty($space['magicgift']) ? dunserialize($space['magicgift']) : array();
 			}
-			if(helper_access::check_module('follow')) {
+		/*	if(helper_access::check_module('follow')) {
 				$html .= '<li class="ul_broadcast"><a href="home.php?mod=space&uid='.$uid.'">'.lang('space', 'block_profile_follow').'</a></li>';
 			}
 			if ($space['self']) {
@@ -144,9 +146,21 @@ function getblockhtml($blockname,$parameters = array()) {
 				$html .= "<li class='ul_msg'><a href=\"home.php?mod=space&uid=$space[uid]&do=wall\">".lang('space', 'block_profile_wall_to_me')."</a></li>";
 				$html .= "<li class='ul_poke'><a href=\"home.php?mod=spacecp&ac=poke&op=send&uid=$space[uid]&handlekey=propokehk_{$space[uid]}\" id=\"a_poke_{$space[uid]}\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">".lang('space', 'block_profile_poke')."</a></li>";
 				$html .= "<li class='ul_pm'><a href=\"home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2\" id=\"a_sendpm_$space[uid]\" onclick=\"showWindow('showMsgBox', this.href, 'get', 0)\">".lang('space', 'block_profile_sendmessage')."</a></li>";
+			}*/
+			$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+			if($_G['member']['extgroupids']==$data['groupid']){
+		//		$icodir=$_G['setting']['attachurl'].'common/'.$data['icon'];
+				$icodir='static/image/common/kaiser_ext.png';
+				$space['vertifyico']=$icodir;
+				$html .= '<div class="huiyuan_rz"><img src="'.$icodir.'" width="122" height="32" border="0"/></div>';
 			}
+			$html .='<div class="tz_zt_gz"><div class="tz_zt_gz01"><i>'.$space['posts'].'</i><span>帖子</span></div>
+					<div class="tz_zt_gz01"><i>'.$space['threads'].'</i><span>主题</span></div>
+					<div class="tz_zt_gz02"><i>'.$space['friends'].'</i><span>关注</span> </div></div>';
+			$html .= "<a href=\"home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2\" id=\"a_sendpm_$space[uid]\" onclick=\"showWindow('showMsgBox', this.href, 'get', 0)\"  class='sixin'></a>";
+			$html .= "<a href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=$space[uid]\" id=\"followmod\" onclick=\"showWindow(this.id, this.href, 'get', 0);\" class='guanzhu'></a>";
 
-			$html .= '</ul>';
+		//	$html .= '</ul>';
 
 			$encodeusername = rawurlencode($space['username']);
 

@@ -124,9 +124,9 @@ class logging_ctl {
 					$pass=passport::useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);	//add
 					if(is_array($pass)){
 						$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
-					}/*else{
+					}else{
 						showmessage('login_passport_invalid');
-					}*/
+					}
 				}
 				
 				//--------add end-----------
