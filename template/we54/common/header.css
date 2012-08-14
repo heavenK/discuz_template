@@ -1,13 +1,13 @@
 @charset "gb2312";
 /* CSS Document */
 
-body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
+body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå";}
 
 
 /*kaiser*/
 #toptb #diy-tg_menu{ margin:-2px 0 0 -18px;}
 .xg2 img{ width:763px; height:165px;}
-#scbar_txt{ width:149px; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå";}
+#scbar_txt{ width:149px; font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå";}
 #scbar_btn{ margin:6px 0 0 3px; background:url(/template/we54/images/all_bg.jpg) no-repeat -180px -74px;}
 
 /*Í¨ÓÃµ÷Í¼*/
@@ -28,7 +28,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 .top_header { width:1000px; height:36px; overflow:hidden;}
 .zzz { width:125px; height:36px; float:left;}
-.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666; font-family:"ËÎÌå";}
+.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666;}
 .dl_zc a { text-decoration:none; color:#0035a0; float:none;}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
@@ -38,7 +38,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 #um a{ color:#0035a0;}
 
 /*¶¥²¿Ö÷µ¼º½*/
-.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; _right:-1px; float:left; overflow:hidden; font-family:"ËÎÌå";}
+.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; _right:-1px; float:left; overflow:hidden;}
 	.zx_nav { width:316px; height:88px; background-color:#f7f7f7; overflow:hidden; float:left;}
 	.zx_sec_nav { width:215px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
