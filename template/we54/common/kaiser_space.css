@@ -1,5 +1,6 @@
+.wp								{ margin-bottom:30px;}
 .ct2 .kaiser_mn					{ width:809px !important; margin:0 29px 0 0; border:none; float:right;}
 .ct2 .kaiser_bm					{ margin:0; border:none;}
-.ct2 .kaiser_sd					{ width:138px; float:left;}
+.ct2 .kaiser_sd					{ width:138px; overflow:visible; float:left;}
 .ct2 .kaiser_bm_h				{ height:26px; margin:17px 0 0 0; padding:0 0 0 11px; background:url(/template/we54/images/kaiser_space_pic_cont_bav.png) no-repeat; border:none; overflow:hidden;}
-.ct2 .kaiser_bm_h .mt			{ width:93px; height:26px; text-align:center;}
+.ct2 .kaiser_bm_h .mt			{ width:93px; height:26px; text-align:center; font-size:14px; color:#333333;}
