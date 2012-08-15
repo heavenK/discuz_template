@@ -17,12 +17,12 @@ $picid = empty($_GET['picid'])?0:intval($_GET['picid']);
 
 $page = empty($_GET['page'])?1:intval($_GET['page']);
 if($page<1) $page=1;
-var_dump($space);
+
 //add
 space_merge($space, 'count');
 $data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
 if($_G['member']['extgroupids']==$data['groupid']){
-$space['vertifyico']='static/image/common/kaiser_ext.png';
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
 }
 
 //end add
