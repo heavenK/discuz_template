@@ -7,8 +7,8 @@
 .huiyuan_rz { width:122px; height:32px; overflow:hidden; float:left; margin-bottom:6px; display:inline;}
 .tz_zt_gz { width:117px; height:52px; overflow:hidden; float:left; margin-bottom:7px; display:inline; border:1px solid #e1dbbd; background-color:#fefef4; padding:6px 0 0 1px;}
 .tz_zt_gz01 { width:38px; height:46px; overflow:hidden; float:left; border-right:1px solid #e1dbbd; text-align:center;}
-.tz_zt_gz i { width:38px; height:23px; overflow:hidden; float:left; font-weight:bold; font-size:14px; color:#FF0000; line-height:28px; }
-.tz_zt_gz span { width:38px; height:23px; overflow:hidden; float:left; line-height:30px;}
+.tz_zt_gz i { width:38px; height:23px; overflow:hidden; float:left; font-weight:bold; font-size:14px; color:#ff6600; line-height:28px; }
+.tz_zt_gz span { width:38px; height:23px; overflow:hidden; float:left; line-height:30px; color:#996633;}
 .tz_zt_gz02 { width:38px; height:46px; overflow:hidden; float:left; text-align:center;}
 .sixin { width:63px; height:22px; overflow:hidden; float:left; background:url(../images/sixin.jpg) no-repeat; margin:0 0 6px 28px; display:inline; cursor:pointer;}
 .sixin:hover { background:url(../images/sixin02.jpg) no-repeat;}	
@@ -18,8 +18,8 @@
 .web_left li   { width:128px; height:30px; line-height:30px; overflow:hidden; float:left; }
 .pre_shouw	     { width:128px; height:30px;  background:url(../images/xinxi_bg.jpg) no-repeat; overflow:hidden; float:left; }
 .web_left li b  { width:16px; height:16px; overflow:hidden; float:left; margin:6px 8px 0 13px; display:inline;}
-.web_left li a { color:#000000; font-size:14px;}
+.web_left li a { color:#996633; font-size:14px;}
 
 #ct		{background:url(../images/home_left_bg.jpg) repeat-y #FFFFFF !important; border-top:3px solid #d6d1ad; border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7; }
-#frame1_left .block	{ margin:0 !important;}
+#frame1_left .block	{ margin:0 !important;border:0;}
 #frame1_left .dxb_bc{padding:0;}

@@ -1,6 +1,6 @@
 /*通用样式*/
 *			{ margin:0; padding:0; border:0;}
-body		{ background: url(/template/we54/images/home_top_bg.jpg) repeat-x top; font-size:12px; font-family:"宋体"; color:#663300;}
+body		{ background: url(/template/we54/images/home_top_bg.jpg) repeat-x top; font-size:12px; font-family:"宋体"; color:#000;}
 a           { text-decoration:none; }
 a:hover     { text-decoration:underline;}
 .wp         { width:1000px;}

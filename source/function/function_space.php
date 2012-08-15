@@ -73,7 +73,6 @@ function getblockhtml($blockname,$parameters = array()) {
 			$titlemore = $space['self'] ? lang('space', 'block_profile_edit') : '';
 			break;
 		case 'profile':
-			space_merge($space, 'count');
 			$do = $blockname;
 			$managehtml = '';
 			$avatar = empty($parameters['banavatar']) ? 'middle' : $parameters['banavatar'];
@@ -147,13 +146,7 @@ function getblockhtml($blockname,$parameters = array()) {
 				$html .= "<li class='ul_poke'><a href=\"home.php?mod=spacecp&ac=poke&op=send&uid=$space[uid]&handlekey=propokehk_{$space[uid]}\" id=\"a_poke_{$space[uid]}\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">".lang('space', 'block_profile_poke')."</a></li>";
 				$html .= "<li class='ul_pm'><a href=\"home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2\" id=\"a_sendpm_$space[uid]\" onclick=\"showWindow('showMsgBox', this.href, 'get', 0)\">".lang('space', 'block_profile_sendmessage')."</a></li>";
 			}*/
-			$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
-			if($_G['member']['extgroupids']==$data['groupid']){
-		//		$icodir=$_G['setting']['attachurl'].'common/'.$data['icon'];
-				$icodir='static/image/common/kaiser_ext.png';
-				$space['vertifyico']=$icodir;
-				$html .= '<div class="huiyuan_rz"><img src="'.$icodir.'" width="122" height="32" border="0"/></div>';
-			}
+			
 			$html .='<div class="tz_zt_gz"><div class="tz_zt_gz01"><i>'.$space['posts'].'</i><span>帖子</span></div>
 					<div class="tz_zt_gz01"><i>'.$space['threads'].'</i><span>主题</span></div>
 					<div class="tz_zt_gz02"><i>'.$space['friends'].'</i><span>关注</span> </div></div>';

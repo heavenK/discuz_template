@@ -122,6 +122,13 @@ if($space['medals']) {
 		}
 	}
 }
+space_merge($space, 'count');
+$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if($_G['member']['extgroupids']==$data['groupid']){
+	$icodir=$_G['setting']['attachurl'].'common/'.$data['icon'];
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
+	$html .= '<div class="huiyuan_rz"><img src="'.$icodir.'" width="122" height="32" border="0"/></div>';
+}
 include_once(template('home/space_index'));
 
 function formatdata($data, $position, $space) {
