@@ -5,7 +5,7 @@ $_CACHE['apps'] = array (
     'appid' => '1',
     'type' => 'DISCUZX',
     'name' => 'Discuz! Board',
-    'url' => 'http://bbsup.we54.com',
+    'url' => 'http://bbs_test.we54.com',
     'authkey' => 'C8e0T0ke77N1A610828b03wew4x8G3BcDaJam1Vez6jf7aq92du56cg499u6u5zc',
     'ip' => '',
     'viewprourl' => '',
@@ -14,8 +14,17 @@ $_CACHE['apps'] = array (
     'dbcharset' => '',
     'synlogin' => '1',
     'recvnote' => '1',
-    'extra' => '',
-    'tagtemplates' => '',
+    'extra' => 
+    array (
+      'apppath' => '',
+      'extraurl' => 
+      array (
+      ),
+    ),
+    'tagtemplates' => '<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="template"><![CDATA[]]></item>
+</root>',
     'allowips' => '',
   ),
 );
