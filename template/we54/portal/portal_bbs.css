@@ -114,8 +114,8 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	.life_logo li strong a:hover { background-position:-880px -183px;}
 	.life_news { width:275px; height:130px; overflow:hidden; float:left; margin:5px 0 0 21px; display:inline;}
 	.life_news li { width:275px; height:19px; margin-bottom:6px; display:inline; overflow:hidden; float:left; font-size:14px;}
-	.life_news li i { font-style:normal; color:#ff6600;}
-	.life_news li i a { font-style:normal; color:#ff6600;}
+	.life_news li i { font-style:normal; color:#ff9966;}
+	.life_news li i a { font-style:normal; color:#ff9966;}
 	.life_news li em a { font-style:normal; }
 
 	/*社区中间新闻*/
@@ -128,8 +128,8 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	.news_shequ dl dt a { color:#ff6633;}
 	.news_shequ ul { width:435px; height:240px; overflow:hidden; float:left; margin:5px 0 0 0; display:inline;}
 	.news_shequ ul li { width:435px; height:20px; margin-bottom:4px; display:inline; overflow:hidden; float:left; font-size:14px;}
-	.news_shequ ul li i { font-style:normal; color:#ff6600; width:80px; float:left;}
-	.news_shequ ul li i a { font-style:normal; color:#ff6600;}
+	.news_shequ ul li i { font-style:normal; color:#ff9966; width:80px; float:left;}
+	.news_shequ ul li i a { font-style:normal; color:#ff9966;}
 	.news_shequ ul li em { font-style:normal; color:#ff6600; width:292px; float:left;}
 	.news_shequ ul li em a { font-style:normal; }
 	.news_shequ ul li strong { font-weight:normal; color:#999999; font-size:12px;}
