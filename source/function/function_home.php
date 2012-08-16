@@ -530,11 +530,12 @@ function getuserdefaultdiy() {
 			),
 			'parameters' => array(
 					'profile' => array('title'=>''),
+					'personalinfo' => array('title'=>'基本资料'),
 					'blog' => array('showmessage' => 150, 'shownum' => 6),
 					'doing' => array('shownum' => 15),
 					'album' => array('shownum' => 8),
 					'thread' => array('shownum' => 10),
-					'share' => array('shownum' => 10),
+					'share' => array('shownum' => 10,'title'=>'TA的分享'),
 					'friend' => array('shownum' => 18),
 					'group' => array('shownum' => 12),
 					'visitor' => array('shownum' => 18),

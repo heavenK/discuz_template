@@ -28,6 +28,10 @@ function getblockhtml($blockname,$parameters = array()) {
 		case 'personalinfo':
 			$do = 'profile';
 			space_merge($space, 'profile');
+			space_merge($space, 'count');
+			space_merge($space, 'status');
+			$space['group'] = $_G['cache']['usergroups'][$space['groupid']];
+			$space['group']['icon'] = g_icon($space['groupid'], 1);
 
 			require_once libfile('function/friend');
 			$isfriend = friend_check($space['uid']);
@@ -43,7 +47,8 @@ function getblockhtml($blockname,$parameters = array()) {
 					continue;
 				}
 				if(
-					$field['available'] && $field['invisible'] != '1' && strlen($space[$fieldid]) > 0 &&
+			//		$field['available'] && $field['invisible'] != '1' && strlen($space[$fieldid]) > 0 &&
+					$field['available'] && $field['invisible'] != '1' &&
 					(
 						$field['showinthread'] ||
 						$field['showincard'] ||
@@ -62,21 +67,31 @@ function getblockhtml($blockname,$parameters = array()) {
 							$val = '<span><a href="'.$imgurl.'" target="_blank"><img src="'.$imgurl.'"  style="max-width: 300px;" /></a></span>';
 						}
 						if ($val == '')  $val = '';
-						$html .= '<li><em>'.$field['title'].'</em>'.$val.'</li>';
+						$html .= '<li><em>'.$field['title'].'：</em><i>'.$val.'</i></li>';
 					}
 				}
 			}
+			//-----add------------------------------------------------
+			$html.="<li><em>用户组别：</em><i></i>".$space['group']['grouptitle']."</li>";
+			$html.="<li><em>青春豆：</em><i></i>$space[extcredits5]</li>";
+			$html.="<li><em>注册时间：</em><i></i>".dgmdate($space[regdate])."</li>";
+			$html.="<li><em>积分：</em><i></i>$space[extcredits1]</li>";
+			$html.="<li><em>在线时间：</em><i></i>$space[oltime]小时</li>";
+			$html.="<li><em>上次发帖：</em><i></i>".dgmdate($space[lastactivity])."</li>";
+			$html.="<li><em>最后访问：</em><i></i>".dgmdate($space[lastvisit])."</li>";
+			//--------------------------------------------------------
 			$html = $html ? $html : '<li>'.lang('space', 'block_view_profileinfo_noperm').'</li>';
 			$html = '<ul id="pprl" class="mbm pbm bbda cl">'.$html.$more.'</ul>';
-			$more = lang('space', 'block_profile_all', array('uid' => $uid));
+		//	$more = lang('space', 'block_profile_all', array('uid' => $uid));
 			$html = $html.$more;
 			$titlemore = $space['self'] ? lang('space', 'block_profile_edit') : '';
+			$titlemore = '';//add
 			break;
 		case 'profile':
 			$do = $blockname;
 			$managehtml = '';
 			$avatar = empty($parameters['banavatar']) ? 'middle' : $parameters['banavatar'];
-			$html .= "<div class=\"hm huiyuan_tx\"><p><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".avatar($uid,$avatar).'</a></p>';
+			$html .= "<div class=\"hm\"><p><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".avatar($uid,$avatar).'</a></p>';
 
 			$memberfieldforum = C::t('common_member_field_forum')->fetch($space['uid']);
 			$space['medals'] = $memberfieldforum['medals'];
@@ -102,16 +117,15 @@ function getblockhtml($blockname,$parameters = array()) {
 					$usermedals = '<p class="md_ctrl"><a href="home.php?mod=medal">'.$usermedals.'</a></p>'.$usermedalmenus;
 				}
 			}
-		//	$html .= "<h2 class=\"mbn\"><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".$space['username']."</a></h2>$usermedals";
-		//	$html .= '</div><ul class="xl xl2 cl ul_list">';
-			$html .= '</div>';
+			$html .= "<h2 class=\"mbn\"><a href=\"home.php?mod=space&uid=$uid\" target=\"_blank\">".$space['username']."</a></h2>$usermedals";
+			$html .= '</div><ul class="xl xl2 cl ul_list">';
 
 			$magicinfo = $showmagicgift = false;
 			if($_G['setting']['magicstatus'] && $_G['setting']['magics']['gift']) {
 				$showmagicgift = true;
 				$magicinfo = !empty($space['magicgift']) ? dunserialize($space['magicgift']) : array();
 			}
-		/*	if(helper_access::check_module('follow')) {
+			if(helper_access::check_module('follow')) {
 				$html .= '<li class="ul_broadcast"><a href="home.php?mod=space&uid='.$uid.'">'.lang('space', 'block_profile_follow').'</a></li>';
 			}
 			if ($space['self']) {
@@ -145,15 +159,10 @@ function getblockhtml($blockname,$parameters = array()) {
 				$html .= "<li class='ul_msg'><a href=\"home.php?mod=space&uid=$space[uid]&do=wall\">".lang('space', 'block_profile_wall_to_me')."</a></li>";
 				$html .= "<li class='ul_poke'><a href=\"home.php?mod=spacecp&ac=poke&op=send&uid=$space[uid]&handlekey=propokehk_{$space[uid]}\" id=\"a_poke_{$space[uid]}\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">".lang('space', 'block_profile_poke')."</a></li>";
 				$html .= "<li class='ul_pm'><a href=\"home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2\" id=\"a_sendpm_$space[uid]\" onclick=\"showWindow('showMsgBox', this.href, 'get', 0)\">".lang('space', 'block_profile_sendmessage')."</a></li>";
-			}*/
+			}
 			
-			$html .='<div class="tz_zt_gz"><div class="tz_zt_gz01"><i>'.$space['posts'].'</i><span>帖子</span></div>
-					<div class="tz_zt_gz01"><i>'.$space['threads'].'</i><span>主题</span></div>
-					<div class="tz_zt_gz02"><i>'.$space['friends'].'</i><span>关注</span> </div></div>';
-			$html .= "<a href=\"home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2\" id=\"a_sendpm_$space[uid]\" onclick=\"showWindow('showMsgBox', this.href, 'get', 0)\"  class='sixin'></a>";
-			$html .= "<a href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=$space[uid]\" id=\"followmod\" onclick=\"showWindow(this.id, this.href, 'get', 0);\" class='guanzhu'></a>";
 
-		//	$html .= '</ul>';
+			$html .= '</ul>';
 
 			$encodeusername = rawurlencode($space['username']);
 
@@ -431,9 +440,24 @@ function getblockhtml($blockname,$parameters = array()) {
 			$fuids = array_keys($friendlist);
 			getonlinemember($fuids);
 
+			//add
+			$followerlist = C::t('home_follow')->fetch_all_following_by_uid($uid);
 			foreach ($friendlist as $key => $value) {
+				$gzflag=false;			//add
 				$classname = $_G['ols'][$value['fuid']]?'gol':'';
-				$html .= '<li><a href="home.php?mod=space&uid='.$value['fuid'].'" target="_blank" class="avt"><em class="'.$classname.'"></em>'.avatar($value['fuid'],'small').'</a><p><a href="home.php?mod=space&uid='.$value[fuid].'" target="_blank">'.$value['fusername'].'</a></p></li>';
+				$html .= '<li><a href="home.php?mod=space&uid='.$value['fuid'].'" target="_blank" class="avt"><em class="'.$classname.'"></em>'.avatar($value['fuid'],'small').'</a><p><a href="home.php?mod=space&uid='.$value[fuid].'" target="_blank">'.$value['fusername'].'</a></p>';
+				foreach($followerlist as $k=>$val){
+					if($val['followuid']==$value['fuid']){
+						$gzflag=true;
+						break;
+					}
+				}
+				if($gzflag){
+					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['fuid']."\" id=\"followmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">已关注</a></p>";
+				}else{
+					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['fuid']."\" id=\"followmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">未关注</a></p>";
+				}
+				$html .='</li>';
 			}
 			$html = !$html ? '<p class="emp">'.lang('space','block_friend_no_content').($space['self'] ? lang('space', 'block_friend_no_content_publish', $space) : '').'</p>' : '<ul class="ml mls cl">'.$html.'</ul>';
 			break;
@@ -451,7 +475,10 @@ function getblockhtml($blockname,$parameters = array()) {
 
 			getonlinemember($fuids);
 
+			//add
+			$followerlist = C::t('home_follow')->fetch_all_following_by_uid($uid);
 			foreach($list as $value) {
+				$gzflag=false;			//add
 				$html .= "<li>";
 				if ($value['vusername'] == '') {
 					$html .= lang('space', 'visitor_anonymity');
@@ -462,7 +489,19 @@ function getblockhtml($blockname,$parameters = array()) {
 							'class' => ($_G['ols'][$value['vuid']]?'gol':''),
 							'avatar' => avatar($value['vuid'],'small')));
 				}
-				$html .= "<span class=\"xg2\">".dgmdate($value['dateline'],'u', '9999', 'Y-m-d')."</span>";
+			//	$html .= "<span class=\"xg2\">".dgmdate($value['dateline'],'u', '9999', 'Y-m-d')."</span>";
+			//add
+				foreach($followerlist as $k=>$val){
+					if($val['followuid']==$value['vuid']){
+						$gzflag=true;
+						break;
+					}
+				}
+				if($gzflag){
+					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['vuid']."\" id=\"vfollowmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">已关注</a></p>";
+				}else{
+					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['vuid']."\" id=\"vfollowmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">未关注</a></p>";
+				}
 				$html .= "</li>";
 			}
 			$html = !$html ? '<p class="emp">'.lang('space','block_visitor_no_content').($space['self'] ? lang('space', 'block_visitor_no_content_publish', $space) : '').'</p>' : '<ul class="ml mls cl">'.$html.'</ul>';

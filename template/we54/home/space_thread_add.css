@@ -1,0 +1,9 @@
+@charset "gb2312";
+/* CSS Document */
+
+#ct {background:url(../images/home_left_bg.jpg) repeat-y #FFFFFF !important;margin-bottom:50px;border-top:3px solid #d6d1ad; border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7;}
+#ct .bm_h{background:none;height:43px;font-family:'Î¢ÈíÑÅºÚ';line-height:50px;border-bottom:1px solid #f1f1e3;padding:0;}
+#ct .mt{font-size:14px;}
+.ct2 .mn{float:right;width:840px !important;margin-left:0;}
+.ct2 .sd{float:left;width:139px;}
+.bm		{border:none;}
