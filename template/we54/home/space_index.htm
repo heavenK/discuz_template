@@ -1,10 +1,10 @@
 <!--{subtemplate home/space_header}-->
-<link rel="stylesheet" type="text/css" href="template/we54/home/space_index.css" />
 <div id="ct" class="wp w cl web_all">
 	<div id="diypage" class="area">
 		<div id="frame1" class="frame cl" noedit="1">
 			<!--{subtemplate home/space_left_nav}-->
-			<div id="frame1_center" style="width:{$widths[1]}px" class="z column">
+
+			<div id="frame1_center" class="z column">
 				<!--{if empty($centerlist)}-->
 				<div id="center_temp" class="move-span temp"></div>
 				<!--{/if}-->
@@ -18,7 +18,7 @@
 			</div>
 
 			<!--{if (strlen($userdiy['currentlayout']) > 3) }-->
-			<div id="frame1_right" style="width:{$widths[2]}px" class="z column">
+			<div id="frame1_right" class="z column">
 				<!--{if empty($rightlist)}-->
 				<div id="right_temp" class="move-span temp"></div>
 				<!--{/if}-->
@@ -35,8 +35,37 @@
 	</div>
 </div>
 
+<link rel="stylesheet" type="text/css" href="template/we54/home/space_index.css" />
 
-
+<div class="web_all" style="display:none;">
+	<div class="web_left">
+		<div class="huiyuan">
+			<div class="huiyuan_tx"><img src="/template/we54/por_images/ad04.jpg" width="120" height="120" border="0"/></div>
+			<div class="huiyuan_rz"><img src="/template/we54/images/huiyuan.jpg" width="122" height="32" border="0"/></div>
+			<div class="tz_zt_gz">
+				<div class="tz_zt_gz01">
+					<i>48</i>
+					<span>帖子</span>
+                </div>
+				<div class="tz_zt_gz01">
+					<i>11</i>
+					<span>主题</span>
+                </div>
+				<div class="tz_zt_gz02">
+					<i>22</i>
+					<span>关注</span>
+                </div>
+            </div>
+        	<div class="sixin"></div>
+            <div class="guanzhu"></div>
+        </div>
+		<ul>
+			<li  class="pre_shouw"><b><img src="/template/we54/images/sy_logo.gif" width="14" height="16" border="0"/></b><a href="#">TA的首页</a></li>
+            <li><a href="#"><b><img src="/template/we54/images/tz_logo.gif" width="16" height="16" border="0"/></b>TA的帖子</a></li>
+            <li><a href="#"><b><img src="/template/we54/images/xc_logo.gif" width="16" height="14" border="0"/></b>TA的相册</a></li>
+            <li><a href="#"><b><img src="/template/we54/images/hy_logo.gif" width="16" height="16" border="0"/></b>TA的好友</a></li>
+		</ul>
+	</div>
 
 
 
