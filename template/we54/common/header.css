@@ -58,7 +58,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 
 
-.top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left;}
+.top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left; margin:5px 0 0 0; display:inline;}
 .top_ad { width:1000px; height:70px; margin:5px 0 5px 0; display:inline; overflow:hidden; float:left;}
 .top_ad_02 { width:200px; height:70px; overflow:hidden; float:left;}
 .top_ad_03 { width:590px; height:70px; margin:0 5px 0 5px; display:inline; overflow:hidden; float:left;}
