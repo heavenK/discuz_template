@@ -13,7 +13,11 @@
 				<div class="tz_zt_gz01"><i><!--{$space['threads']}--></i><span>Ö÷Ìâ</span></div>
 				<div class="tz_zt_gz02"><i><!--{$space['friends']}--></i><span>¹Ø×¢</span> </div></div>
 				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)"  class='sixin'></a>
+				<!--{if $gzflag}-->
+				<a href="home.php?mod=spacecp&ac=follow&op=del&fuid=$space[uid]" id="followmod" onclick="showWindow(this.id, this.href, 'get', 0);" class='yguanzhu'></a>
+				<!--{else}-->
 				<a href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$space[uid]" id="followmod" onclick="showWindow(this.id, this.href, 'get', 0);" class='guanzhu'></a>
+				<!--{/if}-->
 			</div>
 		</div>
 	<ul>

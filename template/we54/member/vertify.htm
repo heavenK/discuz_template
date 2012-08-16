@@ -6,7 +6,7 @@
 <div class="register_box">
     <div class="register"><!--зЂВс-->
         <span><img src="{$_G[siteurl]}template/we54/common/images/register_02_nav.png" /></span>
-	<form id="bindmobileform" name="bindmobileform" action="member.php?mod=$regname&action=bindmobile" method="post" autocomplete="off" onsubmit="$('flag').value = '1';subvertifycode(this.id,'tip_$_G[gp_handlekey]');return false;">
+	<form id="bindmobileform" name="bindmobileform" action="member.php?mod=$regname&action=bindmobile" method="post" autocomplete="off" onsubmit="$('flag').value = '1';subvertifycode(this.id,'tip_$_G[gp_handlekey]','$dreferer');return false;">
         <dl class="register_02">
 		<input type="hidden" name="refer" value="home.php?mod=space&uid=$space[uid]&do=bindmobile" />
 		<input type="hidden" id="flag" name="flag" value="1" />
@@ -29,7 +29,7 @@
 				<kbd id="tip_$_G[gp_handlekey]" class="p_chk" ></kbd>
 			</dt>
         </dl>
-        <b><button type="submit"  name="bindmobilesubmit_btn" id="bindmobilesubmit_btn" value="true" tabindex="4"><strong style="display:none;">{lang smstong:smstong_mobilebind_submit}</strong></button><a href="/forum.php" tabindex="5"></a></b>
+        <b><button type="submit"  name="bindmobilesubmit_btn" id="bindmobilesubmit_btn" value="true" tabindex="4"><strong style="display:none;">{lang smstong:smstong_mobilebind_submit}</strong></button><a href="member.php?mod=regend&o=$dreferer" tabindex="5"></a></b>
 	</form>
 	
     </div>

@@ -129,6 +129,16 @@ if($_G['member']['extgroupids']==$data['groupid']){
 	$space['vertifyico']='static/image/common/kaiser_ext.png';
 	$html .= '<div class="huiyuan_rz"><img src="'.$icodir.'" width="122" height="32" border="0"/></div>';
 }
+
+//add
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
+foreach($followerlist as $k=>$val){
+	if($val['followuid']==$uid){
+		$gzflag=true;
+		break;
+	}
+}
+
 include_once(template('home/space_index'));
 
 function formatdata($data, $position, $space) {
