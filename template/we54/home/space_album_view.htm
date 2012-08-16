@@ -5,11 +5,11 @@
 <!--{if $_G[setting][homepagestyle]}-->
 	<!--{subtemplate home/space_header}-->
 	<div id="ct" class="ct2 wp cl">
-		<div class="mn">
-			<div class="bm">
-				<div class="bm_h">
+		<div class="mn kaiser_mn">
+			<div class="bm kaiser_bm">
+				<div class="bm_h kaiser_bm_h">
 					<!--{if $space[self] && helper_access::check_module('album')}--><span class="xi2 y"><a href="home.php?mod=spacecp&ac=upload" class="addnew">{lang upload_pic}</a></span><!--{/if}-->
-					<h1 class="mt">{lang album}</h1>
+					<h1 class="mt"><!--{if $space['self']}-->ÎÒ<!--{else}-->TA<!--{/if}-->µÄ{lang album}</h1>
 				</div>
 			<div class="bm_c">
 <!--{else}-->
@@ -40,12 +40,12 @@
 			<!--{/if}-->
 			<div class="y">
 				<!--{hook/space_album_op_extra}-->
-				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">{lang edit}</a><span class="pipe">|</span><!--{/if}-->
+				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">{lang edit}</a><!--{/if}-->
 				<!--{if ($_G[uid] == $album[uid] || checkperm('managealbum')) && $album[albumid] > 0}-->
-					<a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a><span class="pipe">|</span>
+					<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
 				<!--{/if}-->
 				<!--{if $_G[uid] != $album[uid]}-->
-				<a href="javascript:;" onclick="showWindow('miscreport$album[albumid]', 'misc.php?mod=report&rtype=album&uid=$album[uid]&rid=$album[albumid]', 'get', -1);return false;">{lang report}</a><span class="pipe">|</span>
+				<span class="pipe">|</span><a href="javascript:;" onclick="showWindow('miscreport$album[albumid]', 'misc.php?mod=report&rtype=album&uid=$album[uid]&rid=$album[albumid]', 'get', -1);return false;">{lang report}</a><span class="pipe">|</span>
 				<!--{/if}-->
 			</div>
 			<!--{if $album['catname']}-->
@@ -138,8 +138,8 @@
 				</div>
 			<!--{if $_G[setting][homepagestyle]}-->
 			</div>
-			<div class="sd">
-				<!--{subtemplate home/space_userabout}-->
+			<div class="sd kaiser_sd">
+				<!--{subtemplate home/space_left_nav}-->
 			<!--{/if}-->
 		</div>
 	</div>

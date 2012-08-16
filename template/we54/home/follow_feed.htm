@@ -36,10 +36,10 @@
 	<!--{if $_G[setting][homepagestyle]}-->
 		<!--{subtemplate home/space_header}-->
 		<div id="ct" class="ct2 wp cl">
-			<div class="mn">
-				<div class="bm">
-					<div class="bm_h">
-						<h1 class="mt">{lang follow}</h1>
+			<div class="mn kaiser_mn">
+				<div class="bm kaiser_bm">
+					<div class="bm_h kaiser_bm_h">
+						<h1 class="mt"><!--{if $space['self']}-->ÎÒ<!--{else}-->TA<!--{/if}-->µÄ{lang follow}</h1>
 					</div>
 				<div class="bm_c">
 	<!--{else}-->
@@ -633,8 +633,8 @@
 				</div>
 			<!--{if $_G[setting][homepagestyle]}-->
 			</div>
-			<div class="sd">
-				<!--{subtemplate home/space_userabout}-->
+			<div class="sd kaiser_sd">
+				<!--{subtemplate home/space_left_nav}-->
 			<!--{/if}-->
 		<!--{/if}-->
 		</div>
