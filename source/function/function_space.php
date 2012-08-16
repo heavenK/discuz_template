@@ -453,9 +453,9 @@ function getblockhtml($blockname,$parameters = array()) {
 					}
 				}
 				if($gzflag){
-					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['fuid']."\" id=\"followmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">已关注</a></p>";
+					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['fuid']."\" id=\"followmd".$value['fuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['fuid'].");\">已关注</a></p>";
 				}else{
-					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['fuid']."\" id=\"followmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">未关注</a></p>";
+					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['fuid']."\" id=\"followmd".$value['fuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['fuid'].");\">未关注</a></p>";
 				}
 				$html .='</li>';
 			}
@@ -498,9 +498,9 @@ function getblockhtml($blockname,$parameters = array()) {
 					}
 				}
 				if($gzflag){
-					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['vuid']."\" id=\"vfollowmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">已关注</a></p>";
+					$html.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['vuid']."\" id=\"vfollowmd".$value['vuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['vuid'].");\">已关注</a></p>";
 				}else{
-					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['vuid']."\" id=\"vfollowmd\" onclick=\"showWindow(this.id, this.href, 'get', 0);\">未关注</a></p>";
+					$html.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['vuid']."\" id=\"vfollowmd".$value['vuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['vuid'].");\">未关注</a></p>";
 				}
 				$html .= "</li>";
 			}

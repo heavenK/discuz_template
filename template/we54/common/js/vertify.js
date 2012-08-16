@@ -28,7 +28,7 @@ function trim(str) {
 	return str.replace(/^\s*(.*?)[\s\n]*$/g, '$1');
 }
 
-function subvertifycode(formid,id){
+function subvertifycode(formid,id,url){
 	var verifycode = trim($('verifycode').value);
 	var flag=false;
 	var ajaxframeid = 'ajaxframe';
@@ -48,7 +48,7 @@ function subvertifycode(formid,id){
 				if(data!="success"){
 					$(id).innerHTML = data;
 				}else{
-					showDialog('绑定手机成功','right','','location.href="member.php?mod=regend"',null,null,null,null,null,null,2);
+					showDialog('绑定手机成功','right','','location.href="member.php?mod=regend&o='+url+'"',null,null,null,null,null,null,2);
 				}
 			}
 		});
