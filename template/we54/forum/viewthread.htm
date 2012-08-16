@@ -493,10 +493,10 @@ function showsetcover(obj) {
 function succeedhandle_followmod(url, msg, values) {
 	var fObj = $('followmod_'+values['fuid']);
 	if(values['type'] == 'add') {
-		fObj.innerHTML = '{lang nofollow}';
+		fObj.innerHTML = '<img src="template/we54/images/kaiser_flw_no.png" />';
 		fObj.href = 'home.php?mod=spacecp&ac=follow&op=del&fuid='+values['fuid'];
 	} else if(values['type'] == 'del') {
-		fObj.innerHTML = '{lang follow}';
+		fObj.innerHTML = '<img src="template/we54/images/kaiser_flw.png" />';
 		fObj.href = 'home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid='+values['fuid'];
 	}
 }

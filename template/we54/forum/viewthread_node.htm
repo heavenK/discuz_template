@@ -118,7 +118,13 @@
 					<li class="kaiser_pm2"><a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$post[authorid]&touid=$post[authorid]&pmid=0&daterange=2&pid=$post[pid]&tid=$post[tid]" onclick="showWindow('sendpm', this.href);" title="{lang viewthread_left_sendpm}" class="xi2"></a></li>
                     <!--{if helper_access::check_module('follow')}-->
 					<li class="kaiser_addflw">
-						<a href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$post[authorid]" id="followmod_$post[authorid]" title="{lang follow}" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);"></a>
+                        <!--{eval $follow = 0;}-->
+						<!--{eval $follow = C::t('home_follow')->fetch_all_by_uid_followuid($_G['uid'], $post['authorid']);}-->
+						<!--{if !$follow}-->
+							<a id="followmod_$post[authorid]" title="{lang follow}" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$post[authorid]"><img src="template/we54/images/kaiser_flw.png" /></a>
+						<!--{else}-->
+							<a id="followmod_$post[authorid]" title="{lang follow}" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" href="home.php?mod=spacecp&ac=follow&op=del&fuid=$post[authorid]"><img src="template/we54/images/kaiser_flw_no.png" /></a>
+						<!--{/if}-->
 					</li>
 					<!--{/if}-->
 				</ul>

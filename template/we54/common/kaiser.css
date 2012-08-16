@@ -53,7 +53,7 @@
 .pls .kaiser_tns_xg2				{ padding:10px;}
 .xl2 li								{ width:69px; height:22px; padding:8px 0 11px 0;}
 .kaiser_pm2 a						{ width:63px; height:22px; background:url(../../../static/image/common/kaiser_pmto.png) no-repeat; float:left;}
-.kaiser_addflw a					{ width:63px; height:22px; background:url(../../../static/image/common/kaiser_flw.png) no-repeat; float:left;}
+.kaiser_addflw a					{ width:63px; height:22px; text-indent:0; overflow:hidden; float:left;}
 .kaiser_mtw_mbm_cl					{ padding:0 0 52px 0;}
 #p_btn a							{ margin-right:0; padding:0;}
 #p_btn .kaiser_pingfen_btn			{ width:85px; height:38px; margin:0 0 0 307px; display:inline; background:url(../../../static/image/common/kaiser_pingfen_reply_btn.png) no-repeat 0 0; overflow:hidden; float:left;}
