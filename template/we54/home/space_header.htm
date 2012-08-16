@@ -18,6 +18,8 @@
     });
     </script>
 	<style id="diy_style">$space[spacecss]</style>
+    <link rel="stylesheet" type="text/css" href="template/we54/home/space_thread_add.css">
+    <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/kaiser_space.css" />
 </head>
 
 <body id="space" onkeydown="if(event.keyCode==27) return false;">
@@ -113,7 +115,7 @@
 	<!--{if $space['status'] == -1 && $_G['adminid'] == 1 }-->
 		<p class="ptw xw1 xi1 hm"><img src="{IMGDIR}/locked.gif" alt="Locked" class="vm" /> {lang message_banned}</p>
 	<!--{/if}-->
-	<div id="hd" class="wp cl" style="display:none;" >
+	<div id="hd" class="wp cl" style=" display:none;">
 
 		<h2 id="spaceinfoshow" >
 			<!--{eval space_merge($space, 'field_home'); $space[domainurl] = space_domain($space);getuserdiydata($space);$personalnv = isset($_G['blockposition']['nv']) ? $_G['blockposition']['nv'] : '';}-->
@@ -169,5 +171,5 @@
 
 
 <div class="person_name">
-	<span>awsmnms007的空间</span>
+	<span>$space['username']的空间</span>
 </div>
