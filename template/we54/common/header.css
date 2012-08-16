@@ -25,8 +25,8 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 .top_header { width:1000px; height:36px; overflow:hidden;}
 .zzz { width:125px; height:36px; float:left;}
-.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666;}
-.dl_zc a { text-decoration:none; color:#336699; float:none;}
+.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666; font-family:"ËÎÌו";}
+.dl_zc a { text-decoration:none; color:#336699; float:none; font-family:"ËÎÌו";}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; z-index:9999; }

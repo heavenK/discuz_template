@@ -20,7 +20,7 @@ body		{ background: url(/template/we54/por_images/body_bg.jpg);}
 .zzz { width:197px; height:31px; padding:0 0 0 3px; float:left; line-height:36px;}
 .zzz a { color:#666666;}
 .dl_zc { line-height:36px; float:right; color:#666666; }
-.dl_zc a { text-decoration:none; color:#336699; float:none;}
+.dl_zc a { text-decoration:none; color:#336699; float:none; font-family:"ËÎÌו";}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; }
