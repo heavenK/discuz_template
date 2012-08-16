@@ -126,6 +126,7 @@
 .pgb a								{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
 .kaiser_tl_bm_bmw					{ border:none;}
 .kaiser_bm_c						{ padding:0 0 0 10px;}
+.kaiser_bm_c #moderate a			{ color:#0657b2;}
 .kaiser_ml_mlt_mtw_cl li			{ width:224px; height:319px; margin:0 18px 0 15px; padding:0; border:none;}
 .kaiser_ml_mlt_mtw_cl li .c			{ padding-top:0 !important; padding-left:0 !important;}
 .kaiser_ml_mlt_mtw_cl li .c a		{ width:200px; height:200px; padding:10px 14px 14px 10px; background:url(/template/we54/images/kaiser_list_tuji_pic_bg.png) no-repeat 0 0; overflow:hidden; float:left;}
