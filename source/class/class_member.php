@@ -816,9 +816,9 @@ class register_ctl {
 			$url_forward = dreferer();
 
 			//-------------------add-------------------------------------&& passport::p_allowverify()
-			if($_G['setting']['verify']['enabled']  || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
+		//	if($_G['setting']['verify']['enabled']  || $_G['setting']['my_app_status'] && $_G['setting']['videophoto']){
 				$url_forward=passport::url_sms();
-			}
+		//	}
 			//-----------------------------------------------------------
 			$refreshtime = 2000;
 			switch($this->setting['regverify']) {
