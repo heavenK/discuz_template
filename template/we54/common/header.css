@@ -35,7 +35,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 #um a{ color:#0035a0;}
 
 /*顶部主导航*/
-.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; float:left; overflow:hidden;}
+.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; float:left; overflow:hidden; font-family:"宋体";}
 	.zx_nav { width:316px; height:88px; background-color:#f7f7f7; overflow:hidden; float:left;}
 	.zx_sec_nav { width:215px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
