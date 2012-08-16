@@ -25,8 +25,8 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 .top_header { width:1000px; height:36px; overflow:hidden;}
 .zzz { width:125px; height:36px; float:left;}
-.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666;}
-.dl_zc a { text-decoration:none; color:#336699; float:none;}
+.dl_zc { line-height:40px; overflow:hidden; height:36px; float:right; color:#666666; font-family:"宋体";}
+.dl_zc a { text-decoration:none; color:#336699; float:none; font-family:"宋体";}
 .dl_zc span { float:right;}
 .dl_zc i { float:right;}
 .nav 		{ width:90px; height:28px; float:right; position:relative; cursor:pointer; background:url(/template/we54/por_images/xl_nav.jpg) no-repeat; margin-left:15px; margin-top:8px; display:inline; z-index:9999; }
@@ -35,7 +35,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 #um a{ color:#0035a0;}
 
 /*顶部主导航*/
-.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; float:left; overflow:hidden;}
+.main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; float:left; overflow:hidden; font-family:"宋体";}
 	.zx_nav { width:316px; height:88px; background-color:#f7f7f7; overflow:hidden; float:left;}
 	.zx_sec_nav { width:215px; height:65px; overflow:hidden; float:left; margin:23px 0 0 3px; display:inline;}
 	.zx_sec_nav span { height:14px; margin-bottom:14px; padding:0 12px 0 12px; display:inline; overflow:hidden; float:left;}
@@ -58,7 +58,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 
 
 
-.top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left;}
+.top_ad_01 { width:1000px; height:70px; overflow:hidden; float:left; margin:5px 0 0 0; display:inline;}
 .top_ad { width:1000px; height:70px; margin:5px 0 5px 0; display:inline; overflow:hidden; float:left;}
 .top_ad_02 { width:200px; height:70px; overflow:hidden; float:left;}
 .top_ad_03 { width:590px; height:70px; margin:0 5px 0 5px; display:inline; overflow:hidden; float:left;}
