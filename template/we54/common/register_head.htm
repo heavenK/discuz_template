@@ -79,7 +79,7 @@
 	  </h1>
 	 <!--{elseif !$_G[connectguest]}-->
 
-	  <h1>您好！欢迎来到新青年网社区 请 <em>[</em><a href="member.php?mod=logging&action=login&referer={echo rawurlencode($dreferer)}">登录</a><em>]</em> 或 <em>[</em><a href="member.php?mod=register">免费注册</a><em>]</em></h1>
+	  <h1>您好！欢迎来到新青年网社区 请 <em>[</em><a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login">登录</a><em>]</em> 或 <em>[</em><a href="member.php?mod={$_G[setting][regname]}">免费注册</a><em>]</em></h1>
 	  
 	   <!--{/if}-->
 	
@@ -92,8 +92,8 @@
         <ul>
             <li><!-- {if $_GET[mod]!='sms'} --><a href="#"><!-- {/if} -->联系客服<!-- {if $_GET[mod]!='sms'} --></a><!-- {/if} --></li>
             <li><!-- {if $_GET[mod]!='sms'} --><a href="member.php?mod=sms&action=bindmobile"><!-- {/if} -->认证会员<!-- {if $_GET[mod]!='sms'} --></a><!-- {/if} --></li>
-            <li><!-- {if $_GET[mod]!='register'} --><a href="member.php?mod=register"><!-- {/if} -->注册账号<!-- {if $_GET[mod]!='register'} --></a><!-- {/if} --></li>
-            <li><!-- {if $_GET[mod]!='logging'} --><a href="member.php?mod=logging&action=login&referer={echo rawurlencode($dreferer)}"><!-- {/if} -->登录<!-- {if $_GET[mod]!='logging'} --></a><!-- {/if} --></li>
+            <li><!-- {if $_GET[mod]!='register'} --><a href="member.php?mod={$_G[setting][regname]}"><!-- {/if} -->注册账号<!-- {if $_GET[mod]!='register'} --></a><!-- {/if} --></li>
+            <li><!-- {if $_GET[mod]!='logging'} --><a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login"><!-- {/if} -->登录<!-- {if $_GET[mod]!='logging'} --></a><!-- {/if} --></li>
         </ul>
     </div>
 </div>

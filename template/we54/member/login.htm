@@ -48,7 +48,7 @@
             <span id="returnmessage3_$loginhash">{lang getpassword}</span>
             <dl>
                 <dt>
-                    <label for="lostpw_email"><font color="red">*</font>{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
+                    <label for="lostpw_email">{lang email}:</label><input type="text" id="lostpw_email" name="email" size="30" value="" tabindex="1" autocomplete="off"  />
                 </dt>
 				<!--{if $_G['cache']['plugin']['smstong']['mobilepwd'] == 1}-->
 				<!-- <dt>
@@ -56,7 +56,9 @@
                 </dt> -->
 				<!--{/if}-->
                 <dt>
-                    <label for="lostpw_username">{lang username}:</label><input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
+                    <label for="lostpw_username">{lang username}:</label>
+					<a href="javascript:;" onclick="display('layer_lostpw_$loginhash');display('layer_login_$loginhash');" title="{lang getpassword}">·µ»ØµÇÂ¼</a>
+					<input type="text" id="lostpw_username" name="username"size="30" value=""  tabindex="1"  />
                 </dt>
                 <dd>
 					<button class="lostpwdbtn" type="submit" name="lostpwsubmit" value="true" tabindex="100"><span style="display:none;">{lang submit}</span></button>

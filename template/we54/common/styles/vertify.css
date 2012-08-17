@@ -1,2 +1,4 @@
 @charset "gb2312";
 /* CSS Document */
+label		{cursor:auto;}
+tt			{color:red;margin-right:6px;}

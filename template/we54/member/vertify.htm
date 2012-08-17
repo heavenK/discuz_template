@@ -14,7 +14,7 @@
 		<input type="hidden" name="bindmobilesubmit" value="true" />
 		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_G[gp_handlekey]" /><!--{/if}-->
             <dt>
-            	<label for="phone"><u>*</u> 手机号码：</label><input type="text" id="newmobile" name="newmobile" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
+            	<label for="phone"><tt>*</tt> 手机号码：</label><input type="text" id="newmobile" name="newmobile" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
                 <button type="button" id="myphone" name="note" value="true" tabindex="2" onclick="getbindverifycode();"></button>
 				<div id="myauth"  style="display:none;">{lang smstong:smstong_mobilereg_verifycode_other}</div>
             </dt>
@@ -22,7 +22,7 @@
 				<kbd id="return_$_G[gp_handlekey]" class="p_chk" ></kbd>
 			</dt>
             <dt>
-            	<label for="check"><u>*</u> 验证码：</label><input type="text" id="verifycode" name="verifycode" tabindex="3" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
+            	<label for="check"><tt>*</tt> 验证码：</label><input type="text" id="verifycode" name="verifycode" tabindex="3" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
                 <em>请输入手机验证码</em>
             </dt>
 			<dt class="mobile_msg">
@@ -91,7 +91,7 @@ function setchecktime() {
 	} else {
 		clearInterval(intval);
 		intval = null;
-		timeRemain = waitTime;
+	//	timeRemain = waitTime;
 		$("timeRemainTips").disabled = false;
 		$("timeRemainTips").innerHTML = '<strong>{lang smstong:smstong_mobilereg_checktime_retry}</strong>';
 		$("modifyMobile").innerHTML = '<a href="javascript:;" >{lang smstong:smstong_mobilereg_checktime_change}</a>';
@@ -103,9 +103,10 @@ function setchecktime() {
 			return false;
 		}
 		$("timeRemainTips").onclick = function() {
-			if (timeRemain == waitTime || timeRemain == 0) {
+		//	if (timeRemain == waitTime || timeRemain == 0) {
 				getbindverifycode();
-			}
+				timeRemain = waitTime;
+		//	}	
 		}
 	}
 }
