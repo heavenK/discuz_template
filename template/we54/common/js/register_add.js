@@ -17,6 +17,7 @@ function errormessage(id, msg) {
                 $('tip_' + id).parentNode.className = $('tip_' + id).parentNode.className.replace(/ p_right/, '');
 				$('tip_' + id).parentNode.className += ' p_right';
 				$('tip_' + id).parentNode.style.display="block";
+				$('tip_' + id).style.display="none";
 			} else if(msg !== '') {
 				$('tip_' + id).parentNode.className = $('tip_' + id).parentNode.className.replace(/ p_right/, '');
 				$('tip_' + id).parentNode.style.display="none";
@@ -131,9 +132,9 @@ function showInputTip(id) {
 			p_tips[i].style.display = 'none';
 		}
 	}
-	if($('tip_' + id)) {
+/*	if($('tip_' + id)) {
 		$('tip_' + id).style.display = 'block';
-	}
+	}*/
 }
 
 function showbirthday(){
