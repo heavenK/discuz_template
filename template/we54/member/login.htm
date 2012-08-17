@@ -69,9 +69,9 @@
 </div>
 <div id="chg_bg_btn" class="box">
     <div class="login_bg_btn"><!--µÇÂ½±³¾°ÇÐ»»°´Å¥-->
-        <a onClick="change(1,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png" /></a>
-        <a onClick="change(2,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
-        <a onClick="change(3,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+        <a id="login_bg_btn1" onClick="change(1,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png" /></a>
+        <a id="login_bg_btn2" onClick="change(2,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+        <a id="login_bg_btn3" onClick="change(3,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
     </div>
 </div>
 <script>
@@ -86,6 +86,25 @@ function change(n, obj){
 	jQuery(obj).attr('class','login_bg_btn_on');
 	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
 }
+function autoChange(){
+	var cls = jQuery("#login_bg").attr("class");
+	var num = cls.match(/\d/);
+	
+	var n = ++num;
+	if(n > 3) n = 1;
+	
+	var new_cls = "login_bg bg_" + n;
+	var new_obj = "#login_bg_btn" + n;
+	jQuery("#login_bg").fadeOut("slow",function(){
+	   jQuery("#login_bg").attr("class",new_cls);
+	   jQuery("#login_bg").fadeIn("slow");
+	 });
+	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
+	jQuery(".login_bg_btn a").attr('class','');
+	jQuery(new_obj).attr('class','login_bg_btn_on');
+	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
+}
+setInterval("autoChange()", 4000);
 </script>
 <script type="text/javascript" reload="1">
 <!--{if !isset($_GET['viewlostpw'])}-->
