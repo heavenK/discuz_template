@@ -1335,8 +1335,8 @@ function adshow($parameter) {
 
 function showmessage($message, $url_forward = '', $values = array(), $extraparam = array(), $custom = 0) {
 	require_once libfile('function/message');
-	if($message=='to_login'||$message=='postperm_login_nopermission'){
-		$url_forward='member.php?mod=logging&action=login';
+	if($message=='to_login'||$message=='postperm_login_nopermission'||$message=='group_nopermission'){
+		$url_forward='member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login';
 	}
 	return dshowmessage($message, $url_forward, $values, $extraparam, $custom);
 }

@@ -8,12 +8,12 @@
 .register dl					{ width:860px; padding:31px 0 0 140px; overflow:hidden; float:left;}
 .register_01					{ background:url(../images/register_01_bg.png) no-repeat 71px 62px;}
 .register_02					{ background:url(../images/register_02_bg.png) no-repeat 121px 77px;}
-.register dl dt					{ width:850px; height:30px; padding:31px 0 0 0; overflow:hidden; float:left;}
+.register dl dt					{ width:850px; height:34px; padding:31px 0 0 0; overflow:hidden; float:left;}
 .register dl dt label			{ width:129px; height:26px; padding:4px 6px 0 0; text-align:right; font-size:14px; overflow:hidden; float:left;}
 .register dl dt input			{ width:252px; height:14px; padding:7px 3px; background:#FFF; border:1px solid #c4c4c4; font-size:12px; overflow:hidden; float:left;}
 .register dl dt em				{ width:429px; height:23px; padding:7px 0 0 11px; color:#b2b2b2; overflow:hidden; float:left;}
 .register dl dt em img			{ float:left;}
-.register dl dt em i			{ margin:0 0 0 8px; display:inline; line-height:15px; float:left;}
+.register dl dt em i			{ display:inline; line-height:15px; float:left;}
 .register dl dt u				{ font-size:14px; color:#ff0000;}
 .register dl dt button			{ width:86px; height:30px; margin:0 0 0 11px; display:inline; background:url(../images/register_btn.png) no-repeat 0 -32px; cursor:pointer; overflow:hidden; float:left;}
 .register_no					{ color:#ff0000;}
