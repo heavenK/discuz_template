@@ -13,7 +13,11 @@
 				<div class="tz_zt_gz01"><i><!--{$space['threads']}--></i><span>主题</span></div>
 				<div class="tz_zt_gz02"><i><!--{$space['friends']}--></i><span>关注</span> </div></div>
 				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)"  class='sixin'></a>
+				<!--{if $gzflag}-->
+				<a href="home.php?mod=spacecp&ac=follow&op=del&fuid=$space[uid]" id="followmod" onclick="showWindow(this.id, this.href, 'get', 0);" class='yguanzhu'></a>
+				<!--{else}-->
 				<a href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$space[uid]" id="followmod" onclick="showWindow(this.id, this.href, 'get', 0);" class='guanzhu'></a>
+				<!--{/if}-->
 			</div>
 		</div>
 	<ul>
@@ -27,7 +31,7 @@
 	<!--{/if}-->
 		<li <!--{if $_GET['do']=='thread'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=thread&view=me&from=space"><b><img src="/template/we54/images/tz_logo.gif" width="16" height="16" border="0"/></b>TA的帖子</a></li>
 		<li<!--{if $_GET['do']=='album'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><b><img src="/template/we54/images/xc_logo.gif" width="16" height="14" border="0"/></b>TA的相册</a></li>
-		<li<!--{if $_GET['do']=='friend'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&do=friend"><b><img src="/template/we54/images/hy_logo.gif" width="16" height="16" border="0"/></b>TA的好友</a></li>
+		<li<!--{if $_GET['do']=='friend'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=friend&view=me&from=space"><b><img src="/template/we54/images/hy_logo.gif" width="16" height="16" border="0"/></b>TA的好友</a></li>
 <!--{/if}-->
 	</ul>
 </div>

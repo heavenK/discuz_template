@@ -412,6 +412,8 @@ class sms_send{
 				$_G['sechashi'] = !empty($_G['cookie']['sechashi']) ? $_G['sechash'] + 1 : 0;
 				$sechash = 'S'.($_G['inajax'] ? 'A' : '').$_G['sid'].$_G['sechashi'];
 
+				$dreferer=urlencode(trim($_GET['o']));
+
 				include template($this->template);
 				exit();
 			}
@@ -449,16 +451,20 @@ class regend{
 			} elseif(!$this->setting['regstatus']) {
 				showmessage(!$this->setting['regclosemessage'] ? 'register_disable' : str_replace(array("\r", "\n"), '', $this->setting['regclosemessage']));
 			}
-		}elseif($_G['uid']) {
+		}/*elseif($_G['uid']) {
 			$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';
 			$exists = DB::result_first("SELECT mobile FROM ".DB::table('common_member_profile')." WHERE uid='".trim($_G['uid'])."'");
 			if(empty($exists)){
 				$url_forward = dreferer();
-				$url_forward = 'member.php?mod=sms&action=bindmobile';
+			//	$url_forward = 'member.php?mod=sms&action=bindmobile';
 				showmessage('register_vertify_invalid', $url_forward ? $url_forward : './', array('username' => $_G['member']['username'], 'usergroup' => $_G['group']['grouptitle'], 'uid' => $_G['uid']), array('extrajs' => $ucsynlogin));
 			}
-		}
+			
+		}*/
+
 		$regname = 'regend';
+
+		$dreferer=trim($_GET['o']);
 		include template($this->template);
 		exit();
 	}
