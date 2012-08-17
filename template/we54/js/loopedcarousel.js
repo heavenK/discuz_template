@@ -67,7 +67,7 @@
 		});
 
 		$(o.slides,obj).children().each(function(){
-			pt = pt+1;
+			//pt = pt+1;
 			if (pt<i+1) {
 				params[o.vertical ? 'top' : 'left'] = (-w*pt)+pd-(w*os);
 				$(o.slides,obj).children(':eq('+(s-pt)+')').css(params);
