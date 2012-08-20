@@ -101,7 +101,7 @@
 			</div>
 			<!--{hook/viewthread_avatar $postcount}-->
 			<!--{if $post[groupicon]}--><p><a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">$post[groupicon]</a></p><!--{/if}-->
-			<p class="kaiser_member_font"><em><a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">Member</a></em></p>
+			<p class="kaiser_member_font"><em><a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">{$post[authortitle]}</a></em></p>
 			<!--{if $post['customstatus']}--><p class="xg1">$post[customstatus]</p><!--{/if}-->
 			</div>
 			<p{if $post['upgradecredit'] !== false} id="g_up$post[pid]" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"{/if}><!--{eval showstars($post['stars']);}--></p>
@@ -372,11 +372,23 @@
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{if $post['authorid']}-->
+                    	<!--{if $_G['cookie']['auth']}-->
 						<a href="javascript:;" class="kaiser_pingfen_btn" id="ak_rate" onclick="showWindow('rate', 'forum.php?mod=misc&action=rate&tid=$_G[tid]&pid=$post[pid]', 'get', -1);return false;" title="{echo count($postlist[$post[pid]][totalrate]);} {lang people_score}"></a>
+                    	<!--{else}-->
+                    	<a href="member.php?mod=logging&action=login&infloat=yes&frommessage&inajax=1&ajaxtarget=messagelogin" class="kaiser_pingfen_btn" id="ak_rate" title="{echo count($postlist[$post[pid]][totalrate]);} {lang people_score}"></a>
+                        <!--{/if}-->
 					<!--{/if}-->
                     <!--{if $post['invisible'] == 0}-->
 						<!--{if (!$_G['uid'] || $allowpostreply) && !$needhiddenreply}-->
-							<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
+                        	<!--{if $_G['cookie']['auth']}-->
+                            	<!--{if $post['first']}-->
+									<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
+                                <!--{else}-->
+                                	<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
+                                <!--{/if}-->
+                        	<!--{else}-->
+                        		<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('sendpm', this.href);"></a>
+                            <!--{/if}-->
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{hook/viewthread_useraction}-->
