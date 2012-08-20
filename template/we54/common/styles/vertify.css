@@ -2,3 +2,15 @@
 /* CSS Document */
 label		{cursor:auto;}
 tt			{color:red;margin-right:6px;}
+.login_header em				{padding:0;}
+/*短信认证*/
+.register dl dt.mobile_msg		{width:450px;height:42px;padding:0;}
+.register dl dt.mobile_msg kbd	{margin-left:125px;width:266px;}
+.register dl dt button.pn		{vertical-align:middle;overflow:hidden;padding:0;width:170px;_width:168px;border:1px solid #b3b3b3;background:#E5E5E5 url(../images/btn_bg.png) repeat-x 0 0;cursor:pointer;-moz-box-shadow:0 1px 0 #E5E5E5;-webkit-box-shadow:0 1px 0 #E5E5E5;box-shadow:0 1px 0 #E5E5E5;padding:0;margin:0;}
+#myauth							{float:left;margin-top:-30px;margin-left:400px;}
+#myauth p						{float:left;}
+/*说明文档*/
+.vertify_help					{background:url(../images/v_help.png) no-repeat;width:290px;height:160px; margin-top:-250px; margin-left:712px;_margin-left:356px;float:left;}
+.vertify_help b					{width:245px;height:155px;color:#666;font-weight:normal;margin:20px 22px 28px 26px;padding:0;line-height:30px;text-indent:22px;}
+.p_chk							{color:#b2b2b2;font-weight:normal;}
+.r								{color:red;}

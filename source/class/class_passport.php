@@ -252,6 +252,7 @@ class sms_send{
 		}
 
 		$regname = 'sms';
+		$_G['gp_handlekey']='bindmobile';
 
 		$groupinfo = array();
 		if($this->setting['regverify']) {
@@ -307,7 +308,8 @@ class sms_send{
 					{
 						if(!empty($value['mobile']))
 						{
-							showmessage('smstong:smstong_mobilebind_mobile_exists');
+							//showmessage('smstong:smstong_mobilebind_mobile_exists');
+							exit(lang('plugin/smstong','smstong_mobilebind_mobile_exists'));
 						}
 					}
 
@@ -316,7 +318,8 @@ class sms_send{
 					
 					if ($sended)
 					{
-						showmessage('smstong:smstong_mobilereg_mobile_sended', '', array('mobilegap' => $mobilegap));
+						//showmessage('smstong:smstong_mobilereg_mobile_sended', '', array('mobilegap' => $mobilegap));
+						exit(lang("<img src='template/we54/common/images/register_no.png' />每IP每手机号每$mobilegap秒只能获取一次验证码"));
 					}
 					else
 					{
@@ -346,11 +349,13 @@ class sms_send{
 							);
 							DB::insert('common_verifycode', $verifycode_data);
 
-							showmessage('smstong:smstong_mobilebind_sendsms_succeed');
+						//	showmessage('smstong:smstong_mobilebind_sendsms_succeed');
+							exit('success');
 						}
 						else
 						{
-							showmessage('smstong:smstong_mobilebind_sendsms_failured', '', array('ret' => $ret));
+					//		showmessage('smstong:smstong_mobilebind_sendsms_failured', '', array('ret' => $ret));
+							exit(lang('plugin/smstong','smstong_mobilebind_sendsms_failured'));
 						}
 					}
 				}
