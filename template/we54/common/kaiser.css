@@ -198,3 +198,8 @@
 .kaiser_tfm tr td					{ padding:10px 0 6px 0; border-bottom:1px solid #f2f2f2; vertical-align:middle;}
 .kaiser_pn_pnc						{ width:120px !important; height:32px; border:none; background:url(/template/we54/images/kaiser_data_sub_btn.png) no-repeat; float:left;}
 .sltm								{ background:#FFF;}
+
+/*
+Ìø×ªÒ³
+*/
+.kaiser_return_wp					{ height:auto!important; height:515px; min-height:515px; padding:60px 0 0 0; background:#FFF url(/template/we54/images/kaiser_return_bg.jpg) no-repeat bottom;}

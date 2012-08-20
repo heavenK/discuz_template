@@ -69,7 +69,7 @@
 		<table cellspacing="0" cellpadding="0">
 			<tr>
 				<th colspan="{if !$_GET['archiveid'] && $_G['forum']['ismoderator']}3{else}2{/if}" class="kaiser_pailie" style=" padding:0 0 0 10px;">
-					<a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=author&orderby=dateline" {if $_GET['orderby'] == 'dateline'}style=" font-weight:bold;"{/if}>按最新发表</a><em>|</em><a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost" {if $_GET['orderby'] == 'lastpost'}style=" font-weight:bold;"{/if}>按最后回复</a><em>|</em><a href="http://dz.we54.com/forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=replies" {if $_GET['orderby'] == 'replies'}style=" font-weight:bold;"{/if}>按最多回帖</a>
+					<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=author&orderby=dateline" {if $_GET['orderby'] == 'dateline'}style=" font-weight:bold;"{/if}>按最新发表</a><em>|</em><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost" {if $_GET['orderby'] == 'lastpost'}style=" font-weight:bold;"{/if}>按最后回复</a><em>|</em><a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=reply&orderby=replies" {if $_GET['orderby'] == 'replies'}style=" font-weight:bold;"{/if}>按最多回帖</a>
 				</th>
 				<!--{if $kaiser_k == 1}-->
 					<!--{if CURMODULE == 'guide'}-->
