@@ -24,6 +24,15 @@ if(empty($_GET['view']) || $_GET['view'] == 'all') $_GET['view'] = 'me';
 
 ckstart($start, $perpage);
 
+//add
+space_merge($space, 'count');
+$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if($_G['member']['extgroupids']==$data['groupid']){
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
+}
+
+//end add
+
 if($_GET['view'] == 'online') {
 	$theurl = "home.php?mod=space&uid=$space[uid]&do=friend&view=online";
 	$actives = array('me'=>' class="a"');
