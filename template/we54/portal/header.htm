@@ -31,6 +31,7 @@
     <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
     <script src="template/we54/js/logging.js" type="text/javascript"></script>
 	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+	<script src="template/we54/js/focus.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 	var jq = jQuery.noConflict(); 
@@ -54,43 +55,7 @@
 	});
 	</script>
 
-	<!--½¹µãÍ¼JS_a-->
-	<script type="text/javascript" language="javascript"> 
-    jq(document).ready(function(){ 	
-        var t=false;
-        var j=0; 
-        jq("#btn").find("span").each(function(i){
-        jq("#btn").find("span").eq(i).mouseover( 
-        function(){	
-           var cur=jq("#img").find("img:visible").parent().prevAll().length;
-        
-           if(i!==cur){
-           j=i;
-        
-           jq(this).addClass("hov").siblings().removeClass("hov");
-        
-           jq("#img").find("img:visible").fadeOut(200,
-            function(){
-             jq("#img").find("img").eq(i).fadeIn(300,function(){})  
-             }); 
-           }}  
-           ) 
-        })
-        var func_play=function(){   
-            jq("#btn").find("span").eq(j).mouseover()
-            j++;
-            if(j==5){j=0;}  
-           }
-           t=setInterval(func_play,3000);
-           jq("#imgnav").hover(function(){
-            clearInterval(t);   
-            return j;
-            },function(){
-             t=setInterval(func_play,3000);
-             })
-    })
-     
-    </script>
+	
     
     <!--»ÃµÆÆ¬JS-->
 	<script type="text/javascript" language="javascript"> 	

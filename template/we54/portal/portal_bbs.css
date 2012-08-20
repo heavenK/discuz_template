@@ -88,11 +88,21 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	.NO1_moduble_left_l { width:298px; height:698px; overflow:hidden; float:left; position:relative;}
 	/*焦点图*/
 	#left_focus{ width:280px; height:360px; margin-left:18px; margin-top:18px; display:inline; overflow:hidden; float:left; }
-	.img		{ width:280px; height:360px; overflow:hidden; text-align:center; position:absolute; z-index:1; }		
-	.ctrl		{ width:280px; height:18px; position:absolute; right:6px; top:350px; z-index:100; float:left;}
-	.ctrl span	{ width:20px; height:20px; line-height:18px; margin:1px 3px 0 3px; cursor:pointer; overflow:hidden; background:#666666; text-align:center; color:#FFF; float:left;}
-	.ctrl span.hov{ width:20px; height:20px; line-height:18px; cursor:pointer; overflow:hidden; background:#ff7700; font-size:14px; text-align:center; color:#FFF; float:left;}
-	.ctrl div	{ float:right;}
+	.sub_box{width:280px; height:360px; float:left; position:relative; overflow:hidden;}
+	.sub_box img{border:none; width:280px; height:360px;}
+	#bd1lfimg{position:relative; width:280px; height:360px; overflow:hidden;}
+	#bd1lfimg div{width:100000px; margin-left:-4px;}
+	#bd1lfimg dl{width:280px; height:360px; position:relative; overflow:hidden; float:left;}
+	#bd1lfimg dt{width:280px; height:360px; position:absolute; left:0px; top:0px;}
+	#bd1lfimg dd{width:240px; height:40px; ;background:url(/template/we54/por_images/shadow.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/template/we54/por_images/shadow.png" ,sizingMethod="crop"); position:absolute; left:0px; bottom:0px; padding:0 20px;}
+	#bd1lfimg dd h2{height:25px; padding:8px 0 4px 0; line-height:25px; overflow:hidden;}
+	#bd1lfimg dd h2 a{font-size:14px; font-weight:bold; color:#ffffff;}
+	#bd1lfimg dd a{color:#ffffff; text-decoration:none;}
+	
+	.sub_nav{width:100px; height:20px; bottom:9px; position:absolute; color:#999999; z-index:200; right:6px;}
+	.sub_no{height:20px; float:right;}
+	.sub_no li{display:block; width:20px; height:20px; margin-right:6px; float:left; overflow:hidden; line-height:18px; cursor:pointer; overflow:hidden; background:#666666; text-align:center; color:#FFF; }
+	.sub_no li.show{cursor:pointer; overflow:hidden; background:#ff7700; font-size:14px; text-align:center; color:#FFF; float:left;}
 	
 	
 	/*生活向导*/
