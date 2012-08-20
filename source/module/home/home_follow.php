@@ -11,7 +11,7 @@ if(!defined('IN_DISCUZ')) {
 }
 
 if(!$_G['uid']) {
-	showmessage('login_before_enter_home', null, array(), array('showmsg' => true, 'login' => 1));
+	showmessage('login_before_enter_home', null, array(), array('showmsg' => true, 'login' => 0));
 }
 $dos = array('feed', 'follower', 'following', 'view');
 $do = (!empty($_GET['do']) && in_array($_GET['do'], $dos)) ? $_GET['do'] : (!$_GET['uid'] ? 'feed' : 'view');
