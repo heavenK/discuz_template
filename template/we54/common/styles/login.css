@@ -2,8 +2,11 @@
 /* CSS Document */
 
 /*µÇÂ½*/
-.login_bg		{ width:100%; min-width:1000px; height:407px; margin:0 auto; border-top:1px solid #FFF;}
-.login_bg_line				{ width:100%; min-width:1000px; height:7px; margin:0 auto; background:url(../images/login_box_bg_line.gif) repeat-x; overflow:hidden;}
+/*µÇÂ½*/
+.we54_login		{ width:100%; min-width:1000px; height:407px; margin:0 auto; border-top:1px solid #FFF; overflow:hidden;}
+.login_bg_line				{ width:100%; min-width:1000px; height:7px; margin:0 auto; background:url(../images/login_box_bg_line.gif) repeat-x; _overflow:hidden;}
+.login_bg					{ width:100%; min-width:1000px; height:400px; margin:0 auto; overflow:hidden;}
+
 .bg_1						{ background:url(../images/1.jpg) no-repeat 50% 50%;}
 .bg_2						{ background:url(../images/2.jpg) no-repeat 50% 50%;}
 .bg_3						{ background:url(../images/3.jpg) no-repeat 50% 50%;}
