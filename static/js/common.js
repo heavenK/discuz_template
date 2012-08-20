@@ -349,7 +349,7 @@ function Ajax(recvType, waitId) {
 				aj.resultHandle(aj.XMLHttpRequest.responseText, aj);
 			} else if(aj.recvType == 'XML') {
 				if(!aj.XMLHttpRequest.responseXML || !aj.XMLHttpRequest.responseXML.lastChild || aj.XMLHttpRequest.responseXML.lastChild.localName == 'parsererror') {
-					aj.resultHandle('<a href="' + aj.targetUrl + '" target="_blank" style="color:red">内部错误，无法显示此内容</a>' , aj);
+					aj.resultHandle('<a href="' + aj.targetUrl + '" target="_blank" style="color:red">您可能还未登录，请点击进行登录。</a>' , aj);
 				} else {
 					aj.resultHandle(aj.XMLHttpRequest.responseXML.lastChild.firstChild.nodeValue, aj);
 				}
