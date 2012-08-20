@@ -30,7 +30,7 @@ $lang = array (
   'group_category_empty' => '请选择{_G/setting/navs/3/navname}分类',
   'group_description_failed' => '{_G/setting/navs/3/navname}简介含有敏感词语',
   'group_setup_succeed' => '{_G/setting/navs/3/navname}设置成功 ',
-  'to_login' => '您需要先登录才能继续本操作',
+  'to_login' => '您需要先<a href="http://dz.we54.com/member.php?mod=logging&action=login&infloat=yes&frommessage&inajax=1&ajaxtarget=messagelogin" target="_blank" style=" color:#369;">登录</a>才能继续本操作',
   'postcomment_closed' => '点评功能已关闭',
   'group_nopermission' => '抱歉，您所在的用户组({grouptitle})无法进行此操作',
   'thread_nonexistence' => '抱歉，指定的主题不存在或已被删除或正在被审核',
