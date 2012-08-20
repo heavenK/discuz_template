@@ -106,7 +106,7 @@ function autoChange(){
 	   jQuery("#login_bg").fadeIn("faster");
 	 });
 	*/
-	jQuery("#login_bg").animate({opacity: '0.08'},1000,function (){jQuery(this).attr("class",new_cls);jQuery(this).animate({opacity: '1'},1000);});
+	jQuery("#login_bg").animate({opacity: '0.1'},2000,function (){jQuery(this).attr("class",new_cls);jQuery(this).animate({opacity: '1'},2000);});
 
 	 
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
@@ -114,7 +114,7 @@ function autoChange(){
 	jQuery(new_obj).attr('class','login_bg_btn_on');
 	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
 }
-setInterval("autoChange()", 6000);
+setInterval("autoChange()", 5000);
 </script>
 <script type="text/javascript" reload="1">
 <!--{if !isset($_GET['viewlostpw'])}-->
