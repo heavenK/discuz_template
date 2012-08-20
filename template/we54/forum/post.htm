@@ -24,7 +24,12 @@
 	var postaction = '{$_GET['action']}';
 	var ispicstyleforum = <!--{if $_G['forum']['picstyle']}-->1<!--{else}-->0<!--{/if}-->;
 </script>
-
+<style>
+.bm  { margin-top:10px;}
+.kaiser_bm .z { top:0;}
+.tb { margin-bottom:10px;}
+.ct2_a .mn { padding-top:0;}
+</style>
 <!--{if $_GET[action] == 'edit'}--><!--{eval $editor[value] = $postinfo[message];}--><!--{else}--><!--{eval $editor[value] = $message;}--><!--{/if}-->
 <script type="text/javascript" src="{$_G['setting']['jspath']}forum_post.js?{VERHASH}"></script>
 
@@ -75,8 +80,10 @@
 	<!--{/if}-->
 <!--{/block}-->
 
-<div id="pt" class="bm cl">
-	<div class="z"><a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> $navigation$actionsubject <em>&rsaquo;</em> $actiontitle</div>
+<div id="pt kaiser_pt" class="bm cl kaiser_bm">
+	<div class="z">
+		<b>µ±«∞Œª÷√£∫</b><a href="http://www.we54.com/" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="./"{if $_G['setting']['forumjump']} id="fjump" onmouseover="delayShow(this, 'showForummenu($_G[fid])');" class="showmenu" {/if}>{$_G[setting][navs][2][navname]}</a>$navigation $actiontitle
+	</div>
 </div>
 
 <!--{eval $adveditor = $isfirstpost && $special || $special == 2 && ($_GET['action'] == 'newthread' || $_GET['action'] == 'reply' && !empty($_GET['addtrade']) || $_GET['action'] == 'edit' && $thread['special'] == 2);}-->
@@ -123,7 +130,7 @@
 		<!--{/if}-->
 		<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if}>
 			<!--{if $_GET[action] == 'newthread'}-->
-				<ul class="tb cl mbw">
+				<ul class="tb cl kaiser_tb_cl">
 					<!--{if $savecount}-->
 						<li class="y"><a id="draftlist" href="javascript:;" class="xi2" onmouseover="showMenu({'ctrlid':'draftlist','ctrlclass':'a','duration':2,'pos':'34'})">{lang draftbox}(<strong>$savecount</strong>)</a></li>
 					<!--{/if}-->

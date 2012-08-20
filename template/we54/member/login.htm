@@ -80,10 +80,13 @@
 <script>
 function change(n, obj){
 	var cls = "login_bg bg_" + n;
-		jQuery("#login_bg").fadeOut("faster",function(){
+	/*jQuery("#login_bg").fadeOut("faster",function(){
 		jQuery("#login_bg").attr("class",cls);
 		jQuery("#login_bg").fadeIn("faster");
-	 });
+	 });*/
+	 
+	 jQuery("#login_bg").animate({opacity: '0.08'},1000,function (){jQuery(this).attr("class",cls);jQuery(this).animate({opacity: '1'},1000);});
+	 
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
 	jQuery(".login_bg_btn a").attr('class','');
 	jQuery(obj).attr('class','login_bg_btn_on');
@@ -98,10 +101,14 @@ function autoChange(){
 	
 	var new_cls = "login_bg bg_" + n;
 	var new_obj = "#login_bg_btn" + n;
-	jQuery("#login_bg").fadeOut("faster",function(){
+	/*jQuery("#login_bg").fadeOut("faster",function(){
 	   jQuery("#login_bg").attr("class",new_cls);
 	   jQuery("#login_bg").fadeIn("faster");
 	 });
+	*/
+	jQuery("#login_bg").animate({opacity: '0.1'},2000,function (){jQuery(this).attr("class",new_cls);jQuery(this).animate({opacity: '1'},2000);});
+
+	 
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
 	jQuery(".login_bg_btn a").attr('class','');
 	jQuery(new_obj).attr('class','login_bg_btn_on');
