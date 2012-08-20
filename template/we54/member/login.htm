@@ -11,9 +11,8 @@
 				</div>
 			</div>
 		<!--{/if}-->
-<div id="login_bg" class="login_bg bg_1"><!--µÇÂ½-->
-	<div class="login_bg_line"></div>
-    <div class="login_box">
+<div class="we54_login"><!--µÇÂ½-->
+	<div class="login_bg_line"><div class="login_box">
         <a href="member.php?mod={$_G[setting][regname]}" class="login_register"></a>
         <div class="login_box_bg"></div>
         <div class="login" id="layer_login_$loginhash">
@@ -66,8 +65,10 @@
             </dl>
 			</form>
         </div>
-
-    </div>
+	
+    </div></div>
+    
+	<div id="login_bg" class="login_bg bg_1"></div>
 </div>
 <div id="chg_bg_btn" class="box">
     <div class="login_bg_btn"><!--µÇÂ½±³¾°ÇÐ»»°´Å¥-->
@@ -79,9 +80,9 @@
 <script>
 function change(n, obj){
 	var cls = "login_bg bg_" + n;
-		jQuery("#login_bg").fadeOut("slow",function(){
+		jQuery("#login_bg").fadeOut("faster",function(){
 		jQuery("#login_bg").attr("class",cls);
-		jQuery("#login_bg").fadeIn("slow");
+		jQuery("#login_bg").fadeIn("faster");
 	 });
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
 	jQuery(".login_bg_btn a").attr('class','');
@@ -97,16 +98,16 @@ function autoChange(){
 	
 	var new_cls = "login_bg bg_" + n;
 	var new_obj = "#login_bg_btn" + n;
-	jQuery("#login_bg").fadeOut("slow",function(){
+	jQuery("#login_bg").fadeOut("faster",function(){
 	   jQuery("#login_bg").attr("class",new_cls);
-	   jQuery("#login_bg").fadeIn("slow");
+	   jQuery("#login_bg").fadeIn("faster");
 	 });
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
 	jQuery(".login_bg_btn a").attr('class','');
 	jQuery(new_obj).attr('class','login_bg_btn_on');
 	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
 }
-setInterval("autoChange()", 4000);
+setInterval("autoChange()", 5000);
 </script>
 <script type="text/javascript" reload="1">
 <!--{if !isset($_GET['viewlostpw'])}-->
