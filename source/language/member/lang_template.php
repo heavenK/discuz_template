@@ -24,7 +24,7 @@ $lang = array (
   'faq' => '帮助',
   'login' => '登录',
   'login_clearcookies' => '清除痕迹',
-  'login_guestmessage' => '您需要先登录才能继续本操作',
+  'login_guestmessage' => '您需要先<a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login">登录</a>才能继续本操作',
   'login_member' => '用户登录',
   'login_method' => '快捷登录',
   'login_permanent' => '自动登录',
