@@ -9,7 +9,7 @@ a:hover     { text-decoration:underline;}
 #toptb { background:none; border-bottom:none; margin:auto; width:1000px;}
 #toptb a { padding:0; }
 #hd  { margin-top:0;}
-
+#ct    { min-height:600px; height:100%; _hight:600px; }
 .zx_nav_bg01,
 .zx_nav_bg02,
 .zx_nav_bg03,
@@ -59,7 +59,7 @@ a:hover     { text-decoration:underline;}
 
 
 /*µ×²¿*/
-.index_bottom	{ width:100%; height:99px; margin:0 auto; background:#f3f3f3 url(/template/we54/images/bottom_bg.gif) repeat-x; text-align:center;}
+.index_bottom	{ width:100%; height:150px; margin:0 auto; background:#f3f3f3 url(/template/we54/images/bottom_bg.gif) repeat-x; text-align:center;}
 .index_bottom a				{ color:#666666;}
 #ft							{ padding:30px 0 0 0; border:none; color:#666666; line-height:28px;}
 #scrolltop					{ width:24px; height:88px; background:url(../../../static/image/common/kaiser_fanhuitop.png) no-repeat;}
