@@ -380,14 +380,10 @@
 					<!--{/if}-->
                     <!--{if $post['invisible'] == 0}-->
 						<!--{if (!$_G['uid'] || $allowpostreply) && !$needhiddenreply}-->
-                        	<!--{if $_G['cookie']['auth']}-->
-                            	<!--{if $post['first']}-->
-									<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
-                                <!--{else}-->
-                                	<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
-                                <!--{/if}-->
-                        	<!--{else}-->
-                        		<a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('sendpm', this.href);"></a>
+                            <!--{if $post['first']}-->
+                                <a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
+                            <!--{else}-->
+                                <a class="fastre kaiser_reply_btn" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&extra=$_GET[extra]&page=$page" onclick="showWindow('reply', this.href)"></a>
                             <!--{/if}-->
 						<!--{/if}-->
 					<!--{/if}-->
