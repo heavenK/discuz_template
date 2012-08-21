@@ -1,4 +1,5 @@
 <!--{template common/register_head}-->
+<link href="{$_G[siteurl]}template/we54/common/styles/vertify.css" rel="stylesheet" type="text/css" />
 <script src="{$_G[siteurl]}template/we54/common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="{$_G[siteurl]}template/we54/common/js/common_add.js?{VERHASH}"></script>
 <script type="text/javascript" src="{$_G[siteurl]}template/we54/common/js/vertify.js?{VERHASH}"></script>
@@ -15,29 +16,30 @@
 		<!--{if $_G[inajax]}--><input type="hidden" name="handlekey" value="$_G[gp_handlekey]" /><!--{/if}-->
             <dt>
             	<label for="phone"><tt>*</tt> 手机号码：</label><input type="text" id="newmobile" name="newmobile" tabindex="1" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
-                <button type="button" id="myphone" name="note" value="true" tabindex="2" onclick="getbindverifycode();"></button>
+                <button type="button" id="myphone" name="note" value="true" tabindex="2" onclick="getbindverifycode('return_$_G[gp_handlekey]');"></button>
+				<span id="mobileNumber" style="display:none;"></span>
 				<div id="myauth"  style="display:none;">{lang smstong:smstong_mobilereg_verifycode_other}</div>
             </dt>
 			<dt class="mobile_msg">
-				<kbd id="return_$_G[gp_handlekey]" class="p_chk" ></kbd>
+				<kbd id="return_$_G[gp_handlekey]" class="p_chk" >请输入您的手机号码，以便能正确收到我们为您发送的验证码</kbd>
 			</dt>
             <dt>
             	<label for="check"><tt>*</tt> 验证码：</label><input type="text" id="verifycode" name="verifycode" tabindex="3" onfocus="this.className='input_on';this.onmouseout=''" onblur="this.className='';this.onmouseout=function(){this.className=''};" onmousemove="this.className='input_on'" onmouseout="this.className=''" />
-                <em>请输入手机验证码</em>
             </dt>
 			<dt class="mobile_msg">
-				<kbd id="tip_$_G[gp_handlekey]" class="p_chk" ></kbd>
+				<kbd id="tip_$_G[gp_handlekey]" class="p_chk" >请输入您所收到的6位数字验证码</kbd>
 			</dt>
         </dl>
         <b><button type="submit"  name="bindmobilesubmit_btn" id="bindmobilesubmit_btn" value="true" tabindex="4"><strong style="display:none;">{lang smstong:smstong_mobilebind_submit}</strong></button><a href="member.php?mod=regend&o=$dreferer" tabindex="5"></a></b>
 	</form>
-	
+	<div class="vertify_help">
+		<b>新青年认证会员专享流畅体验新青年社区的各种权限，可以参加新青年网举办的一切线上和线下活动，并且凭认证会员身份领取各种活动的丰厚礼品。还等什么？加入我们吧！</b>
+	</div>
     </div>
 </div>
 <!--{if $_G[inajax]}-->
 <script type="text/javascript">
 	function succeedhandle_$_G['gp_handlekey'](url, message, values) {
-		alert(url);
 		$('return_$_G[gp_handlekey]').innerHTML = message + " <a href='javascript:;' onclick='location.reload()'>{lang smstong:smstong_mobilebind_submit_refresh}</a>";
 		setTimeout('location.href = location.href', 3000);
 	}
@@ -55,21 +57,10 @@ var intval	= null;
 	var waitTime = parseInt('$_G["cache"]["plugin"]["smstong"]["mobilegap"]');
 <!--{/if}-->
 
-function getbindverifycode() {
-	var newmobile = trim($('newmobile').value);
-	if(newmobile == '') {
-		$('return_$_G[gp_handlekey]').innerHTML = "{lang smstong:smstong_mobilereg_mobile_empty}";
-		$('newmobile').focus();
-	} else {
-		$('flag').value = "2";
-		ajaxpost('bindmobileform', 'return_$_G[gp_handlekey]');
 
-		setInterval(checkbindverifycode,1000);
-	}
-}
 
 function checkbindverifycode() {
-	if ($('return_$_G[gp_handlekey]').innerHTML.indexOf('{lang smstong:smstong_mobilereg_sendsms_succeed}') != -1)
+	if ($('return_$_G[gp_handlekey]').innerHTML.indexOf('验证码短信发送成功') != -1)
 	{
 	//	$('mobileNumber').innerHTML = trim($('newmobile').value);
 		$('myphone').style.visibility = "hidden";
@@ -104,7 +95,7 @@ function setchecktime() {
 		}
 		$("timeRemainTips").onclick = function() {
 		//	if (timeRemain == waitTime || timeRemain == 0) {
-				getbindverifycode();
+				getbindverifycode('return_$_G[gp_handlekey]');
 				timeRemain = waitTime;
 		//	}	
 		}
