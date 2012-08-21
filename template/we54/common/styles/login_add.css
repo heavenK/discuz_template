@@ -5,3 +5,5 @@ label							{cursor:auto;}
 /*login success*/
 #main_succeed		{padding:60px 0 0 460px;background-color:white;}
 #main_succeed .f_c	{margin:0;}
+.sina_qq			{width:266px;height:50px;float:left;margin-left:6px;}
+.sina_qq a			{margin-left:8px;}

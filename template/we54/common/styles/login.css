@@ -12,8 +12,8 @@
 .bg_3						{ background:url(../images/3.jpg) no-repeat 50% 50%;}
 .login_box					{ width:1000px; height:407px; margin:0 auto; position:relative;}
 .login_register				{ width:100px; height:28px; position:absolute; top:202px; left:81px; overflow:hidden; z-index:9999;}
-.login_box_bg				{ width:280px; height:296px; background-image:url(../images/login_bg.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='template/we54/common/images/login_bg.png'); _background-image:none; position:absolute; top:59px; right:18px; z-index:9999;}
-.login						{ width:280px; height:296px; position:absolute; top:59px; right:18px; z-index:9999;}
+.login_box_bg				{ width:280px; height:340px; background-image:url(../images/login_bg.png)!important; background-repeat:no-repeat;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='template/we54/common/images/login_bg.png'); _background-image:none; position:absolute; top:35px; right:18px; z-index:9999;}/*change*/
+.login						{ width:280px; height:296px; position:absolute; top:35px; right:18px; z-index:9999;}/*change*/
 .login span					{ width:280px; height:37px; padding:18px 0 0 0; text-align:center; font-size:14px; font-weight:bold; color:#FFF; overflow:hidden; float:left;}
 .login dl					{ width:250px; height:241px; padding:0 0 0 30px; overflow:hidden; float:left;}
 .login dl dt				{ width:220px; height:70px; overflow:hidden; float:left;}
@@ -33,6 +33,6 @@
 .login_bg_btn a				{ width:12px; height:13px; margin:0 8px; display:inline; cursor:pointer;}
 
 /*ÍÆ¼ö*/
-.recommend		{ width:1000px; height:70px; margin:0 auto; padding:0 0 27px 0;}
-.recommend dt				{ width:307px; height:57px; padding:13px 0 0 18px; overflow:hidden; float:left;}
+.recommend		{ width:1000px; height:72px; margin:0 auto; padding:0 0 27px 0;}
+.recommend dt				{ width:307px; height:72px; padding:10px 0 0 18px; overflow:hidden; float:left;}
 .recommend dd				{ margin:0 6px 0 0; display:inline; overflow:hidden; float:left;}
