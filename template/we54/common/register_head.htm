@@ -54,7 +54,7 @@
 <form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
 <dl class="index_header"><!--整体头部-->
 	<dt><a href="/">新青年首页</a></dt>
-  <dd><h2><a href="#" target="_blank">帮助</a></h2>
+  <dd><!-- <h2><a href="#" target="_blank">帮助</a></h2> -->
 	
 	  <!--{if $_G['uid']}-->
 	  <h1><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a>
@@ -88,7 +88,13 @@
 </form>
 <div class="box">
     <div class="login_header"><!--子页头部-->
-        <em><a href="#"><img src="{$_G[siteurl]}template/we54/common/images/logo.png" /></a></em>
+        <em>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,19,0" width="250" height="70" title="Hi">
+				<param name="movie" value="{$_G[siteurl]}template/we54/common/images/logo.swf">
+				<param name="quality" value="high">
+				<embed  src="{$_G[siteurl]}template/we54/common/images/logo.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="250" height="70"></embed>
+		   </object>
+        </em>
         <ul>
             <li><!-- {if $_GET[mod]!='sms'} --><a href="#"><!-- {/if} -->联系客服<!-- {if $_GET[mod]!='sms'} --></a><!-- {/if} --></li>
             <li><!-- {if $_GET[mod]!='sms'} --><a href="member.php?mod=sms&action=bindmobile"><!-- {/if} -->认证会员<!-- {if $_GET[mod]!='sms'} --></a><!-- {/if} --></li>
