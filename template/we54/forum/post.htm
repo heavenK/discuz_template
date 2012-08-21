@@ -30,6 +30,9 @@
 .tb { margin-bottom:10px;}
 .ct2_a .mn { padding-top:0;}
 #post_extra_tb label { background-color:#FFFFFF;}
+.fabiaotiezi { width:900px; height:32px; margin-top:15px; }
+.fabiaotiezi span { float:left; font-size:20px; font-weight:bold; color:#000000; margin-left:18px; margin-top:2px; }
+.fabiaotiezi b { float:left; }
 </style>
 <!--{if $_GET[action] == 'edit'}--><!--{eval $editor[value] = $postinfo[message];}--><!--{else}--><!--{eval $editor[value] = $message;}--><!--{/if}-->
 <script type="text/javascript" src="{$_G['setting']['jspath']}forum_post.js?{VERHASH}"></script>
@@ -129,7 +132,10 @@
 		<!--{if $specialextra}-->
 			<input type="hidden" name="specialextra" value="$specialextra" />
 		<!--{/if}-->
-        
+        <div class="fabiaotiezi">
+        	<b><img src="/template/we54/images/tizi_logo.jpg" width="30" height="32" /></b>
+        	<span>·¢±íÌû×Ó</span>        
+        </div>
 		<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if} >
 			<!--{if $_GET[action] == 'newthread'}-->
 				<ul class="tb cl kaiser_tb_cl">
