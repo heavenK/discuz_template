@@ -120,6 +120,7 @@
 .kaiser_gundong_box b				{ width:385px; height:24px; padding:17px 0 0 15px; overflow:hidden; float:left;}
 .kaiser_gundong_box b span			{ width:91px; height:24px; font-weight:normal; color:#666; line-height:27px; overflow:hidden; float:left;}
 .kaiser_gundong_box b a				{ height:24px; margin:0 12px 0 0; display:inline; overflow:hidden; float:left;}
+.kaiser_gundong_close				{ width:19px; height:16px; background:url(/template/we54/images/kaiser_gundong_close.png) no-repeat; overflow:hidden; position:absolute; right:12px; top:12px; cursor:pointer;}
 
 /*
 ¡–±Ì“≥
