@@ -135,7 +135,13 @@
         <div class="fabiaotiezi">
         	<b><img src="/template/we54/images/tizi_logo.jpg" width="30" height="32" /></b>
         	<!--{if $_GET[action] == 'newthread'}-->
-						<!--{if $special == 0}--><span>发表帖子</span><!--{/if}-->
+						<!--{if $special == 0}--><span>发表帖子</span>
+                        <!--{elseif $special == 1}--><span>{lang post_newthreadpoll}</span>
+						<!--{elseif $special == 2}--><span>{lang post_newthreadtrade}</span>
+						<!--{elseif $special == 3}--><span>{lang post_newthreadreward}</span>
+						<!--{elseif $special == 4}--><span>{lang post_newthreadactivity}</span>
+						<!--{elseif $special == 5}--><span>{lang post_newthreaddebate}</span>
+                        <!--{/if}-->
                         <!--{elseif $_GET[action] == 'reply'}--><span>回复帖子</span>  
             <!--{/if}--> 
         </div>
