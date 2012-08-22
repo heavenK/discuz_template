@@ -134,7 +134,10 @@
 		<!--{/if}-->
         <div class="fabiaotiezi">
         	<b><img src="/template/we54/images/tizi_logo.jpg" width="30" height="32" /></b>
-        	<span>发表帖子</span>        
+        	<!--{if $_GET[action] == 'newthread'}-->
+						<!--{if $special == 0}--><span>发表帖子</span><!--{/if}-->
+                        <!--{elseif $_GET[action] == 'reply'}--><span>回复帖子</span>  
+            <!--{/if}--> 
         </div>
 		<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if} >
 			<!--{if $_GET[action] == 'newthread'}-->
@@ -231,7 +234,7 @@
 							<span><!--{if $buttontext}-->$buttontext<!--{else}-->{lang post_newthread}<!--{/if}--></span>
 						<!--{/if}-->
 					<!--{elseif $_GET[action] == 'reply' && !empty($_GET['addtrade'])}--><span>{lang trade_add_post}</span>
-					<!--{elseif $_GET[action] == 'reply'}--><span>{lang join_thread}</span>
+					<!--{elseif $_GET[action] == 'reply'}--><span>写好了，回复</span>
 					<!--{elseif $_GET[action] == 'edit' && $isfirstpost && $thread['displayorder'] == -4}-->
 						<span>{lang post_newthread}</span>
 					<!--{elseif $_GET[action] == 'edit'}--><span>{lang edit_save}</span>
