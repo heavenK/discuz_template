@@ -4,12 +4,14 @@ label							{cursor:auto;}
 .login_header em				{padding:0;}
 /*×¢²á*/
 .z_tip							{z-index:2;padding-left:10px;width:390px;background:#FFF;color:#b2b2b2;font-style:normal;font-size:14px;float:left;}
+.register						{background:url(../images/bg.jpg) white no-repeat bottom center;_height:850px !important;}
 .register tt					{color:red;margin-right:6px;}
 .register dl dt.tipwide			{height:auto;padding:10px 2px;line-height:24px;}
 .register dl dt em.p_notice		{ width:352px;height:34px;}
 .register dl dt em i			{ margin:0 0 0 8px; display:inline; line-height:13px; float:left;}
 .register dl dd em.p_notice		{ width:352px;height:34px;}
 .register b.sechash_tip			{color:#b2b2b2;font-style:normal;font-size:14px;font-weight:normal;width:auto;height:auto;padding:5px 0 0 0;}
+.register b						{margin-bottom:140px;_margin-bottom:1340px;}
 .p_chk							{z-index:1;padding:4px 6px 0 10px;width:390px;color:red;font-weight:700;font-size:14px;font-family: "Î¢ÈíÑÅºÚ", "ºÚÌå";float:left;}
 .s_k							{margin-left:4px;}
 .p_chk img						{margin:4px 4px 0 6px;float:left;}

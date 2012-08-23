@@ -73,49 +73,65 @@
 </div>
 <div id="chg_bg_btn" class="box">
     <div class="login_bg_btn"><!--µÇÂ½±³¾°ÇÐ»»°´Å¥-->
-        <a id="login_bg_btn1" onClick="change(1,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png" /></a>
-        <a id="login_bg_btn2" onClick="change(2,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
-        <a id="login_bg_btn3" onClick="change(3,this)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+        <a id="login_bg_btn1" onClick="autoChange(1)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png" /></a>
+        <a id="login_bg_btn2" onClick="autoChange(2)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
+        <a id="login_bg_btn3" onClick="autoChange(3)"><img src="{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png" /></a>
     </div>
 </div>
 <script>
-function change(n, obj){
-	var cls = "login_bg bg_" + n;
-	/*jQuery("#login_bg").fadeOut("faster",function(){
-		jQuery("#login_bg").attr("class",cls);
-		jQuery("#login_bg").fadeIn("faster");
-	 });*/
-	 
-	 jQuery("#login_bg").animate({opacity: '0.08'},1000,function (){jQuery(this).attr("class",cls);jQuery(this).animate({opacity: '1'},1000);});
-	 
-	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
-	jQuery(".login_bg_btn a").attr('class','');
-	jQuery(obj).attr('class','login_bg_btn_on');
-	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
-}
-function autoChange(){
-	var cls = jQuery("#login_bg").attr("class");
+var flag = 1;
+
+
+function autoChange(n){
+	
+	var old_id = '';
+	var new_id = '';
+
+	if(flag%2 == 1){
+		old_id = 'login_bg';
+		new_id = 'login_bg_bacup';
+	}else{
+		old_id = 'login_bg_bacup';
+		new_id = 'login_bg';
+	}
+	
+	flag++;
+	
+	var cls = jQuery("#" + old_id).attr("class");
 	var num = cls.match(/\d/);
 	
-	var n = ++num;
-	if(n > 3) n = 1;
+	if(!n){
+		var n = ++num;
+		if(n > 3) n = 1;
+	}else{
+		clearInterval(timer);
+		timer = setInterval("autoChange()", 6000);	
+	}
+	
 	
 	var new_cls = "login_bg bg_" + n;
 	var new_obj = "#login_bg_btn" + n;
-	/*jQuery("#login_bg").fadeOut("faster",function(){
-	   jQuery("#login_bg").attr("class",new_cls);
-	   jQuery("#login_bg").fadeIn("faster");
-	 });
-	*/
-	jQuery("#login_bg").animate({opacity: '0.1'},2000,function (){jQuery(this).attr("class",new_cls);jQuery(this).animate({opacity: '1'},2000);});
+	
+	var str = '<div id="' + new_id + '" class="' + new_cls + '" style="opacity: 0;"></div>';
+	
+	
+	var left = jQuery(".login_bg_line").offset().left;
+	var top = jQuery(".login_bg_line").offset().top + 7;
+	
+	jQuery("#" + old_id).after(str);
 
-	 
+	
+	jQuery("#" + new_id).offset({top:top , left:left});
+	
 	jQuery(".login_bg_btn a img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_out.png');
-	jQuery(".login_bg_btn a").attr('class','');
-	jQuery(new_obj).attr('class','login_bg_btn_on');
-	jQuery(".login_bg_btn_on img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
+	jQuery(new_obj + " img").attr('src','{$_G[siteurl]}template/we54/common/images/login_bg_btn_on.png');
+	
+	jQuery("#" + new_id).animate({opacity: '1'},1000,function(){jQuery("#" + old_id).remove();jQuery("#" + new_id).offset({top:top , left:left});});
+	
+	
+	return;
 }
-setInterval("autoChange()", 5000);
+var timer = setInterval("autoChange()", 5000);
 </script>
 <script type="text/javascript" reload="1">
 <!--{if !isset($_GET['viewlostpw'])}-->
