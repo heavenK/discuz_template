@@ -287,7 +287,7 @@ function editorfull(op) {
 		bbar.style.top = (document.documentElement.clientHeight - bbar.offsetHeight) + 'px';
 		bbar.style.left = '0px';
 		bbar.style.width = '100%';
-		control.style.zIndex = '500';
+		control.style.zIndex = '9999';/*Ô­À´ÊÇ500*/
 		area.style.zIndex = bbar.style.zIndex = '200';
 		if($(editorid + '_resize')) {
 			$(editorid + '_resize').style.display = 'none';
