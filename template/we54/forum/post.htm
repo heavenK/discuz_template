@@ -1,4 +1,4 @@
-<!--{subtemplate common/header}-->
+<!--{subtemplate common/other_header}-->
 <script type="text/javascript">
 	var allowpostattach = parseInt('{$_G['group']['allowpostattach']}');
 	var allowpostimg = parseInt('$allowpostimg');
@@ -29,6 +29,10 @@
 .kaiser_bm .z { top:0;}
 .tb { margin-bottom:10px;}
 .ct2_a .mn { padding-top:0;}
+#post_extra_tb label { background-color:#FFFFFF;}
+.fabiaotiezi { width:900px; height:32px; margin-top:15px; }
+.fabiaotiezi span { float:left; font-size:20px; font-weight:bold; color:#000000; margin-left:18px; margin-top:2px; }
+.fabiaotiezi b { float:left; }
 </style>
 <!--{if $_GET[action] == 'edit'}--><!--{eval $editor[value] = $postinfo[message];}--><!--{else}--><!--{eval $editor[value] = $message;}--><!--{/if}-->
 <script type="text/javascript" src="{$_G['setting']['jspath']}forum_post.js?{VERHASH}"></script>
@@ -94,8 +98,8 @@
 	{elseif $_GET[action] == 'edit'}action="forum.php?mod=post&action=edit&extra=$extra&editsubmit=yes" $enctype
 	{/if}
 	onsubmit="return validate(this)">
-<div id="ct" class="ct2_a ct2_a_r wp cl">
-	<div class="mn" style="width:1000px;">
+<div id="ct" class="ct2_a ct2_a_r wp cl" style="background-color:#f9f9f9; border-top:3px solid #6d98c7; margin-top:18px; margin-bottom:10px; ">
+	<div class="mn" style="width:970px; padding:0 15px 0 15px; ">
 		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
 		<input type="hidden" name="posttime" id="posttime" value="{TIMESTAMP}" />
 		<!--{if $_GET['action'] == 'edit'}-->
@@ -128,7 +132,20 @@
 		<!--{if $specialextra}-->
 			<input type="hidden" name="specialextra" value="$specialextra" />
 		<!--{/if}-->
-		<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if}>
+        <div class="fabiaotiezi">
+        	<b><img src="/template/we54/images/tizi_logo.jpg" width="30" height="32" /></b>
+        	<!--{if $_GET[action] == 'newthread'}-->
+						<!--{if $special == 0}--><span>发表帖子</span>
+                        <!--{elseif $special == 1}--><span>{lang post_newthreadpoll}</span>
+						<!--{elseif $special == 2}--><span>{lang post_newthreadtrade}</span>
+						<!--{elseif $special == 3}--><span>{lang post_newthreadreward}</span>
+						<!--{elseif $special == 4}--><span>{lang post_newthreadactivity}</span>
+						<!--{elseif $special == 5}--><span>{lang post_newthreaddebate}</span>
+                        <!--{/if}-->
+                        <!--{elseif $_GET[action] == 'reply'}--><span>回复帖子</span>  
+            <!--{/if}--> 
+        </div>
+		<div class="bm bw0 cl"{if !$showthreadsorts && !$adveditor} id="editorbox"{/if} >
 			<!--{if $_GET[action] == 'newthread'}-->
 				<ul class="tb cl kaiser_tb_cl">
 					<!--{if $savecount}-->
@@ -211,9 +228,9 @@
 
 				<div class="mtm mbm pnpost">
 					<a href="home.php?mod=spacecp&ac=credit&op=rule&fid=$_G['fid']" class="y" target="_blank">{lang post_credits_rule}</a>
-					<button type="submit" id="postsubmit" class="pn pnc" value="true" name="{if $_GET[action] == 'newthread'}topicsubmit{elseif $_GET[action] == 'reply'}replysubmit{elseif $_GET[action] == 'edit'}editsubmit{/if}">
+					<button type="submit" id="postsubmit" class="pn pnc" value="true" name="{if $_GET[action] == 'newthread'}topicsubmit{elseif $_GET[action] == 'reply'}replysubmit{elseif $_GET[action] == 'edit'}editsubmit{/if}" style="width:120px; height:32px; background:url(/template/we54/images/fabu_bg_01.jpg) no-repeat; font-size:14px; font-weight:bold; border:none;">
 					<!--{if $_GET[action] == 'newthread'}-->
-						<!--{if $special == 0}--><span>{lang post_newthread}</span>
+						<!--{if $special == 0}--><span>写好了，发布</span>
 						<!--{elseif $special == 1}--><span>{lang post_newthreadpoll}</span>
 						<!--{elseif $special == 2}--><span>{lang post_newthreadtrade}</span>
 						<!--{elseif $special == 3}--><span>{lang post_newthreadreward}</span>
@@ -223,7 +240,7 @@
 							<span><!--{if $buttontext}-->$buttontext<!--{else}-->{lang post_newthread}<!--{/if}--></span>
 						<!--{/if}-->
 					<!--{elseif $_GET[action] == 'reply' && !empty($_GET['addtrade'])}--><span>{lang trade_add_post}</span>
-					<!--{elseif $_GET[action] == 'reply'}--><span>{lang join_thread}</span>
+					<!--{elseif $_GET[action] == 'reply'}--><span>写好了，回复</span>
 					<!--{elseif $_GET[action] == 'edit' && $isfirstpost && $thread['displayorder'] == -4}-->
 						<span>{lang post_newthread}</span>
 					<!--{elseif $_GET[action] == 'edit'}--><span>{lang edit_save}</span>
@@ -232,7 +249,7 @@
 					<!--{if $_G['uid']}-->
 						<input type="hidden" id="postsave" name="save" value="" />
 						<!--{if $_GET[action] == 'newthread' && !$modnewthreads || $_GET[action] == 'edit' && $isfirstpost && !$modnewreplies && $thread['displayorder'] == -4}-->
-							<button type="button" id="postsubmit" class="pn" value="true" onclick="$('postsave').value = 1;$('postsubmit').click();"><em>{lang save_draft}</em></button>
+							<button type="button" id="postsubmit" class="pn" value="true" onclick="$('postsave').value = 1;$('postsubmit').click();" style="width:120px; height:32px; background:url(/template/we54/images/fabu_bg_02.jpg) no-repeat; font-size:14px; font-weight:bold; border:0; margin-right:0;"><em>{lang save_draft}</em></button>
 						<!--{/if}-->
 					<!--{/if}-->
 					<!--{hook/post_btn_extra}-->

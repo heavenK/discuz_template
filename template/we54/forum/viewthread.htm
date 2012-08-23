@@ -502,3 +502,19 @@ function succeedhandle_followmod(url, msg, values) {
 }
 </script>
 <!--{subtemplate common/footer}-->
+<!--{if !$_G['cookie']['auth']}-->
+<div class="kaiser_gundong">
+	<div class="kaiser_gundong_close"></div>
+	<div class="kaiser_gundong_box">
+        <em>别说你只是随便逛逛<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我知道你是很油菜花</em>
+        <i><a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login" class="kaiser_gundong_login"></a><a href="member.php?mod=register" class="kaiser_gundong_register"></a></i>
+        <b><span>其他账号登陆：</span><a href="#"><img src="template/we54/images/kaiser_sina_button.png" /></a><a href="#"><img src="template/we54/images/kaiser_qq_login.gif" /></a></b>
+    </div>
+</div>
+<script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+		jq(".kaiser_gundong_close").click(function(){jq(".kaiser_gundong").hide();});
+	});
+</script>
+<!--{/if}-->

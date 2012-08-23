@@ -107,6 +107,20 @@
 .dxcneirong_wenzhang				{ width:232px; height:117px; margin:0; padding:8px 0 0 13px; overflow:hidden; float:left;}
 .dxcneirong_wenzhang .xl1 ul li		{ width:232px; height:24px; margin:0; padding:0; background:none; line-height:24px; overflow:hidden; float:left;}
 .dxcneirong_wenzhang .xl1 ul li a	{ font-size:14px; color:#666666;}
+.kaiser_gundong						{ width:100%; height:59px; background:#e7e7cb; border-top:1px solid #e1d6ad; position:fixed; bottom:0; z-index:99999; _position:absolute; _bottom:auto; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); overflow:hidden;}
+.kaiser_gundong_box					{ width:1000px; height:59px; margin:0 auto; overflow:hidden;}
+.kaiser_gundong_box em				{ width:271px; padding:4px 0 0 36px; font-family:"Œ¢»Ì—≈∫⁄"; font-size:22px; color:#996633; line-height:26px; overflow:hidden; float:left;}
+*html								{ background-image:url(about:blank); background-attachment:fixed;}/*∑¿IE6∂∂∂Ø*/
+.kaiser_gundong_box i				{ width:210px; height:39px; margin:8px 0 0 0; display:inline; padding:4px 0 0 76px; background:url(/template/we54/images/kaiser_gundong_bg.png) no-repeat 0 11px; border-right:1px solid #d6c59c; overflow:hidden; float:left;}
+.kaiser_gundong_box i a				{ width:88px; height:35px; margin:0 17px 0 0; display:inline]; overflow:hidden; float:left;}
+.kaiser_gundong_login				{ background:url(/template/we54/images/kaiser_gundong_btn.png) no-repeat 0 0;}
+.kaiser_gundong_login:hover			{ background-position:-88px 0;}
+.kaiser_gundong_register			{ background:url(/template/we54/images/kaiser_gundong_btn.png) no-repeat 0 -35px;}
+.kaiser_gundong_register:hover		{ background-position:-88px -35px;}
+.kaiser_gundong_box b				{ width:385px; height:24px; padding:17px 0 0 15px; overflow:hidden; float:left;}
+.kaiser_gundong_box b span			{ width:91px; height:24px; font-weight:normal; color:#666; line-height:27px; overflow:hidden; float:left;}
+.kaiser_gundong_box b a				{ height:24px; margin:0 12px 0 0; display:inline; overflow:hidden; float:left;}
+.kaiser_gundong_close				{ width:19px; height:16px; background:url(/template/we54/images/kaiser_gundong_close.png) no-repeat; overflow:hidden; position:absolute; right:12px; top:12px; cursor:pointer;}
 
 /*
 ¡–±Ì“≥
