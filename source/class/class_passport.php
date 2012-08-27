@@ -19,22 +19,10 @@ class passport{
 	    self::connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
 	}
 	function connect($dbhost, $dbuser, $dbpw, $dbname = '', $pconnect = 0, $halt = TRUE) {
-		$func = empty($pconnect) ? 'mysql_connect' : 'mysql_pconnect';
-		if(!$this->link = @$func($dbhost, $dbuser, $dbpw)) {
-			$halt && self::halt('Can not connect to MySQL server');
-		} else {
-			if(self::version() > '4.1') {
-				global $charset, $dbcharset;
-				$dbcharset = !$dbcharset && in_array(strtolower($charset), array('gbk', 'big5', 'utf-8')) ? str_replace('-', '', $charset) : $dbcharset;
-				$serverset = $dbcharset ? 'character_set_connection='.$dbcharset.', character_set_results='.$dbcharset.', character_set_client='.$dbcharset : '';
-				$serverset .= self::version() > '5.0.1' ? ((empty($serverset) ? '' : ',').'sql_mode=\'\'') : '';
-				$serverset && mysql_query("SET $serverset", $this->link);
-			}
-			mysql_query("SET NAMES GBK");
-
-			$dbname && @mysql_select_db($dbname, $this->link);
-		}
-
+		$dbrs=mysql_connect($dbhost,$dbuser,$dbpw);
+		 
+		mysql_query("SET NAMES GBK");
+		@mysql_select_db($dbname, $dbrs);
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
