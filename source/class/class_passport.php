@@ -9,10 +9,10 @@ class passport{
 	var $link;
 
 	function passport(){
-		$dbhost = '192.168.1.9';			// 数据库服务器
+		$dbhost = '192.168.0.9';			// 数据库服务器
 		$dbuser = 'user1';			// 数据库用户名
 		$dbpw = '123';				// 数据库密码
-		$dbname = 'bbsup';			// 数据库名
+		$dbname = 'bbsnew';			// 数据库名
 		$pconnect = 0;				// 数据库持久连接 0=关闭, 1=打开
 		$tablepre = 'passport';   		// 表名前缀, 同一数据库安装多个论坛请修改此处
 		$dbcharset = 'gbk';			// MySQL 字符集, 可选 'gbk', 'big5', 'utf8', 'latin1', 留空为按照论坛字符集设定
