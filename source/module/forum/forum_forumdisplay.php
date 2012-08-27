@@ -877,6 +877,11 @@ if(empty($_GET['k'])){
 }else{
 	$kaiser_k = $_GET['k'];
 }
+$kaiser_jieshao = 1;
+
+if(empty($_G['cookie']['kaiser'])){
+	dsetcookie('kaiser', 1);
+}
 //$kaiser_k = $_GET['k'];
 //end add
 
