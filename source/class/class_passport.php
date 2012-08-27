@@ -20,9 +20,8 @@ class passport{
 	}
 	function connect($dbhost, $dbuser, $dbpw, $dbname = '', $pconnect = 0, $halt = TRUE) {
 		$dbrs=mysql_connect($dbhost,$dbuser,$dbpw);
-		 
-		mysql_query("SET NAMES GBK");
 		@mysql_select_db($dbname, $dbrs);
+		mysql_query("SET NAMES GBK");
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
