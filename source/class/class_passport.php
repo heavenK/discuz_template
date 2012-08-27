@@ -25,7 +25,6 @@ class passport{
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
-
 		$searchsql="SELECT * FROM passport_user WHERE username='".$username."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
@@ -83,7 +82,6 @@ class passport{
 		
 	}
 	function nickname_check($nickname){
-		$this->passport();
 		$searchsql="SELECT * FROM passport_user WHERE nickname='".$nickname."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
