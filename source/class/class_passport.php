@@ -30,7 +30,7 @@ class passport{
 				$serverset .= self::version() > '5.0.1' ? ((empty($serverset) ? '' : ',').'sql_mode=\'\'') : '';
 				$serverset && mysql_query("SET $serverset", $this->link);
 			}
-			mysql_query("set names gbk");
+			mysql_query("SET NAMES GBK");
 
 			$dbname && @mysql_select_db($dbname, $this->link);
 		}
@@ -39,7 +39,7 @@ class passport{
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
 		self::passport();
-		$searchsql="select * from passport_user where username='".$username."'";
+		$searchsql="SELECT * FROM passport_user WHERE username='".$username."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
 		if(!empty($row)){
@@ -97,7 +97,7 @@ class passport{
 	}
 	function nickname_check($nickname){
 		$this->passport();
-		$searchsql="select * from passport_user where nickname='".$nickname."'";
+		$searchsql="SELECT * FROM passport_user WHERE nickname='".$nickname."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
 		if(!empty($row)){
@@ -108,7 +108,7 @@ class passport{
 	}
 	function passport_setsession($DZuser,$cookietime,$lastip){
 		self::passport();
-		$searchsql="select * from passport_user where username='".$DZuser['username']."' limit 1";
+		$searchsql="SELECT * FROM passport_user WHERE username='".$DZuser['username']."' limit 1";
 		$rs=mysql_query($searchsql);
 		$passportdata=mysql_fetch_array($rs);
 		if(!empty($passportdata)){
