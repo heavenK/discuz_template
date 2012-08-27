@@ -8,7 +8,7 @@ class passport{
 	var $querynum = 0;
 	var $link;
 
-	function passport(){
+	function __construct(){
 		$dbhost = '192.168.0.9';			// 数据库服务器
 		$dbuser = 'user1';			// 数据库用户名
 		$dbpw = '123';				// 数据库密码
@@ -25,7 +25,7 @@ class passport{
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
-		self::passport();
+
 		$searchsql="SELECT * FROM passport_user WHERE username='".$username."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
@@ -94,7 +94,6 @@ class passport{
 		}
 	}
 	function passport_setsession($DZuser,$cookietime,$lastip){
-		self::passport();
 		$searchsql="SELECT * FROM passport_user WHERE username='".$DZuser['username']."' limit 1";
 		$rs=mysql_query($searchsql);
 		$passportdata=mysql_fetch_array($rs);
