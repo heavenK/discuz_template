@@ -1,5 +1,5 @@
 <!--{subtemplate common/header}-->
-<!--{if empty($_G['cookie']['kaiser'])}-->
+<!--{if empty($_G['cookie']['kaiser_info'])}-->
 <script src="{$_G[siteurl]}template/we54/js/popup.js" type="text/javascript"></script>
 <div class="kaiser_jieshao">
 	<em class="kaiser_jieshao_1">
@@ -30,6 +30,7 @@
         <a id="kaiser_jieshao_07" onclick="kaiserjieshaonext(7);"></a>
     </em>
 </div>
+<!--{eval dsetcookie('kaiser_info', 1);}-->
 <!--{/if}-->
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/list_focus.css" />
 <script src="{$_G[siteurl]}template/we54/js/loopedcarousel.js" type="text/javascript"></script>
