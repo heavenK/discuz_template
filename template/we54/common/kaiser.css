@@ -96,8 +96,8 @@
 .dxctuijian_cont .xl1 ul li a		{ color:#663300;}
 .temp								{ margin:0;}
 .dxcneirong							{ width:995px; height:125px; margin:0 0 0 3px; display:inline; border:none; overflow:hidden; float:left;}
-.dxcneirong #frame619jsP_left		{ width:733px; float:left;}
-.dxcneirong #frame619jsP_center		{ width:245px; float:left;}
+.dxcneirong .frame-2-1-l			{ width:733px; float:left;}
+.dxcneirong .frame-2-1-r			{ width:245px; float:left;}
 .dxcneirong_tupian					{ margin:0;}
 .dxcneirong_tupian dl				{ width:120px; height:112px; margin:13px 13px 0; display:inline; overflow:hidden; float:left;}
 .dxcneirong_tupian .xld dd			{ width:120px; height:90px; overflow:hidden; margin:0; float:left;}
@@ -194,6 +194,29 @@
 .tl .num a							{ color:#aaa;}
 .tl .num em							{ color:#ff0101;}
 #fj .kaiser_z						{ line-height:19px;}
+.kaiser_jieshao						{ width:1000px; height:629px; margin:0 auto; position:absolute; top:0; z-index:999999;}
+.kaiser_jieshao em					{ position:absolute; overflow:hidden;}
+.kaiser_jieshao_1					{ width:507px; height:261px; background-image:url(/template/we54/images/kaiser_jieshao_01.gif); background-repeat:no-repeat; left:304px; top:37px;}
+.popupContactClose_01				{ width:43px; height:43px; cursor:pointer; overflow:hidden; position:absolute; left:406px; top:34px;}
+#kaiser_jieshao_01					{ width:126px; height:59px; position:absolute; left:325px; top:148px; cursor:pointer;}
+.kaiser_jieshao_2					{ width:400px; height:224px; background-image:url(/template/we54/images/kaiser_jieshao_02.gif); background-repeat:no-repeat; left:538px; top:37px;}
+.popupContactClose_02				{ width:43px; height:43px; cursor:pointer; overflow:hidden; position:absolute; left:290px; top:39px;}
+#kaiser_jieshao_02					{ width:88px; height:42px; position:absolute; left:36px; top:171px; cursor:pointer;}
+.kaiser_jieshao_3					{ width:418px; height:183px; background-image:url(/template/we54/images/kaiser_jieshao_03.gif); background-repeat:no-repeat; left:26px; top:239px;}
+.popupContactClose_03				{ width:43px; height:43px; cursor:pointer; overflow:hidden; position:absolute; left:335px; top:21px;}
+#kaiser_jieshao_03					{ width:93px; height:44px; position:absolute; left:244px; top:116px; cursor:pointer;}
+.kaiser_jieshao_4					{ width:426px; height:285px; background-image:url(/template/we54/images/kaiser_jieshao_04.gif); background-repeat:no-repeat; left:503px; top:176px;}
+.popupContactClose_04				{ width:43px; height:43px; cursor:pointer; overflow:hidden; position:absolute; left:344px; top:84px;}
+#kaiser_jieshao_04					{ width:93px; height:44px; position:absolute; left:285px; top:201px; cursor:pointer;}
+.kaiser_jieshao_5					{ width:412px; height:232px; background-image:url(/template/we54/images/kaiser_jieshao_05.gif); background-repeat:no-repeat; left:15px; top:397px;}
+.popupContactClose_05				{ width:37px; height:37px; cursor:pointer; overflow:hidden; position:absolute; left:350px; top:77px;}
+#kaiser_jieshao_05					{ width:93px; height:44px; position:absolute; left:286px; top:173px; cursor:pointer;}
+.kaiser_jieshao_6					{ width:334px; height:222px; background-image:url(/template/we54/images/kaiser_jieshao_06.gif); background-repeat:no-repeat; left:590px; top:339px;}
+.popupContactClose_06				{ width:37px; height:37px; cursor:pointer; overflow:hidden; position:absolute; left:282px; top:68px;}
+#kaiser_jieshao_06					{ width:93px; height:44px; position:absolute; left:24px; top:151px; cursor:pointer;}
+.kaiser_jieshao_7					{ width:488px; height:278px; background-image:url(/template/we54/images/kaiser_jieshao_07.gif); background-repeat:no-repeat; left:326px; top:171px;}
+#kaiser_jieshao_07					{ width:208px; height:67px; position:absolute; left:265px; top:144px; cursor:pointer;}
+#backgroundPopup					{ display:none; position:fixed; _position:absolute; height:100%; width:100%; top:0; left:0; background:#000000; z-index:99999;}
 
 /*
 个人资料

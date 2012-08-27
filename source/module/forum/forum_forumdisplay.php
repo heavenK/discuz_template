@@ -877,6 +877,8 @@ if(empty($_GET['k'])){
 }else{
 	$kaiser_k = $_GET['k'];
 }
+$kaiser_jieshao = 1;
+
 //$kaiser_k = $_GET['k'];
 //end add
 
