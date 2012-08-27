@@ -119,14 +119,15 @@ class logging_ctl {
 				checkfollowfeed();
 
 				//----------add by zh-------------
-				$psptuser=passport::passport_setsession($result['member'], $_GET['cookietime'] ? 2592000 : 0,$_G['clientip']);
+				$passp=new passport();
+				$psptuser=$passp->passport_setsession($result['member'], $_GET['cookietime'] ? 2592000 : 0,$_G['clientip']);
 				if($psptuser==false){
-					$pass=passport::useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);	//add
+					$pass=$passp->useradd($uid, $result['ucresult']['username'], $result['ucresult']['password'], $result['ucresult']['email'], $_G['clientip'], $groupid, $init_arr);	//add
 					if(is_array($pass)){
-						$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
-					}/*else{
+						$psptuser=$passp->passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
+					}else{
 						showmessage('login_passport_invalid');
-					}*/
+					}
 				}
 				
 				//--------add end-----------
@@ -684,10 +685,11 @@ class register_ctl {
 			C::t('common_member')->insert($uid, $username, $password, $email, $_G['clientip'], $groupinfo['groupid'], $init_arr);
 
 			//----------------add--------------------------
-			$pass=passport::useradd($uid, $username, $passportpwd, $email, $_G['clientip'], $groupinfo['groupid'], $init_arr);	//add
+			$passp=new passport();
+			$pass=$passp->useradd($uid, $username, $passportpwd, $email, $_G['clientip'], $groupinfo['groupid'], $init_arr);	//add
 			
 			if(is_array($pass)){
-				$psptuser=passport::passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
+				$psptuser=$passp->passport_setsession($pass, $_GET['cookietime'] ? 2592000 : 14400,$_G['clientip']);//add
 			}else if($pass=="userisexist"){
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
