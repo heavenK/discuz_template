@@ -19,27 +19,14 @@ class passport{
 	    self::connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
 	}
 	function connect($dbhost, $dbuser, $dbpw, $dbname = '', $pconnect = 0, $halt = TRUE) {
-		$func = empty($pconnect) ? 'mysql_connect' : 'mysql_pconnect';
-		if(!$this->link = @$func($dbhost, $dbuser, $dbpw)) {
-			$halt && self::halt('Can not connect to MySQL server');
-		} else {
-			if(self::version() > '4.1') {
-				global $charset, $dbcharset;
-				$dbcharset = !$dbcharset && in_array(strtolower($charset), array('gbk', 'big5', 'utf-8')) ? str_replace('-', '', $charset) : $dbcharset;
-				$serverset = $dbcharset ? 'character_set_connection='.$dbcharset.', character_set_results='.$dbcharset.', character_set_client='.$dbcharset : '';
-				$serverset .= self::version() > '5.0.1' ? ((empty($serverset) ? '' : ',').'sql_mode=\'\'') : '';
-				$serverset && mysql_query("SET $serverset", $this->link);
-			}
-			mysql_query("set names gbk");
-
-			$dbname && @mysql_select_db($dbname, $this->link);
-		}
-
+		$dbrs=mysql_connect($dbhost,$dbuser,$dbpw);
+		@mysql_select_db($dbname, $dbrs);
+		mysql_query("SET NAMES GBK");
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
 		self::passport();
-		$searchsql="select * from passport_user where username='".$username."'";
+		$searchsql="SELECT * FROM passport_user WHERE username='".$username."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
 		if(!empty($row)){
@@ -97,7 +84,7 @@ class passport{
 	}
 	function nickname_check($nickname){
 		$this->passport();
-		$searchsql="select * from passport_user where nickname='".$nickname."'";
+		$searchsql="SELECT * FROM passport_user WHERE nickname='".$nickname."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
 		if(!empty($row)){
@@ -108,7 +95,7 @@ class passport{
 	}
 	function passport_setsession($DZuser,$cookietime,$lastip){
 		self::passport();
-		$searchsql="select * from passport_user where username='".$DZuser['username']."' limit 1";
+		$searchsql="SELECT * FROM passport_user WHERE username='".$DZuser['username']."' limit 1";
 		$rs=mysql_query($searchsql);
 		$passportdata=mysql_fetch_array($rs);
 		if(!empty($passportdata)){
