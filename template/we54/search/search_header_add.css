@@ -3,7 +3,7 @@
 
 /*通用样式*/
 *			{ margin:0; padding:0; border:0;}
-body		{ background: url(/template/we54/images/search_top_bg.jpg) #fff repeat-x top !important; font-size:12px; font-family:"宋体"; color:#000;}
+body		{ background: url(/template/we54/por_images/header_bg.jpg) #fff repeat-x top !important; font-size:12px; font-family:"宋体"; color:#000;}
 a           { text-decoration:none; }
 a:hover     { text-decoration:underline;}
 .wp         { width:1000px;}
