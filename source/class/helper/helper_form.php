@@ -19,16 +19,24 @@ class helper_form {
 			return FALSE;
 		} else {
 			global $_G;
+			
 			if($allowget || ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_GET['formhash']) && $_GET['formhash'] == formhash() && empty($_SERVER['HTTP_X_FLASH_VERSION']) && (empty($_SERVER['HTTP_REFERER']) ||
 			preg_replace("/https?:\/\/([^\:\/]+).*/i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("/([^\:]+).*/", "\\1", $_SERVER['HTTP_HOST'])))) {
-				if(checkperm('seccode')) {
-					if($secqaacheck && !check_secqaa($_GET['secanswer'], $_GET['sechash'])) {
-						showmessage('submit_secqaa_invalid');
-					}
-					if($seccodecheck && !check_seccode($_GET['seccodeverify'], $_GET['sechash'])) {
-						showmessage('submit_seccode_invalid');
+				
+				if(empty($_GET['phone_reg'])){
+					if(checkperm('seccode')) {
+						if($secqaacheck && !check_secqaa($_GET['secanswer'], $_GET['sechash'])) {
+							showmessage('submit_secqaa_invalid');
+						}
+						if($seccodecheck && !check_seccode($_GET['seccodeverify'], $_GET['sechash'])) {
+							showmessage('submit_seccode_invalid');
+						}
 					}
 				}
+				return TRUE;
+				
+			// For ios reg modify by heavenK
+			} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_GET['formhash']) && !empty($_GET['phone_reg']) && empty($_SERVER['HTTP_X_FLASH_VERSION']) && (empty($_SERVER['HTTP_REFERER']))) {
 				return TRUE;
 			} else {
 				//add by zh
