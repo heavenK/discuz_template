@@ -8,24 +8,18 @@ class passport{
 	var $querynum = 0;
 	var $link;
 
-	function passport(){
+	function __construct(){
 		$dbhost = '192.168.0.9';			// 数据库服务器
 		$dbuser = 'user1';			// 数据库用户名
 		$dbpw = '123';				// 数据库密码
 		$dbname = 'bbsnew';			// 数据库名
-		$pconnect = 0;				// 数据库持久连接 0=关闭, 1=打开
-		$tablepre = 'passport';   		// 表名前缀, 同一数据库安装多个论坛请修改此处
-		$dbcharset = 'gbk';			// MySQL 字符集, 可选 'gbk', 'big5', 'utf8', 'latin1', 留空为按照论坛字符集设定
-	    self::connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
-	}
-	function connect($dbhost, $dbuser, $dbpw, $dbname = '', $pconnect = 0, $halt = TRUE) {
 		$dbrs=mysql_connect($dbhost,$dbuser,$dbpw);
 		@mysql_select_db($dbname, $dbrs);
 		mysql_query("SET NAMES GBK");
+//	    self::connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
 	}
 
 	function useradd($uid, $username, $password, $email, $ip, $groupid, $extdata, $adminid = 0){
-		self::passport();
 		$searchsql="SELECT * FROM passport_user WHERE username='".$username."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
@@ -83,7 +77,6 @@ class passport{
 		
 	}
 	function nickname_check($nickname){
-		$this->passport();
 		$searchsql="SELECT * FROM passport_user WHERE nickname='".$nickname."'";
 		$searchrs=mysql_query($searchsql);
 		$row=mysql_fetch_array($searchrs);
@@ -94,7 +87,6 @@ class passport{
 		}
 	}
 	function passport_setsession($DZuser,$cookietime,$lastip){
-		self::passport();
 		$searchsql="SELECT * FROM passport_user WHERE username='".$DZuser['username']."' limit 1";
 		$rs=mysql_query($searchsql);
 		$passportdata=mysql_fetch_array($rs);
