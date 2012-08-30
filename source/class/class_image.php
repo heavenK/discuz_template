@@ -406,6 +406,18 @@ class image {
 			$ax = min($box[0], $box[6]) * -1;
 			$ay = min($box[5], $box[7]) * -1;
 		}
+		
+		
+		if ($this->param['watermarktype'][$type] == 'png'){
+				$percents = $this->imginfo['width'] / (5 * $logo_w);
+				$logo_w = $logo_w * $percents;
+				$logo_h = $logo_h * $percents;
+				list($width, $height) = getimagesize($this->param['watermarkfile'][$type]);
+				$src_im = @imagecreatefrompng($this->param['watermarkfile'][$type]);
+				$watermark_logo = imagecreate($logo_w, $logo_h);
+				imagecopyresized($watermark_logo, $src_im, 0, 0, 0, 0, $logo_w, $logo_h, $width, $height);
+			}
+		
 		$wmwidth = $this->imginfo['width'] - $logo_w;
 		$wmheight = $this->imginfo['height'] - $logo_h;
 
@@ -432,8 +444,13 @@ class image {
 					$y = ($this->imginfo['height'] - $logo_h) / 2;
 					break;
 				case 6:
-					$x = $this->imginfo['width'] - $logo_w;
-					$y = ($this->imginfo['height'] - $logo_h) / 2;
+					//$x = $img_w - $logo_w;
+					//$y = ($img_h - $logo_h) / 2;
+					$x = $this->imginfo['width'] - $logo_w - 10;
+					$y = $this->imginfo['height'] - $logo_h - $this->imginfo['height'] / 6;
+					
+					//$x = $this->imginfo['width'] - $logo_w;
+					//$y = ($this->imginfo['height'] - $logo_h) / 2;
 					break;
 				case 7:
 					$x = 5;
