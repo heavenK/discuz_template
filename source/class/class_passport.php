@@ -356,6 +356,8 @@ class sms_send{
 					{
 						$gid=C::t('common_usergroup')->findgroupid_by('认证会员');
 
+						DB::query("UPDATE ".DB::table('common_member')." SET groupid=".$gid['groupid']." WHERE uid=$_G[uid]");
+
 						DB::query("UPDATE ".DB::table('common_member')." SET extgroupids=".$gid['groupid']." WHERE uid=$_G[uid]");
 
 						DB::query("UPDATE ".DB::table('common_member_profile')." SET mobile='$mobile' WHERE uid=$_G[uid]");
