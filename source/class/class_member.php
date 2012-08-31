@@ -270,11 +270,21 @@ class register_ctl {
 
 	function on_register() {
 		global $_G;
-
-		$_GET['username'] = $_GET[''.$this->setting['reginput']['username']];
+		
+		
+		// For ios registe add by heavenK 
+		if(!$_GET['phone_reg']){
+			$_GET['username'] = $_GET[''.$this->setting['reginput']['username']];
+			$_GET['password'] = $_GET[''.$this->setting['reginput']['password']];
+			$_GET['password2'] = $_GET[''.$this->setting['reginput']['password2']];
+			$_GET['email'] = $_GET[''.$this->setting['reginput']['email']];
+		}
+		// end 
+		
+/*		$_GET['username'] = $_GET[''.$this->setting['reginput']['username']];
 		$_GET['password'] = $_GET[''.$this->setting['reginput']['password']];
 		$_GET['password2'] = $_GET[''.$this->setting['reginput']['password2']];
-		$_GET['email'] = $_GET[''.$this->setting['reginput']['email']];
+		$_GET['email'] = $_GET[''.$this->setting['reginput']['email']];*/
 
 		if($_G['uid']) {
 			$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';

@@ -110,6 +110,30 @@ class table_forum_thread extends discuz_table
 		$wheresql = !empty($wherearr) && is_array($wherearr) ? ' WHERE '.implode(' AND ', $wherearr) : '';
 		return DB::fetch_all("SELECT * FROM %t $wheresql ORDER BY lastpost DESC ".DB::limit($start, $limit), $parameter, $this->_pk);
 	}
+	//add by heavenK
+	public function fetch_all_by_fid_typeid_digest_displayorder($fid, $typeid = null, $displayorder = null, $glue = '=', $start = 0, $limit = 0, $digest = 0) {
+
+		$parameter = array($this->get_table_name(), $fid);
+		$wherearr = array();
+		$wherearr[] = is_array($fid) ? 'fid IN(%n)' : 'fid=%d';
+
+		if($typeid) {
+			$parameter[] = $typeid;
+			$wherearr[] = "typeid=%d";
+		}
+		if($digest !== 0) {
+			$parameter[] = $digest;
+			$wherearr[] = "digest>=%d";
+		}
+		if($displayorder !== null) {
+			$parameter[] = $displayorder;
+			$glue = helper_util::check_glue($glue);
+			$wherearr[] = "displayorder{$glue}%d";
+		}
+		$wheresql = !empty($wherearr) && is_array($wherearr) ? ' WHERE '.implode(' AND ', $wherearr) : '';
+		return DB::fetch_all("SELECT * FROM %t $wheresql ORDER BY lastpost DESC ".DB::limit($start, $limit), $parameter, $this->_pk);
+	}
+	//
 	public function fetch_all_by_fid_lastpost($fid, $lstart = 0, $lend = 0, $tableid = 0) {
 		$parameter = array($this->get_table_name($tableid), $fid);
 		$wherearr = array();

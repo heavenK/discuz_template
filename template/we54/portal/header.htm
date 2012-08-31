@@ -1,10 +1,5 @@
-<!--{subtemplate common/header_common}-->
-	<meta name="application-name" content="$_G['setting']['bbname']" />
-	<meta name="msapplication-tooltip" content="$_G['setting']['bbname']" />
-	<!--{if $_G['setting']['portalstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][1]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G[siteurl].'portal.php'};icon-uri={$_G[siteurl]}{IMGDIR}/portal.ico" /><!--{/if}-->
-	<meta name="msapplication-task" content="name=$_G['setting']['navs'][2]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['forum']) ? 'http://'.$_G['setting']['domain']['app']['forum'] : $_G[siteurl].'forum.php'};icon-uri={$_G[siteurl]}{IMGDIR}/bbs.ico" />
-	<!--{if $_G['setting']['groupstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][3]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['group']) ? 'http://'.$_G['setting']['domain']['app']['group'] : $_G[siteurl].'group.php'};icon-uri={$_G[siteurl]}{IMGDIR}/group.ico" /><!--{/if}-->
-	<!--{if helper_access::check_module('feed')}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][4]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['home']) ? 'http://'.$_G['setting']['domain']['app']['home'] : $_G[siteurl].'home.php'};icon-uri={$_G[siteurl]}{IMGDIR}/home.ico" /><!--{/if}-->
+<!--{subtemplate common/header_common_portal}-->
+	
 	<!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
 		<link rel="archives" title="$_G['setting']['bbname']" href="{$_G[siteurl]}archiver/" />
 	<!--{/if}-->
@@ -305,31 +300,31 @@
                 
                     <div class="nav_three"><!--三级导航-->
                         <ul>
-                            <li><a href="/forum-743-1.html" target="_blank">大连你好</a></li>
-                            <li><a href="/forum-747-1.html" target="_blank">纯粹女人</a></li>
-                            <li><a href="/forum-992-1.html" target="_blank">法律咨询</a></li>
-                            <li><a href="/forum-898-1.html" target="_blank">欢乐时光</a></li>
-                            <li><a href="/forum-940-1.html" target="_blank">非常夜店</a></li>
-                            <li><a href="/forum-791-1.html" target="_blank">谈车论驾</a></li>
-                            <li><a href="/forum-964-1.html" target="_blank">君子爱财</a></li>
-                            <li><a href="/forum-970-1.html" target="_blank" >新青年歌友会</a></li>
-                            <li><a href="/forum-900-1.html" target="_blank">不惜泡吧</a></li>
-                            <li><a href="/forum-974-1.html" target="_blank">妈 妈 团</a></li>
-                            <li><a href="/forum-903-1.html" target="_blank">大连之恋 </a></li>
-                            <li><a href="/forum-962-1.html" target="_blank">体坛风云</a></li>
-                            <li><a href="/forum-968-1.html" target="_blank">教育培训</a></li>
-                            <li><a href="/forum-966-1.html" target="_blank">人在旅途</a></li>
-                            <li><a href="/forum-959-1.html" target="_blank">好片同享 </a></li>
-                            <li><a href="/forum-921-1.html" target="_blank" >五四宜家人</a></li>
-                            <li><a href="/forum-269-1.html" target="_blank">偶秀偶拍</a></li>
-                            <li><a href="/forum-993-1.html" target="_blank">寻医问诊</a></li>
-                            <li><a href="/forum-941-1.html" target="_blank">两性咨询</a></li>
-                            <li><a href="/forum-909-1.html" target="_blank">买房卖房</a></li>
-                            <li><a href="/forum-985-1.html" target="_blank">学 院 派</a></li>
-                            <li><a href="/forum-931-1.html" target="_blank">饭统大连</a></li>
-                            <li><a href="/forum-705-1.html" target="_blank">淘宝大连街</a></li>
-                            <li><a href="/forum-973-1.html" target="_blank" >官方版务</a></li>
-                        </ul>
+                                    <li><a href="/forum-743-1.html" target="_blank" style="color:#ff6600">大连你好</a></li>
+                                    <li><a href="/forum-900-1.html" target="_blank" style="color:#ff6600">不惜泡吧</a></li>
+                                    <li><a href="/forum-903-1.html" target="_blank">大连之恋 </a></li>
+                                    <li><a href="/forum-747-1.html" target="_blank" style="color:#ff6600">纯粹女人</a></li>
+                                    <li><a href="/forum-1000-1.html" target="_blank" style="color:#ff6600">婚纱写真</a></li>
+                                    <li><a href="/forum-940-1.html" target="_blank">非常夜店</a></li>
+                                    <li><a href="/forum-964-1.html" target="_blank">君子爱财</a></li>
+                                    <li><a href="/forum-993-1.html" target="_blank">寻医问诊</a></li>
+                                    <li><a href="/forum-909-1.html" target="_blank">买房卖房</a></li>
+                                    <li><a href="/forum-791-1.html" target="_blank">谈车论驾</a></li>
+                                    <li><a href="/forum-269-1.html" target="_blank" style="color:#ff6600">偶秀偶拍</a></li>
+                                    <li><a href="/forum-929-1.html" target="_blank">败家报告</a></li>
+                                    <li><a href="/forum-974-1.html" target="_blank">妈 妈 团</a></li>
+                                    <li><a href="/forum-959-1.html" target="_blank">好片同享</a></li>
+                                    <li><a href="/forum-921-1.html" target="_blank">五四宜家人</a></li>
+                                    <li><a href="/forum-992-1.html" target="_blank">法律咨询</a></li>
+                                    <li><a href="/forum-931-1.html" target="_blank">饭统大连</a></li>
+                                    <li><a href="/forum-966-1.html" target="_blank">人在旅途</a></li>
+                                    <li><a href="/forum-898-1.html" target="_blank">欢乐时光</a></li>
+                                    <li><a href="/forum-941-1.html" target="_blank">两性咨询</a></li>
+                                    <li><a href="/forum-968-1.html" target="_blank">教育培训</a></li>
+                                    <li><a href="/forum-962-1.html" target="_blank">体坛风云</a></li>
+                                    <li><a href="/forum-705-1.html" target="_blank" style="color:#ff6600">淘宝大连街</a></li>
+                                    <li><a href="/forum-973-1.html" target="_blank">官方版务</a></li>
+                                </ul> 
                     </div>
                 </div>
                	
