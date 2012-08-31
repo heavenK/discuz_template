@@ -188,7 +188,7 @@ class logging_ctl {
 										'setTimeout("window.location.href =\''.$href.'\';", 2000);'.
 										'$(\'succeedmessage_href\').href = \''.$href.'\';'.
 									//	'$(\'main_message\').style.display = \'none\';'.
-										'$(\'login_bg\').style.display = \'none\';'.		//add
+										'$(\'login_main\').style.display = \'none\';'.		//add
 										'$(\'chg_bg_btn\').style.display = \'none\';'.		//add
 										'$(\'reco_show\').style.display = \'none\';'.		//add
 										'$(\'main_succeed\').style.display = \'\';'.
