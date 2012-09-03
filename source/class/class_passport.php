@@ -355,7 +355,7 @@ class sms_send{
 					else
 					{
 					//	$gid=C::t('common_usergroup')->findgroupid_by('认证会员');
-						$gid=22;
+						$gid['groupid']=22;
 
 						DB::query("UPDATE ".DB::table('common_member')." SET groupid=".$gid['groupid']." WHERE uid=$_G[uid]");
 
