@@ -334,7 +334,7 @@ class sms_send{
 						else
 						{
 					//		showmessage('smstong:smstong_mobilebind_sendsms_failured', '', array('ret' => $ret));
-							exit(lang('plugin/smstong','smstong_mobilebind_sendsms_failured'));
+							exit(lang('plugin/smstong','smstong_mobilebind_sendsms_failured').$ret);
 						}
 					}
 				}
@@ -354,7 +354,8 @@ class sms_send{
 					}
 					else
 					{
-						$gid=C::t('common_usergroup')->findgroupid_by('认证会员');
+					//	$gid=C::t('common_usergroup')->findgroupid_by('认证会员');
+						$gid['groupid']=22;
 
 						DB::query("UPDATE ".DB::table('common_member')." SET groupid=".$gid['groupid']." WHERE uid=$_G[uid]");
 

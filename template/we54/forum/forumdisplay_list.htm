@@ -1,3 +1,8 @@
+<div class="bm bw0 pgs cl kaiser_list_bm_bw0_pgs_cl" style=" padding-left:10px;">
+	<span {if $_G[setting][visitedforums]}id="visitedforums" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'21'})"{/if} class="pgb y" style=" margin-top:0;"><a href="forum.php">{lang return_index}</a></span>
+	<span id="fd_page_bottom" class="pgt kaiser_list_tp_pgt">$multipage</span>
+	<!--{hook/forumdisplay_postbutton_bottom}-->
+</div>
 <div id="threadlist" class="tl bm bmw kaiser_tl_bm_bmw"{if $_G['uid']} style="position: relative;"{/if}>
 	<!--{if $quicksearchlist && !$_GET['archiveid']}-->
 		<!--{subtemplate forum/search_sortoption}-->
@@ -248,7 +253,8 @@
 										<!--{hook/forumdisplay_author $key}-->
 										<cite>
 										<!--{if $thread['authorid'] && $thread['author']}-->
-											<a href="home.php?mod=space&uid=$thread[authorid]" c="1">$thread[author]</a><!--{if !empty($verify[$thread['authorid']])}--> $verify[$thread[authorid]]<!--{/if}-->
+                                        	<!--{eval $banzhunlistarthor = C::t('common_member_profile')->fetch_all($thread['authorid']);}-->
+											<a href="home.php?mod=space&uid=$thread[authorid]" c="1">$banzhunlistarthor[$thread['authorid']]['field1']</a><!--{if !empty($verify[$thread['authorid']])}--> $verify[$thread[authorid]]<!--{/if}-->
 										<!--{else}-->
 											$_G[setting][anonymoustext]
 										<!--{/if}-->
@@ -257,7 +263,9 @@
 									</td>
 									<td class="num"><a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" class="xi2">$thread[replies]</a><em style=" {if ($thread[views] > 100) || ($groupnames[$thread[tid]][views] > 100)}color:#ff0101;{else}color:#aaa;{/if}"><!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></em></td>
 									<td class="by">
-										<cite><!--{if $thread['lastposter']}--><a href="{if $thread[digest] != -2}home.php?mod=space&username=$thread[lastposterenc]{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}" c="1">$thread[lastposter]</a><!--{else}-->$_G[setting][anonymoustext]<!--{/if}--></cite>
+                                    	<!--{eval $banzhulistuid = C::t('common_member')->fetch_all_by_username($thread['lastposter']);}-->
+                                    	<!--{eval $banzhunlistarthor = C::t('common_member_profile')->fetch_all($banzhulistuid[$thread['lastposter']]['uid']);}-->
+										<cite><!--{if $thread['lastposter']}--><a href="{if $thread[digest] != -2}home.php?mod=space&username=$thread[lastposterenc]{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}" c="1">$banzhunlistarthor[$banzhulistuid[$thread['lastposter']]['uid']]['field1']</a><!--{else}-->$_G[setting][anonymoustext]<!--{/if}--></cite>
 										<em><a href="{if $thread[digest] != -2}forum.php?mod=redirect&tid=$thread[tid]&goto=lastpost$highlight#lastpost{else}forum.php?mod=viewthread&tid=$thread[tid]&page={echo max(1, $thread[pages]);}{/if}">$thread[lastpost]</a></em>
 									</td>
 								</tr>

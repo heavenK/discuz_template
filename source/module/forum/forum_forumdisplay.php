@@ -862,8 +862,11 @@ foreach($banzhulist as $val){
 	$kaiser_username = $val['username'];
 	$kaiser_uid = $val['uid'];
 	$kaiser_avatar = avatar($kaiser_uid, 'middle');
-	$kaiser_banzhu .= '<a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'<p class="caption">'.$kaiser_username.'</p></a>';
+	$banzhunarthor = C::t('common_member_profile')->fetch_all($kaiser_uid);
+	//$kaiser_banzhu .= '<a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'<p class="caption">'.$banzhunarthor[$kaiser_uid]['field1'].'</p></a>';
+	$kaiser_banzhu .= '<li><div class="pic"><a href="home.php?mod=space&uid='.$kaiser_uid.'" target="_blank">'.$kaiser_avatar.'</a></div><div class="title"><a href="home.php?mod=space&uid='.$kaiser_uid.'">'.$banzhunarthor[$kaiser_uid]['field1'].'</a></div></li>';
 }
+
 if(empty($_GET['k'])){
 	if(empty($_G['cookie']['forumdefstyle'])){
 		if(empty($_G['forum']['picstyle'])){

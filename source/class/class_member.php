@@ -43,7 +43,7 @@ class logging_ctl {
 		$invite = getinvite();
 
 		if(!submitcheck('loginsubmit', 1, $seccodestatus)) {
-
+		$_GET['cookietime']=2592000;
 			$auth = '';
 			$username = !empty($_G['cookie']['loginuser']) ? dhtmlspecialchars($_G['cookie']['loginuser']) : '';
 
