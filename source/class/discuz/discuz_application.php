@@ -257,6 +257,13 @@ class discuz_application extends discuz_base{
 			$this->var['cookie']['saltkey'] = random(8);
 			dsetcookie('saltkey', $this->var['cookie']['saltkey'], 86400 * 30, 1, 1);
 		}
+		if(empty($this->var['cookie']['kaiser_info'])) {
+			$this->var['cookie']['kaiser_list_box'] = 1;
+			$this->var['cookie']['kaiser_info'] = random(8);
+			dsetcookie('kaiser_info', $this->var['cookie']['kaiser_info'], 86400 * 30, 1, 1);
+		}else{
+			$this->var['cookie']['kaiser_list_box'] = 0;
+		}
 		$this->var['authkey'] = md5($this->var['config']['security']['authkey'].$this->var['cookie']['saltkey']);
 
 	}

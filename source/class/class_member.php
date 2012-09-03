@@ -612,10 +612,25 @@ class register_ctl {
 
 				if($uid <= 0) {
 					if($uid == -1) {
+						if($_GET['phone_reg']){
+							$res['registerCheck'] = -1;
+							echo json_encode($res);
+							exit;
+						}
 						showmessage('profile_username_illegal');
 					} elseif($uid == -2) {
+						if($_GET['phone_reg']){
+							$res['registerCheck'] = -2;
+							echo json_encode($res);
+							exit;
+						}
 						showmessage('profile_username_protect');
 					} elseif($uid == -3) {
+						if($_GET['phone_reg']){
+							$res['registerCheck'] = -3;
+							echo json_encode($res);
+							exit;
+						}
 						showmessage('profile_username_duplicate');
 					} elseif($uid == -4) {
 						showmessage('profile_email_illegal');
@@ -624,6 +639,11 @@ class register_ctl {
 					} elseif($uid == -6) {
 						showmessage('profile_email_duplicate');
 					} else {
+						if($_GET['phone_reg']){
+							$res['registerCheck'] = -4;
+							echo json_encode($res);
+							exit;
+						}
 						showmessage('undefined_action');
 					}
 				}
@@ -879,6 +899,11 @@ class register_ctl {
 				'</script>',
 				'striptags' => false,
 			);
+			if($_GET['phone_reg']){
+				$res['registerCheck'] = 1;
+				echo json_encode($res);
+				exit;
+			}
 			showmessage($message, $url_forward, $param, $extra);
 		}
 	}
