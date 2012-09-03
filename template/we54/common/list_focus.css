@@ -15,18 +15,19 @@
 .kaiser_banzhu_n_c em				{ font-size:14px; font-weight:bold; color:#ff6633;}
 
 /*°æÖ÷ÂÖ²¥*/
-.container 							{ height:162px; overflow:hidden; position:relative; margin:0 0 0 28px;}
-.slides 							{ position:absolute; top:0; left:0; }
-.slides a 							{ position:absolute; top:0; width:130px; height:162px; display:none;}
-.slides a img						{ width:128px; height:128px; border:1px solid #dadada;}
-.pagination							{ display:none;}
-#container 							{ position:relative; width:196px;}
-#loopedCarousel 					{ margin:0 auto; width:196px;  position:relative; clear:both;}
-a.previous							{ position:absolute; top:50px; left:10px; display:block; width:15px; height:15px; overflow:hidden; background-image:url(../../../static/image/common/arw_l.gif); background-repeat:no-repeat;}
-a.previous:hover 					{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
-a.next 								{ position:absolute; top:50px; right:10px; display:block; width:15px; height:15px; overflow:hidden; background-image:url(../../../static/image/common/arw_r.gif); background-repeat:no-repeat;}
-a.next:hover 						{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
-p.caption 							{ height:20px; font-size:14px; color:#333333; text-align:center; margin-top:8px; overflow:hidden;}
+.leftLoop							{ width:196px; height:162px; overflow:hidden; position:relative;}
+.leftLoop .hd						{ width:128px; overflow:hidden; height:30px;}
+.leftLoop .hd .prev					{ width:15px; height:15px; overflow:hidden; cursor:pointer; background:url(../../../static/image/common/arw_l.gif) no-repeat; position:absolute; top:50px; left:10px; display:block;}
+.leftLoop .hd .prev:hover			{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
+.leftLoop .hd .next					{ width:15px; height:15px; overflow:hidden; cursor:pointer; background:url(../../../static/image/common/arw_r.gif) no-repeat; position:absolute; top:50px; right:10px; display:block;}
+.leftLoop .hd .next:hover 			{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
+.leftLoop .bd						{ width:130px; height:162px; position:absolute; top:0; left:33px;}
+.leftLoop .bd ul					{ width:130px; height:162px; overflow:hidden; zoom:1;}
+.leftLoop .bd ul li					{ width:130px; height:162px;}
+.leftLoop .bd ul li .pic			{ width:128px; height:128px; border:1px solid #dadada; overflow:hidden; float:left;}
+.leftLoop .bd ul li .pic img		{ width:128px; height:128px;}
+.leftLoop .bd ul li .title			{ width:130px; height:20px; padding:0; line-height:16px; text-align:center; margin-top:8px; overflow:hidden; float:left;}
+.leftLoop .bd ul li .title a		{ font-size:14px; color:#333333; font-weight:bold;}
 
 /*»î¶¯*/
 .kaiser_huodong						{ width:196px; margin:10px 0 0 0; display:inline; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
