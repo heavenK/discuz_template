@@ -44,6 +44,7 @@ function subvertifycode(formid,id,url){
 		var vertifycode=trim($('verifycode').value);
 		var formhash=trim($('formhash').value);
 		jQuery.post("member.php?mod=sms&action=bindmobile",{flag:1,newmobile:mobile,verifycode:verifycode,bindmobilesubmit:true,formhash:formhash},function(data){
+			$("msgshow").innerHTML=data;
 			if (data!="")
 			{
 				if(data!="success"){
@@ -71,7 +72,6 @@ function getbindverifycode(id) {
 		var mobile=trim($('newmobile').value);
 		var formhash=trim($('formhash').value);
 		jQuery.post("member.php?mod=sms&action=bindmobile",{flag:2,newmobile:mobile,bindmobilesubmit:true,formhash:formhash},function(data){
-			alert(data);
 			if (data!="")
 			{
 				if(data!="success"){
