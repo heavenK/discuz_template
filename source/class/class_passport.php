@@ -334,7 +334,7 @@ class sms_send{
 						else
 						{
 					//		showmessage('smstong:smstong_mobilebind_sendsms_failured', '', array('ret' => $ret));
-							exit(lang('plugin/smstong','smstong_mobilebind_sendsms_failured'));
+							exit(lang('plugin/smstong','smstong_mobilebind_sendsms_failured').$ret);
 						}
 					}
 				}
