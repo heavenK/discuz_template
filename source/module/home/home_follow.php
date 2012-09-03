@@ -34,6 +34,21 @@ space_merge($space, 'count');
 space_merge($space, 'profile');
 space_merge($space, 'field_home');
 
+//add
+//$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if($_G['member']['extgroupids']==22){
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
+}
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
+foreach($followerlist as $k=>$val){
+	if($val['followuid']==$uid){
+		$gzflag=true;
+		break;
+	}
+}
+
+//end add
+
 if($viewself) {
 	$showguide = false;
 } else {

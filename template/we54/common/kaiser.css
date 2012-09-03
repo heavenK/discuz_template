@@ -216,6 +216,7 @@
 .kaiser_jieshao_7					{ width:488px; height:278px; background-image:url(/template/we54/images/kaiser_jieshao_07.gif); background-repeat:no-repeat; left:326px; top:171px;}
 #kaiser_jieshao_07					{ width:208px; height:67px; position:absolute; left:265px; top:144px; cursor:pointer;}
 #backgroundPopup					{ display:none; position:fixed; _position:absolute; height:100%; width:100%; top:0; left:0; background:#000000; z-index:99999;}
+.kaiser_list_tp_pgt .pg				{ margin-top:0;}
 
 /*
 个人资料
