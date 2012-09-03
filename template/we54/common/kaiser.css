@@ -141,6 +141,8 @@
 .kaiser_tl_bm_bmw					{ border:none;}
 .kaiser_bm_c						{ padding:0 0 0 10px;}
 .kaiser_bm_c #moderate .lock a, .kaiser_bm_c #moderate .common a, .kaiser_bm_c #moderate .new a{ color:#0657b2;}
+.kaiser_bm_c #moderate .lock em, .kaiser_bm_c #moderate .common em, .kaiser_bm_c #moderate .new em{ color:#999;}
+.kaiser_bm_c #moderate .lock em a, .kaiser_bm_c #moderate .common em a, .kaiser_bm_c #moderate .new em a{ color:#999;}
 .kaiser_bm_c #moderate .lock .xi1, .kaiser_bm_c #moderate .common .xi1, .kaiser_bm_c #moderate .new .xi1{ color:#FF0101;}
 .kaiser_ml_mlt_mtw_cl li			{ width:224px; height:319px; margin:0 18px 0 15px; padding:0; border:none;}
 .kaiser_ml_mlt_mtw_cl li .c			{ padding-top:0 !important; padding-left:0 !important;}
@@ -216,6 +218,7 @@
 .kaiser_jieshao_7					{ width:488px; height:278px; background-image:url(/template/we54/images/kaiser_jieshao_07.gif); background-repeat:no-repeat; left:326px; top:171px;}
 #kaiser_jieshao_07					{ width:208px; height:67px; position:absolute; left:265px; top:144px; cursor:pointer;}
 #backgroundPopup					{ display:none; position:fixed; _position:absolute; height:100%; width:100%; top:0; left:0; background:#000000; z-index:99999;}
+.kaiser_list_tp_pgt .pg				{ margin-top:0;}
 
 /*
 个人资料
