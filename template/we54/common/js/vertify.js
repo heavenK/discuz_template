@@ -71,7 +71,6 @@ function getbindverifycode(id) {
 		var mobile=trim($('newmobile').value);
 		var formhash=trim($('formhash').value);
 		jQuery.post("member.php?mod=sms&action=bindmobile",{flag:2,newmobile:mobile,bindmobilesubmit:true,formhash:formhash},function(data){
-			alert(data);
 			if (data!="")
 			{
 				if(data!="success"){
