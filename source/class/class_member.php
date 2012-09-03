@@ -879,6 +879,11 @@ class register_ctl {
 				'</script>',
 				'striptags' => false,
 			);
+			if($_GET['phone_reg']){
+				$res['registerCheck'] = 1;
+				echo json_encode($res);
+				exit;
+			}
 			showmessage($message, $url_forward, $param, $extra);
 		}
 	}
