@@ -176,7 +176,14 @@
                 <div class="dl_zc">
                     您好！欢迎来到新青年网站论坛 请 <a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login" class="xi2">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
                 </div>
-                <div class="qq_img" style=" float:right; margin-right:10px; margin-top:5px;"><a href="/connect.php?mod=login&op=init&referer=forum.php&statfrom=login_simple" target="_blank"><img src="/static/image/common/qq_login.gif" border="0"/></a></div>
+                <div class="qq_img" style=" float:right; margin-right:10px; margin-top:5px;"><a href="/connect.php?mod=login&op=init&referer=portal.php&statfrom=login_simple" target="_blank"><img src="/static/image/common/qq_login.gif" border="0"/></a></div>
+                <!--{else}-->
+                <div id="um">
+                    <p>
+                        <strong class="vwmy qq">{$_G[member][username]}</strong>
+                        <!--{hook/global_usernav_extra1}--><span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+                    </p>
+                </div>
                 <!--{/if}-->
                 </form>
                 <div class="y kaiser_y" style=" margin-top:8px; margin-right:10px;">
