@@ -21,12 +21,12 @@
 .leftLoop .hd .prev:hover			{ background-image:url(../../../static/image/common/kaiser_arw_l.gif);}
 .leftLoop .hd .next					{ width:15px; height:15px; overflow:hidden; cursor:pointer; background:url(../../../static/image/common/arw_r.gif) no-repeat; position:absolute; top:50px; right:10px; display:block;}
 .leftLoop .hd .next:hover 			{ background-image:url(../../../static/image/common/kaiser_arw_r.gif);}
-.leftLoop .bd						{ width:130px; height:162px; position:absolute; top:0; left:33px;}
-.leftLoop .bd ul					{ width:130px; height:162px; overflow:hidden; zoom:1;}
-.leftLoop .bd ul li					{ width:130px; height:162px;}
-.leftLoop .bd ul li .pic			{ width:128px; height:128px; border:1px solid #dadada; overflow:hidden; float:left;}
-.leftLoop .bd ul li .pic img		{ width:128px; height:128px;}
-.leftLoop .bd ul li .title			{ width:130px; height:20px; padding:0; line-height:16px; text-align:center; margin-top:8px; overflow:hidden; float:left;}
+.leftLoop .bd						{ width:122px; height:162px; position:absolute; top:0; left:37px;}
+.leftLoop .bd ul					{ width:122px; height:162px; overflow:hidden; zoom:1;}
+.leftLoop .bd ul li					{ width:122px; height:162px;}
+.leftLoop .bd ul li .pic			{ width:120px; height:120px; border:1px solid #dadada; overflow:hidden; float:left;}
+.leftLoop .bd ul li .pic img		{ width:120px; height:120px;}
+.leftLoop .bd ul li .title			{ width:122px; height:20px; padding:0; line-height:16px; text-align:center; margin-top:8px; overflow:hidden; float:left;}
 .leftLoop .bd ul li .title a		{ font-size:14px; color:#333333; font-weight:bold;}
 
 /*»î¶¯*/
