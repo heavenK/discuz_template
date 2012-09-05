@@ -32,18 +32,18 @@ a:hover { text-decoration:underline; color:#FF6633;}
 .paihang_title,
 .rt_news_01 i,
 .paihang_news ul,
-.buxi_title p,
+.buxi_title a,
 .paoba_huitie span,
 .paoba_huitie strong,
 .jinghua_top i,
 .house_title,
-.car_title p,
+.car_title a,
 .pinpai_title,
-.women_title p,
+.women_title a,
 .chuncui_title,
-.fantong_title p,
-.relian_title p,
-.movie_title p,
+.fantong_title a,
+.relian_title a,
+.movie_title a,
 .club_title,
 .NO6_moduble_right dl dd,
 .map_title p,
@@ -149,6 +149,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*社区活动*/
 	.bbs_active { width:230px; height:484px; overflow:hidden; float:left; margin-top:7px; display:inline;}
 	.active_title { width:222px; height:40px; margin-bottom:15px; display:inline; overflow:hidden; float:left; background-position:-222px -243px;}
+	.active_title a { width:75px; height:20px; overflow:hidden; float:left; margin:6px 0 0 14px; display:inline;}
 	.active_in { width:230px; height:270px; overflow:hidden; float:left;}
 	.active_in b { width:176px; height:100px; margin-left:26px; margin-bottom:10px; display:inline; overflow:hidden; float:left;}
 	.active_in h1 { width:195px; height:18px; overflow:hidden; float:left; font-size:14px; margin-left:25px; display:inline;}
@@ -257,7 +258,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第三板块左侧*/
 	.NO3_moduble_left { width:770px; height:310px; background:left url(/template/we54/por_images/NO3_moduble_left_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.buxi_title { width:770px; height:30px; overflow:hidden; float:left;}
-	.buxi_title p { width:72px; height:18px; margin:12px 0 0 17px; display:inline; overflow:hidden; float:left; background-position:-560px -75px;}
+	.buxi_title a { width:72px; height:18px; margin:12px 0 0 17px; display:inline; overflow:hidden; float:left; background-position:-560px -75px;}
 	/*不惜泡吧*/
 	.buxi_paoba	 { width:453px; height:280px; overflow:hidden; float:left; margin-left:24px; display:inline;}
 	.paoba_news { width:140px; height:265px; margin-right:16px; overflow:hidden; float:left; margin-top:15px; display:inline;}
@@ -287,6 +288,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第三板块右侧*****买房卖房*/
 	.NO3_moduble_right { width:230px; height:310px; background:right url(/template/we54/por_images/NO3_moduble_right_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.house_title { width:222px; height:40px; margin-top:6px; display:inline; overflow:hidden; float:left; background-position:0 -283px;}
+	.house_title a { width:105px; height:20px; overflow:hidden; float:left; margin:6px 0 0 14px; display:inline;}
 	.house_zt { width:190px; height:85px; overflow:hidden; float:left; margin:6px 0 20px 20px; display:inline;}
 	.house_news { width:195px; height:145px; overflow:hidden; float:left; margin:0 0 0 18px; display:inline;}
 	.house_news li { width:184px; height:18px; font-size:14px; margin-bottom:6px; display:inline; padding:0 0 0 11px; line-height:19px; background:left url(/template/we54/por_images/jiantou.gif) no-repeat; overflow:hidden; float:left;}	
@@ -298,7 +300,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第四板块左侧******谈车论驾*/	
 	.NO4_moduble_left { width:770px; height:310px; background:left url(/template/we54/por_images/NO3_moduble_left_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.car_title { width:770px; height:28px; overflow:hidden; float:left;}
-	.car_title p { width:71px; height:19px; margin:9px 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-633px -75px;}
+	.car_title a { width:71px; height:19px; margin:9px 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-633px -75px;}
 	.car_left { width:140px; height:265px; overflow:hidden; float:left; margin:15px 0 0 24px; display:inline;}
 	.car_left li { width:140px; height:129px; overflow:hidden; float:left;}
 	.car_left li b { width:140px; height:100px; overflow:hidden; float:left;}
@@ -322,6 +324,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第四板块右侧*******品牌4S店*/
 	.NO4_moduble_right { width:230px; height:310px; background:right url(/template/we54/por_images/NO3_moduble_right_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.pinpai_title { width:222px; height:40px; margin-top:8px; display:inline; overflow:hidden; float:left; background-position:-222px -283px;}
+	.pinpai_title a { width:75px; height:20px; overflow:hidden; float:left; margin:6px 0 0 14px; display:inline;}
 	.pinpai_tip { width:210px; height:120px; overflow:hidden; float:left; margin:12px 0 0 17px; display:inline;}
 	.pinpai_tip li { width:94px; height:120px; margin:0 9px 0 0; display:inline; overflow:hidden; float:left;}
 	.pinpai_tip li b { width:94px; height:94px; overflow:hidden; float:left;}
@@ -336,7 +339,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第五板块左侧****女人Women*/	
 	.NO5_moduble_left { width:770px; height:310px; background:left url(/template/we54/por_images/NO3_moduble_left_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.women_title { width:770px; height:31px; overflow:hidden; float:left;}
-	.women_title p { width:103px; height:18px; margin:13px 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-704px -75px;}
+	.women_title a { width:103px; height:18px; margin:13px 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-704px -75px;}
 	.women_pic { width:770px; height:94px; margin-top:17px; display:inline; overflow:hidden; float:left;}
 	.women_pic li { width:94px; height:94px; color:#FFFFFF; position:relative;  float:left; margin:0 8px 0 24px; display:inline;}
 	.wopic_display01 { width:94px; height:25px; text-align:center; line-height:28px; display:none; position:absolute; bottom:0; _bottom:-1px; left:0; overflow:hidden; float:left;background:url(/template/we54/por_images/shadow.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/template/we54/por_images/shadow.png" ,sizingMethod="crop");}
@@ -354,6 +357,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第五板块右侧****纯粹女人*/
 	.NO5_moduble_right { width:230px; height:310px; background:right url(/template/we54/por_images/NO3_moduble_right_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.chuncui_title { width:222px; height:40px; margin-top:8px; display:inline; overflow:hidden; float:left; background-position:-444px -283px;}
+	.chuncui_title a { width:75px; height:20px; overflow:hidden; float:left; margin:6px 0 0 14px; display:inline;}
 	.chuncui_tip { width:210px; height:120px; overflow:hidden; float:left; margin:12px 0 0 17px; display:inline;}
 	.chuncui_tip li { width:94px; height:120px; margin:0 9px 0 0; display:inline; overflow:hidden; float:left;}
 	.chuncui_tip li b { width:94px; height:94px; overflow:hidden; float:left;}
@@ -370,7 +374,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*饭桶大连*/
 	.fantong_dl { width:460px; height:245px; overflow:hidden; margin-left:22px; display:inline; float:left;}
 	.fantong_title { width:460px; height:30px; margin-bottom:11px; display:inline; overflow:hidden; float:left;}
-	.fantong_title p { width:72px; height:19px; margin:11px 0 11px 1px; display:inline; overflow:hidden; float:left; background-position:-807px -75px;}
+	.fantong_title a { width:72px; height:19px; margin:11px 0 11px 1px; display:inline; overflow:hidden; float:left; background-position:-807px -75px;}
 	.fantong_pic { width:204px; height:204px; overflow:hidden; float:left;}
 	.fantong_pic li { width:94px; height:94px; overflow:hidden; float:left; margin:0 8px 8px 0; display:inline;}
 	.fantong_news { width:240px; height:190px; overflow:hidden; float:left; margin:9px 0 0 9px; display:inline;}
@@ -379,14 +383,14 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*全城热恋*/	
 	.relian_qc { width:270px; height:240px; margin-left:12px; display:inline; overflow:; float:left;}	
 	.relian_title { width:270px; height:48px; overflow:hidden; float:left;}
-	.relian_title p { width:72px; height:19px; margin:11px 0 0 1px; display:inline; overflow:hidden; float:left; background-position:-879px -75px;}
+	.relian_title a { width:72px; height:19px; margin:11px 0 0 1px; display:inline; overflow:hidden; float:left; background-position:-879px -75px;}
 	.relian_qc ul { width:270px; height:190px; overflow:hidden; float:left;}
 	.relian_qc ul li { width:259px; height:18px; font-size:14px; margin-bottom:6px; display:inline; padding:0 0 0 11px; line-height:19px; background:left url(/template/we54/por_images/jiantou.gif) no-repeat; overflow:hidden; float:left;}	
 	.relian_qc ul li a { height:17px; }	
 	/*时光影院*/
 	.movie_sg { width:770px; height:230px; margin-top:9px; display:inline; overflow:hidden; float:left;}
 	.movie_title { width:770px; height:38px; overflow:hidden; float:left;}
-	.movie_title p { width:72px; height:19px; margin:0 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-852px -143px;}
+	.movie_title a { width:72px; height:19px; margin:0 0 0 20px; display:inline; overflow:hidden; float:left; background-position:-852px -143px;}
 	.movie_title b { overflow:hidden; float:left; font-size:14px; color:#FF0000; margin:5px 0 0 27px; display:inline;}
 	.movie_sg ul { width:770px; height:185px; overflow:hidden; float:left;}
 	.movie_sg ul li { width:120px; height:185px; overflow:hidden; float:left; margin:0 6px 0 24px; display:inline;}
@@ -395,6 +399,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	/*第六板块右侧*/
 	.NO6_moduble_right { width:230px; height:487px; background:right url(/template/we54/por_images/NO6_moduble_right_bg.jpg) no-repeat; overflow:hidden; float:left;}
 	.club_title { width:222px; height:40px; margin-top:8px; display:inline; overflow:hidden; float:left; background-position:-666px -283px;}
+	.club_title a { width:75px; height:20px; overflow:hidden; float:left; margin:6px 0 0 14px; display:inline;}
 	.NO6_moduble_right dl { width:210px; height:310px; margin-left:10px; display:inline; overflow:hidden; float:left;}
 	.NO6_moduble_right dl dd { width:210px; height:139px; overflow:hidden; float:left; margin:0 0 15px 0; display:inline; background-position:-720px -323px;}
 	.NO6_moduble_right dl dd b { width:190px; height:90px; overflow:hidden; float:left; margin:9px 0 5px 10px; display:inline;}
