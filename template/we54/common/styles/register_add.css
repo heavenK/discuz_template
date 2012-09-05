@@ -33,4 +33,6 @@ label							{cursor:auto;}
 /*qqœ‡πÿ*/
 .qq_st							{background-color:white;}
 .qq_st input					{width:252px; height:14px; padding:7px 3px; background:#FFF; border:1px solid #c4c4c4; font-size:12px; overflow:hidden; float:left;}
-.qq_st th						{ width:129px; height:26px; padding:4px 6px 0 0; text-align:right; font-size:14px; overflow:hidden; float:left;}
+.qq_st th						{ width:129px; height:26px; padding:12px 6px 0 0; text-align:right; font-size:14px; overflow:hidden; float:left;}
+.qq_st .qq_slct					{ padding:7px 3px; background:#FFF; border:1px solid #c4c4c4; font-size:12px; overflow:hidden; }
+.qq_st .ppc						{width:auto;height:auto;padding:0;float:none;}
