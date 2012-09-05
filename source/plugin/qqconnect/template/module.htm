@@ -547,7 +547,7 @@ $qq_nick = $_G['qc']['qq_nick'];
 $js2 = str_replace(array("'", "\r", "\n"), array("\'", '', ''), $js2);
 }
 <!--{block return}-->
-	<div class="b1lr">
+	<div class="b1lr qq_st">
 		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl"{if $_G['setting']['regconnect']} style="display:none"{/if} onsubmit="ajaxpost('loginform_$loginhash', 'returnmessage4', 'returnmessage4', 'onerror');return false;" action="member.php?mod=connect&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}&loginhash=$loginhash">
 			<div class="c cl bm_c">
 				<input type="hidden" name="formhash" value="{FORMHASH}" />
@@ -602,7 +602,7 @@ $js2 = str_replace(array("'", "\r", "\n"), array("\'", '', ''), $js2);
 					<table>
 						<tr>
 							<th>{lang security_q}:</th>
-							<td><select id="loginquestionid_$loginhash" width="213" name="questionid" onchange="if($('loginquestionid_$loginhash').value > 0) $('loginanswer_row_$loginhash').style.display=''; else $('loginanswer_row_$loginhash').style.display='none'">
+							<td><select id="loginquestionid_$loginhash" width="213" name="questionid"  class="qq_slct" onchange="if($('loginquestionid_$loginhash').value > 0) $('loginanswer_row_$loginhash').style.display=''; else $('loginanswer_row_$loginhash').style.display='none'">
 								<option value="0">{lang security_question}</option>
 								<option value="1">{lang security_question_1}</option>
 								<option value="2">{lang security_question_2}</option>
@@ -630,7 +630,7 @@ $js2 = str_replace(array("'", "\r", "\n"), array("\'", '', ''), $js2);
 						<tr>
 							<th></th>
 							<td>
-								<p><label for="use_qqshow_bind"><input type="checkbox" name="use_qqshow" id="use_qqshow_bind" class="pc" value="1" checked="checked" tabindex="1" /> {lang qqconnect:connect_register_use_qqshow}</label></p>
+								<p><label for="use_qqshow_bind"><input type="checkbox" name="use_qqshow" id="use_qqshow_bind" class="pc ppc" value="1" checked="checked" tabindex="1" /> {lang qqconnect:connect_register_use_qqshow}</label></p>
 							</td>
 						</tr>
 					</table>

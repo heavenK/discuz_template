@@ -63,7 +63,7 @@ function sendsms($user, $pass, $mobile, $content, $checkmobile=true, $refno='', 
 		}
 		
 		if (empty($_G['cache']['plugin']['smstong']['smstongsign'])) {
-			$content = $content.lang('plugin/smstong','smstong_function_sign_left').$_G['setting']['bbname'].lang('plugin/smstong','smstong_function_sign_right');
+		//	$content = $content.lang('plugin/smstong','smstong_function_sign_left').$_G['setting']['bbname'].lang('plugin/smstong','smstong_function_sign_right');
 		} else {
 			$content = $content.lang('plugin/smstong','smstong_function_sign_left').$_G['cache']['plugin']['smstong']['smstongsign'].lang('plugin/smstong','smstong_function_sign_right');
 		}
