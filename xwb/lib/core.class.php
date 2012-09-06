@@ -413,7 +413,7 @@ class XWB_plugin {
 		if (!method_exists($m,$r[3])){
 			trigger_error("Can't find method  [ ".$r[3]." ]  in  [ ".$r[2]." ] ", E_USER_ERROR);
 		}
-		echo($m."--".$r[3]);
+		echo($r[3]);
 		exit();
 		// call action 
 		if ($r[3]!=$r[2]) { $m->$r[3]();}
