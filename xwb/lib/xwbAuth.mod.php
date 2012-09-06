@@ -200,8 +200,6 @@ class xwbAuth {
 			showmessage( XWB_plugin::L('xwb_site_user_not_exist'),'', array(), array(), 1 );
 			
 		}elseif( 'reg' == $tipsType ){
-			var_dump(XWB_plugin::L('xwb_process_binding', 'openReg4dx' ));
-			exit();
 			showmessage(XWB_plugin::L('xwb_process_binding', 'openReg4dx' ), null, array(), array(), 1 );
 			
 		}elseif( 'hasBinded' == $tipsType ){

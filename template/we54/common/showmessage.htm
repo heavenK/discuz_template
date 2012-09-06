@@ -1,13 +1,5 @@
 <!--{if !$_G['inajax']}-->
-	<!--{subtemplate common/we54_header}-->
-    	</div>
-    </div>	
-	<!--{/if}-->
-<style>
-body{ background:#f3f3f3 url(/template/we54/images/header_bg.jpg) repeat-x top;}
-</style>
-<div style="width:100%; min-width:1000px; background:#FFF; margin:0 auto;">
-<div id="wp" class="wp kaiser_return_wp">
+	<!--{template common/header}-->
 	<div id="ct" class="wp cl w">
 		<!--{if !$param[login]}-->
 			<div class="nfl">
@@ -27,7 +19,7 @@ body{ background:#f3f3f3 url(/template/we54/images/header_bg.jpg) repeat-x top;}
 	<!--{template common/header_ajax}-->
 <!--{/if}-->
 <!--{if $param[msgtype] == 1 || $param[msgtype] == 2 && !$_G[inajax]}-->
-		<div class="f_c altw" style=" margin-top:0;">
+		<div class="f_c altw">
 			<div id="messagetext" class="$alerttype">
 				<p>$show_message</p>
 				<!--{if $url_forward}-->
@@ -77,7 +69,6 @@ body{ background:#f3f3f3 url(/template/we54/images/header_bg.jpg) repeat-x top;}
 <!--{if !$_G['inajax']}-->
 		</div>
 	</div>
-</div>
 	<!--{template common/footer}-->
 <!--{else}-->
 	<!--{template common/footer_ajax}-->
