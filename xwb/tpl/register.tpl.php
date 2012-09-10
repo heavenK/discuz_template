@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>注册页面</title>
 <link type="text/css" rel="stylesheet" href="<?php echo XWB_plugin::getPluginUrl('images/xwb_'. XWB_S_VERSION .'.css');?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo XWB_plugin::getPluginUrl('images/xwb_regbox.css');?>" />
 <script language="javascript">
 	document.onkeydown = function (e){
 			var ev =  e || window.event ;
@@ -110,45 +111,53 @@
 </script>
 </head>
 
-<body id="xwb-plugin-register-layer" class="xwb-plugin">
-<h3 id="forRegH3" class="xwb-plugin-layer-title">完善账号信息，快速开始</h3>
-<h3 id="forBindH3" class="xwb-plugin-layer-title" style="display:none;">一步登陆，绑定账号</h3>
-<div id="regBox" class="xwb-plugin-form" >
+<body id="xwb-plugin-register-layer" class="xwb-plugin xwb-plugin-new">
+<h3 id="forRegH3" class="xwb-plugin-layer-title xwb-pf-info1"><!-- 完善账号信息，快速开始 --></h3>
+<h3 id="forBindH3" class="xwb-plugin-layer-title xwb-pf-info2" style="display:none;"><!-- 一步登陆，绑定账号 --></h3>
+<div id="regBox" class="xwb-plugin-form xwb-regbox" >
     <form action="<?php echo XWB_plugin::getEntryURL("xwbSiteInterface.doReg");?>" id="siteRegFrom"  method="post" target="xwbSiteRegister"  >
-        <table class="xwb-plugin-table">
+        <table class="xwb-plugin-table xwb-table-zh">
             <tr class="xwb-plugin-tr-error">
                 <td colspan="3">
                     <em id="regErrorTips" class="xwb-plugin-error" style="display:none;"></em>
                 </td>
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg"><label for="siteRegName"> 设置用户名：</label></td>
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="siteRegName"> 设置用户名：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteRegName" id="siteRegName" class="xwb-plugin-input-a" value="<?php echo $sina_user_info['screen_name'];?>" />
                 </td>
-                <td rowspan="4" class="xwb-plugin-td-right-msg">
+                <!-- <td rowspan="6" class="xwb-plugin-td-right-msg">
                     已经有<?php echo XWB_S_TITLE ;?>账号？<br/><br/>
                     <a href="javascript:void(function(){})" onclick="forTurn('bind')" tabindex="-1">绑定我的账号</a>
-                </td>
+                </td> -->
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg"><label for="siteRegEmail"> 邮箱：</label></td>
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="siteRegEmail"> 邮箱：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteRegEmail"	id="siteRegEmail" class="xwb-plugin-input-a" />
                 </td>
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg"><label for="regPwd"> 密码：</label></td>
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="regPwd"> 密码：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input name="regPwd" type="password"  class="xwb-plugin-input-a" id="regPwd" maxlength="256" />
                 </td>
             </tr>
+			 <tr class="xwb-plugin-tr">
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="regPwd"> 昵称：</label></td>
+                <td class="xwb-plugin-td-input">
+                    <input name="nickname" type="text"  class="xwb-plugin-input-a" id="nickname" />
+                </td>
+            </tr>
             <tr class="xwb-plugin-tr"><td colspan="3" class="xwb-plugin-td-msg"><label>　&nbsp;</label></td></tr>
-            <tr class="xwb-plugin-tr-btn">
-                <td colspan="3" class="xwb-plugin-td-btn">
+            <tr class="xwb-plugin-tr-btn"><td></td>
+                <td colspan="3" class="xwb-plugin-td-btn xwb-td-btn-zh">
                     <span class="xwb-plugin-btn">
-                        <input name="registerBt1" type="button" onclick="submitForm('siteRegFrom')" id="registerBt1" value="完 成" />
+                        <input name="registerBt1" type="button" onclick="submitForm('siteRegFrom')" id="registerBt1" value="" class="xwd-real-btn-zh" />
                     </span>
+                    已经有<?php echo XWB_S_TITLE ;?>账号？
+                    <a href="javascript:void(function(){})" onclick="forTurn('bind')" tabindex="-1">绑定我的账号</a>
                 </td>
             </tr>
         </table>
@@ -157,14 +166,14 @@
 
 <div id="bindBox" class="xwb-plugin-form" style="display:none;">
     <form action="<?php echo XWB_plugin::getEntryURL("xwbSiteInterface.doBindAtNotLog");?>" id="siteBindFrom"  method="post" target="xwbSiteRegister"  >
-        <table class="xwb-plugin-table">
+        <table class="xwb-plugin-table xwb-table-zh">
             <tr class="xwb-plugin-tr-error">
                 <td colspan="3">
                     <em id="bindErrorTips" class="xwb-plugin-error" style="display:none;"></em>
                 </td>
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg"><label for="siteBindName"> 用户名：</label></td>
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="siteBindName"> 用户名：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteBindName" id="siteBindName" class="xwb-plugin-input-a" value="" />
                 </td>
@@ -174,13 +183,13 @@
                 </td>
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg"><label for="bindPwd"> 密码：</label></td>
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="bindPwd"> 密码：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input name="bindPwd" type="password" class="xwb-plugin-input-a" id="bindPwd" maxlength="256" />
                 </td>
             </tr>
             <tr class="xwb-plugin-tr">
-                <td class="xwb-plugin-td-msg">
+                <td class="xwb-plugin-td-msg xwb-td-msg-zh">
                     <label for="questionid">安全提问：</label>
                 </td>
                 <td class="xwb-plugin-td-input">

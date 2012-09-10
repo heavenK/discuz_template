@@ -1124,7 +1124,7 @@ NS.ui.Popup.prototype = {
     _createView : function(){
       this._loadStyle();
       var v = this.view = NS.util.forNode([
-        '<div class="xwb_ui_dlg xwb_ui_focus" style="display:none;">',
+        '<div class="xwb_ui_dlg xwb_ui_focus " style="display:none;">',
           //'<div class="ui_main_wrap">',
           '<table class="ui_boxinner"><tbody>',
             '<tr>',
@@ -1138,9 +1138,9 @@ NS.ui.Popup.prototype = {
                 '<table class="xwb_ui_dlg_main"><tbody>',
                   // titlebar template
                   '<tr id="_xwb_dlg_tb"><td class="ui_title_wrap">',
-                        '<div class="ui_title" id="_xwb_dlg_tbct">',
-                           '<div class="ui_title_text">',
-                             '<span class="ui_title_icon"></span><span id="_xwb_load_tip" class="ui_title_tip" style="display:none;">正在加载 </span><span id="_xwb_dlg_tle">提示</span>',
+                        '<div class="ui_title ui_title_zh" id="_xwb_dlg_tbct">',
+                           '<div class="ui_title_text ui_title_text_zh">',
+                             '<span class="ui_title_icon"></span><span id="_xwb_load_tip" class="ui_title_tip" style="display:none;">正在加载 </span><span id="_xwb_dlg_tle" class="xwb_tle_zh">提示</span>',
                            '</div>',
                            '<a class="ui_close" title="关闭" id="_xwb_dlg_cls" href="javascript:void(0)">×</a>',
                         '</div>',
@@ -1321,11 +1321,14 @@ NS.ui.Popup.prototype = {
         '.xwb_ui_dlg .ui_btns{background-color:#F6F6F6; border-bottom:1px solid #CCC; border-top:1px solid #EBEBEB; box-shadow:inset 0 -2px 2px rgba(204,204,204,0.3); moz-box-shadow:inset 0 -2px 2px rgba(204,204,204,0.3); webkit-box-shadow:inset 0 -2px 2px rgba(204,204,204,0.3)}',
         '.xwb_ui_dlg .ui_btns button{letter-spacing:2px; padding:2px 4px}',
         '.xwb_ui_dlg .ui_title{border-bottom:2px solid #EBEBEB; height:100%; position:relative}',
-        '.xwb_ui_dlg .ui_title_text{background-color:#3A6EA5; border:1px solid #4E84C0; border-bottom-color:#0D1D3C; box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2); color:#EBEBEB; font-weight:700; height:30px; line-height:30px; moz-box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2); padding:0 30px 0 10px; text-shadow:0 1px 0 #000; webkit-box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2)}',
+		'.xwb_ui_dlg .ui_title_zh{border-bottom:none;background:url(xwb/images/bgimg/new_titlebg_2.png) #c0eeff repeat-x;}',//add
+        '.xwb_ui_dlg .ui_title_text{/*background-color:#000;*/ border:1px solid #4E84C0; border-bottom-color:#0D1D3C; box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2); color:#EBEBEB; font-weight:700; height:30px; line-height:30px; moz-box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2); padding:0 30px 0 10px; text-shadow:0 1px 0 #000; webkit-box-shadow:inset 0 -2px 2px rgba(0,0,0,0.2)}',//chg
+		'.xwb_ui_dlg .ui_title_text_zh{ border:none;height:60px;box-shadow:none;}',//add
         '.xwb_ui_dlg .ui_move .ui_title_text{color:#FFF}',
-        '.xwb_ui_focus .ui_title_text{background-color:#214FA3}',
+		'.xwb_ui_dlg .xwb_tle_zh{color:#000;font-size:20px;font-weight:600;line-height:60px;text-shadow:none;margin-left:26px;}',//add
+        '.xwb_ui_focus .ui_title_text{/*background-color:#214FA3*/}',//chg
         '.xwb_ui_dlg .ui_close{border:1px solid #3A6EA5; color:#FFF!important; height:13px; line-height:13px; padding:0; right:5px; text-align:center; text-decoration:none; top:5px; width:13px}',
-        '.xwb_ui_focus .ui_close{border:1px solid #214FA3}',
+        '.xwb_ui_focus .ui_close{border:1px solid #214FA3;background-color:#214FA3;}',
         '.xwb_ui_dlg .ui_close:hover{background-color:#771C35; border:1px solid #000; cursor:pointer; text-decoration:none}',
         '.xwb_ui_dlg .ui_close:active{background-color:#A80000}',
         '.xwb_ui_dlg .ui_resize{height:8px; width:8px}',
@@ -1415,7 +1418,7 @@ NS.util.extend(NS, {
 			var me = this;
 			this.win['reg'] = new NS.ui.Popup({
 					title  : '用户登录',
-					width  : 600,
+					width  : 517,
 					height : 345,
 					hidden : false,
 					contentType:'iframe',
