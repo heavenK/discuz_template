@@ -19,6 +19,7 @@ class xwbSiteUserRegister{
 	var $groupid = -999;
 	var $ip;
 	var $timestamp = 0;
+	var $nickname = '';			//add by zh
 	
 	var $db;
 	
@@ -54,11 +55,13 @@ class xwbSiteUserRegister{
 	 * @param string $email 和论坛编码相符合的Email
 	 * @param mixed $pwd
 	 * @return integer 
+	 * @change by zh
 	 */
-	function reg( $name, $email, $pwd= false ){
+	function reg( $name, $email, $pwd= false,$nickn='' ){
 		$this->username = mysql_escape_string(trim($name));
 		$this->email = mysql_escape_string(trim($email));
 		$this->password = $pwd ? mysql_escape_string($pwd) : rand(100000,999999);
+		$this->nickname = mysql_escape_string(trim($nickn));
 		
 		$checkRegCTRL = $this->_checkRegCTR();
 		if( $checkRegCTRL < 0 ){
@@ -85,6 +88,23 @@ class xwbSiteUserRegister{
 	function _regToUCDZX(){
 		global $_G;
 		$this->uid = (int)uc_user_register($this->username, $this->password, $this->email, $this->questionid, $this->answer);
+
+		//----------------add by zh--------------------------
+		$passp=new passport();
+		$pass=$passp->useradd($this->uid, $this->username, $this->password, $this->email, $this->ip, $this->groupid, $this->nickname);	//add
+		if(is_array($pass)){
+			$psptuser=$passp->passport_setsession($pass, 2592000 ,$this->ip);//add
+		}else if($pass=="userisexist"){
+			uc_user_delete($this->uid);
+			$this->uid = -3;
+		}else if($pass=="nicknameexist"){
+			uc_user_delete($this->uid);
+			$this->uid = -7;
+		}else{
+			uc_user_delete($this->uid);
+			$this->uid= -8;
+		}
+		//-------------add end-------------------------------
 		if ($this->uid>0){
 			//在有UC的情况下，附属论坛的members表password列并不存储真实密码，只是用于cookies登陆状态校样。
 			$init_arr = explode ( ',', $_G ['setting'] ['initcredits'] );
@@ -100,6 +120,7 @@ class xwbSiteUserRegister{
 				'timeoffset' => 9999 
 			);
 			DB::insert ( 'common_member', $userdata );
+
 			$status_data = array (
 				'uid' => $this->uid, 
 				'regip' => $this->ip, 
@@ -111,6 +132,7 @@ class xwbSiteUserRegister{
 			);
 			DB::insert ( 'common_member_status', $status_data );
 			$profile ['uid'] = $this->uid;
+			$profile ['field1'] = $this->nickname;			//add by zh
 			DB::insert ( 'common_member_profile', $profile );
 			DB::insert ( 'common_member_field_forum', array ('uid' => $this->uid ) );
 			DB::insert ( 'common_member_field_home', array ('uid' => $this->uid ) );

@@ -1,5 +1,5 @@
 <?php
-if(!defined('IN_DISCUZ')) {
+if(!defined('IN_DISCUZ')&&!isset($_GET['m'])) {
 	exit('Access Denied');
 }
 
@@ -27,7 +27,12 @@ class passport{
 			return "userisexist";
 			
 		}else{
-			$profile = isset($extdata['profile']) ? $extdata['profile'] : array();
+			if(is_array($extdata)){
+				$profile = isset($extdata['profile']) ? $extdata['profile'] : array();
+			}else{
+				$profile['field1'] = empty($extdata) ? '' : $extdata;
+			}
+			
 			$nicknamesql="select * from passport_user where nickname='".$profile['field1']."'";
 			$nicknames=mysql_query($nicknamesql);
 			$nicknamer=mysql_fetch_array($nicknames);

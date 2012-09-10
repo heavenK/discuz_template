@@ -126,7 +126,7 @@
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteRegName" id="siteRegName" class="xwb-plugin-input-a" value="<?php echo $sina_user_info['screen_name'];?>" />
                 </td>
-                <td rowspan="4" class="xwb-plugin-td-right-msg">
+                <td rowspan="6" class="xwb-plugin-td-right-msg">
                     已经有<?php echo XWB_S_TITLE ;?>账号？<br/><br/>
                     <a href="javascript:void(function(){})" onclick="forTurn('bind')" tabindex="-1">绑定我的账号</a>
                 </td>
@@ -141,6 +141,12 @@
                 <td class="xwb-plugin-td-msg"><label for="regPwd"> 密码：</label></td>
                 <td class="xwb-plugin-td-input">
                     <input name="regPwd" type="password"  class="xwb-plugin-input-a" id="regPwd" maxlength="256" />
+                </td>
+            </tr>
+			 <tr class="xwb-plugin-tr">
+                <td class="xwb-plugin-td-msg"><label for="regPwd"> 昵称：</label></td>
+                <td class="xwb-plugin-td-input">
+                    <input name="nickname" type="text"  class="xwb-plugin-input-a" id="nickname" />
                 </td>
             </tr>
             <tr class="xwb-plugin-tr"><td colspan="3" class="xwb-plugin-td-msg"><label>　&nbsp;</label></td></tr>

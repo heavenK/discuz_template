@@ -428,11 +428,13 @@ class xwbSiteInterface {
 		$usernameS	= trim( (string)(XWB_plugin::V('p:siteRegName')) );
 		$emailS		= trim( (string)(XWB_plugin::V('p:siteRegEmail')) );
 		$regPwdS	= trim( (string)(XWB_plugin::V('p:regPwd')) );
+		$nicknameS	= trim( (string)(XWB_plugin::V('p:nickname')) );			//add by zh
 		
 		//转换成论坛编码，方便进行UC和论坛的注册数据库操作
 		$username	= XWB_plugin::convertEncoding($usernameS, "UTF8", XWB_S_CHARSET);
 		$email		= XWB_plugin::convertEncoding($emailS, "UTF8", XWB_S_CHARSET);
 		$password = $regPwdS;
+		$nickname = XWB_plugin::convertEncoding($nicknameS, "UTF8", XWB_S_CHARSET);		//add by zh
 		
 		$uid = 0;
 		if (empty($username))				{$uid = -102;}
@@ -449,7 +451,7 @@ class xwbSiteInterface {
 				$uid = -201;
 			}else{
 				$regInstance = XWB_plugin::O('xwbSiteUserRegister');
-				$uid = $regInstance->reg($username, $email, $password);
+				$uid = $regInstance->reg($username, $email, $password,$nickname);
 			}
 			unset($bInfo);
 		}
@@ -603,6 +605,9 @@ class xwbSiteInterface {
 			'-4' => '邮箱格式错误或已被使用',
 			'-5' => '邮箱格式错误或已被使用',
 			'-6' => '邮箱格式错误或已被使用',
+
+			'-7' => '昵称已被使用',				//add by zh
+			'-8' => '系统未知错误',				//add by zh
 
 			'-101' => '用户邮箱不能为空',
 			'-102' => '用户帐号不能为空',
