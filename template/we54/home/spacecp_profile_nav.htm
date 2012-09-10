@@ -5,6 +5,9 @@
 			<li $opactives[$key]><a href="home.php?mod=spacecp&ac=profile&op=$key">$value[title]</a></li>
 			<!--{/if}-->
 		<!--{/loop}-->
+        <li{if $_GET[ac] == 'plugin'} class="a"{/if}><a href="home.php?mod=spacecp&ac=plugin&id=qqconnect:spacecp">账号绑定</a></li>
+        <li{if $_GET[ac] == 'avatar'} class="a"{/if}><a href="home.php?mod=spacecp&ac=avatar">设置头像</a></li>
+        <li{if $_GET[op] == 'password'} class="a"{/if}><a href="home.php?mod=spacecp&ac=profile&op=password">修改密码</a></li>
 		<!--{if $_G['setting']['allowspacedomain'] && $_G['setting']['domain']['root']['home'] && checkperm('domainlength')}-->
 		<li $opactives[domain]><a href="home.php?mod=spacecp&ac=domain">{lang space_domain}</a></li>
 		<!--{/if}-->

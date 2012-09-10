@@ -1,8 +1,9 @@
 <!--{subtemplate common/header}-->
-<link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/kaiser.css" />
 
 	<!--{subtemplate home/spacecp_header}-->
 			<!--{hook/spacecp_avatar_top}-->
+            <!--{hook/spacecp_profile_top}-->
+			<!--{subtemplate home/spacecp_profile_nav}-->
 			<script type="text/javascript">
 				function updateavatar() {
 					window.location.href = document.location.href.replace('&reload=1', '') + '&reload=1';
@@ -12,20 +13,24 @@
 				<!--{/if}-->
 			</script>
 			<form method="post" autocomplete="off" action="home.php?mod=spacecp&ac=avatar&ref">
-				<table cellspacing="0" cellpadding="0" class="tfm">
+				<table cellspacing="0" cellpadding="0" class="tfm kaiser_tfm_avatar_f">
 					<caption>
-						<span id="retpre" class="y xi2"></span>
+						<!--<span id="retpre" class="y xi2"></span>-->
 						<h2 class="xs2">{lang current_my_space}</h2>
-						<p>{lang setting_avatar_message}</p>
 					</caption>
 					<tr>
 						<td>
 							<!--{avatar($space[uid],big)}-->
 						</td>
 					</tr>
+                    <tr>
+						<th>
+							×î¼Ñ³ß´ç120ÏñËØ*120ÏñËØ
+						</th>
+					</tr>
 				</table>
 
-				<table cellspacing="0" cellpadding="0" class="tfm">
+				<table cellspacing="0" cellpadding="0" class="tfm kaiser_tfm_avatar_s">
 					<caption>
 						<h2 class="xs2">{lang setting_my_new_avatar}</h2>
 						<p>{lang setting_my_new_avatar_message}</p>
