@@ -353,19 +353,7 @@ if($space['username']) {
 }
 $metakeywords = $navtitle;
 $metadescription = $navtitle;
-space_merge($space, 'count');
-//$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
-if($_G['member']['groupid']==22){
-	$space['vertifyico']='static/image/common/kaiser_ext.png';
-}
-//add
-$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
-foreach($followerlist as $k=>$val){
-	if($val['followuid']==$uid){
-		$gzflag=true;
-		break;
-	}
-}
+
 if(!$_G['follow']) {
 	include_once template("diy:home/space_thread");
 }

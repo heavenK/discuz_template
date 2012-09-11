@@ -109,6 +109,21 @@ $secqaacheck = $_G['setting']['secqaa']['status'] & 2;
 if($do != 'index') {
 	$_G['disabledwidthauto'] = 0;
 }
+
+space_merge($space, 'count');
+//$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if($_G['member']['groupid']==22||strpos($_G['member']['extgroupids'],'22')!==false){
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
+}
+
+//add
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
+foreach($followerlist as $k=>$val){
+	if($val['followuid']==$uid){
+		$gzflag=true;
+		break;
+	}
+}
 require_once libfile('space/'.$do, 'include');
 
 ?>
