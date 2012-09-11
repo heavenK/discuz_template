@@ -29,7 +29,7 @@ a:hover     { text-decoration:underline;}
 #um a{ color:#0035a0;}
 
 
-.person_name { width:1000px; height:81px; background:url(../images/home_top_banner.jpg) no-repeat; margin:auto;}
+.person_name { width:1000px; height:84px; background:url(../images/home_top_banner.jpg) no-repeat; margin:auto;}
 .person_name span { line-height:80px; font-size:20px; padding-left:15px;}
 /*¶¥²¿Ö÷µ¼º½*/
 .main_nav				 { width:316px; height:352px; padding:2px 2px 2px 2px; border-bottom:1px #dbdbdb solid; border-left:1px #dbdbdb solid; border-right:1px #dbdbdb solid; z-index:9999; background:#FFFFFF; display:none; position:absolute; top:28px; right:0; _right:-1px; float:left; overflow:hidden;}
