@@ -4,12 +4,12 @@
 $_config = array();
 
 // ----------------------------  CONFIG DB  ----------------------------- //
-$_config['db']['1']['dbhost'] = '192.168.0.9';
-$_config['db']['1']['dbuser'] = 'user1';
-$_config['db']['1']['dbpw'] = '123';
+$_config['db']['1']['dbhost'] = 'localhost';
+$_config['db']['1']['dbuser'] = 'root';
+$_config['db']['1']['dbpw'] = '';
 $_config['db']['1']['dbcharset'] = 'gbk';
 $_config['db']['1']['pconnect'] = '0';
-$_config['db']['1']['dbname'] = 'bbs_update';
+$_config['db']['1']['dbname'] = 'newbbs';
 $_config['db']['1']['tablepre'] = 'pre_';
 $_config['db']['common']['slave_except_table'] = '';
 
