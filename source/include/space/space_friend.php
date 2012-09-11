@@ -24,21 +24,7 @@ if(empty($_GET['view']) || $_GET['view'] == 'all') $_GET['view'] = 'me';
 
 ckstart($start, $perpage);
 
-//add
-space_merge($space, 'count');
-//$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
-if($_G['member']['extgroupids']==22){
-	$space['vertifyico']='static/image/common/kaiser_ext.png';
-}
-$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
-foreach($followerlist as $k=>$val){
-	if($val['followuid']==$uid){
-		$gzflag=true;
-		break;
-	}
-}
 
-//end add
 
 if($_GET['view'] == 'online') {
 	$theurl = "home.php?mod=space&uid=$space[uid]&do=friend&view=online";
