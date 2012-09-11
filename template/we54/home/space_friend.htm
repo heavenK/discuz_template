@@ -219,7 +219,7 @@
 											<!--{/if}-->
 											</span>
 											<a href="home.php?mod=space&uid=$value[uid]"{eval g_color($value[groupid]);}>$value[username]</a>
-											<!--{eval g_icon($value[groupid]);}-->
+											
 											<!--{if $value['videostatus']}-->
 												<img src="{IMGDIR}/videophoto.gif" alt="videophoto" class="vm" />
 											<!--{/if}-->
@@ -229,7 +229,7 @@
 										</h4>
 										<p class="maxh">$value[recentnote]</p>
 									<!--{/if}-->
-										<div class="xg1" style=" width:165px;">
+										<div class="xg1" style=" width:175px;">
 											<!--{if isset($value['follow']) && $key != $_G['uid'] && $value[username] != ''}-->
 											<a href="home.php?mod=spacecp&ac=follow&op={if $value['follow']}del{else}add{/if}&fuid=$value[uid]&hash={FORMHASH}&from=a_followmod_" id="a_followmod_$key" onclick="showWindow('followmod', this.href, 'get', 0)"><!--{if $value['follow']}-->{lang follow_del}<!--{else}-->{lang follow_add}TA<!--{/if}--></a>
 											<!--{/if}-->
