@@ -1,9 +1,28 @@
-<div id="pt" class="bm cl">
-	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
-		<a href="home.php?mod=spacecp">{lang setup}</a> <em>&rsaquo;</em>
-		<!--{subtemplate home/spacecp_header_name}-->
-	</div>
+<!--{eval $_G[cookie][extstyle] = false;}-->
+	<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+	<link rel="stylesheet" type="text/css" href="{$_G[setting][csspath]}data/cache/style_{STYLEID}_css_space.css?{VERHASH}" />
+	<link id="style_css" rel="stylesheet" type="text/css" href="{STATICURL}space/{if $space[theme]}$space[theme]{else}t1{/if}/style.css?{VERHASH}">
+    <link rel="stylesheet" type="text/css" href="template/we54/home/space_header.css" />
+    <script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+	var jq = jQuery.noConflict(); 
+    jq(document).ready(function(){
+      
+      jq("#ss, #show").hover(function(){
+      jq(".main_nav").show();
+      },function (){jq(".main_nav").hide();});
+    
+    });
+    </script>
+	<style id="diy_style">$space[spacecss]</style>
+    <link rel="stylesheet" type="text/css" href="template/we54/home/space_thread_add.css">
+    <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/kaiser_space.css" />
+
+
+
+<div class="person_name">
+	<span>$space['username']µÄ¿Õ¼ä($space['field1'])</span>
 </div>
 <div id="ct" class="ct2_a wp cl kaiser_ct2_a_wp_cl">
 	<div class="mn">
