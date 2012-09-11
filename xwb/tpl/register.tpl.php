@@ -127,6 +127,10 @@
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteRegName" id="siteRegName" class="xwb-plugin-input-a" value="<?php echo $sina_user_info['screen_name'];?>" />
                 </td>
+                <!-- <td rowspan="6" class="xwb-plugin-td-right-msg">
+                    已经有<?php echo XWB_S_TITLE ;?>账号？<br/><br/>
+                    <a href="javascript:void(function(){})" onclick="forTurn('bind')" tabindex="-1">绑定我的账号</a>
+                </td> -->
             </tr>
             <tr class="xwb-plugin-tr">
                 <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="siteRegEmail"> 邮箱：</label></td>
@@ -152,7 +156,7 @@
                     <span class="xwb-plugin-btn">
                         <input name="registerBt1" type="button" onclick="submitForm('siteRegFrom')" id="registerBt1" value="" class="xwd-real-btn-zh" />
                     </span>
-                    已经有<?php echo XWB_S_TITLE ;?>账号？
+                    <em>已经有<?php echo XWB_S_TITLE ;?>账号？</em>
                     <a href="javascript:void(function(){})" onclick="forTurn('bind')" tabindex="-1">绑定我的账号</a>
                 </td>
             </tr>
@@ -173,10 +177,10 @@
                 <td class="xwb-plugin-td-input">
                     <input type="text" name="siteBindName" id="siteBindName" class="xwb-plugin-input-a" value="" />
                 </td>
-                <td rowspan="4" class="xwb-plugin-td-right-msg">
+                <!-- <td rowspan="4" class="xwb-plugin-td-right-msg">
                     还没有<?php echo XWB_S_TITLE ;?>账号？<br/><br/>
                     <a href="javascript:void(function(){})" onclick="forTurn('reg')" tabindex="-1">设置一个账号</a>
-                </td>
+                </td> -->
             </tr>
             <tr class="xwb-plugin-tr">
                 <td class="xwb-plugin-td-msg xwb-td-msg-zh"><label for="bindPwd"> 密码：</label></td>
@@ -202,11 +206,13 @@
                 </td>
             </tr>
             <tr id="bindTr" class="xwb-plugin-tr"><td colspan="3" class="xwb-plugin-td-msg"><label>　</label></td></tr>
-            <tr class="xwb-plugin-tr-btn">
-                <td colspan="3" class="xwb-plugin-td-btn">
+            <tr class="xwb-plugin-tr-btn"><td></td>
+                <td colspan="3" class="xwb-plugin-td-btn xwb-td-btn-zh">
                     <span class="xwb-plugin-btn">
-                        <input name="bindBt" type="button" onclick="submitForm('siteBindFrom')" id="bindBt" value="完 成" />
+                        <input name="bindBt" type="button" onclick="submitForm('siteBindFrom')" id="bindBt" value="" class="xwd-real-btn-zh" />
                     </span>
+					<em>已经有<?php echo XWB_S_TITLE ;?>账号？</em>
+                    <a href="javascript:void(function(){})" onclick="forTurn('reg')" tabindex="-1">绑定我的账号</a>
                 </td>
             </tr>
         </table>
