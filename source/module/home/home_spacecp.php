@@ -61,6 +61,8 @@ foreach($kaiser_user as $val){
 	$renzheng = $val['extgroupids'];
 }
 //end add
+//add by zh
+space_merge($space, 'profile');
 space_merge($space, 'count');
 //$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
 if($_G['member']['groupid']==22){
@@ -75,6 +77,7 @@ foreach($followerlist as $k=>$val){
 		break;
 	}
 }
+//end add
 require_once libfile('spacecp/'.$ac, 'include');
 
 ?>
