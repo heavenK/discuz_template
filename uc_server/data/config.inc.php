@@ -1,8 +1,8 @@
 <?php 
-define('UC_DBHOST', '192.168.0.9');
-define('UC_DBUSER', 'user1');
-define('UC_DBPW', '123');
-define('UC_DBNAME', 'bbs_update');
+define('UC_DBHOST', 'localhost');
+define('UC_DBUSER', 'root');
+define('UC_DBPW', '');
+define('UC_DBNAME', 'newbbs');
 define('UC_DBCHARSET', 'gbk');
 define('UC_DBTABLEPRE', 'pre_ucenter_');
 define('UC_COOKIEPATH', '/');
