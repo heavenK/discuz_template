@@ -27,6 +27,7 @@
 .aset b					{ width:16px; height:16px; overflow:hidden; float:left; margin:8px 8px 0 13px; display:inline;}
 .aset .btn				{ width:121px;height:30px; background:url(../images/suggest.png) no-repeat;cursor:pointer;}
 .aset .btn:hover		{ background:url(../images/suggest_h.png) no-repeat;}
+.separated				{ width:100%;height:10px;float:left;}
 
 #frame1_left .block		{ margin:0 !important;border:0;}
 #frame1_left .dxb_bc	{ padding:0;}
