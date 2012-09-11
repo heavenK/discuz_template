@@ -678,7 +678,7 @@ $lang = array (
   'sendmultipmsystem' => '这是由系统发送的多人消息',
   'sendmultipmwho' => '这是由 <a href="home.php?mod=space&uid=$grouppm[authorid]" class="xi2" target="_blank">$grouppm[author]</a> 发送的多人消息',
   'sendpm_tip' => '多个用户使用逗号、分号或回车提示系统分开',
-  'view_newpm' => '点击这里查看 <strong class="xi1">$newpmcount</strong> 条未读消息',
+  'view_newpm' => '共有 <strong class="xi1">$newpmcount</strong> 条未读私信',
   'view_privatepm' => '查看全部私人消息',
   'yes' => '是',
   'you_to' => '对',
