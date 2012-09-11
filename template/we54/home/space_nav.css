@@ -22,11 +22,12 @@
 .web_left li b			{ width:16px; height:16px; overflow:hidden; float:left; margin:6px 8px 0 13px; display:inline;}
 .web_left li a			{ color:#996633; font-size:14px;}
 .bod					{ width:100%;height:1px;background:url(../images/border.png) no-repeat;margin-left:1px;float:left;}
-.aset					{ width:128px; height:30px; line-height:30px; margin:6px 0 0 11px; overflow:hidden; float:left; }
+.aset					{ width:128px; height:30px; line-height:30px; margin:6px 0 0 11px;_margin-left:8px; overflow:hidden; float:left; }
 .aset a					{ color:#996633; font-size:14px;}
 .aset b					{ width:16px; height:16px; overflow:hidden; float:left; margin:8px 8px 0 13px; display:inline;}
-.aset .btn				{ width:121px;height:30px; background:url(../images/suggest.png) no-repeat;cursor:pointer;}
-.aset .btn:hover		{ background:url(../images/suggest_h.png) no-repeat;}
+.aset2					{ width:128px; height:30px; line-height:30px; margin:6px 0 0 9px;_margin:6px 0 0 4px; overflow:hidden; float:left;}
+.aset2 .btn				{ width:128px;height:30px; background:url(../images/suggest.png) no-repeat;cursor:pointer;}
+.aset2 .btn:hover		{ background:url(../images/suggest_h.png) no-repeat;}
 .separated				{ width:100%;height:10px;float:left;}
 
 #frame1_left .block		{ margin:0 !important;border:0;}
