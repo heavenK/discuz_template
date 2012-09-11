@@ -1,7 +1,7 @@
 /* CSS Document */
 body#space .block{margin:0;}
 .web_all		{ width:998px; margin:auto;margin-bottom:50px;}
-#ct				{background:url(../images/center_bg.png) repeat-y #fff !important; border-top:3px solid #d6d1ad; border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7; }
+#ct				{background:url(../images/center_bg.png) repeat-y #fff !important;  border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7; }
 #frame1_center .block,#frame1_right .block{border:0 !important;}
 #frame1_center	{width:580px;margin:0 27px 0 26px;}
 #frame1_center .title{background:none;height:43px;font-size:16px;font-family:'Î¢ÈíÑÅºÚ';line-height:50px;border-bottom:2px solid #f1f1e3;padding:0;}

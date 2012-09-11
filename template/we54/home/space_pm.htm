@@ -1,7 +1,7 @@
 <!--{eval $_G['home_tpl_titles'] = array('{lang pm}');}-->
 <!--{template common/other_header}-->
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/king_space.css" />
-
+<link rel="stylesheet" type="text/css" href="template/we54/home/space_pm.css" />
 <div id="pt" class="bm cl">
 	<div class="z">
 		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
@@ -20,10 +20,10 @@
 		<div class="bm bw0">
 			<h1 class="mt"><img alt="pm" src="{STATICURL}image/feed/pm.gif" class="vm" /> {lang news}</h1>
 			<ul class="tb cl kaiser_tb_cl">
-				<li class="y"><a href="home.php?mod=space&do=pm&subop=setting" class="xi2">{lang pm_setting}</a></li>
+				<!--<li class="y"><a href="home.php?mod=space&do=pm&subop=setting" class="xi2">{lang pm_setting}</a></li>-->
 				<li$actives[privatepm] $actives[newpm]><a href="home.php?mod=space&do=pm&filter=privatepm">{lang private_pm}</a></li>
 				<li$actives[announcepm]><a href="home.php?mod=space&do=pm&filter=announcepm">{lang announce_pm}</a></li>
-				<li class="o"><a href="home.php?mod=spacecp&ac=pm">{lang send_pm}</a></li>
+				<li class="o"><a href="home.php?mod=spacecp&ac=pm"></a></li>
 			</ul>
 
 			<!--{if ($filter == 'privatepm' && $newpm) || $filter == 'newpm'}-->
@@ -379,6 +379,14 @@
 
 				<!--{if $count || $grouppms}-->
 					<form id="deletepmform" action="home.php?mod=spacecp&ac=pm&op=delete&folder=$folder" method="post" autocomplete="off" name="deletepmform">
+                    	<div class="pgs pbm cl pm_op">
+							<!--{if $multi}-->$multi<!--{/if}-->
+							<!--{if $count || $grouppms}-->
+								<label for="delete_all" onclick="checkall(this.form, 'deletepm_');" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
+								<button class="pn" type="submit" name="deletepmsubmit_btn" value="true"><strong>{lang delete}</strong></button>
+								<button class="pn" type="button" name="markreadpm_btn" value="true" onclick="setpmstatus(this.form);"><strong>{lang change_old_pm}</strong></button>
+							<!--{/if}-->
+						</div>
 						<div class="xld xlda pml mtm mbm">
 							<!--{if $grouppms}-->
 								<!--{loop $grouppms $grouppm}-->
@@ -417,7 +425,7 @@
 							<!--{/if}-->
 							<!--{loop $list $key $value}-->
 								<dl id="pmlist_$value[plid]" class="bbda cur1 cl{if $value[isnew]} newpm{/if}">
-									<dd class="y mtm pm_o">
+									<dd class="y mtm pm_o" style=" height:40px;">
 										<div id="pm_o_$value[plid]_menu" class="p_pop" style="display: none;">
 											<ul>
 												<!--{if $value['pmtype'] == 1}-->
@@ -432,19 +440,10 @@
 												<!--{/if}-->
 											</ul>
 										</div>
-										<a href="javascript:;" id="pm_o_$value[plid]" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})">{lang menu}</a>
-										<span class="xg1">{lang pm_num}</span>
-									</dd>
+										<a href="javascript:;" id="pm_o_$value[plid]" class="o" onmouseover="showMenu({'ctrlid':this.id, 'pos':'34'})" style="" >{lang menu}</a><br />
+										<span class="xg1" style="margin:17px 0 0 0; *margin:17px 0 0 0 !important; overflow:hidden; float:right;">{lang pm_num}</span>
 									<dd class="m avt">
-										<div class="newpm_avt" title="{lang new_pm}"></div>
-										<!--{if $value['pmtype'] == 1}-->
-										<a href="home.php?mod=space&uid=$value[touid]" target="_blank"><!--{avatar($value[touid],small)}--></a>
-										<!--{elseif $value['pmtype'] == 2}-->
-										<a href="home.php?mod=space&do=pm&subop=view&plid=$value[plid]&type=1&daterange=$value[daterange]"><img src="{IMGDIR}/grouppm.png" alt="" /></a>
-										<!--{/if}-->
-									</dd>
-									<dd class="ptm pm_c">
-										<div class="o">
+                                    	<div class="o" style=" float:left; margin:20px 11px 0 -18px; *margin-left:3px !important; ">
 											<!--{if $value['pmtype'] == 1}-->
 												<input type="checkbox" name="deletepm_deluid[]" id="a_delete_$value[plid]" class="pc" value="$value[touid]" />
 											<!--{elseif $value['pmtype'] == 2}-->
@@ -455,14 +454,26 @@
 												<!--{/if}-->
 											<!--{/if}-->
 										</div>
+										<div class="newpm_avt" title="{lang new_pm}"></div>
+										<!--{if $value['pmtype'] == 1}-->
+										<a href="home.php?mod=space&uid=$value[touid]" target="_blank"><!--{avatar($value[touid],small)}--></a>
+										<!--{elseif $value['pmtype'] == 2}-->
+										<a href="home.php?mod=space&do=pm&subop=view&plid=$value[plid]&type=1&daterange=$value[daterange]"><img src="{IMGDIR}/grouppm.png" alt="" /></a>
+										<!--{/if}-->
+									</dd>
+									<dd class="ptm pm_c" style="height:40px; overflow:hidden;" >
+										<div class="tit_sj" style="width:100px; height:50px;  float:left; margin-left:5px; margin-right:30px;">
 										<!--{if $value['pmtype'] == 1}-->
 											<!--{if $value['lastauthorid'] == $_G['uid']}-->
-												<span class="xi2">{lang you}</span> {lang you_to} <a href="home.php?mod=space&uid=$value[touid]" target="_blank">{$value[tousername]}</a> {lang say} :
+												<a href="home.php?mod=space&uid=$value[touid]" target="_blank">{$value[tousername]}</a><br />
 											<!--{else}-->
-												<a href="home.php?mod=space&uid=$value[touid]" target="_blank">{$value[tousername]}</a> {lang you_to} <span class="xi2">{lang you}</span> {lang say} :
+												<a href="home.php?mod=space&uid=$value[touid]" target="_blank">{$value[tousername]}</a><br />
 											<!--{/if}-->
-											$value[lastsummary] &nbsp; 
-											<span class="xg1"><!--{date($value[lastdateline], 'u')}--></span> &nbsp; 
+                                            <span class="xg1" style="line-height:30px; float:left;"><!--{date($value[lastdateline], 'u')}--></span>
+                                        </div>
+											<i style="color:#996633; font-size:14px; line-height:22px; height:40px;">$value[lastsummary]</i>
+										
+                                        	
 											<a href="home.php?mod=space&do=pm&subop=view&touid=$value[touid]#last" id="pmlist_$value[plid]_a">{lang reply}</a>
 										<!--{elseif $value['pmtype'] == 2}-->
 											<table>
@@ -490,7 +501,7 @@
 						<div class="pgs pbm cl pm_op">
 							<!--{if $multi}-->$multi<!--{/if}-->
 							<!--{if $count || $grouppms}-->
-								<label for="delete_all" onclick="checkall(this.form, 'deletepm_');"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
+								<label for="delete_all" onclick="checkall(this.form, 'deletepm_');" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
 								<button class="pn" type="submit" name="deletepmsubmit_btn" value="true"><strong>{lang delete}</strong></button>
 								<button class="pn" type="button" name="markreadpm_btn" value="true" onclick="setpmstatus(this.form);"><strong>{lang change_old_pm}</strong></button>
 							<!--{/if}-->
