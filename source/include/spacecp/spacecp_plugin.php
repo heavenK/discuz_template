@@ -13,6 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $pluginkey = 'spacecp'.($op ? '_'.$op : '');
 $navtitle = $_G['setting']['plugins'][$pluginkey][$_GET['id']]['name'];
+$profilegroup = C::t('common_setting')->fetch('profilegroup', true);
 
 include pluginmodule($_GET['id'], $pluginkey);
 if(!$op || $op == 'credit') {

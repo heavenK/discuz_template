@@ -15,7 +15,9 @@ $attentionUrl = XWB_plugin::getEntryURL("xwbSiteInterface.attention", XWB_TOKEN_
 $wbxUrl = '';
 $xwb_loadScript2 =  XWB_plugin::getPluginUrl('images/xwb.js');
 $xwb_css_base = XWB_plugin::getPluginUrl('images/xwb_base.css');
+
 $xwb_css_append = XWB_plugin::getPluginUrl('images/xwb_'. XWB_S_VERSION. '.css');
+$xwb_css_append2 = XWB_plugin::getPluginUrl('images/xwb_regbox.css');
 
 $xwb_loadingImg = XWB_plugin::getPluginUrl('images/bgimg/xwb_loading.gif');
 $tipGetCountUrl = XWB_plugin::getEntryURL("xwbSiteInterface.getTips");
@@ -52,7 +54,7 @@ xwb_loadScript("$xwb_loadScript2", "UTF-8");
 </script>
 <link href="$xwb_css_base" rel="stylesheet" type="text/css" />
 <link href="$xwb_css_append" rel="stylesheet" type="text/css" />
-
+<link href="$xwb_css_append2" rel="stylesheet" type="text/css" />
 EOF;
 
 

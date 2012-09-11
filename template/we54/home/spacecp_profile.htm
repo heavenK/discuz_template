@@ -29,6 +29,8 @@
 	</div>
 	<!--{else}-->
 		<!--{if $operation == 'password'}-->
+        	<!--{hook/spacecp_profile_top}-->
+			<!--{subtemplate home/spacecp_profile_nav}-->
 			<p class="bbda pbm mbm"><!--{if !$_G['setting']['connect']['allow'] || !$conisregister}-->{lang old_password_comment}<!--{else}-->{lang connect_config_newpassword_comment}<!--{/if}--></p>
 			<form action="home.php?mod=spacecp&ac=profile" method="post" autocomplete="off">
 				<input type="hidden" value="{FORMHASH}" name="formhash" />

@@ -16,6 +16,7 @@ if(submitcheck('avatarsubmit')) {
 }
 
 loaducenter();
+$profilegroup = C::t('common_setting')->fetch('profilegroup', true);
 $uc_avatarflash = uc_avatar($_G['uid'], 'virtual', 0);
 
 if(empty($space['avatarstatus']) && uc_check_avatar($_G['uid'], 'middle')) {

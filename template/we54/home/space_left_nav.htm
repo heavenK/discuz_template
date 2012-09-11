@@ -20,18 +20,45 @@
 				<!--{/if}-->
 			</div>
 		</div>
+		<div class="bod"></div>
 	<ul>
 <!--{if empty($personalnv['nvhidden'])}-->
-	<!--{if empty($personalnv['banitems']['index'])}-->
-		<!--{if $_G['adminid'] == 1 && $_G['setting']['allowquickviewprofile'] == 1}-->
-		<li <!--{if $_GET['do']=='index'}--> class="pre_shouw" <!--{/if}-->><b><img src="/template/we54/images/sy_logo.gif" width="14" height="16" border="0"/></b><a href="home.php?mod=space&uid=$space[uid]&do=index&view=admin">TA的首页</a></li>
-		<!--{else}-->
-		<li {if $_GET['do']=='index'} class="pre_shouw" {/if}><b><img src="/template/we54/images/sy_logo.gif" width="14" height="16" border="0"/></b><a href="home.php?mod=space&uid=$space[uid]&do=index&view=admin">TA的首页</a></li>
+	<!--{if $space['self']}-->
+		<li <!--{if $_GET['do']=='home'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=home&view=we"><b><img src="/template/we54/images/sy_logo.gif" width="16" height="16" border="0"/></b>好友动态</a></li>
+	<!--{else}-->
+		<!--{if empty($personalnv['banitems']['index'])}-->
+			<!--{if $_G['adminid'] == 1 && $_G['setting']['allowquickviewprofile'] == 1}-->
+			<li <!--{if $_GET['do']=='index'}--> class="pre_shouw" <!--{/if}-->><b><img src="/template/we54/images/sy_logo.gif" width="14" height="16" border="0"/></b><a href="home.php?mod=space&uid=$space[uid]&do=index&view=admin"><!--{if $space['self']}-->我的首页<!--{else}-->TA的首页<!--{/if}--></a></li>
+			<!--{else}-->
+			<li {if $_GET['do']=='index'} class="pre_shouw" {/if}><b><img src="/template/we54/images/sy_logo.gif" width="14" height="16" border="0"/></b><a href="home.php?mod=space&uid=$space[uid]&do=index&view=admin"><!--{if $space['self']}-->我的首页<!--{else}-->TA的首页<!--{/if}--></a></li>
+			<!--{/if}-->
 		<!--{/if}-->
 	<!--{/if}-->
-		<li <!--{if $_GET['do']=='thread'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=thread&view=me&from=space"><b><img src="/template/we54/images/tz_logo.gif" width="16" height="16" border="0"/></b>TA的帖子</a></li>
-		<li<!--{if $_GET['do']=='album'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><b><img src="/template/we54/images/xc_logo.gif" width="16" height="14" border="0"/></b>TA的相册</a></li>
-		<li<!--{if $_GET['do']=='friend'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=friend&view=me&from=space"><b><img src="/template/we54/images/hy_logo.gif" width="16" height="16" border="0"/></b>TA的好友</a></li>
+		<li <!--{if $_GET['do']=='thread'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=thread&view=me&from=space"><b><img src="/template/we54/images/tz_logo.gif" width="16" height="16" border="0"/></b><!--{if $space['self']}-->我的帖子<!--{else}-->TA的帖子<!--{/if}--></a></li>
+		<!--{if $space['self']}-->
+		<li <!--{if $_GET['do']=='favorite'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&do=favorite&uid=$space[uid]&view=me"><b><img src="/template/we54/images/star.gif" width="16" height="16" border="0"/></b>我的收藏</a></li>
+		<!--{/if}-->
+		<li<!--{if $_GET['do']=='album'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><b><img src="/template/we54/images/xc_logo.gif" width="16" height="14" border="0"/></b><!--{if $space['self']}-->我的相册<!--{else}-->TA的相册<!--{/if}--></a></li>
+		<li<!--{if $_GET['do']=='friend'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=space&uid=$space[uid]&do=friend&view=me&from=space"><b><img src="/template/we54/images/hy_logo.gif" width="16" height="16" border="0"/></b><!--{if $space['self']}-->我的好友<!--{else}-->TA的好友<!--{/if}--></a></li>
+		<li<!--{if $_GET['do']=='following'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=follow&do=following&uid=$space[uid]"><b><img src="/template/we54/images/eye.gif" width="16" height="16" border="0"/></b><!--{if $space['self']}-->我关注的人<!--{else}-->TA关注的人<!--{/if}--></a></li>
+		<li<!--{if $_GET['do']=='follower'}--> class="pre_shouw" <!--{/if}-->><a href="home.php?mod=follow&do=follower&uid=$space[uid]"><b><img src="/template/we54/images/user_add.gif" width="16" height="16" border="0"/></b><!--{if $space['self']}-->我的粉丝<!--{else}-->TA的粉丝<!--{/if}--></a></li>
 <!--{/if}-->
 	</ul>
+	<div class="bod"></div>
+<!--{if $space['self']}-->
+	<ul class="ea">
+		<li<!--{if $_GET['do']=='favorite'}--> class="pre_shouw" <!--{/if}-->><a href=""><b><img src="/template/we54/images/email.gif" width="16" height="16" border="0"/></b>私信</a></li>
+		<li<!--{if $_GET['do']=='favorite'}--> class="pre_shouw" <!--{/if}-->><a href=""><b><img src="/template/we54/images/alert.gif" width="16" height="16" border="0"/></b>提醒</a></li>
+	</ul>
+	<div class="bod"></div>
+	<div<!--{if $_GET['mod']=='spacecp'&&$_GET['ac']=='profile'}--> class="pre_shouw" <!--{else}--> class="aset"<!--{/if}-->>
+		<a href="home.php?mod=spacecp&ac=profile&op=base" title="账户设置"><b><img src="/template/we54/images/accountset.gif" width="16" height="16" border="0" /></b>账户设置</a>
+	</div>
+<!--{else}-->
+	<div class="separated"></div>
+<!--{/if}-->
+	<div class="aset">
+		<button type="button" value="1" class="btn">
+		</button>
+	</div>
 </div>
