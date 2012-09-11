@@ -61,7 +61,23 @@ foreach($kaiser_user as $val){
 	$renzheng = $val['extgroupids'];
 }
 //end add
+//add by zh
+space_merge($space, 'profile');
+space_merge($space, 'count');
+//$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if($_G['member']['groupid']==22){
+	$space['vertifyico']='static/image/common/kaiser_ext.png';
+}
 
+//add
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
+foreach($followerlist as $k=>$val){
+	if($val['followuid']==$uid){
+		$gzflag=true;
+		break;
+	}
+}
+//end add
 require_once libfile('spacecp/'.$ac, 'include');
 
 ?>

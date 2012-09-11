@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+.xwb-plugin-new										{margin-left:45px;}
+.xwb-plugin-new .xwb-pf-info1						{background:url(bgimg/pf_infobg1.png) no-repeat;width:270px;height:30px;}
+.xwb-plugin-new .xwb-pf-info2						{background:url(bgimg/pf_infobg2.png) no-repeat;width:270px;height:30px;}
+.xwb-table-zh .xwb-td-msg-zh						{text-align:right;}
+.xwb-table-zh .xwb-td-btn-zh						{font-size:13px;line-height:20px;}
+.xwb-table-zh .xwd-real-btn-zh						{background:url(bgimg/sina_plg_btn.png) no-repeat;border:none;width:100px;height:35px;float:left;}
+.xwb-table-zh .xwb-td-btn-zh em						{font-style:normal;margin-top:8px;margin-left:15px;color:#333;float:left;}
+.xwb-table-zh .xwb-td-btn-zh a						{margin-top:8px;margin-left:6px;color:#f00;float:left;}
