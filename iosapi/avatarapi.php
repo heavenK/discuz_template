@@ -23,6 +23,8 @@ if($res || $res == NULL){
 
 	dmkdir($basedir);
 
+	$s=base64_decode($s);
+
 	file_put_contents($avatar, $s);
 
 	$res['changeCheck'] = 1;
