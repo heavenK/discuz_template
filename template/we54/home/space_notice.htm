@@ -1,7 +1,22 @@
 <!--{eval $_G['home_tpl_titles'] = array('{lang remind}');}-->
 <!--{template common/other_header}-->
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/king_space.css" />
+<link rel="stylesheet" type="text/css" href="template/we54/home/space_notice.css" />
 
+<script language="javascript">
+jq(function(){
+  //当鼠标滑入时将div的class换成divOver
+  jq('.ttt').hover(function(){
+	jq(this).addClass('clOver');  
+   },function(){
+	//鼠标离开时移除divOver样式
+	jq(this).removeClass('clOver'); 
+   }
+  );
+});
+</script> 
+    
+    
 <div id="pt" class="bm cl">
 	<div class="z">
 		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
@@ -20,7 +35,7 @@
 		<div class="bm bw0">
 			<h1 class="mt"><img alt="pm" src="{STATICURL}image/feed/nts.gif" class="vm" /> {lang remind}</h1>
 			<ul class="tb cl kaiser_tb_cl">
-				<li class="y"><a href="home.php?mod=spacecp&ac=privacy&op=filter" target="_blank" class="xi2">{lang filter_settings}</a></li>
+				<!--<li class="y"><a href="home.php?mod=spacecp&ac=privacy&op=filter" target="_blank" class="xi2">{lang filter_settings}</a></li>-->
 				<!--{if $_G['setting']['my_app_status']}-->
 				<li$actives[notice]><a href="home.php?mod=space&do=notice">{lang notice}</a></li>
 				<li$actives[userapp]><a href="home.php?mod=space&do=notice&view=userapp">{lang applications_news}{if $mynotice}($mynotice){/if}</a></li>
@@ -132,7 +147,7 @@
 
 					<div class="nts">
 						<!--{loop $list $key $value}-->
-							<dl class="cl {if $key==1}bw0{/if}" $value[rowid] notice="$value[id]">
+							<dl class="cl ttt {if $key==1}bw0{/if}" $value[rowid] notice="$value[id]">
 								<dd class="m avt mbn">
 									<!--{if $value[authorid]}-->
 									<a href="home.php?mod=space&uid=$value[authorid]"><!--{avatar($value[authorid],small)}--></a>
@@ -140,13 +155,14 @@
 									<img src="{IMGDIR}/systempm.png" alt="systempm" />
 									<!--{/if}-->
 								</dd>
-								<dt>
-									<a class="d b" href="home.php?mod=spacecp&ac=common&op=ignore&authorid=$value[authorid]&type=$value[type]&handlekey=addfriendhk_{$value[authorid]}" id="a_note_$value[id]" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang shield}">{lang shield}</a>
-									<span class="xg1 xw0"><!--{date($value[dateline], 'u')}--></span>
-								</dt>
-								<dd class="ntc_body" style="$value[style]">
+                                <dd class="ntc_body" style="$value[style]">
 									$value[note]
 								</dd>
+								<dt>
+									<a class="d b" href="home.php?mod=spacecp&ac=common&op=ignore&authorid=$value[authorid]&type=$value[type]&handlekey=addfriendhk_{$value[authorid]}" id="a_note_$value[id]" onclick="showWindow(this.id, this.href, 'get', 0);" title="{lang shield}" onfocus="this.blur()">{lang shield}</a>
+									<span class="xg1 xw0"><!--{date($value[dateline], 'u')}--></span>
+								</dt>
+								
 
 								<!--{if $value[from_num]}-->
 								<dd class="xg1 xw0">{lang ignore_same_notice_message}</dd>
