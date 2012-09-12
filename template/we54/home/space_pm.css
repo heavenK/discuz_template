@@ -22,19 +22,34 @@
 .avt img { margin-left:35px; *margin-left:55px !important;}
 .pm_c { padding-left:10px; *padding-left:10px !important ;}
 .xlda dd a { color:#996633;}
-.pm_o .o { background: url(/template/we54/images/xiala.jpg) no-repeat;}
+.pm_o .o { background: url(/template/we54/images/xiala.jpg) no-repeat; }
 .pm_o { margin-right:-20px; width:60px; }
 .pml dl { padding-left:75px; padding-right:20px; *padding-right:20px !important;}
+.p_pop, .p_pof, .sllt { background: none repeat scroll 0 0 #f26c4f; border:0; box-shadow:0 0 0 0; min-width: 60px; padding: 4px;}
+.ie6 .p_pop { width: 60px;}
+.p_pop a { border:0; }
+.p_pop li a { color:#FFFFFF;}
+.p_pop li a:hover { color:#FFFFFF; background-color:#f08770;}
+.p_pop li { text-align:center; *text-align:center !important ;}
 
 
-.p_pop, .p_pof, .sllt {
-    background: none repeat scroll 0 0 #f26c4f;
-    border:0;
-    box-shadow:0 0 0 0;
-    min-width: 60px;
-    padding: 4px;
-}
-.ie6 .p_pop {
-    width: 60px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
