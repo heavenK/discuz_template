@@ -75,7 +75,7 @@ if($res['err'] != 1){
 			'attachment' => '0',
 			'tags' => '',
 			'replycredit' => 0,
-			'status' => 0
+			'status' => 100
 		));
 	if($pid) {
 		$res['tid'] = $tid;
