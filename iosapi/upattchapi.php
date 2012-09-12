@@ -36,7 +36,6 @@ if($res['err'] != 1){
 	$update['filename'] = $filename;
 	$update['filesize'] = $filesize;
 	$update['attachment'] = $attachments;
-	$update['filesize'] = 555;
 	$update['description'] = censor(cutstr(dhtmlspecialchars($description), 100));
 	$update['readperm'] = 0;
 	$update['price'] = 0;
