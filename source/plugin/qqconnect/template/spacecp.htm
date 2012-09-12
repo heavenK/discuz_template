@@ -535,7 +535,7 @@
 <!--{if $_G['member']['conisbind']}-->
 	<p class="pbm bbda xi1">{lang qqconnect:connect_config_bindinfo}</p>
 	<!--{if $_G['member']['is_feed']}-->
-	<form action="connect.php?mod=config" method="post" autocomplete="off" class="mbw bbda">
+	<form action="connect.php?mod=config" method="post" autocomplete="off" class="mbw bbda kaiser_qq_mbw_bbda">
 		<input type="hidden" name="formhash" value="{FORMHASH}">
 		<table cellspacing="0" cellpadding="0" class="tfm">
 			<tr>
@@ -619,21 +619,15 @@
 	<!--{/if}-->
 
 <!--{else}-->
-	<div class="mtw bm2 cl">
-		<div class="bm2_b bw0 hm" style="padding-top: 70px;">
-			<a href="{$_G['connect']['loginbind_url']}"><img src="{IMGDIR}/qq_bind.gif" /></a>
-			<p class="mtn xg1">{lang qqconnect:connect_config_bind}</p>
-		</div>
-		<div class="bm2_b bm2_b_y bw0">
-			<dl class="xld">
-				<h2 class="xi1 xs2">{lang qqconnect:connect_config_title}</h2>
-				<dt>{lang qqconnect:connect_config_desc_title1}</dt>
-				<dd class="xg1">{lang qqconnect:connect_config_desc_content1}</dd>
-				<dt>{lang qqconnect:connect_config_desc_title2}</dt>
-				<dd class="xg1">{lang qqconnect:connect_config_desc_content2}</dd>
-				<dt>{lang qqconnect:connect_config_desc_title3}</dt>
-				<dd class="xg1">{lang qqconnect:connect_config_desc_content3}</dd>
-			</dl>
+	<div class="mtw bm2 cl kaiser_mtw_bm2_cl">
+		<div class="bm2_b bw0 hm kaiser_bm2_b_bw0_hm"></div>
+		<div class="bm2_b bm2_b_y bw0 kaiser_bm2_b_bm2_b_y_bw0">
+			<em class="xld">
+				<span>点击按钮，立刻绑定QQ帐号</span>
+                <a href="{$_G['connect']['loginbind_url']}"><img src="{IMGDIR}/qq_bind.gif" /></a>
+				<i class="xg1">绑定以后就可以把帖子、回帖同步发到腾讯微博上啦，无需记住本站的帐号和密码，随时使用QQ帐号密码轻松登录</i>
+
+			</em>
 		</div>
 	</div>
 <!--{/if}-->

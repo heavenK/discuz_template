@@ -13,7 +13,9 @@ if(!defined('IN_DISCUZ')) {
 
 $pluginkey = 'spacecp'.($op ? '_'.$op : '');
 $navtitle = $_G['setting']['plugins'][$pluginkey][$_GET['id']]['name'];
+//add by kaiser
 $profilegroup = C::t('common_setting')->fetch('profilegroup', true);
+//end add
 
 include pluginmodule($_GET['id'], $pluginkey);
 if(!$op || $op == 'credit') {
