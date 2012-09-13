@@ -1,9 +1,13 @@
 <!--{if $_GET['mod'] == 'spacecp'}-->
 	<!--{subtemplate home/space_header}-->
-    <!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
+	<!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
 		<link rel="archives" title="$_G['setting']['bbname']" href="{$_G[siteurl]}archiver/" />
 	<!--{/if}-->
 	<!--{if !empty($rsshead)}-->$rsshead<!--{/if}-->
+	<!--{if widthauto()}-->
+		<link rel="stylesheet" id="css_widthauto" type="text/css" href="data/cache/style_{STYLEID}_widthauto.css?{VERHASH}" />
+		<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
+	<!--{/if}-->
 	<!--{if $_G['basescript'] == 'forum' || $_G['basescript'] == 'group'}-->
 		<script type="text/javascript" src="{$_G[setting][jspath]}forum.js?{VERHASH}"></script>
 	<!--{elseif $_G['basescript'] == 'home' || $_G['basescript'] == 'userapp'}-->
@@ -11,7 +15,63 @@
 	<!--{elseif $_G['basescript'] == 'portal'}-->
 		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
 	<!--{/if}-->
+	<!--{if $_G['basescript'] != 'portal' && $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
+	<!--{/if}-->
+	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
+	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
+	<!--{/if}-->
     <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
+    <script src="template/we54/js/logging.js" type="text/javascript"></script>
+	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	var jq = jQuery.noConflict(); 
+    jq(document).ready(function(){
+      
+      jq("#ss, #show").hover(function(){
+      jq(".main_nav").show();
+      },function (){jq(".main_nav").hide();});
+    
+    });
+    </script>
+	
+    <script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+	  
+	  jq("#bk, #ycbk").hover(function(){
+	  jq(".nav_three").show();
+	  },function (){jq(".nav_three").hide();});
+	
+	});
+	</script>
+	
+    <script language="javascript">
+	jq(function(){
+	  //当鼠标滑入时将div的class换成divOver
+	  jq('.nav').hover(function(){
+		jq(this).addClass('divOver');  
+	   },function(){
+		//鼠标离开时移除divOver样式
+		jq(this).removeClass('divOver'); 
+	   }
+	  );
+	});
+	</script> 
+    
+    <script language="javascript">
+	jq(function(){
+	  //当鼠标滑入时将div的class换成divOver
+	  jq('.bankuai').hover(function(){
+		jq(this).addClass('bankuaiOver');  
+	   },function(){
+		//鼠标离开时移除divOver样式
+		jq(this).removeClass('bankuaiOver'); 
+	   }
+	  );
+	});
+	</script> 
     <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="template/we54/common/kaiser.css" />
 <!--{else}-->
