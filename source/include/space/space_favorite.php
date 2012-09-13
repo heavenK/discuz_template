@@ -12,7 +12,7 @@ if(!defined('IN_DISCUZ')) {
 }
 
 $space = getuserbyuid($_G['uid']);
-
+space_merge($space, 'profile');
 $page = empty($_GET['page'])?1:intval($_GET['page']);
 if($page<1) $page=1;
 $id = empty($_GET['id'])?0:intval($_GET['id']);
@@ -25,7 +25,7 @@ $start = ($page-1)*$perpage;
 ckstart($start, $perpage);
 
 $idtypes = array('thread'=>'tid', 'forum'=>'fid', 'blog'=>'blogid', 'group'=>'gid', 'album'=>'albumid', 'space'=>'uid', 'article'=>'aid');
-$_GET['type'] = isset($idtypes[$_GET['type']]) ? $_GET['type'] : 'all';
+$_GET['type'] = isset($idtypes[$_GET['type']]) ? $_GET['type'] : 'thread';
 $actives[$_GET['type']] = ' class="a"';
 
 $gets = array(

@@ -1,0 +1,14 @@
+@charset "gb2312";
+/* CSS Document */
+
+.ct2_a .mn_zh{width:810px !important;margin-right:20px;}
+.ct2_a h1.new_nav{display:block;height:26px;background:url(../images/new_navbg.png) repeat-x;border:0 !important;}
+.ct2_a h1.new_nav ul{float:left;}
+.ct2_a h1.new_nav li{background:url(../images/p_nav.png) no-repeat;width:95px;height:26px;margin-left:10px;text-align:center;line-height:28px;float:left;}
+.ct2_a h1.new_nav a{color:black;font-weight:normal;text-decoration:none;}
+.ct2_a h1.new_nav li.nav_put{background:url(../images/f_nav.png) no-repeat;}
+.ct2_a h1.new_nav li.nav_put a{color:#663300;font-weight:bold;}
+.f_btn{background:url(../images/favor_del.png) no-repeat;width:95px;height:30px;border:0;color:white;font-weight:normal;-webkit-box-shadow:none;box-shadow:none;}
+.mtm label{color:#663300;margin-right:24px;}
+.ml{margin-right:15px;}
+#favorite_ul a{color:#663300;}
