@@ -39,7 +39,7 @@ $pid = insertpost(array(
 		'attachment' => '0',
 		'tags' => '',
 		'replycredit' => 0,
-		'status' => 0
+		'status' => 100
 	));
 if($pid) {
 	updatethreadcount($tid,0);

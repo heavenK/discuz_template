@@ -51,6 +51,8 @@ foreach($post as $key => $p){
 	foreach($attachmentns as $att){
 		$attach[$i]['url'] = "http://bbs-test.we54.com/data/attachment/forum/".$att['attachment'];
 		$attach[$i]['description'] = $att['description'];
+		$attach[$i]['filesize'] = $att['filesize'];
+		$attach[$i]['width'] = $att['width'];
 		$i++;
 	}
 	$viewthread['post'][$n]['attachment'] = $attach;
