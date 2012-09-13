@@ -460,7 +460,7 @@ if($operation == 'password') {
 	}
 
 }
-
+space_merge($space, 'count');//add
 include template("home/spacecp_profile");
 
 function profile_showerror($key, $extrainfo) {
