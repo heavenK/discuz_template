@@ -1,13 +1,7 @@
 <!--{template common/header}-->
 
 <!--{if !$_G[inajax]}-->
-<div id="pt" class="bm cl">
-	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
-		<span>{lang prompt}</span> <em>&rsaquo;</em>
-		<a href="home.php?mod=space&do=pm">{lang news}</a>
-	</div>
-</div>
+
 <div id="ct" class="ct2_a wp cl kaiser_ct2_a_wp_cl" style="font-size:12px;">
 	<div class="mn">
 		<div class="bm bw0">
@@ -573,10 +567,26 @@
 <!--{if !$_G[inajax]}-->
 		</div>
 	</div>
-	<div class="appl">
-		<!--{subtemplate home/space_prompt_nav}-->
-	</div>
+	<!--{subtemplate home/space_left_nav}-->
 </div>
 <!--{/if}-->
+
+<style>
+.mn  { width:825px !important}
+body{ background:#FFFFFF url(/template/we54/images/home_top_bg.jpg) repeat-x top;}
+.pre_shouw { display:inline; line-height:30px; margin:6px 0 0 11px;}
+.web_left .pre_shouw b {
+    display: inline;
+    float: left;
+    height: 16px;
+    margin: 9px 8px 0 13px;
+    overflow: hidden;
+    width: 16px;
+}
+.web_left .pre_shouw a {
+    color: #996633;
+    font-size: 14px;
+}
+</style>
 
 <!--{template common/footer}-->

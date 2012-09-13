@@ -1,0 +1,190 @@
+<!--{subtemplate common/header_common}-->
+	<meta name="application-name" content="$_G['setting']['bbname']" />
+	<meta name="msapplication-tooltip" content="$_G['setting']['bbname']" />
+	<!--{if $_G['setting']['portalstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][1]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['portal']) ? 'http://'.$_G['setting']['domain']['app']['portal'] : $_G[siteurl].'portal.php'};icon-uri={$_G[siteurl]}{IMGDIR}/portal.ico" /><!--{/if}-->
+	<meta name="msapplication-task" content="name=$_G['setting']['navs'][2]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['forum']) ? 'http://'.$_G['setting']['domain']['app']['forum'] : $_G[siteurl].'forum.php'};icon-uri={$_G[siteurl]}{IMGDIR}/bbs.ico" />
+	<!--{if $_G['setting']['groupstatus']}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][3]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['group']) ? 'http://'.$_G['setting']['domain']['app']['group'] : $_G[siteurl].'group.php'};icon-uri={$_G[siteurl]}{IMGDIR}/group.ico" /><!--{/if}-->
+	<!--{if helper_access::check_module('feed')}--><meta name="msapplication-task" content="name=$_G['setting']['navs'][4]['navname'];action-uri={echo !empty($_G['setting']['domain']['app']['home']) ? 'http://'.$_G['setting']['domain']['app']['home'] : $_G[siteurl].'home.php'};icon-uri={$_G[siteurl]}{IMGDIR}/home.ico" /><!--{/if}-->
+	<!--{if $_G['basescript'] == 'forum' && $_G['setting']['archiver']}-->
+		<link rel="archives" title="$_G['setting']['bbname']" href="{$_G[siteurl]}archiver/" />
+	<!--{/if}-->
+	<!--{if !empty($rsshead)}-->$rsshead<!--{/if}-->
+	<!--{if widthauto()}-->
+		<link rel="stylesheet" id="css_widthauto" type="text/css" href="data/cache/style_{STYLEID}_widthauto.css?{VERHASH}" />
+		<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
+	<!--{/if}-->
+	<!--{if $_G['basescript'] == 'forum' || $_G['basescript'] == 'group'}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}forum.js?{VERHASH}"></script>
+	<!--{elseif $_G['basescript'] == 'home' || $_G['basescript'] == 'userapp'}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+	<!--{elseif $_G['basescript'] == 'portal'}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
+	<!--{/if}-->
+	<!--{if $_G['basescript'] != 'portal' && $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
+		<script type="text/javascript" src="{$_G[setting][jspath]}portal.js?{VERHASH}"></script>
+	<!--{/if}-->
+	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
+	<link rel="stylesheet" type="text/css" id="diy_common" href="data/cache/style_{STYLEID}_css_diy.css?{VERHASH}" />
+	<!--{/if}-->
+    <link href="template/we54/common/header.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="template/we54/common/kaiser.css" />
+    <script type="text/javascript" src="{$_G[setting][jspath]}logging.js?{VERHASH}"></script>
+    <script src="template/we54/js/logging.js" type="text/javascript"></script>
+	<script src="template/we54/js/jquery-1.4.2.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	var jq = jQuery.noConflict(); 
+    jq(document).ready(function(){
+      
+      jq("#ss, #show").hover(function(){
+      jq(".main_nav").show();
+      },function (){jq(".main_nav").hide();});
+    
+    });
+    </script>
+	
+    <!--<script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+	  
+	  jq("#bk, #ycbk").hover(function(){
+	  jq(".nav_three").show();
+	  },function (){jq(".nav_three").hide();});
+	
+	});
+	</script>-->
+	
+    <script language="javascript">
+	jq(function(){
+	  //当鼠标滑入时将div的class换成divOver
+	  jq('.nav').hover(function(){
+		jq(this).addClass('divOver');  
+	   },function(){
+		//鼠标离开时移除divOver样式
+		jq(this).removeClass('divOver'); 
+	   }
+	  );
+	});
+	</script> 
+    
+    <script language="javascript">
+	jq(function(){
+	  //当鼠标滑入时将div的class换成divOver
+	  jq('.bankuai').hover(function(){
+		jq(this).addClass('bankuaiOver');  
+	   },function(){
+		//鼠标离开时移除divOver样式
+		jq(this).removeClass('bankuaiOver'); 
+	   }
+	  );
+	});
+	</script> 
+
+</head>
+
+<body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
+	<!--{if $kaiser_jieshao}--><div id="backgroundPopup"></div><!--{/if}-->
+	<div id="append_parent"></div><div id="ajaxwaitid"></div>
+	<!--{if $_GET['diy'] == 'yes' && check_diy_perm($topic)}-->
+		<!--{template common/header_diy}-->
+	<!--{/if}-->
+	<!--{if check_diy_perm($topic)}-->
+		<!--{block diynav}-->
+			<a id="diy-tg" href="javascript:openDiy();" title="{lang open_diy}" class="xi1 xw1" onMouseOver="showMenu(this.id)"><img src="{STATICURL}image/diy/panel-toggle.png" alt="DIY" /></a>
+			<div id="diy-tg_menu" style="display: none;">
+				<ul>
+					<li><a href="javascript:saveUserdata('diy_advance_mode', '');openDiy();" class="xi2">{lang header_diy_mode_simple}</a></li>
+					<li><a href="javascript:saveUserdata('diy_advance_mode', '1');openDiy();" class="xi2">{lang header_diy_mode_adv}</a></li>
+				</ul>
+			</div>
+		<!--{/block}-->
+	<!--{/if}-->
+	<!--{if CURMODULE == 'topic' && $topic && empty($topic['useheader']) && check_diy_perm($topic)}-->
+		$diynav
+	<!--{/if}-->
+	<!--{if empty($topic) || $topic['useheader']}-->
+		<!--{if $_G['setting']['mobile']['allowmobile'] && (!$_G['setting']['cacheindexlife'] && !$_G['setting']['cachethreadon'] || $_G['uid']) && ($_GET['diy'] != 'yes' || !$_GET['inajax']) && ($_G['mobile'] != '' && $_G['cookie']['mobile'] == '' && $_GET['mobile'] != 'no')}-->
+			<div class="xi1 bm bm_c">
+			    {lang your_mobile_browser}<a href="{$_G['siteurl']}forum.php?mobile=yes">{lang go_to_mobile}</a> <span class="xg1">|</span> <a href="$_G['setting']['mobile']['nomobileurl']">{lang to_be_continue}</a>
+			</div>
+		<!--{/if}-->
+
+		<div id="toptb" class="cl">
+			<!--{hook/global_cpnav_top}-->
+			<div class="wp">
+                <div class="zzz">
+                    <a href="./"><img src="/template/we54/images/bbs_logo.jpg" width="125" height="36" border="0"/></a>
+                </div>
+            
+            	<div class="nav" id="show">
+                    <div class="main_nav" id="ss"><!--顶部主导航-->
+                        <div class="zx_nav">
+                            <div class="zx_nav_bg01"></div>
+                            <div class="zx_sec_nav">
+                                <span><a href="http://news.we54.com/" target="_blank">资讯</a></span><div class="tyty">|</div><span><a href="http://news.we54.com/we54/dlnhzt/wq" target="_blank">专题</a></span><div class="tyty">|</div><span><a href="http://pic.we54.com/" target="_blank">图片</a></span><div class="tyty">|</div><span><a href="http://opinion.we54.com/" target="_blank">评论</a></span><span><a href="http://video.we54.com/" target="_blank">视频</a></span><div class="tyty">|</div><span><a href="http://news.we54.com/plus/list.php?tid=931" target="_blank">独家</a></span><div class="tyty">|</div><span><a href="http://video.we54.com/xqnsppd/pdylsp/index.html" target="_blank">娱乐</a></span><div class="tyty">|</div><span><a href="http://video.we54.com/xqnsppd/pdwshsp/index.html" target="_blank">访谈</a></span>
+                            </div>
+                        </div>
+                        
+                        <div class="hd_nav">
+                            <div class="zx_nav_bg02"></div>
+                            <div class="zx_sec_nav">
+                                <span><a href="http://moda.we54.com/" target="_blank">美达</a></span><div class="tyty">|</div><span><a href="http://54class.we54.com/" target="_blank">五年四班</a></span><div class="tyty">|</div><span><a href="http://lichi.we54.com/" target="_blank">荔枝先生</a></span><span><a href="/forum-898-1.html" target="_blank">活动</a></span><div class="tyty">|</div><span><a href="http://news.we54.com/xqnsppd/pdwshsp/index.html" target="_blank">原创节目</a></span><div class="tyty">|</div><span><a href="http://pub.we54.com/" target="_blank">非常夜店</a></span>
+                            </div>
+                        </div>  
+                        
+                        <div class="zx_nav">
+                            <div class="zx_nav_bg03"></div>
+                            <div class="zx_sec_nav">
+                                <span><a href="http://house.we54.com/" target="_blank">房产</a></span><div class="tyty">|</div><span><a href="http://licai.we54.com/" target="_blank">理财</a></span><div class="tyty">|</div><span><a href="http://auto.we54.com/" target="_blank">爱车</a></span><div class="tyty">|</div><span><a href="http://uni.we54.com/" target="_blank">高校</a></span><span><a href="http://eat.we54.com/" target="_blank">美食</a></span><div class="tyty">|</div><span><a href="http://edu.we54.com/" target="_blank">教育</a></span><div class="tyty">|</div><span><a href="http://travel.we54.com" target="_blank">旅游</a></span><div class="tyty">|</div><span><a href="http://baby.we54.com/" target="_blank">早教</a></span>
+                            </div>
+                        </div> 
+                        
+                        <div class="sq_nav">
+                            <div class="zx_nav_bg04"></div>
+                            <div class="sq_sec_nav">
+                                <span><a href="http://bbs.we54.com/" target="_blank">社区</a></span><div class="tyty">|</div><span><a href="/forum-743-1.html" target="_blank">大连你好</a></span><div class="tyty">|</div><span><a href="/forum-900-1.html" target="_blank">不惜泡吧</a></span><div class="tyty">|</div><span><a href="/forum-269-1.html" target="_blank">偶秀偶拍</a></span><span><a href="http://bbs.we54.com/bbs_cms/a/luntan/ltjh/index.html" target="_blank">精华</a></span><div class="tyty">|</div><span><a href="/forum-747-1.html" target="_blank">纯粹女人</a></span><div class="tyty">|</div><span><a href="/forum-974-1.html" target="_blank">亲亲宝贝</a></span><div class="tyty">|</div><span><a href="/forum-960-1.html" target="_blank">视频社区</a></span>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
+                <!--{if $_G['uid']}-->
+                <div id="um" style=" float:right;">
+                    <p>
+                        <strong class="vwmy{if $_G['setting']['connect']['allow'] && $_G[member][conisbind]} qq{/if}"><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a></strong>
+                        <!--{if $_G['group']['allowinvisible']}-->
+                        <span id="loginstatus">
+                            <a id="loginstatusid" href="member.php?mod=switchstatus" title="{lang login_switch_invisible_mode}" onClick="ajaxget(this.href, 'loginstatus');return false;" class="xi2"></a>
+                        </span>
+                        <!--{/if}-->
+                        <!--{hook/global_usernav_extra1}-->
+                        <span class="pipe">|</span><!--{hook/global_usernav_extra4}--><a href="home.php?mod=spacecp">{lang setup}</a>
+                        <span class="pipe">|</span><a href="home.php?mod=space&do=pm" id="pm_ntc"{if $_G[member][newpm]} class="new"{/if}>{lang pm_center}</a>
+                        <span class="pipe">|</span><a href="home.php?mod=space&do=notice" id="myprompt"{if $_G[member][newprompt]} class="new"{/if}>{lang remind}<!--{if $_G[member][newprompt]}-->($_G[member][newprompt])<!--{/if}--></a><span id="myprompt_check"></span>
+                        <!--{if $_G['setting']['taskon'] && !empty($_G['cookie']['taskdoing_'.$_G['uid']])}--><span class="pipe">|</span><a href="home.php?mod=task&item=doing" id="task_ntc" class="new">{lang task_doing}</a><!--{/if}-->
+                        <!--{if ($_G['group']['allowmanagearticle'] || $_G['group']['allowpostarticle'] || $_G['group']['allowdiy'] || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 6) || getstatus($_G['member']['allowadmincp'], 2) || getstatus($_G['member']['allowadmincp'], 3))}-->
+                            <span class="pipe">|</span><a href="portal.php?mod=portalcp"><!--{if $_G['setting']['portalstatus'] }-->{lang portal_manage}<!--{else}-->{lang portal_block_manage}<!--{/if}--></a>
+                        <!--{/if}-->
+                        <!--{if $_G['uid'] && $_G['group']['radminid'] > 1}-->
+                            <span class="pipe">|</span><a href="forum.php?mod=modcp&fid=$_G[fid]" target="_blank">{lang forum_manager}</a>
+                        <!--{/if}-->
+                        <!--{hook/global_usernav_extra2}-->
+                        <span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+                    </p>
+                </div>
+                <!--{elseif !$_G[connectguest]}-->
+                <div class="dl_zc">
+                    您好！欢迎来到新青年网站论坛 请 <a href="member.php?mod=logging&action=login&infloat=yes&handlekey=login&ajaxtarget=fwin_content_login" class="xi2">[登录]</a> 或 <a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1" style="font-weight:normal;">[免费注册]</a>
+                </div>
+                <!--<div class="qq_img" style=" float:right; margin-right:10px; margin-top:5px;"><a href="/connect.php?mod=login&op=init&referer=portal.php&statfrom=login_simple" target="_blank"><img src="/static/image/common/qq_login.gif" border="0"/></a></div>-->
+                <!--{else}-->
+                <div id="um">
+                    <p>
+                        <strong class="vwmy qq">{$_G[member][username]}</strong>
+                        <!--{hook/global_usernav_extra1}--><span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+                    </p>
+                </div>
+                <!--{/if}-->
+                </form>
+                
+		<!--{hook/global_header}-->
