@@ -44,7 +44,7 @@ define('XWB_API_VERSION', '2.0');
 /*接口*/
 define('XWB_API_URL_20',  'https://api.weibo.com/');
 /*认证*/
-define('XWB_API_AUTH_URL',  'http://api.weibo.com/');
+define('XWB_API_AUTH_URL',  'https://api.weibo.com/');
 /*微博域名*/
 define('XWB_API_WEB_URL',  'http://weibo.com/');
 // 微博API使用的字符集，大写 如果是UTF-8 则表示为  UTF-8
