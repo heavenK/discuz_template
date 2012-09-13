@@ -1,5 +1,8 @@
 <!--{template common/header}-->
 <!--{template home/spacecp_header}-->
+<!--{if $op == 'credit'}-->
+	<!--{template home/spacecp_credit_header}-->
+<!--{/if}-->
 <!--{hook/spacecp_profile_top}-->
 <!--{subtemplate home/spacecp_profile_nav}-->
 <!--{eval include(template('qqconnect:spacecp'));}-->
