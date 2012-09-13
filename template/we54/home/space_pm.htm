@@ -160,7 +160,7 @@
 				<!--{elseif $list && !$daterange}-->
 					<div id="pm_ul" class="xld xlda mbm pml">
 						<!--{loop $list $key $value}-->
-							<!--{subtemplate home/space_pm_node}-->
+							<!--{template home/space_pm_node}-->
 						<!--{/loop}-->
 						<div id="pm_append" style="display: none"></div>
 					</div>
@@ -272,7 +272,7 @@
 					<!--{if empty($lastanchor)}--><a name="last"></a><!--{/if}-->
 					<div id="pm_ul_post" class="xld xlda pml">
 						<dl class="cl">
-							<dd class="m avt">
+							<dd class="m avt" style="margin:5px 0 4px -108px; *margin-left:-130px !important;">
 								<a href="home.php?mod=space&uid=$space[uid]"><!--{avatar($space[uid],small)}--></a>
 							</dd>
 							<dd class="ptm">
@@ -290,7 +290,7 @@
 										</div>
 									</div>
 									<p class="mtn">
-										<button type="submit" name="pmsubmit" id="pmsubmit" class="pn pnc" value="true"><strong>{lang send}</strong></button>
+										<button type="submit" name="pmsubmit" id="pmsubmit" class="pn pnc" value="true"><strong  style="color:#000000;">{lang send}</strong></button>
 										<span id="pmforum_return"></span>
 									</p>
 									<input type="hidden" name="formhash" value="{FORMHASH}" />
@@ -516,6 +516,11 @@
 	</div>
 	<!--{subtemplate home/space_left_nav}-->
 </div>
+
+<style>
+.aset2 .btn {  border:0; padding:0;}
+
+</style>
 
 <div class="wp mtn">
 	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->

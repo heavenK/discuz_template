@@ -1,4 +1,4 @@
-.ct2_a .mn { width:811px;}
+.ct2_a .mn { width:815px; margin-right:20px;}
 .tb .o  { float:right; height:30px; width:74px; border:none; margin-bottom:4px;}
 .tb .o, .tb .o a { background: url(/template/we54/images/xiesixin.jpg) no-repeat; }
 .tb .o a { border:none; padding:0; height:30px; margin-top:0; }
@@ -31,6 +31,7 @@
 .p_pop li a { color:#FFFFFF;}
 .p_pop li a:hover { color:#FFFFFF; background-color:#f08770;}
 .p_pop li { text-align:center; *text-align:center !important ;}
+.pm_op_r { padding-right:20px;}
 
 
 
