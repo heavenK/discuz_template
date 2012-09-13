@@ -456,6 +456,84 @@ if($_GET['from'] == 'space') {
 		$metadescription = $_G['setting']['navs'][4]['navname'];
 	}
 }
+//add by zh
+$do = $blockname;
+$view = 'me';
+$from = 'space';
+require_once libfile('function/friend');
+
+$friendlist = array();
+$friendlist = friend_list($uid, $shownum);
+
+$fuids = array_keys($friendlist);
+getonlinemember($fuids);
+
+//add
+//好友
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($uid);
+foreach ($friendlist as $key => $value) {
+	$gzflag=false;			//add
+	$classname = $_G['ols'][$value['fuid']]?'gol':'';
+	$friendhtml .= '<li><a href="home.php?mod=space&uid='.$value['fuid'].'" target="_blank" class="avt"><em class="'.$classname.'"></em>'.avatar($value['fuid'],'small').'</a><p><a href="home.php?mod=space&uid='.$value[fuid].'" target="_blank">'.$value['fusername'].'</a></p>';
+	foreach($followerlist as $k=>$val){
+		if($val['followuid']==$value['fuid']){
+			$gzflag=true;
+			break;
+		}
+	}
+	if($gzflag){
+		$friendhtml.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['fuid']."\" id=\"followmd".$value['fuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['fuid'].");\">已关注</a></p>";
+	}else{
+		$friendhtml.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['fuid']."\" id=\"followmd".$value['fuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['fuid'].");\">未关注</a></p>";
+	}
+	$friendhtml .='</li>';
+}
+$friendhtml = !$friendhtml ? '<p class="emp">'.lang('space','block_friend_no_content').($space['self'] ? lang('space', 'block_friend_no_content_publish', $space) : '').'</p>' : '<ul class="ml mls cl">'.$friendhtml.'</ul>';
+//访客
+if($space['self']) {
+	$do = 'friend';
+	$view = 'visitor';
+}
+
+$visitorlist = $fuids = array();
+foreach(C::t('home_visitor')->fetch_all_by_uid($uid, $shownum) as $value) {
+	$visitorlist[] = $value;
+	$fuids[] = $value['vuid'];
+}
+
+getonlinemember($fuids);
+
+//add
+$followerlist = C::t('home_follow')->fetch_all_following_by_uid($uid);
+foreach($visitorlist as $value) {
+	$gzflag=false;			//add
+	$visitorhtml .= "<li>";
+	if ($value['vusername'] == '') {
+		$visitorhtml .= lang('space', 'visitor_anonymity');
+	} else {
+		$visitorhtml .= lang('space', 'visitor_list', array(
+				'uid' => $value['vuid'],
+				'username' => $value['vusername'],
+				'class' => ($_G['ols'][$value['vuid']]?'gol':''),
+				'avatar' => avatar($value['vuid'],'small')));
+	}
+//	$visitorhtml .= "<span class=\"xg2\">".dgmdate($value['dateline'],'u', '9999', 'Y-m-d')."</span>";
+//add
+	foreach($followerlist as $k=>$val){
+		if($val['followuid']==$value['vuid']){
+			$gzflag=true;
+			break;
+		}
+	}
+	if($gzflag){
+		$visitorhtml.="<p><a class='gzbtn' href=\"home.php?mod=spacecp&ac=follow&op=del&fuid=".$value['vuid']."\" id=\"vfollowmd".$value['vuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['vuid'].");\">已关注</a></p>";
+	}else{
+		$visitorhtml.="<p><a class='wgzbtn' href=\"home.php?mod=spacecp&ac=follow&op=add&hash=".FORMHASH."&fuid=".$value['vuid']."\" id=\"vfollowmd".$value['vuid']."\" onclick=\"showWindow(this.id, this.href, 'get', 0);follow_change(this.id,this.href,".$value['vuid'].");\">未关注</a></p>";
+	}
+	$visitorhtml .= "</li>";
+}
+$visitorhtml = !$visitorhtml ? '<p class="emp">'.lang('space','block_visitor_no_content').($space['self'] ? lang('space', 'block_visitor_no_content_publish', $space) : '').'</p>' : '<ul class="ml mls cl">'.$visitorhtml.'</ul>';
+//add end
 if(empty($cp_mode)) include_once template("diy:home/space_home");
 
 ?>
