@@ -8,10 +8,14 @@
 				<div class="hm huiyuan_tx"><p><a href="home.php?mod=space&uid=$space[uid]" target="_blank"><!--{avatar($space[uid],middle)}--></a></p></div>
 			<!--{if isset($space['vertifyico'])}-->
 				<div class="huiyuan_rz"><img src="$space['vertifyico']" border="0"/></div>
+			<!--{else}-->
+				<!--{if isset($spacecp['vertifyico'])}-->
+					<div class="huiyuan_rz"><img src="$spacecp['vertifyico']" border="0"/></div>
+				<!--{/if}-->
 			<!--{/if}-->
-				<div class="tz_zt_gz"><div class="tz_zt_gz01"><i><!--{$space['posts']}--></i><span>帖子</span></div>
-				<div class="tz_zt_gz01"><i><!--{$space['threads']}--></i><span>主题</span></div>
-				<div class="tz_zt_gz02"><i><!--{$space['follower']}--></i><span>关注</span> </div></div>
+				<div class="tz_zt_gz"><div class="tz_zt_gz01"><i><!--{if isset($spacecp['posts'])}--><!--{$spacecp['posts']}--><!--{else}--><!--{$space['posts']}--><!--{/if}--></i><span>帖子</span></div>
+				<div class="tz_zt_gz01"><i><!--{if isset($spacecp['posts'])}--><!--{$spacecp['threads']}--><!--{else}--><!--{$space['threads']}--><!--{/if}--></i><span>主题</span></div>
+				<div class="tz_zt_gz02"><i><!--{if isset($spacecp['posts'])}--><!--{$spacecp['follower']}--><!--{else}--><!--{$space['follower']}--><!--{/if}--></i><span>关注</span> </div></div>
 				<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$space[uid]&touid=$space[uid]&pmid=0&daterange=2" id="a_sendpm_$space[uid]" onclick="showWindow('showMsgBox', this.href, 'get', 0)"  class='sixin'></a>
 				<!--{if $gzflag}-->
 				<a href="home.php?mod=spacecp&ac=follow&op=del&fuid=$space[uid]" id="followmod" onclick="showWindow(this.id, this.href, 'get', 0);" class='yguanzhu'></a>

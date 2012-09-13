@@ -62,11 +62,12 @@ foreach($kaiser_user as $val){
 }
 //end add
 //add by zh
-space_merge($space, 'profile');
-space_merge($space, 'count');
+$spacecp = getuserbyuid($_G['uid']);
+space_merge($spacecp, 'profile');
+space_merge($spacecp, 'count');
 //$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
-if($_G['member']['groupid']==22){
-	$space['vertifyico']='static/image/common/kaiser_ext.png';
+if($_G['member']['groupid']==22||strpos($_G['member']['extgroupids'],'22')!==false){
+	$spacecp['vertifyico']='static/image/common/kaiser_ext.png';
 }
 
 //add
