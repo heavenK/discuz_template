@@ -63,15 +63,15 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 .top_ad_02 { width:200px; height:70px; overflow:hidden; float:left;}
 .top_ad_03 { width:590px; height:70px; margin:0 5px 0 5px; display:inline; overflow:hidden; float:left;}
 .top_ad_04 { width:200px; height:70px; overflow:hidden; float:left;}
-.top_ad_05 { width:1000px; height:90px; margin:25px 0 0 0; _margin:5px 0 0 0; display:inline; overflow:hidden; float:left;}
+.top_ad_05 { width:1000px; height:90px; margin:5px 0 0 0; _margin:5px 0 0 0; display:inline; overflow:hidden; float:left;}
 
 
 
-.nav_st { width:1000px; height:20px; position:relative; float:left; _float:none; z-index:999; }
+.nav_st { width:1000px; height:155px; position:relative; float:left; _float:none; z-index:999; }
 	.nav_second { width:1000px; height:40px; background-position:0 -103px; overflow:hidden; float:left;}
 	.bankuai { width:104px; height:35px; background:url(/template/we54/images/bk_01.jpg) no-repeat; margin:5px 0 0 17px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.bankuaiOver { background:url(/template/we54/images/bk_02.jpg) no-repeat;}	
-	.nav_nav { width:600px; height:40px; line-height:42px; font-size:18px; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; margin-left:12px; display:inline; overflow:hidden; float:left;}	
+	.nav_nav { width:720px; height:40px; line-height:42px; font-size:18px; font-family:"Î¢ÈíÑÅºÚ","ºÚÌå"; margin-left:12px; display:inline; overflow:hidden; float:left;}	
 	.nav_nav li { height:40px; padding:0 15px 0 15px;text-align:center; list-style-type:none; overflow:hidden; float:left;}
 	.nav_nav li a { height:40px; color:#663300; }
 	.nav_nav li a:hover { text-decoration:none;}
@@ -82,7 +82,7 @@ body		{ background:#FFF url(/template/we54/images/header_bg.jpg) repeat-x top; f
 	.ggg { width:149px; _width:149px; padding-left:3px; height:24px; margin:7px 0 0 30px; line-height:24px; color:#999999; display:inline; border:1px solid #bdb378; background-color:#fffef0; overflow:hidden; float:left;}
 	.aaa { width:77px; height:26px; display:inline; overflow:hidden; float:left; cursor:pointer;}
 	.aaa:hover { background-position:-257px -74px;}
-	.nav_three { width:1000px; height:115px; z-index:99999; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; position:absolute; top:40px; left:0; overflow:hidden; float:left; display:none;}
+	.nav_three { width:1000px; height:115px; z-index:99999; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; position:absolute; top:40px; left:0; overflow:hidden; float:left; }
 	.nav_three ul { width:1000px; height:66px; margin:35px 0 0 0; display:inline; overflow:hidden; float:left;}	
 	.nav_three ul li { width:125px; height:24px; overflow:hidden; float:left; font-size:14px; line-height:22px; text-align:center;}
 	.nav_three ul li a { text-decoration:none; color:#663300; }
