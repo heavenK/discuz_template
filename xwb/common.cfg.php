@@ -37,7 +37,7 @@ define('XWB_SITE_GLOBAL_V_NAME','XWB_SITE_GLOBAL_V_NAME');
 
 //-----------------------------------------------------------------------
 // 微博 api url
-define('XWB_API_URL', 	'http://api.t.sina.com.cn/');
+define('XWB_API_URL', 	'https://api.t.sina.com.cn/');
 //define('XWB_API_VERSION', '1.0a');
 /*oauth版本*/
 define('XWB_API_VERSION', '2.0');
@@ -46,11 +46,11 @@ define('XWB_API_URL_20',  'https://api.weibo.com/');
 /*认证*/
 define('XWB_API_AUTH_URL',  'https://api.weibo.com/');
 /*微博域名*/
-define('XWB_API_WEB_URL',  'http://weibo.com/');
+define('XWB_API_WEB_URL',  'https://weibo.com/');
 // 微博API使用的字符集，大写 如果是UTF-8 则表示为  UTF-8
 define('XWB_API_CHARSET',		'UTF8');
 //微博评论回推地址
-define('XWB_PUSHBACK_URL', 'http://service.x.weibo.com/pb/');
+define('XWB_PUSHBACK_URL', 'https://service.x.weibo.com/pb/');
 
 //-----------------------------------------------------------------------
 //插件所服务的站点根目录。这是本文件唯一出现"S"类别的常量
