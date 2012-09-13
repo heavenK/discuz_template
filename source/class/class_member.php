@@ -41,9 +41,9 @@ class logging_ctl {
 		$seccodecheck = $from_connect ? false : $this->setting['seccodestatus'] & 2;
 		$seccodestatus = !empty($_GET['lssubmit']) ? false : $seccodecheck;
 		$invite = getinvite();
-
-		if(!submitcheck('loginsubmit', 1, $seccodestatus)) {
 		$_GET['cookietime']=2592000;
+		if(!submitcheck('loginsubmit', 1, $seccodestatus)) {
+		
 			$auth = '';
 			$username = !empty($_G['cookie']['loginuser']) ? dhtmlspecialchars($_G['cookie']['loginuser']) : '';
 
