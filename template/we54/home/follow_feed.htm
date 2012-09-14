@@ -39,7 +39,7 @@
 			<div class="mn kaiser_mn">
 				<div class="bm kaiser_bm">
 					<div class="bm_h kaiser_bm_h">
-						<h1 class="mt"><!--{if $space['self']}-->我<!--{else}-->TA<!--{/if}-->的{lang follow}</h1>
+						<h1 class="mt"><!--{if $_GET['do']=='following'}-->我关注的人<!--{elseif $_GET['do']=='follower'}-->TA的粉丝<!--{/if}--></h1>
 					</div>
 				<div class="bm_c">
 	<!--{else}-->
@@ -746,5 +746,7 @@
 		}
 	}
 </script>
+
+<link rel="stylesheet" type="text/css" href="template/we54/home/follow_feed.css" />
 
 <!--{subtemplate common/footer}-->
