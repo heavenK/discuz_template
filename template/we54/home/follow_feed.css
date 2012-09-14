@@ -1,12 +1,12 @@
 #ct .kaiser_bm_h { background:none; border-bottom:2px solid #f1f1e3; padding-left:0; padding-bottom:12px; }
 #ct .kaiser_bm_h .mt { text-align:left;}
-
-
-
-
-
-
-
+.bm_c { padding:0;}
+.flw_ulist li { padding:10px 0 10px 80px;}
+.xi2, .xi2 a, .xi3 a { font-weight:normal; color:#996600;}
+.flw_btn_unfo { background:none; color:#996600;}
+.flw_btn_unfo a { color:#000000;}
+.flw_btn_fo, .flw_btn_unfo {text-indent:1px; background:none;}
+.flw_btn_fo, .flw_btn_unfo a { color:#996600;}
 
 
 
