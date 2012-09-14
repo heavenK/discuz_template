@@ -110,6 +110,7 @@ if($do != 'index') {
 	$_G['disabledwidthauto'] = 0;
 }
 //add by zh
+space_merge($space, 'profile');
 $spacecp = getuserbyuid($_G['uid']);
 space_merge($spacecp, 'profile');
 space_merge($spacecp, 'count');

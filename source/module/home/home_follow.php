@@ -37,6 +37,9 @@ space_merge($space, 'field_home');
 //add
 space_merge($space, 'count');
 //$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
+if(!isset($space['self'])&&$viewself){
+	$space['self']=1;
+}
 if($_G['member']['extgroupids']==22){
 	$space['vertifyico']='static/image/common/kaiser_ext.png';
 }
