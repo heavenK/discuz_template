@@ -9,10 +9,11 @@
 		<div class="mn kaiser_mn">
 			<div class="bm kaiser_bm">
 				<div class="bm_h kaiser_bm_h">
-					<!--{if $space[self] && helper_access::check_module('album')}--><span class="xi2 y"><a href="home.php?mod=spacecp&ac=upload" class="addnew">{lang upload_pic}</a></span><!--{/if}-->
-					<h1 class="mt"><!--{if $space['self']}-->我<!--{else}-->TA<!--{/if}-->的{lang album}</h1>
+					<!--{if $space[self] && helper_access::check_module('album')}--><span class="xi2 y up_zh"><a href="home.php?mod=spacecp&ac=upload" class="addnew a_zh">创建新相册</a></span><span class="xi2 y up_zh"><a href="home.php?mod=spacecp&ac=upload" class="addnew a_zh">{lang upload_pic}</a></span><!--{/if}-->
+					<h1 class="mt mt_zh"><a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><!--{if $space['self']}-->我<!--{else}-->TA<!--{/if}-->的相册</a> <em>&rsaquo;</em>
+								<a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><b>$album[albumname]</b></a></h1>
 				</div>
-			<div class="bm_c">
+			<div class="bm_c bm_zh">
 <!--{else}-->
 	<!--{template common/header}-->
 	<link rel="stylesheet" type="text/css" href="template/we54/home/album_add.css" />
@@ -32,19 +33,19 @@
 		<div class="mn">
 			<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
 			<div class="bm bw0">
-				<div class="bm_c">
+				<div class="bm_c bm_zh">
 <!--{/if}-->
 		
-		<div class="tbmu cl">
+		<div class="tbmu cl tbmu_zh">
 			<!--{if $album[albumid]>0}-->
 			<a href="home.php?mod=spacecp&ac=favorite&type=album&id=$album[albumid]&spaceuid=$space[uid]&handlekey=sharealbumhk_{$album[albumid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" class="oshr ofav">{lang favorite}</a>
 			<!--{if helper_access::check_module('share')}--><a href="home.php?mod=spacecp&ac=share&type=album&id=$album[albumid]&handlekey=sharealbumhk_{$album[albumid]}" id="a_share" onclick="showWindow(this.id, this.href, 'get', 0);" class="oshr">{lang share}</a><!--{/if}-->
 			<!--{/if}-->
-			<div class="y">
+			<div class="y y_zh">
 				<!--{hook/space_album_op_extra}-->
-				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">{lang edit}</a><!--{/if}-->
+				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">管理该相册</a><!--{/if}-->
 				<!--{if ($_G[uid] == $album[uid] || checkperm('managealbum')) && $album[albumid] > 0}-->
-					<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+					<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}该相册</a>
 				<!--{/if}-->
 				<!--{if $_G[uid] != $album[uid]}-->
 				<span class="pipe">|</span><a href="javascript:;" onclick="showWindow('miscreport$album[albumid]', 'misc.php?mod=report&rtype=album&uid=$album[uid]&rid=$album[albumid]', 'get', -1);return false;">{lang report}</a><span class="pipe">|</span>
@@ -53,7 +54,7 @@
 			<!--{if $album['catname']}-->
 			<span class="xg1">{lang system_cat}</span><a href="home.php?mod=space&do=album&catid=$album[catid]&view=all">$album[catname]</a><span class="pipe">|</span>
 			<!--{/if}-->
-			<!--{if $album[picnum]}-->{lang total} $album[picnum] {lang album_pics}<!--{/if}-->
+			<!--{if $album[picnum]}--><!--{/if}-->
 			<!--{if $album['friend']}-->
 			<span class="xg1"> &nbsp; {$friendsname[$value[friend]]}</span>
 			<!--{/if}-->
@@ -61,10 +62,13 @@
 		
 		<!--{if $list}-->
 			<!--{if $album[depict]}--><p class="tbmu">$album[depict]</p><!--{/if}-->
-			<ul class="ptw ml mlp cl">
+			<ul class="ptw ml mlp cl apl_zh">
 			<!--{loop $list $key $value}-->
 				<li>
+				<div class="picbg_zh">
 				<a href="home.php?mod=space&uid=$value[uid]&do=$do&picid=$value[picid]"><!--{if $value[pic]}--><img src="$value[pic]" alt="" /><!--{/if}--></a><!--{if $value[status] == 1}--><b>({lang moderate_need})</b><!--{/if}-->
+				</div>
+				<p>$value[filename]</p>
 				</li>
 			<!--{/loop}-->
 			</ul>
@@ -79,14 +83,14 @@
 		<div class="bm mtm bw0">
 			<div class="bm_h cl">
 				<!--{if $albumlist}-->
-				<div class="y mtn">
+				<div class="y mtn mtn_zh">
 						<a href="javascript:;" id="sabup" onclick="switchAlbum(0);this.blur();return false;" title="{lang previous_album}"><img src="{STATICURL}image/common/pic_nv_prev.gif" alt="{lang previous_album}"/></a> 
 						<a href="javascript:;" id="sabdown" onclick="switchAlbum(1);this.blur();return false;" title="{lang next_album}"><img src="{STATICURL}image/common/pic_nv_next.gif" alt="{lang next_album}"/></a>
 				</div>
 				<!--{/if}-->
 				<h2>{lang switch_pics}</h2>
 			</div>
-			<div class="bm_c">
+			<div class="bm_c bm_zh">
 				<div id="pnv" class="bn pns cl">
 					<!--{if $albumlist}-->	
 					<!--{loop $albumlist $key $albums}-->
