@@ -229,7 +229,7 @@
 										</h4>
 										<p class="maxh">$value[recentnote]</p>
 									<!--{/if}-->
-										<div class="xg1" style=" width:175px;">
+										<div class="xg1" style=" width:185px;">
 											<!--{if isset($value['follow']) && $key != $_G['uid'] && $value[username] != ''}-->
 											<a href="home.php?mod=spacecp&ac=follow&op={if $value['follow']}del{else}add{/if}&fuid=$value[uid]&hash={FORMHASH}&from=a_followmod_" id="a_followmod_$key" onclick="showWindow('followmod', this.href, 'get', 0)"><!--{if $value['follow']}-->{lang follow_del}<!--{else}-->{lang follow_add}TA<!--{/if}--></a>
 											<!--{/if}-->
