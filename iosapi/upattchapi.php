@@ -23,7 +23,7 @@ isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['err'] = 1;
 if($res['err'] != 1){
 	$path = '../data/attachment/forum/';
 	$attachments = 'ios/' .date('YmdHsi') .md5(time()) .'.jpg';
-	$s=base64_decode($s);
+	//$s=base64_decode($s);
 	file_put_contents($path .$attachments, $s);
 	$aid = getattachnewaid($uid);
 	
