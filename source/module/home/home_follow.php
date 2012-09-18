@@ -261,6 +261,33 @@ if($do == 'feed') {
 	$navigation = ' <em>&rsaquo;</em> <a href="home.php?mod=space&uid='.$uid.'">'.$space['username'].'</a> <em>&rsaquo;</em> '.lang('space', 'follow_view_'.($viewself?'my':'do').'_'.$do);
 	$navtitle = lang('space', 'follow_view_'.($viewself?'my':'do').'_'.$do);
 }
+//add_by king
+foreach($list as $king_key=>$king_val){
+	$king_list = $king_val['followuid'];
+	$king_user = C::t('common_member_profile')->fetch_all($king_list);
+	$list[$king_key]['gender'] = $king_user[$king_key]['gender'];
+	$list[$king_key]['constellation'] = $king_user[$king_key]['constellation'];
+	$list[$king_key]['birthcity'] = $king_user[$king_key]['birthcity'];
+	$list[$king_key]['address'] = $king_user[$king_key]['address'];
+	
+	$king_user_02 = C::t('common_member_count')->fetch_all($king_list);
+	$list[$king_key]['threads'] = $king_user_02[$king_key]['threads'];
+}
+//$king_user = C::t('common_member')->fetch_by_username($king_list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//end
 $metakeywords = $navtitle;
 $metadescription = $navtitle;
 $navtitle = helper_seo::get_title_page($navtitle, $_G['page']);
