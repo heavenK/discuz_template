@@ -552,6 +552,7 @@ function uc_avatar($uid, $type = 'virtual', $returnhtml = 1) {
 			'quality','high',
 			'bgcolor','#ffffff',
 			'menu', 'false',
+			'wmode','transparent',
 			'swLiveConnect', 'true',
 			'allowScriptAccess', 'always'
 		);
