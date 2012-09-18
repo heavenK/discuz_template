@@ -11,12 +11,11 @@ C::app()->init();
 isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
 
 
-if($res || $res == NULL){
+
 
 	file_put_contents('testupload.jpg', $s);
 
-	$res['changeCheck'] = 1;
-}
 
-echo json_encode($res);
+
 ?>
+<img src="testupload.jpg"  />
