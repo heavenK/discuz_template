@@ -13,7 +13,7 @@ isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
 
 if($res || $res == NULL){
 
-	file_put_contents(time().'jpg', $s);
+	file_put_contents('testupload.jpg', $s);
 
 	$res['changeCheck'] = 1;
 }
