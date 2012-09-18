@@ -8,13 +8,11 @@ require '../source/function/function_forum.php';
 C::app()->init();
 
 
+isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
 
 
 
-$xmlstr =  $GLOBALS[HTTP_RAW_POST_DATA];
-if(empty($xmlstr)) $xmlstr = file_get_contents('php://input');
-
-	file_put_contents('testupload.jpg', $xmlstr);
+	file_put_contents('testupload.jpg', $s);
 
 
 
