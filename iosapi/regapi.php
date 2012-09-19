@@ -12,11 +12,11 @@ $passwd = isset($_GET['password']) ? $_GET['password'] : exit;
 $nickname = isset($_GET['nickname']) ? $_GET['userName'] : exit;
 
 $post_data = array();
-$post_data['username'] = $username;
+$post_data['username'] = iconv('utf-8','gbk',$username);
 $post_data['password'] = $passwd;
 $post_data['password2'] = $passwd;
 $post_data['email'] = time()."@default.com";
-$post_data['field1'] = $nickname;
+$post_data['field1'] = iconv('utf-8','gbk',$nickname);
 $post_data['regsubmit'] = "yes";
 $post_data['phone_reg'] = 11;
 $post_data['formhash'] = $_G['formhash'];

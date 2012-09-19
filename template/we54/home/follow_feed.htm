@@ -22,9 +22,9 @@
 			<div class="tbn">
 				<h2 class="mt bbda">{lang follow}</h2>
 				<ul>
-					<li$actives[follow]><a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
-					<li$actives[special]><a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
-					<li$actives[other]><a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
+					<a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
+					<a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
+					<a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
 					<!--{hook/follow_nav_extra}-->
 				</ul>
 			</div>
@@ -39,7 +39,22 @@
 			<div class="mn kaiser_mn">
 				<div class="bm kaiser_bm">
 					<div class="bm_h kaiser_bm_h">
-						<h1 class="mt"><!--{if $_GET['do']=='following'}-->我关注的人<!--{elseif $_GET['do']=='follower'}-->TA的粉丝<!--{/if}--></h1>
+						<h1 class="mt"><!--{if $viewself}-->
+                            <!--{if $_GET['do']=='following'}-->
+                                我关注的人
+                            <!--{else}-->
+                                我的粉丝
+                            <!--{/if}-->
+                        <!--{else}-->
+                            <!--{if $_GET['do']=='follower'}-->
+                                TA的粉丝
+                            <!--{else}-->
+                                TA关注的人
+                            <!--{/if}-->
+                        <!--{/if}--></h1>
+                        
+                        
+                        
 					</div>
 				<div class="bm_c">
 	<!--{else}-->
@@ -95,7 +110,7 @@
 						</div>
 
 						<div id="flw_post_extra" class="mtn cl">
-							<div{if $_G[setting][fastsmilies]} class="hasfsl"{/if} id="fastposteditor">
+							
 								<div class="tedt">
 									<div class="area">
 										<textarea rows="5" cols="80" name="message" id="fastpostmessage" onKeyDown="seditor_ctlent(event, '$(\'fastpostsubmit\').click()');" tabindex="12" class="pt xs2"></textarea>
@@ -400,9 +415,9 @@
 			<!--{if in_array($do, array('feed', 'view'))}-->
 				<!--{if $do == 'feed' && $_G[setting][homestyle]}-->
 				<ul class="tb cl kaiser_tb_cl">
-					<li$actives[follow]><a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
-					<li$actives[special]><a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
-					<li$actives[other]><a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
+					<a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
+					<a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
+					<a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
 					<!--{hook/follow_nav_extra}-->
 				</ul>
 				<!--{/if}-->
@@ -556,22 +571,28 @@
                                 
 							<!--{elseif $fuser[followuid] != $_G[uid]}-->
 								<!--{if $fuser['mutual']}-->
-									<!--{if $fuser['mutual'] > 0}--><span class="z flw_status_2">{lang follow_follower_mutual}</span><!--{else}--><span class="z flw_status_1">{lang did_not_follow_to_me}</span><!--{/if}--><a id="a_followmod_{$fuser['followuid']}" href="home.php?mod=spacecp&ac=follow&op=del&fuid=$fuser['followuid']"  onclick="ajaxget(this.href);doane(event);" class="flw_btn_unfo">{lang follow_del}</a>
+									<!--{if $fuser['mutual'] > 0}--><!--{/if}--><a id="a_followmod_{$fuser['followuid']}" href="home.php?mod=spacecp&ac=follow&op=del&fuid=$fuser['followuid']"  onclick="ajaxget(this.href);doane(event);" class="flw_btn_unfo">{lang follow_del}</a>
 								<!--{elseif helper_access::check_module('follow')}-->
 									<a id="a_followmod_{$fuser['followuid']}" href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$fuser['followuid']" onclick="ajaxget(this.href);doane(event);" class="flw_btn_fo">{lang follow_add}</a>
 								<!--{/if}-->
 							<!--{/if}-->
 							<h6 class="pbn xs2">
                             	<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$fuser['followuid']&touid=$fuser['followuid']&pmid=0&daterange=2" id="a_sendpm_$fuser['followuid']" onclick="showWindow('showMsgBox', this.href, 'get', 0);" class="fasixin">发私信</a>
+                                
+                                                                <!--{if $fuser['gender'] == 1}--><a><img src="/template/we54/images/nan.jpg" width="14" height="14" border="0" /></a><!--{elseif $fuser['gender'] == 0}--><a></a><!--{else}--><a><img src="/template/we54/images/nv.jpg" width="10" height="16" border="0" /></a><!--{/if}-->
                                 <a href="home.php?mod=space&uid=$fuser['followuid']" title="$fuser['fusername']" class="xi2" c="1" shref="home.php?mod=space&uid=$fuser['followuid']">$fuser['fusername']</a>
                                 <a href="home.php?mod=spacecp&ac=follow&op=bkname&fuid=$fuser['followuid']&handlekey=followbkame_$fuser['followuid']" id="fbkname_$fuser['followuid']" onclick="showWindow('followbkame_{$fuser['followuid']}', this.href, 'get', 0);"><!--{if $fuser['bkname']}--><img src="/template/we54/images/beizhu.jpg" width="12" height="12" border="0" /><!--{else}--><img src="/template/we54/images/beizhu.jpg" width="12" height="12" border="0" /><!--{/if}--></a>
                                 <span id="followbkame_{$fuser['followuid']}" class="xg1 xs1 xw0"><!--{if $fuser['bkname']}-->$fuser[bkname]<!--{/if}--></span>
                             </h6>
 							<p class="ptm xg1">
 								<!--{if $memberprofile[$fuid]['resideprovince'] || $memberprofile[$fuid]['residecity']}-->{lang comefrom}：$memberprofile[$fuid]['resideprovince'] $memberprofile[$fuid]['residecity'] &nbsp;<!--{/if}-->
-								{lang follow_follower}: <a href="home.php?mod=follow&do=follower&uid=$fuser['followuid']"><strong class="xi2" id="followernum_$fuser['followuid']">$memberinfo[$fuid]['follower']</strong></a>{lang person} &nbsp;
-								{lang follow_add}: <a href="home.php?mod=follow&do=following&uid=$fuser['followuid']"><strong class="xi2">$memberinfo[$fuid]['following']</strong></a>{lang person} &nbsp;
-								<!--{if $viewself && $fuser[followuid] != $_G[uid]}-->
+                                <i><!--{if $fuser['address']}-->所在市区：<a>$fuser['address']</a><!--{else}-->所在市区：<a>保密</a><!--{/if}--></i>
+								<i>粉丝：<a><strong class="xi2" id="followernum_$fuser['followuid']">$memberinfo[$fuid]['follower']{lang person}</strong></a></i>
+								<i>发帖数：<a>$fuser['threads']</a></i><br />
+								<i><!--{if $fuser['resideprovince']}-->&nbsp 居住地：<a>$fuser['resideprovince']</a><!--{else}-->&nbsp 居住地：<a>保密</a><!--{/if}--></i>	
+                                <i><!--{if $fuser['constellation']}-->星座：<a>$fuser['constellation']</a><!--{else}-->星座：<a>保密</a><!--{/if}--></i>	
+                             	<i><!--{if $fuser['affectivestatus']}-->人生阶段：<a>$fuser['affectivestatus']</a><!--{else}-->人生阶段：<a>保密</a><!--{/if}--></i>	   
+                                <!--{if $viewself && $fuser[followuid] != $_G[uid]}-->
 
 								
 								<!--{/if}-->
@@ -580,17 +601,25 @@
 							<a href="home.php?mod=space&uid=$fuser['uid']" title="$fuser['username']" id="edit_avt" class="flw_avt" c="1" shref="home.php?mod=space&uid=$fuser['uid']"><!--{avatar($fuser['uid'],small)}--></a>
 							<!--{if $fuser[uid] != $_G[uid]}-->
 								<!--{if $fuser['mutual']}-->
-									<!--{if $fuser['mutual'] > 0}--><span class="z flw_status_2">{lang follow_follower_mutual}</span><!--{else}--><span class="z flw_status_1">{lang did_not_follow_to_me}</span><!--{/if}--><a id="a_followmod_{$fuser['uid']}" href="home.php?mod=spacecp&ac=follow&op=del&fuid=$fuser['uid']"  onclick="ajaxget(this.href);doane(event);" class="flw_btn_unfo">{lang follow_del}</a>
+									<!--{if $fuser['mutual'] > 0}--><!--{/if}--><a id="a_followmod_{$fuser['uid']}" href="home.php?mod=spacecp&ac=follow&op=del&fuid=$fuser['uid']"  onclick="ajaxget(this.href);doane(event);" class="flw_btn_unfo">{lang follow_del}</a>
 								<!--{elseif helper_access::check_module('follow')}-->
 									<a id="a_followmod_{$fuser['uid']}" href="home.php?mod=spacecp&ac=follow&op=add&hash={FORMHASH}&fuid=$fuser['uid']" onclick="ajaxget(this.href);doane(event);" class="flw_btn_fo">{lang follow_add}</a>
 								<!--{/if}-->
 							<!--{/if}-->
-							<h6 class="pbn xs2"><a href="home.php?mod=space&uid=$fuser['uid']" title="$fuser['username']" class="xi2" c="1" shref="home.php?mod=space&uid=$fuser['uid']">$fuser['username']</a></h6>
-							<p><span class="xg1">{lang follow_recent_note}：</span>$fuser[recentnote]</p>
+							<h6 class="pbn xs2">
+                            	<a href="home.php?mod=spacecp&ac=pm&op=showmsg&handlekey=showmsg_$fuser['uid']&touid=$fuser['uid']&pmid=0&daterange=2" id="a_sendpm_$fuser['uid']" onclick="showWindow('showMsgBox', this.href, 'get', 0);" class="fasixin">发私信</a>
+                                  <!--{if $fuser['gender'] == 1}--><a><img src="/template/we54/images/nan.jpg" width="14" height="14" border="0" /></a><!--{elseif $fuser['gender'] == 0}--><a></a><!--{else}--><a><img src="/template/we54/images/nv.jpg" width="10" height="16" border="0" /></a><!--{/if}-->
+                                <a href="home.php?mod=space&uid=$fuser['uid']" title="$fuser['username']" class="xi2" c="1" shref="home.php?mod=space&uid=$fuser['uid']">$fuser['username']</a>
+                                <a href="home.php?mod=spacecp&ac=follow&op=bkname&fuid=$fuser['followuid']&handlekey=followbkame_$fuser['followuid']" id="fbkname_$fuser['followuid']" onclick="showWindow('followbkame_{$fuser['followuid']}', this.href, 'get', 0);"><!--{if $fuser['bkname']}--><img src="/template/we54/images/beizhu.jpg" width="12" height="12" border="0" /><!--{else}--><img src="/template/we54/images/beizhu.jpg" width="12" height="12" border="0" /><!--{/if}--></a>
+                            </h6>
 							<p class="ptm xg1">
 								<!--{if $memberprofile[$fuid]['resideprovince'] || $memberprofile[$fuid]['residecity']}-->{lang comefrom}：$memberprofile[$fuid]['resideprovince'] $memberprofile[$fuid]['residecity'] &nbsp;<!--{/if}-->
-								{lang follow_follower}: <a href="home.php?mod=follow&do=follower&uid=$fuser['uid']"><strong class="xi2" id="followernum_$fuser['uid']">$memberinfo[$fuid]['follower']</strong></a>{lang person} &nbsp;
-								{lang follow_add}: <a href="home.php?mod=follow&do=following&uid=$fuser['uid']"><strong class="xi2">$memberinfo[$fuid]['following']</strong></a>{lang person}
+								<i><!--{if $fuser['address']}-->所在市区：<a>$fuser['address']</a><!--{else}-->所在市区：<a>保密</a><!--{/if}--></i>
+								<i>粉丝：<a><strong class="xi2" id="followernum_$fuser['uid']">$memberinfo[$fuid]['follower']{lang person}</strong></a></i>
+								<i>发帖数：<a>$fuser['threads']</a></i><br />
+								<i><!--{if $fuser['resideprovince']}-->&nbsp 居住地：<a>$fuser['resideprovince']</a><!--{else}-->&nbsp 居住地：<a>保密</a><!--{/if}--></i>	
+                                <i><!--{if $fuser['constellation'] == 1}-->星座：<a>$fuser['constellation']</a><!--{else}-->星座：<a>保密</a><!--{/if}--></i>	
+                             	<i><!--{if $fuser['affectivestatus']}-->人生阶段：<a>$fuser['affectivestatus']</a><!--{else}-->人生阶段：<a>保密</a><!--{/if}--></i>	   
 							</p>
 						<!--{/if}-->
 						</li>
@@ -750,5 +779,9 @@
 </script>
 
 <link rel="stylesheet" type="text/css" href="template/we54/home/follow_feed.css" />
-
+<style>
+.xg1 a { color:#000 !important; text-decoration:none;} .xg1 .xi2{ color:#000 !important; text-decoration:none;}
+.card { padding: 0; width: 295px !important; border-color:#fff; background: #FDFEFF; }
+.p_pop, .p_pof, .sllt { box-shadow:0 0 0 0;}
+</style>
 <!--{subtemplate common/footer}-->

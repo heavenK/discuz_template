@@ -5,11 +5,11 @@
 .xi2, .xi2 a, .xi3 a { font-weight:normal; color:#996600;}
 .flw_btn_unfo { background:none; color:#996600;}
 .flw_btn_unfo a { color:#000000;}
-.flw_btn_fo, .flw_btn_unfo {text-indent:1px; background:none; margin-top:30px;}
+.flw_btn_fo, .flw_btn_unfo {text-indent:1px; background:none; margin-top:44px;}
 .flw_btn_fo, .flw_btn_unfo a { color:#996600;}
-.fasixin { float:right; overflow:hidden; margin-right:-38px; font-size:12px; font-weight:normal;  color:#996600;}
-
-
+.fasixin { float:right; overflow:hidden; margin-right:-38px;  margin-top:24px; font-size:12px; font-weight:normal;  color:#996600;}
+.ptm { padding-top:0 !important; width:620px;}
+.ptm i { width:175px; height:20px; float:left; overflow:hidden; }
 
 
 
