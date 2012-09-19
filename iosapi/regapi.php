@@ -9,7 +9,7 @@ C::app()->init();
 
 $username = isset($_REQUEST['userName']) ? $_REQUEST['userName'] : exit;
 $passwd = isset($_REQUEST['password']) ? $_REQUEST['password'] : exit;
-$nickname = isset($_REQUEST['nickname']) ? $_REQUEST['userName'] : exit;
+$nickname = isset($_REQUEST['nickname']) ? $_REQUEST['nickname'] : exit;
 
 $post_data = array();
 $post_data['username'] = iconv('utf-8','gbk',$username);
