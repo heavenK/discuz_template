@@ -227,21 +227,33 @@ function uploadSuccess(file, serverData) {
 			if(parseInt(data.picid)) {
 				var newTr = document.createElement("TR");
 				newTr.id = 'attach_'+data.picid;
-				var newTd = document.createElement("TD");
+			/*	var newTd = document.createElement("TD");
 				var img = new Image();
 				img.src = data.url;
 				var imgObj = document.createElement("img");
 				imgObj.src = img.src;
 				newTd.className = 'c';
-				newTd.appendChild(imgObj);
+				newTd.appendChild(imgObj);*/
 				newTr.appendChild(newTd);
 				newTd = document.createElement("TD");
+				newTd.width="50%";
+				newTd.className = 'td_zh';
 				newTd.innerHTML = '<strong>'+file.name+'</strong>';
 				newTr.appendChild(newTd);
 				newTd = document.createElement("TD");
+				newTd.innerHTML = '<strong>'+data.size+'KB</strong>';
+				newTr.appendChild(newTd);
+				newTd = document.createElement("TD");
+				newTd.width="30%";
+				newTd.innerHTML = '<strong>'+data.size+'KB</strong>';
+				newTr.appendChild(newTd);
+				newTd = document.createElement("TD");
+				newTd.innerHTML = '<span id="showmsg' + data.picid + '"><a href="javascript:;" onclick="delAttach(attach_'+data.picid + ');return false;" class="xi2">[É¾³ý]</a></span>';
+				newTr.appendChild(newTd);
+			/*	newTd = document.createElement("TD");
 				newTd.className = 'd';
 				newTd.innerHTML = 'Í¼Æ¬ÃèÊö<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
-				newTr.appendChild(newTd);
+				newTr.appendChild(newTd);*/
 				this.customSettings.imgBoxObj.appendChild(newTr);
 			} else {
 				showDialog('Í¼Æ¬ÉÏ´«Ê§°Ü', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
@@ -414,4 +426,12 @@ function uploadError(file, errorCode, message) {
 	} catch (ex) {
         this.debug(ex);
     }
+}
+
+function delAttach(id) {
+	$('attachbody').removeChild(id);
+	if($('attachbody').innerHTML == '') {
+	//	addAttach();
+	}
+//	$('localimgpreview_' + id + '_menu') ? document.body.removeChild($('localimgpreview_' + id + '_menu')) : null;
 }
