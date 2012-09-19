@@ -18,13 +18,21 @@ $filesize = isset($_REQUEST['filesize']) ? $_REQUEST['filesize'] : '';
 $width = isset($_REQUEST['width']) ? $_REQUEST['width'] : 0;
 $cover = isset($_REQUEST['cover']) ? $_REQUEST['cover'] : 0;
 
-isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['err'] = 1;
-
 if($res['err'] != 1){
 	$path = '../data/attachment/forum/';
 	$attachments = 'ios/' .date('YmdHsi') .md5(time()) .'.jpg';
-	$s=base64_decode($s);
-	file_put_contents($path .$attachments, $s);
+	//$s=base64_decode($s);
+	//file_put_contents($path .$attachments, $s);
+	
+	if(isset($_FILES['pic'])){
+		move_uploaded_file($_FILES["pic"]["tmp_name"], $path .$attachments);
+	}
+	else{
+		$res['err'] = 1;
+		echo json_encode($res);
+		exit;
+	}
+	
 	$aid = getattachnewaid($uid);
 	
 	$update = array();

@@ -12,7 +12,7 @@ C::app()->init();
 isset($_REQUEST['uid']) ? $uid = $_REQUEST['uid'] : $res['changeCheck'] = 0;
 $size = isset($_REQUEST['size']) ? $_REQUEST['size'] : '';
 $type = isset($_GET['type']) ? $_GET['type'] : '';
-isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
+//isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
 
 
 if($res || $res == NULL){
@@ -23,9 +23,19 @@ if($res || $res == NULL){
 
 	dmkdir($basedir);
 
-	$s=base64_decode($s);
+	//$s=base64_decode($s);
 
-	file_put_contents($avatar, $s);
+	//file_put_contents($avatar, $s);
+
+	if(isset($_FILES['pic'])){
+		move_uploaded_file($_FILES["pic"]["tmp_name"], $avatar);
+	}
+	else{
+		$res['changeCheck'] = 0;
+		echo json_encode($res);
+		exit;
+	}
+
 
 	$res['changeCheck'] = 1;
 }
