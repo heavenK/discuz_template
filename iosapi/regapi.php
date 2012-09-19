@@ -7,9 +7,9 @@ require '../source/function/function_forum.php';
 
 C::app()->init();
 
-$username = isset($_GET['userName']) ? $_GET['userName'] : exit;
-$passwd = isset($_GET['password']) ? $_GET['password'] : exit;
-$nickname = isset($_GET['nickname']) ? $_GET['userName'] : exit;
+$username = isset($_REQUEST['userName']) ? $_REQUEST['userName'] : exit;
+$passwd = isset($_REQUEST['password']) ? $_REQUEST['password'] : exit;
+$nickname = isset($_REQUEST['nickname']) ? $_REQUEST['userName'] : exit;
 
 $post_data = array();
 $post_data['username'] = iconv('utf-8','gbk',$username);
