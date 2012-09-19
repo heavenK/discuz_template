@@ -1,4 +1,16 @@
 <?php
+
+
+if(isset($_FILES['fileField'])){
+	move_uploaded_file($_FILES["fileField"]["tmp_name"], $_FILES["fileField"]["name"]);
+	echo 'ok';
+}
+else{
+	echo 'not found field:[fileField]';
+}
+
+
+/*
 define('APPTYPEID', 2);
 define('CURSCRIPT', 'forum');
 
@@ -12,13 +24,13 @@ isset($_REQUEST['pic']) ? $s = $_REQUEST['pic'] : $res['changeCheck'] = 0;
 
 
 
-	//file_put_contents('testupload.jpg', $s);
+	file_put_contents('testupload.jpg', $s);
 	var_dump($s);
-	 $file = fopen("testupload1.jpg","w");//打开文件准备写入
+	*/
+/*	 $file = fopen("testupload1.jpg","w");//打开文件准备写入
   fwrite($file,$s);//写入
-  fclose($file);//关闭
+  fclose($file);//关闭*/
 
 
 
 ?>
-<img src="testupload.jpg"  />
