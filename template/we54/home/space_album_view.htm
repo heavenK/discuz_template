@@ -15,7 +15,7 @@
 				</div>
 			<div class="bm_c bm_zh">
 <!--{else}-->
-	<!--{template common/header}-->
+	<!--{subtemplate home/space_header}-->
 	<link rel="stylesheet" type="text/css" href="template/we54/home/album_add.css" />
 	<div id="pt" class="bm cl">
 		<div class="z">
@@ -43,8 +43,8 @@
 			<!--{/if}-->
 			<div class="y y_zh">
 				<!--{hook/space_album_op_extra}-->
-				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=edit&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">管理该相册</a><!--{/if}-->
-				<!--{if ($_G[uid] == $album[uid] || checkperm('managealbum')) && $album[albumid] > 0}-->
+				<!--{if $space[self]}--><a href="{if $album[albumid] > 0}home.php?mod=spacecp&ac=album&op=editpic&albumid=$album[albumid]{else}home.php?mod=spacecp&ac=album&op=editpic&albumid=0{/if}">管理该相册</a><!--{/if}-->
+				<!--{if (($_G[uid] == $album[uid] || checkperm('managealbum')) && $album[albumid] > 0)&&$space[self]}-->
 					<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=album&op=delete&albumid=$album[albumid]&uid=$album[uid]&handlekey=delalbumhk_{$album[albumid]}" id="album_delete_$album[albumid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}该相册</a>
 				<!--{/if}-->
 				<!--{if $_G[uid] != $album[uid]}-->
