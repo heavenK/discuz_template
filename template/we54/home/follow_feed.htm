@@ -1,7 +1,6 @@
 <!--{if $do == 'feed'}-->
-	<!--{template common/header}-->
+	<!--{template common/other_header}-->
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/king_space.css" />
-
 	<div id="pt" class="bm cl">
 		<div class="z">
 			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
@@ -22,9 +21,9 @@
 			<div class="tbn">
 				<h2 class="mt bbda">{lang follow}</h2>
 				<ul>
-					<a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
-					<a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
-					<a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
+					<li$actives[follow]><a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
+					<li$actives[special]><a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
+					<li$actives[other]><a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
 					<!--{hook/follow_nav_extra}-->
 				</ul>
 			</div>
@@ -39,11 +38,16 @@
 			<div class="mn kaiser_mn">
 				<div class="bm kaiser_bm">
 					<div class="bm_h kaiser_bm_h">
-						<h1 class="mt"><!--{if $viewself}-->
-                            <!--{if $_GET['do']=='following'}-->
+						<h1 class="mt">
+                        <!--{if $viewself}-->
+                        	<!--{if $_GET['do']=='following'}-->
                                 我关注的人
-                            <!--{else}-->
-                                我的粉丝
+                            	<!--{else}-->
+									<!--{if $_GET['mod']=='space'}-->
+                                		我的广播
+                            		<!--{else}-->
+									我的粉丝
+                            	<!--{/if}-->    
                             <!--{/if}-->
                         <!--{else}-->
                             <!--{if $_GET['do']=='follower'}-->
@@ -51,10 +55,9 @@
                             <!--{else}-->
                                 TA关注的人
                             <!--{/if}-->
-                        <!--{/if}--></h1>
-                        
-                        
-                        
+                        <!--{/if}-->
+                        </h1>
+
 					</div>
 				<div class="bm_c">
 	<!--{else}-->
@@ -110,7 +113,7 @@
 						</div>
 
 						<div id="flw_post_extra" class="mtn cl">
-							
+							<div{if $_G[setting][fastsmilies]} class="hasfsl"{/if} id="fastposteditor">
 								<div class="tedt">
 									<div class="area">
 										<textarea rows="5" cols="80" name="message" id="fastpostmessage" onKeyDown="seditor_ctlent(event, '$(\'fastpostsubmit\').click()');" tabindex="12" class="pt xs2"></textarea>
@@ -223,8 +226,9 @@
 								</div>
 								<div class="y">
 									<p class="ptm pnpost">
-										<label><input type="checkbox" name="syncbbs" id="syncbbs" value="1" onclick="showSyncInfo(this.checked)" />{lang follow_sync_forum}</label>&nbsp;
-										<button {if $_G['uid']}type="submit" {else}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}name="topicsubmit_btn" id="fastpostsubmit" value="topicsubmitbtn" tabindex="13" class="pn pnc"><strong>{lang follow_new_thread}</strong></button>
+                                    	<button style="float:right; margin-top:10px;" {if $_G['uid']}type="submit" {else}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}name="topicsubmit_btn" id="fastpostsubmit" value="topicsubmitbtn" tabindex="13" class="pn pnc"><strong>{lang follow_new_thread}</strong></button>
+										<label style="float:right; margin-right:10px; margin-top:18px;"><input type="checkbox" name="syncbbs" id="syncbbs" value="1" onclick="showSyncInfo(this.checked)" />{lang follow_sync_forum}</label>&nbsp;
+										
 									</p>
 								</div>
 							</div>
@@ -414,10 +418,10 @@
 
 			<!--{if in_array($do, array('feed', 'view'))}-->
 				<!--{if $do == 'feed' && $_G[setting][homestyle]}-->
-				<ul class="tb cl kaiser_tb_cl">
-					<a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
-					<a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
-					<a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
+				<ul class="mbw tb cl">
+					<li$actives[follow]><a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
+					<li$actives[special]><a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
+					<li$actives[other]><a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
 					<!--{hook/follow_nav_extra}-->
 				</ul>
 				<!--{/if}-->
@@ -778,10 +782,12 @@
 	}
 </script>
 
+
 <link rel="stylesheet" type="text/css" href="template/we54/home/follow_feed.css" />
 <style>
 .xg1 a { color:#000 !important; text-decoration:none;} .xg1 .xi2{ color:#000 !important; text-decoration:none;}
 .card { padding: 0; width: 295px !important; border-color:#fff; background: #FDFEFF; }
 .p_pop, .p_pof, .sllt { box-shadow:0 0 0 0;}
 </style>
+
 <!--{subtemplate common/footer}-->
