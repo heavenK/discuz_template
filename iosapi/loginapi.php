@@ -10,7 +10,7 @@ C::app()->init();
 $author = isset($_GET['author']) ? $_GET['author'] : exit;
 $passwd = isset($_GET['password']) ? $_GET['password'] : exit;
 
-
+$author=iconv('utf-8','gbk',$author);
 loaducenter();
 $ucresult = uc_user_login($author,$passwd);
 list($tmp['uid']) = daddslashes($ucresult);
