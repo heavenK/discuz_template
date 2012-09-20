@@ -71,7 +71,7 @@
 /*ÍÆ¼ö*/
 .kaiser_tuijian						{ width:680px; margin:29px 0 0 0; display:inline; border:none; overflow:hidden; float:left;}
 .kaiser_tuijian_cont				{ margin:0;}
-.kaiser_tuijian_cont .xl1 ul li		{ width:84px; height:24px; margin:0 10px 0 0; display:inline; padding:0; background:none; border:none; line-height:22px; overflow:hidden; float:left;}
+.kaiser_tuijian_cont .xl1 ul li		{ width:84px; height:24px; margin:0 10px 0 0; display:inline; padding:0; background:none; border:none; line-height:23px; overflow:hidden; float:left;}
 .kaiser_tuijian_cont .xl1 ul li a	{ width:82px; height:22px; background:#FFF; border:1px solid #cfcfcf; text-align:center; font-size:12px; color:#000; overflow:hidden; float:left;}
 .kaiser_tuijian_cont .xl1 ul li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
 
@@ -86,12 +86,3 @@
 .kaiser_list_benban_cont dt em		{ width:161px; height:75px; color:#000; line-height:24px; overflow:hidden; float:left;}
 .kaiser_list_benban_cont dt em b	{ font-size:14px; color:#ff0000;}
 .kaiser_list_benban_cont dt i		{ width:161px; height:42px; color:#666666; line-height:20px; overflow:hidden; float:left;}
-
-
-
-
-
-
-
-
-
