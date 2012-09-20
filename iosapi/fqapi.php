@@ -12,7 +12,7 @@ isset($_REQUEST['author']) ? $author = $_REQUEST['author'] : $author = '';
 $opinion = isset($_REQUEST['opinion']) ? $_REQUEST['opinion'] : '';
 
 $sql = "INSERT INTO `pre_phone_message` VALUES('' ,'$author' ,'$opinion' ," . time() .")";
-//file_put_contents('dump.txt',$sql)
+file_put_contents('test.txt',$sql);
 $res = DB::query($sql);
 
 
