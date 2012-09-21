@@ -60,18 +60,46 @@ body	{ margin:0 auto; width:1000px;}
     <div>
         <img src="ad00.jpg" width="150" />
         图片1:<input type="file" name="ad0"  />
+        类型1:<select name="types0">
+        		<option value="1">新闻</option>
+                <option value="2">网页链接</option>
+                <option value="3">帖子</option>
+                <option value="4" selected="selected">照相</option>
+        	  </select>
+        内容1:<input type="text" name="content0"  />
     </div>
     <div>
         <img src="ad01.jpg" width="150" />
         图片2:<input type="file" name="ad1"  />
+        类型2:<select name="types1">
+        		<option value="1">新闻</option>
+                <option value="2">网页链接</option>
+                <option value="3">帖子</option>
+                <option value="4" selected="selected">照相</option>
+        	  </select>
+        内容2:<input type="text" name="content1"  />
     </div>
     <div>
         <img src="ad02.jpg" width="150" />
         图片3:<input type="file" name="ad2"  />
+        类型3:<select name="types2">
+        		<option value="1">新闻</option>
+                <option value="2">网页链接</option>
+                <option value="3">帖子</option>
+                <option value="4" selected="selected">照相</option>
+        	  </select>
+        内容3:<input type="text" name="content2"  />
     </div>
     <div>
         <img src="ad03.jpg" width="150" />
         图片4:<input type="file" name="ad3"  />
+        类型4:<select name="types3">
+        		<option value="1">新闻</option>
+                <option value="2">网页链接</option>
+                <option value="3">帖子</option>
+                <option value="4" selected="selected">照相</option>
+        	  </select>
+        内容4:<input type="text" name="content3"  />
     </div>
 </div>
 <input type="submit" value="submit" />
