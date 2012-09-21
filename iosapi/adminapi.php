@@ -21,6 +21,7 @@ if($_POST['type'] == 'dosubmit'){
 
 ?>
 <style>
+body	{ margin:0 auto; width:1000px;}
 
 .part1	{ float:left; width:1000px;}
 .part1 div:nth-child(2n+1)	{ float:left; width:500px;}
@@ -31,6 +32,7 @@ if($_POST['type'] == 'dosubmit'){
 .part2 div:nth-child(2n+1)	{ float:right; width:500px;}
 
 </style>
+<body>
 <form action="" method="post" enctype="multipart/form-data">
 <input type="hidden" name="type" value="dosubmit" />
 <h1>ÐÞ¸ÄµÇÂ¼Ëæ»úÍ¼Æ¬</h1>
@@ -74,3 +76,4 @@ if($_POST['type'] == 'dosubmit'){
 </div>
 <input type="submit" value="submit" />
 </form>
+</body>
