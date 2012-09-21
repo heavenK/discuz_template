@@ -119,7 +119,7 @@ body	{ margin:0 auto; width:1000px;}
                 <option value="3" <?php if($val['type'] == 3) {?>selected="selected"<?php }?>>帖子</option>
                 <option value="4" <?php if($val['type'] == 4) {?>selected="selected"<?php }?>>照相</option>
         	  </select>
-        内容<?php echo $key+1;?>:<input type="text" name="content<?php echo $key;?>"  />
+        内容<?php echo $key+1;?>:<input type="text" name="content<?php echo $key;?>" value="<?php echo $val['content'];?>" />
     </div>
     <?php } ?>
 </div>
