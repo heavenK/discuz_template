@@ -8,7 +8,8 @@ require '../source/function/function_forum.php';
 C::app()->init();
 
 if($_G['uid'] != 1 || $_G['uid'] != 34) {
-	showmessage('你无权进入！');
+	echo '你无权进入！';
+	exit;
 }
 
 if($_POST['type'] == 'dosubmit'){
