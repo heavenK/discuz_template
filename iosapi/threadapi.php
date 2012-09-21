@@ -78,6 +78,7 @@ if($res['err'] != 1){
 			'status' => 100
 		));
 	if($pid) {
+		C::t('forum_forum')->update_forum_counter(1005, 0, 1, 1);
 		$res['tid'] = $tid;
 		$res['pid'] = $pid;
 		$res['err'] = 0;
