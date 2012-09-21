@@ -6,14 +6,14 @@ require '../source/class/class_core.php';
 require '../source/function/function_forum.php';
 
 ?>
-<h1>修改登录随机图片</h1>
+<h1>�޸ĵ�¼���ͼƬ</h1>
 <div>
 <img src="welcome0.jpg" />
-图片1:<input type="file" name="pic0"  /><br />
+ͼƬ1:<input type="file" name="pic0"  /><br />
 <img src="welcome1.jpg" />
-图片2:<input type="file" name="pic0"  /><br />
+ͼƬ2:<input type="file" name="pic0"  /><br />
 <img src="welcome2.jpg" />
-图片3:<input type="file" name="pic0"  /><br />
+ͼƬ3:<input type="file" name="pic0"  /><br />
 <img src="welcome3.jpg" />
-图片4:<input type="file" name="pic0"  /><br />
+ͼƬ4:<input type="file" name="pic0"  /><br />
 </div>
