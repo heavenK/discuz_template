@@ -5,6 +5,12 @@ define('CURSCRIPT', 'forum');
 require '../source/class/class_core.php';
 require '../source/function/function_forum.php';
 
+C::app()->init();
+
+if($_G['uid'] != 1 || $_G['uid'] != 34) {
+	showmessage('你无权进入！');
+}
+
 if($_POST['type'] == 'dosubmit'){
 	for($i=0 ;$i<4 ;$i++){
 		$pic = 'pic'.$i;
