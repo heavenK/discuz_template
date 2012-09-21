@@ -17,6 +17,25 @@ if($_POST['type'] == 'dosubmit'){
 		}	
 	}
 	echo "<script language='javascript'>window.location.reload();</script>";
+}else{
+	$xmlDoc = new DOMDocument(); 
+	$xmlDoc->load('ad.xml'); 
+	
+	$ads = $xmlDoc->getElementsByTagName("ad"); 
+	
+	$i=0;
+	foreach($ads as $ad){
+		$imgURL = $ad->getElementsByTagName("imgURL"); 
+		$type = $ad->getElementsByTagName("type");
+		$content = $ad->getElementsByTagName("content");
+		
+		$pic[$i]['imgURL'] = $imgURL->item(0)->nodeValue; 
+		$pic[$i]['type'] = $type->item(0)->nodeValue; 
+		$pic[$i]['content'] = $content->item(0)->nodeValue; 
+	
+		$i++;
+	}
+		
 }
 
 ?>
@@ -57,50 +76,19 @@ body	{ margin:0 auto; width:1000px;}
 <p></p>
 <h1>修改广告</h1>
 <div class="part2">
+	<?php foreach($pic as $key => $val){ ?>
     <div>
-        <img src="ad00.jpg" width="150" />
-        图片1:<input type="file" name="ad0"  />
-        类型1:<select name="types0">
-        		<option value="1">新闻</option>
-                <option value="2">网页链接</option>
-                <option value="3">帖子</option>
-                <option value="4" selected="selected">照相</option>
+        <img src="ad0<?php echo $key;?>.jpg" width="150" />
+        图片<?php echo $key;?>:<input type="file" name="ad<?php echo $key;?>"  />
+        类型<?php echo $key;?>:<select name="types<?php echo $key;?>">
+        		<option value="1" <?php if($val['type'] == 1) {?>selected="selected"<?php }?>>新闻</option>
+                <option value="2" <?php if($val['type'] == 2) {?>selected="selected"<?php }?>>网页链接</option>
+                <option value="3" <?php if($val['type'] == 3) {?>selected="selected"<?php }?>>帖子</option>
+                <option value="4" <?php if($val['type'] == 4) {?>selected="selected"<?php }?>>照相</option>
         	  </select>
-        内容1:<input type="text" name="content0"  />
+        内容<?php echo $key;?>:<input type="text" name="content<?php echo $key;?>"  />
     </div>
-    <div>
-        <img src="ad01.jpg" width="150" />
-        图片2:<input type="file" name="ad1"  />
-        类型2:<select name="types1">
-        		<option value="1">新闻</option>
-                <option value="2">网页链接</option>
-                <option value="3">帖子</option>
-                <option value="4" selected="selected">照相</option>
-        	  </select>
-        内容2:<input type="text" name="content1"  />
-    </div>
-    <div>
-        <img src="ad02.jpg" width="150" />
-        图片3:<input type="file" name="ad2"  />
-        类型3:<select name="types2">
-        		<option value="1">新闻</option>
-                <option value="2">网页链接</option>
-                <option value="3">帖子</option>
-                <option value="4" selected="selected">照相</option>
-        	  </select>
-        内容3:<input type="text" name="content2"  />
-    </div>
-    <div>
-        <img src="ad03.jpg" width="150" />
-        图片4:<input type="file" name="ad3"  />
-        类型4:<select name="types3">
-        		<option value="1">新闻</option>
-                <option value="2">网页链接</option>
-                <option value="3">帖子</option>
-                <option value="4" selected="selected">照相</option>
-        	  </select>
-        内容4:<input type="text" name="content3"  />
-    </div>
+    <?php } ?>
 </div>
 <input type="submit" value="submit" />
 </form>
