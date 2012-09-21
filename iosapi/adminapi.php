@@ -20,12 +20,12 @@ require '../source/function/function_forum.php';
 
 <h1>�޸Ĺ��</h1>
 <div>
-<img src="ad00.jpg" width="200" />
-ͼƬ1:<input type="file" name="ad0"  />
 <img src="ad01.jpg" width="200" />
-ͼƬ2:<input type="file" name="ad1"  />
+ͼƬ1:<input type="file" name="ad0"  />
 <img src="ad02.jpg" width="200" />
-ͼƬ3:<input type="file" name="ad2"  />
+ͼƬ2:<input type="file" name="ad1"  />
 <img src="ad03.jpg" width="200" />
+ͼƬ3:<input type="file" name="ad2"  />
+<img src="ad04.jpg" width="200" />
 ͼƬ4:<input type="file" name="ad3"  />
 </div>
