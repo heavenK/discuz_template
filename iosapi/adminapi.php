@@ -26,11 +26,11 @@ if($_POST['type'] == 'dosubmit'){
 <img src="welcome0.jpg" width="200" />
 ͼƬ1:<input type="file" name="pic0"  />
 <img src="welcome1.jpg" width="200" />
-ͼƬ2:<input type="file" name="pic0"  />
+ͼƬ2:<input type="file" name="pic1"  />
 <img src="welcome2.jpg" width="200" />
-ͼƬ3:<input type="file" name="pic0"  />
+ͼƬ3:<input type="file" name="pic2"  />
 <img src="welcome3.jpg" width="200" />
-ͼƬ4:<input type="file" name="pic0"  />
+ͼƬ4:<input type="file" name="pic3"  />
 </div>
 
 <h1>�޸Ĺ��</h1>
