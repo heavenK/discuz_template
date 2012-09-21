@@ -15,7 +15,40 @@ if($_POST['type'] == 'dosubmit'){
 		if(isset($_FILES[$ad])){
 			move_uploaded_file($_FILES[$ad]["tmp_name"], "ad0".$i.".jpg");
 		}	
+		
+		$ads[$i]['imgURL'] = "http://bbs-test.we54.com/iosapi/ad0".$i.".jpg";
+		$ads[$i]['type'] = $_POST['types'.$i];
+		$ads[$i]['content'] = $_POST['content'.$i];
+		
 	}
+	
+	$doc = new DOMDocument();
+	$doc->formatOutput = true;
+	
+	$r = $doc->createElement( "ADV" );
+	$doc->appendChild( $r );
+	
+	foreach( $ads as $val )
+	{
+		$b = $doc->createElement( "ad" );
+		
+		$imgURL = $doc->createElement( "imgURL" );
+		$imgURL->appendChild($doc->createTextNode($val['imgURL']));
+	   $b->appendChild( $imgURL );
+	
+	  $type = $doc->createElement( "type" );
+	  $type->appendChild( $doc->createTextNode( $val['type'] ));
+	  $b->appendChild( $type );
+	
+	  $content = $doc->createElement( "content" );
+	  $content->appendChild($doc->createTextNode( $val['content'] ));
+	  $b->appendChild( $content );
+	
+	  $r->appendChild( $b );
+	}
+	
+	$doc->save('ad.xml');
+	
 	echo "<script language='javascript'>window.location.reload();</script>";
 }else{
 	$xmlDoc = new DOMDocument(); 
@@ -79,14 +112,14 @@ body	{ margin:0 auto; width:1000px;}
 	<?php foreach($pic as $key => $val){ ?>
     <div>
         <img src="ad0<?php echo $key;?>.jpg" width="150" />
-        图片<?php echo $key;?>:<input type="file" name="ad<?php echo $key;?>"  />
-        类型<?php echo $key;?>:<select name="types<?php echo $key;?>">
+        图片<?php echo $key+1;?>:<input type="file" name="ad<?php echo $key;?>"  />
+        类型<?php echo $key+1;?>:<select name="types<?php echo $key;?>">
         		<option value="1" <?php if($val['type'] == 1) {?>selected="selected"<?php }?>>新闻</option>
                 <option value="2" <?php if($val['type'] == 2) {?>selected="selected"<?php }?>>网页链接</option>
                 <option value="3" <?php if($val['type'] == 3) {?>selected="selected"<?php }?>>帖子</option>
                 <option value="4" <?php if($val['type'] == 4) {?>selected="selected"<?php }?>>照相</option>
         	  </select>
-        内容<?php echo $key;?>:<input type="text" name="content<?php echo $key;?>"  />
+        内容<?php echo $key+1;?>:<input type="text" name="content<?php echo $key;?>"  />
     </div>
     <?php } ?>
 </div>
