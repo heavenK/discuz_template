@@ -6,8 +6,8 @@ require '../source/class/class_core.php';
 require '../source/function/function_forum.php';
 
 C::app()->init();
-var_dump($_G);
-if($_G['uid'] != 1 || $_G['uid'] != 34) {
+
+if($_G['uid'] != 1 && $_G['uid'] != 34) {
 	echo '你无权进入！';
 	exit;
 }
