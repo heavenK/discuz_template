@@ -5,7 +5,22 @@ define('CURSCRIPT', 'forum');
 require '../source/class/class_core.php';
 require '../source/function/function_forum.php';
 
+if($_POST['type'] == 'dosubmit'){
+	for($i=0 ;$i<4 ;$i++){
+		$pic = 'pic'.$i;
+		$ad = 'ad'.$i;
+		if(isset($_FILES[$pic])){
+			move_uploaded_file($_FILES[$pic]["tmp_name"], "welcome".$i.".jpg");
+		}
+		if(isset($_FILES[$ad])){
+			move_uploaded_file($_FILES[$ad]["tmp_name"], "ad0".$i.".jpg");
+		}	
+	}
+}
+
 ?>
+<form action="" method="post" enctype="multipart/form-data">
+<input type="hidden" name="type" value="dosubmit" />
 <h1>ÐÞ¸ÄµÇÂ¼Ëæ»úÍ¼Æ¬</h1>
 <div>
 <img src="welcome0.jpg" width="200" />
@@ -20,12 +35,14 @@ require '../source/function/function_forum.php';
 
 <h1>ÐÞ¸Ä¹ã¸æ</h1>
 <div>
-<img src="ad01.jpg" width="200" />
+<img src="ad00.jpg" width="200" />
 Í¼Æ¬1:<input type="file" name="ad0"  />
-<img src="ad02.jpg" width="200" />
+<img src="ad01.jpg" width="200" />
 Í¼Æ¬2:<input type="file" name="ad1"  />
-<img src="ad03.jpg" width="200" />
+<img src="ad02.jpg" width="200" />
 Í¼Æ¬3:<input type="file" name="ad2"  />
-<img src="ad04.jpg" width="200" />
+<img src="ad03.jpg" width="200" />
 Í¼Æ¬4:<input type="file" name="ad3"  />
 </div>
+<input type="submit" value="submit" />
+</form>
