@@ -16,6 +16,7 @@ if($_POST['type'] == 'dosubmit'){
 			move_uploaded_file($_FILES[$ad]["tmp_name"], "ad0".$i.".jpg");
 		}	
 	}
+	echo "<script language='javascript'>window.location.reload();</script>";
 }
 
 ?>
