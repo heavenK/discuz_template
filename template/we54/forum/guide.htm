@@ -35,23 +35,25 @@
 			</div>-->
 			<!--{if $view != 'index'}-->
 			<div id="pgt" class="bm bw0 pgs cl kaiser_list_bm_bw0_pgs_cl">
-				<!--{if helper_access::check_module('guide')}-->
-				<span class="pgb y" style=" margin-top:26px;"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
-				<!--{/if}-->
-                <span class="pgt kaiser_list_bottom_pgt">$multipage</span>
-				<a onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav" class="kaiser_pn_post_btn"></a>
+                <ul id="thread_types" class="ttp bm cl kaiser_new_view_ttp_bm_cl">
+                    <!--{if helper_access::check_module('guide')}-->
+                    <li $currentview['index']><a href="forum.php?mod=guide&view=index">{lang guide_index}</a></li>
+                    <!--{/if}-->
+                    <li $currentview['hot']><a href="forum.php?mod=guide&view=hot">{lang guide_hot}</a></li>
+                    <li $currentview['digest']><a href="forum.php?mod=guide&view=digest">{lang guide_digest}</a></li>
+                    <li $currentview['new']><a href="forum.php?mod=guide&view=new">{lang guide_new}</a></li>
+                    <li $currentview['my']><a id="filter_special" href="forum.php?mod=guide&view=my" onmouseover="showMenu(this.id)">{lang guide_my}</a></li>
+                    <!--{hook/guide_nav_extra}-->
+                </ul>
+                <a onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav" class="kaiser_pn_post_btn"></a>
+                <div class="kaiser_new_view_page">
+                    <!--{if helper_access::check_module('guide')}-->
+                    <span class="pgb y" style=" margin-top:17px;"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
+                    <!--{/if}-->
+                    <span class="pgt kaiser_list_bottom_pgt">$multipage</span>
+                </div>
 			</div>
 			<!--{/if}-->
-			<ul id="thread_types" class="ttp bm cl">
-				<!--{if helper_access::check_module('guide')}-->
-				<li $currentview['index']><a href="forum.php?mod=guide&view=index">{lang guide_index}</a></li>
-				<!--{/if}-->
-				<li $currentview['hot']><a href="forum.php?mod=guide&view=hot">{lang guide_hot}</a></li>
-				<li $currentview['digest']><a href="forum.php?mod=guide&view=digest">{lang guide_digest}</a></li>
-				<li $currentview['new']><a href="forum.php?mod=guide&view=new">{lang guide_new}</a></li>
-				<li $currentview['my']><a id="filter_special" href="forum.php?mod=guide&view=my" onmouseover="showMenu(this.id)">{lang guide_my}</a></li>
-				<!--{hook/guide_nav_extra}-->
-			</ul>
 			<!--{hook/guide_top}-->
 			<!--{if $view == 'index'}-->
 				<!--{loop $data $key $list}-->
@@ -86,7 +88,7 @@
 				<!--{/loop}-->
 			<!--{else}-->
 				<!--{loop $data $key $list}-->
-				<div id="threadlist" class="tl bm bmw"{if $_G['uid']} style="position: relative;"{/if}>
+				<div id="threadlist" class="tl bm bmw kaiser_new_view_tl_bm_bmw"{if $_G['uid']} style="position: relative;"{/if}>
 					<div class="th">
 						<table cellspacing="0" cellpadding="0">
 							<tr>
@@ -148,8 +150,8 @@
 				</div>
 				<!--{/loop}-->
 				<div class="bm bw0 pgs cl">
-					$multipage
-					<span class="pgb y"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
+					<span class="pgb y" style=" margin-top:3px;"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
+                    <span class="pgt kaiser_list_bottom_pgt" style=" margin-top:-7px;">$multipage</span>
 				</div>
 			<!--{/if}-->
 			<!--{hook/guide_bottom}-->

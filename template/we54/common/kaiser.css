@@ -145,6 +145,7 @@
 .kaiser_bm_c #moderate .lock em, .kaiser_bm_c #moderate .common em, .kaiser_bm_c #moderate .new em{ color:#999;}
 .kaiser_bm_c #moderate .lock em a, .kaiser_bm_c #moderate .common em a, .kaiser_bm_c #moderate .new em a{ color:#999;}
 .kaiser_bm_c #moderate .lock .xi1, .kaiser_bm_c #moderate .common .xi1, .kaiser_bm_c #moderate .new .xi1{ color:#FF0101;}
+.kaiser_bm_c_new_view				{ padding:0;}
 .kaiser_bm_c_new_view .lock a, .kaiser_bm_c_new_view .common a, .kaiser_bm_c_new_view .new a{ color:#0657b2;}
 .kaiser_bm_c_new_view .lock em, .kaiser_bm_c_new_view .common em, .kaiser_bm_c_new_view .new em{ color:#999;}
 .kaiser_bm_c_new_view .lock em a, .kaiser_bm_c_new_view .common em a, .kaiser_bm_c_new_view .new em a{ color:#999;}
@@ -227,6 +228,15 @@
 .kaiser_list_bottom_pgt .pg			{ margin-top:10px;}
 .kaiser_new_view a					{ width:82px; height:22px; margin:29px 10px 0 0; display:inline; background:#0080CC; border:1px solid #0080CC; color:#FFF; text-align:center; line-height:23px; overflow:hidden; float:left;}
 .kaiser_new_view a:hover			{ background:#ecf8ff; color:#0080cc; text-decoration:none;}
+.kaiser_new_view_ttp_bm_cl			{ width:600px; padding-top:0; border:none; float:left;}
+.kaiser_new_view_page				{ width:600px; float:left;}
+#pgt .kaiser_new_view_page .pg, #pgt .kaiser_new_view_page .pgb{ margin-top:17px;}
+.kaiser_new_view_tl_bm_bmw			{ border:none; border-top:2px solid #0080cc;}
+.kaiser_new_view_tl_bm_bmw .th		{ height:32px; padding:0 0 0 10px; background:#FFF;}
+.kaiser_new_view_ttp_bm_cl li		{ width:94px; height:24px; padding-bottom:0; overflow:hidden; float:left;}
+.kaiser_new_view_ttp_bm_cl li a		{ width:82px; height:22px; padding:0; background:#FFF; border:1px solid #cfcfcf; text-align:center; line-height:23px; overflow:hidden; float:left;}
+.kaiser_new_view_ttp_bm_cl li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
+.kaiser_new_view_ttp_bm_cl .a a		{ width:82px; height:22px; padding:0; background:#0080cc; border:1px solid #0080cc; text-align:center; font-weight:normal; color:#FFF; line-height:23px; overflow:hidden; float:left;}
 
 /*
 个人资料
