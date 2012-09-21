@@ -24,11 +24,11 @@ if($_POST['type'] == 'dosubmit'){
 body	{ margin:0 auto; width:1000px;}
 
 .part1	{ float:left; width:1000px;}
-.part1 div:nth-child(2n+1)	{ float:left; width:500px;}
+.part1 div:nth-child(2n)	{ float:left; width:500px;}
 .part1 div:nth-child(2n+1)	{ float:right; width:500px;}
 
 .part2	{ float:left; width:1000px;}
-.part2 div:nth-child(2n+1)	{ float:left; width:500px;}
+.part2 div:nth-child(2n)	{ float:left; width:500px;}
 .part2 div:nth-child(2n+1)	{ float:right; width:500px;}
 
 </style>
@@ -54,7 +54,7 @@ body	{ margin:0 auto; width:1000px;}
         Í¼Æ¬4:<input type="file" name="pic3"  />
     </div>
 </div>
-
+<p>
 <h1>ÐÞ¸Ä¹ã¸æ</h1>
 <div class="part2">
     <div>
