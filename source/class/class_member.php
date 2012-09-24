@@ -609,7 +609,9 @@ class register_ctl {
 
 			if(!$activation) {
 				$uid = uc_user_register(addslashes($username), $password, $email, $questionid, $answer, $_G['clientip']);
-
+				if($_GET['phone_reg']){
+							var_dump($uid);
+				}
 				if($uid <= 0) {
 					if($uid == -1) {
 						if($_GET['phone_reg']){
