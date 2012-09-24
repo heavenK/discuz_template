@@ -729,7 +729,7 @@ class register_ctl {
 				C::t('common_member')->delete_no_validate($uid);
 				
 				if($_GET['phone_reg']){
-					$res['registerCheck'] = -4;
+					$res['registerCheck'] = -5;
 					echo json_encode($res);
 					exit;
 				}
