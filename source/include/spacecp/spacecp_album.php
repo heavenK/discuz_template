@@ -17,7 +17,8 @@ $picid = empty($_GET['picid'])?0:intval($_GET['picid']);
 if($_GET['op'] == 'edit') {
 
 	if($albumid < 1) {
-		showmessage('photos_do_not_support_the_default_settings', "home.php?mod=spacecp&ac=album&uid=$_G[uid]&op=editpic&quickforward=1");
+	//	showmessage('photos_do_not_support_the_default_settings', "home.php?mod=spacecp&ac=album&uid=$_G[uid]&op=editpic&quickforward=1");
+		showmessage('photos_do_not_support_the_default_settings', dreferer());
 	}
 
 	if(!$album = C::t('home_album')->fetch($albumid)) {
@@ -70,7 +71,8 @@ if($_GET['op'] == 'edit') {
 		}
 
 		C::t('home_album')->update($albumid, array('albumname'=>$_POST['albumname'], 'catid'=>$_POST['catid'], 'friend'=>$_POST['friend'], 'password'=>$_POST['password'], 'target_ids'=>$_POST['target_ids'], 'depict'=>dhtmlspecialchars($_POST['depict'])));
-		showmessage('spacecp_edit_ok', "home.php?mod=spacecp&ac=album&op=edit&albumid=$albumid");
+	//	showmessage('spacecp_edit_ok', "home.php?mod=spacecp&ac=album&op=edit&albumid=$albumid");
+		showmessage('spacecp_edit_ok', dreferer());
 	}
 
 	$album['target_names'] = '';

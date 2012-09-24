@@ -41,9 +41,46 @@ body{background: white url(/template/we54/images/home_top_bg.jpg) repeat-x top;}
 .cp_zh{margin:8px 0 10px 0;}
 
 /*ÉÏ´«*/
-.uploadform_zh{width:502px;height:263px;overflow:auto;padding:4px 0 !important;}
+.uploadform_zh{width:502px;height:263px;overflow:auto;padding:0 !important;color:#666;background-color:white;border:1px solid #ddd;}
+.mbm_tle_zh{background-color:#f5f5f5;}
 .hm_zh{text-align:left;margin-bottom:15px;}
 .uploadform_zh td{border-bottom:1px dotted #d4dcdf;}
 .uploadform_zh td.td_zh{padding-left:14px;}
-.flash_zh{}
-.progressContainer_zh{background:none;border:0;margin:0;padding:0;}
+.xi2_zh{background:url(../images/up_delbtn.png) no-repeat;width:9px;height:10px;display:block;margin-left:20px;}
+
+.flash_zh{margin-top:-14px;}
+.progressContainer_zh{background:none;border:0;margin:0;padding:0;margin-top:4px;}
+.progressWrapper_zh{border-bottom:1px dotted #d4dcdf;padding:5px 0;}
+.progressName_zh{color:#666;width:226px;padding-left:14px;float:left;}
+.progressBarStatus_zh{width:61px;margin:0;float:left;}
+.progressBarInProgress_zh{width:100px;height:11px;background:none;background-color:#f1f1f1;padding:0;float:left;clear:none;}
+.Progress_zh{height:11px;background:url(../images/progressbarbg.png) repeat-x center center;margin:0;}
+a.progressCancel_zh{margin-right:34px;background:url(../images/up_delbtn.png) no-repeat;width:9px;height:10px;}
+
+.sle_a_zh{width:502px;padding:0;border:0;background:none;padding-top:14px !important;padding-bottom:4px !important;}
+.crt_zh{text-align:center;line-height:24px;}
+.xi2 .crta_zh{color:#996633 !important;}
+.fl_zh{float:left;}
+.sle_zh{width:152px;}
+.sle_a_btn_zh{width:502px;text-align:left;}
+.a_btn{background:url(../images/up_btn.png) no-repeat;width:90px;height:30px;border:0;}
+.a_btn:active{background-position:center center;}
+.up_info_zh{background:url(../images/upinfobg.png) repeat-x;height:30px;width:502px;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+.up_info_zh em,.up_info_zh b{color:#666;font-weight:normal;line-height:32px;}
+.up_info_zh b{margin-left:11px;float:left;}
+.up_info_zh a{color:#996633;line-height:32px;margin-right:11px;float:right;}
+
+.uploadform_min_zh{margin-top:0 !important;background-color:white;border:0;padding:0 !important;}
+.crafm_zh{margin:4px 65px 0 10px;}
+.crafm_zh .px_zh{width:145px;}
+.crafm_zh th{width:auto;}
+.xw1_zh{background:url(../images/catlebg.png) repeat-x;text-align:left;padding:4px 10px 6px 10px !important;color:#996633;}
+.xw1_zh span{float:right;}
+.xw1_zh a:hover{text-decoration:none;}
+.flbc_zh{text-indent:0;background:none;color:#666;text-decoration:none;width:auto;height:auto;}
+#creatalbum{border:0;}
+.ca_btn1,.ca_btn2{width:60px;height:30px;border:0;font-size:14px;}
+.ca_btn1:active,.ca_btn2:active{background-position:center center;}
+.ca_btn1{background:url(../images/crabtnbgok.png) no-repeat center center;color:white;}
+.ca_btn2{background:url(../images/crabtnbgcal.png) no-repeat center center;color:#333 !important;}
+.crabtn_zh{margin-bottom:11px;}
