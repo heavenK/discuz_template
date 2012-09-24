@@ -7,7 +7,7 @@ require '../source/function/function_forum.php';
 
 C::app()->init();
 
-$section = isset($_GET['section']) ? $_GET['section'] : 0;
+$section = isset($_REQUEST['section']) ? $_REQUEST['section'] : 0;
 if($section == 0) $typeid = 43;
 elseif($section == 1) $typeid = 42;
 elseif($section == 2) $typeid = 44;
@@ -16,11 +16,11 @@ else {
 }
 
 
-isset($_GET['author']) ? $author = $_GET['author'] : $res['err'] = 1;
-isset($_GET['uid']) ? $uid = $_GET['uid'] : $res['err'] = 1;
+isset($_REQUEST['author']) ? $author = $_REQUEST['author'] : $res['err'] = 1;
+isset($_REQUEST['uid']) ? $uid = $_REQUEST['uid'] : $res['err'] = 1;
 
-isset($_GET['subject']) ? $subject = $_GET['subject'] : $res['err'] = 1;
-$message = isset($_GET['message']) ? $_GET['message'] : '';
+isset($_REQUEST['subject']) ? $subject = $_REQUEST['subject'] : $res['err'] = 1;
+$message = isset($_REQUEST['message']) ? $_REQUEST['message'] : '';
 
 $message = iconv('utf-8','gbk',$message);
 $subject = iconv('utf-8','gbk',$subject);
@@ -78,6 +78,7 @@ if($res['err'] != 1){
 			'status' => 100
 		));
 	if($pid) {
+		C::t('forum_forum')->update_forum_counter(1005, 0, 1, 1);
 		$res['tid'] = $tid;
 		$res['pid'] = $pid;
 		$res['err'] = 0;

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ADV>
+  <ad>
+    <imgURL>http://bbs-test.we54.com/iosapi/ad00.jpg</imgURL>
+    <type>4</type>
+    <content> </content>
+  </ad>
+  <ad>
+    <imgURL>http://bbs-test.we54.com/iosapi/ad01.jpg</imgURL>
+    <type>4</type>
+    <content> </content>
+  </ad>
+  <ad>
+    <imgURL>http://bbs-test.we54.com/iosapi/ad02.jpg</imgURL>
+    <type>4</type>
+    <content> </content>
+  </ad>
+  <ad>
+    <imgURL>http://bbs-test.we54.com/iosapi/ad03.jpg</imgURL>
+    <type>4</type>
+    <content> </content>
+  </ad>
+</ADV>

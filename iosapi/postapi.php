@@ -7,12 +7,12 @@ require '../source/function/function_forum.php';
 
 C::app()->init();
 
-isset($_GET['tid']) ? $tid = $_GET['tid'] : $res['err'] = 1;
+isset($_REQUEST['tid']) ? $tid = $_REQUEST['tid'] : $res['err'] = 1;
 
-isset($_GET['author']) ? $author = $_GET['author'] : $res['err'] = 1;
-isset($_GET['uid']) ? $uid = $_GET['uid'] : $res['err'] = 1;
+isset($_REQUEST['author']) ? $author = $_REQUEST['author'] : $res['err'] = 1;
+isset($_REQUEST['uid']) ? $uid = $_REQUEST['uid'] : $res['err'] = 1;
 
-$message = isset($_GET['message']) ? $_GET['message'] : '';
+$message = isset($_REQUEST['message']) ? $_REQUEST['message'] : '';
 
 $message = iconv('utf-8','gbk',$message);
 $author = iconv('utf-8','gbk',$author);
@@ -42,7 +42,9 @@ $pid = insertpost(array(
 		'status' => 100
 	));
 if($pid) {
+	
 	updatethreadcount($tid,0);
+	C::t('forum_forum')->update_forum_counter(1005, 0, 1, 1);
 	$res['tid'] = $tid;
 	$res['pid'] = $pid;
 	$res['err'] = 0;

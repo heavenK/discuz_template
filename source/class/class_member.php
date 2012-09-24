@@ -609,7 +609,7 @@ class register_ctl {
 
 			if(!$activation) {
 				$uid = uc_user_register(addslashes($username), $password, $email, $questionid, $answer, $_G['clientip']);
-
+				
 				if($uid <= 0) {
 					if($uid == -1) {
 						if($_GET['phone_reg']){
@@ -727,6 +727,12 @@ class register_ctl {
 			}else if($pass=="nicknameexist"){
 				uc_user_delete($uid);
 				C::t('common_member')->delete_no_validate($uid);
+				
+				if($_GET['phone_reg']){
+					$res['registerCheck'] = -5;
+					echo json_encode($res);
+					exit;
+				}
 				showmessage('nickname_exists');
 			}else{
 				uc_user_delete($uid);

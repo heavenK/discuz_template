@@ -1,12 +1,7 @@
 <!--{if $do == 'feed'}-->
-	<!--{template common/other_header}-->
+	<!--{template common/follow_other_header}-->
 <link rel="stylesheet" type="text/css" href="{$_G[siteurl]}template/we54/common/king_space.css" />
-	<div id="pt" class="bm cl">
-		<div class="z">
-			<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
-			<a href="home.php?mod=follow">{lang follow}</a>
-		</div>
-	</div>
+	
 	<style id="diy_style" type="text/css"></style>
 	<div class="wp">
 		<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
@@ -14,20 +9,10 @@
 	<div id="ct" class="ct2_a wp cl kaiser_ct2_a_wp_cl">
 		<!--{if $_G[setting][homestyle]}-->
 			<div class="appl">
-				<!--{subtemplate common/userabout}-->
+				 
 			</div>
 		<!--{else}-->
-		<div class="appl">
-			<div class="tbn">
-				<h2 class="mt bbda">{lang follow}</h2>
-				<ul>
-					<li$actives[follow]><a href="home.php?mod=follow&view=follow">{lang follow_following}</a></li>
-					<li$actives[special]><a href="home.php?mod=follow&view=special">{lang follow_special_following}</a></li>
-					<li$actives[other]><a href="home.php?mod=follow&view=other">{lang follow_hall}</a></li>
-					<!--{hook/follow_nav_extra}-->
-				</ul>
-			</div>
-		</div>
+			<!--{subtemplate home/space_left_nav}-->
 		<!--{/if}-->
 		<div class="mn">
 		<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
@@ -788,6 +773,7 @@
 .xg1 a { color:#000 !important; text-decoration:none;} .xg1 .xi2{ color:#000 !important; text-decoration:none;}
 .card { padding: 0; width: 295px !important; border-color:#fff; background: #FDFEFF; }
 .p_pop, .p_pof, .sllt { box-shadow:0 0 0 0;}
+.aset2 .btn {  border:0; padding:0;}
 </style>
 
 <!--{subtemplate common/footer}-->

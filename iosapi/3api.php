@@ -2,22 +2,24 @@
 define('APPTYPEID', 2);
 define('CURSCRIPT', 'forum');
 
-$pic[0]['imgURL'] = "http://bbs-test.we54.com/iosapi/ad01.jpg";
-$pic[0]['type'] = "4";
-$pic[0]['content'] = "";
+$xmlDoc = new DOMDocument(); 
+$xmlDoc->load('ad.xml'); 
 
-$pic[1]['imgURL'] = "http://bbs-test.we54.com/iosapi/ad02.jpg";
-$pic[1]['type'] = "4";
-$pic[1]['content'] = "";
+$ads = $xmlDoc->getElementsByTagName("ad"); 
 
+$i=0;
+foreach($ads as $ad){
+	$imgURL = $ad->getElementsByTagName("imgURL"); 
+	$type = $ad->getElementsByTagName("type");
+	$content = $ad->getElementsByTagName("content");
+	
+	$pic[$i]['imgURL'] = $imgURL->item(0)->nodeValue; 
+	$pic[$i]['type'] = $type->item(0)->nodeValue; 
+	$pic[$i]['content'] = $content->item(0)->nodeValue; 
 
-$pic[2]['imgURL'] = "http://bbs-test.we54.com/iosapi/ad03.jpg";
-$pic[2]['type'] = "4";
-$pic[2]['content'] = "";
+	$i++;
+}
 
-$pic[3]['imgURL'] = "http://bbs-test.we54.com/iosapi/ad04.jpg";
-$pic[3]['type'] = "4";
-$pic[3]['content'] = "";
 
 $res['pics'] = $pic;
 

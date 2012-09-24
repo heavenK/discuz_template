@@ -6,7 +6,7 @@ require '../source/class/class_core.php';
 require '../source/function/function_forum.php';
 
 $xmlDoc = new DOMDocument(); 
-$xmlDoc->load('http://bbs.we54.com/bbs_cms/adv.xml'); 
+$xmlDoc->load('adv.xml'); 
 
 $ads = $xmlDoc->getElementsByTagName("AD1"); 
 
