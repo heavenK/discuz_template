@@ -45,7 +45,8 @@ if($_GET['operation'] == 'upload') {
 			if(!empty($file) && is_array($file)) {
 				$url = pic_get($file['filepath'], 'album', $file['thumb'], $file['remote']);
 				$bigimg = pic_get($file['filepath'], 'album', 0, $file['remote']);
-				echo "{\"picid\":\"$file[picid]\", \"url\":\"$url\", \"bigimg\":\"$bigimg\"}";
+				$size = round(($file['size'] / 1024),2);
+				echo "{\"picid\":\"$file[picid]\", \"url\":\"$url\", \"bigimg\":\"$bigimg\",\"size\":\"$size\"}";
 				$showerror = false;
 			}
 		}
