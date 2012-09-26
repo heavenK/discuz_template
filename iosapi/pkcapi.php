@@ -34,6 +34,7 @@ foreach($query as $p){
 
 	$attachmentns = C::t('forum_attachment_n')->fetch_all_by_id('tid:'.$p['tid'], 'tid', $p['tid'] ,'' ,false ,false ,false ,4);
 	$j=0;
+	$attach = array();
 	foreach($attachmentns as $att){
 		$attach[$j] = "http://bbs-test.we54.com/data/attachment/forum/".$att['attachment'];
 		$j++;
