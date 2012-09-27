@@ -178,7 +178,7 @@
 .kaiser_ttp_bm_cl li				{ line-height:32px; color:#334f67;}
 .kaiser_ttp_bm_cl a					{ width:auto; height:auto; border:none; display:inline; padding:0 11px; background:none; color:#334f67;}
 .kaiser_ttp_bm_cl a:hover			{ background:none; text-decoration:underline;}
-.kaiser_ttp_bm_cl .a a				{ padding:0 11px 0 3px; background:none; color:#334f67;}
+.kaiser_ttp_bm_cl .a a				{ padding:0 11px; background:none; color:#334f67;}
 .kaiser_ttp_bm_cl .a a:hover		{ background:none;}
 .tl .kaiser_pailie a				{ color:#666666;}
 .tl .kaiser_pailie em				{ margin:0 15px; color:#666666;}

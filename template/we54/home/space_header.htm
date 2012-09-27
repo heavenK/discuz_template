@@ -92,7 +92,7 @@
                 </div>
             	<form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes" onSubmit="{if $_G['setting']['pwdsafety']}pwmd5('ls_password');{/if}return lsSubmit();">
                 <!--{if $_G['uid']}-->
-                <div id="um" style=" float:right;">
+                <div id="um" style=" font-family:'ËÎÌå'; float:right;">
                     <p>
                         <strong class="vwmy{if $_G['setting']['connect']['allow'] && $_G[member][conisbind]} qq{/if}"><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a></strong>
                         <!--{if $_G['group']['allowinvisible']}-->
