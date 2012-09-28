@@ -187,7 +187,7 @@ function uploadProgress(file, bytesLoaded, bytesTotal) {
 		var percent = Math.ceil((bytesLoaded / bytesTotal) * 100);
 
 		var progress = new FileProgress(file, this.customSettings.progressTarget);
-		progress.setStatus("正在上传("+percent+"%)...");
+		progress.setStatus(""+percent+"%");
 
 	} catch (ex) {
 		this.debug(ex);
@@ -225,24 +225,47 @@ function uploadSuccess(file, serverData) {
 		} else if(this.customSettings.uploadType == 'album') {
 			var data = eval('('+serverData+')');
 			if(parseInt(data.picid)) {
+				var num=$('filenum').innerHTML;
+				var size=$('allsize').innerHTML;
+				var filenum=parseInt(num)+1;
+				var allsize=Number(size)+Number(data.size);
+				allsize=allsize.toFixed(2);
+				$('filenum').innerHTML=filenum;
+				$('allsize').innerHTML=allsize;
+
 				var newTr = document.createElement("TR");
 				newTr.id = 'attach_'+data.picid;
 				var newTd = document.createElement("TD");
-				var img = new Image();
+			/*	var img = new Image();
 				img.src = data.url;
 				var imgObj = document.createElement("img");
 				imgObj.src = img.src;
 				newTd.className = 'c';
 				newTd.appendChild(imgObj);
 				newTr.appendChild(newTd);
-				newTd = document.createElement("TD");
+				newTd = document.createElement("TD");*/
+				newTd.width="48%";
+				newTd.className = 'td_zh';
 				newTd.innerHTML = '<strong>'+file.name+'</strong>';
 				newTr.appendChild(newTd);
 				newTd = document.createElement("TD");
+				newTd.innerHTML = '<strong>'+data.size+'KB</strong>';
+				newTr.appendChild(newTd);
+				newTd = document.createElement("TD");
+				newTd.width="28%";
+				newTd.innerHTML = '<div class="progressBarInProgress_zh"><div class="Progress_zh"></div></div>';
+				newTr.appendChild(newTd);
+				newTd = document.createElement("TD");
+				newTd.className = 'delbtn_zh';
+				newTd.innerHTML = '<span id="showmsg' + data.picid + '"><a href="javascript:;" onclick="delAttach(attach_'+data.picid + ');return false;" class="xi2 xi2_zh"></a></span>';
+				newTr.appendChild(newTd);
+				newTd = document.createElement("TD");
 				newTd.className = 'd';
+				newTd.style.display = "none";
 				newTd.innerHTML = '图片描述<br/><textarea name="title['+data.picid+']" cols="40" rows="2" class="pt"></textarea>';
 				newTr.appendChild(newTd);
 				this.customSettings.imgBoxObj.appendChild(newTr);
+				
 			} else {
 				showDialog('图片上传失败', 'notice', null, null, 0, null, null, null, null, sdCloseTime);
 			}
@@ -414,4 +437,26 @@ function uploadError(file, errorCode, message) {
 	} catch (ex) {
         this.debug(ex);
     }
+}
+
+function delAttach(id) {
+	var size=id.childNodes[1].childNodes[0].innerHTML;
+	var num=$('filenum').innerHTML;
+	var allsize=$('allsize').innerHTML;
+	size=Number(allsize)-parseFloat(size);
+	size=size.toFixed(2);
+	num=Number(num)-1;
+	$('filenum').innerHTML=num;
+	$('allsize').innerHTML=size;
+	$('attachbody').removeChild(id);
+	
+	if($('attachbody').innerHTML == '') {
+	//	addAttach();
+	}
+//	$('localimgpreview_' + id + '_menu') ? document.body.removeChild($('localimgpreview_' + id + '_menu')) : null;
+}
+function delAllAttach(){
+	$('attachbody').innerHTML='';
+	$('filenum').innerHTML=0;
+	$('allsize').innerHTML=0
 }

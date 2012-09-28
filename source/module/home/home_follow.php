@@ -35,12 +35,14 @@ space_merge($space, 'profile');
 space_merge($space, 'field_home');
 
 //add
+$spacecp=getuserbyuid($uid);
+space_merge($spacecp, 'profile');
 space_merge($space, 'count');
 //$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
 if(!isset($space['self'])&&$viewself){
 	$space['self']=1;
 }
-if($_G['member']['extgroupids']==22){
+if($_G['member']['extgroupids']==22||strpos($_G['member']['extgroupids'],'22')!==false){
 	$space['vertifyico']='static/image/common/kaiser_ext.png';
 }
 $followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);

@@ -18,6 +18,71 @@ if($_GET['op'] == 'recount') {
 	C::t('common_member_count')->update($_G['uid'], array('attachsize'=>$newsize));
 	showmessage('do_success', 'home.php?mod=spacecp&ac=upload');
 }
+if($_GET['operation'] == 'creatalbum'){
+	if($_POST['albumop'] == 'creatalbum') {
+		$catid = intval($catid);
+		$_POST['albumname'] = empty($_POST['albumname'])?'':getstr($_POST['albumname'], 50);
+		$_POST['albumname'] = censor($_POST['albumname'], NULL, TRUE);
+
+		if(is_array($_POST['albumname']) && $_POST['albumname']['message']) {
+			showmessage($_POST['albumname']['message']);
+		}
+
+		if(empty($_POST['albumname'])) $_POST['albumname'] = gmdate('Ymd');
+
+		$_POST['friend'] = intval($_POST['friend']);
+
+		$_POST['target_ids'] = '';
+		if($_POST['friend'] == 2) {
+			$uids = array();
+			$names = empty($_POST['target_names']) ? array() : explode(' ', str_replace(array(lang('spacecp', 'tab_space'), "\r\n", "\n", "\r"), ' ', $_POST['target_names']));
+			if($names) {
+				$uids = C::t('common_member')->fetch_all_uid_by_username($names);
+			}
+			if(empty($uids)) {
+				$_POST['friend'] = 3;
+			} else {
+				$_POST['target_ids'] = implode(',', $uids);
+			}
+		} elseif($_POST['friend'] == 4) {
+			$_POST['password'] = trim($_POST['password']);
+			if($_POST['password'] == '') $_POST['friend'] = 0;
+		}
+		if($_POST['friend'] !== 2) {
+			$_POST['target_ids'] = '';
+		}
+		if($_POST['friend'] !== 4) {
+			$_POST['password'] = '';
+		}
+
+		$setarr = array();
+		$setarr['albumname'] = $_POST['albumname'];
+		$setarr['catid'] = intval($_POST['catid']);
+		$setarr['uid'] = $_G['uid'];
+		$setarr['username'] = $_G['username'];
+		$setarr['dateline'] = $setarr['updatetime'] = $_G['timestamp'];
+		$setarr['friend'] = $_POST['friend'];
+		$setarr['password'] = $_POST['password'];
+		$setarr['target_ids'] = $_POST['target_ids'];
+		$setarr['depict'] = dhtmlspecialchars($_POST['depict']);
+
+		$albumid = C::t('home_album')->insert($setarr ,true);
+
+		if($setarr['catid']) {
+			C::t('home_album_category')->update_num_by_catid('1', $setarr[catid]);
+		}
+
+		if(empty($space['albumnum'])) {
+			$space['albums'] = C::t('home_album')->count_by_uid($space['uid']);
+			C::t('common_member_count')->update($_G['uid'], array('albums' => $space['albums']));
+		} else {
+			C::t('common_member_count')->increase($_G['uid'], array('albums' => 1));
+		}
+
+	}
+	showmessage('do_success',dreferer());
+
+}
 
 if(submitcheck('albumsubmit') && helper_access::check_module('album')) {
 
