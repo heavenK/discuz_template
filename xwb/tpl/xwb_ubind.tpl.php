@@ -7,13 +7,14 @@
 <link href="<?php echo XWB_plugin::getPluginUrl('images/xwb_admin.css');?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?php echo XWB_plugin::getPluginUrl('images/xwb.js');?>"></script>
 <style>
+body{ background:#FFF;}
 #unbound	{ padding-left:6px; padding-top:21px;}
 #unbound .kaiser_sina_main					{ width:799px; padding:0;}
 #unbound .kaiser_sina_con-l					{ width:64px; height:64px; margin-right:0; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-l .binding		{ width:64px; height:64px; padding:0; background:url(/template/we54/images/kiaser_space_bangding_sina.png) no-repeat; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r					{ width:80%; padding:4px 0 0 19px; font-family:"微软雅黑"; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r h4				{ padding:0 16px 0 0; font-size:12px; font-weight:normal; color:#999; line-height:24px; overflow:hidden; float:left;}
-#unbound .kaiser_sina_con-r a				{ width:126px; height:24px; background:none; overflow:hidden; float:left;}
+#unbound .kaiser_sina_con-r a				{ width:131px; height:24px; background:none; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r p				{ width:700px; margin-left:0; margin-top:10px; display:inline; font-size:12px; font-weight:normal; color:#999; line-height:16px; overflow:hidden; float:left;}
 </style>
 </head>
@@ -25,7 +26,7 @@
                 <div class="binding"></div>
             </div> 
             <div class="con-r kaiser_sina_con-r">
-				<h4>点击按钮，立刻绑定QQ帐号</h4><a class="binding-btn binding-w" href="javascript:void(0)" onclick="window.top.location='<?php echo XWB_plugin::getEntryURL('xwbAuth.login');?>'"><img src="template/we54/images/kaiser_sina_button.png" /></a>
+				<h4>点击按钮，立刻绑定QQ帐号</h4><a class="binding-btn binding-w" href="javascript:void(0)" onclick="window.top.location='<?php echo XWB_plugin::getEntryURL('xwbAuth.login');?>'"><img src="template/we54/images/kaiser_sina_bangding_button.png" /></a>
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
