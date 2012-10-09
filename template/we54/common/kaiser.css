@@ -237,6 +237,9 @@
 .kaiser_new_view_ttp_bm_cl li a		{ width:82px; height:22px; padding:0; background:#FFF; border:1px solid #cfcfcf; text-align:center; line-height:23px; overflow:hidden; float:left;}
 .kaiser_new_view_ttp_bm_cl li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
 .kaiser_new_view_ttp_bm_cl .a a		{ width:82px; height:22px; padding:0; background:#0080cc; border:1px solid #0080cc; text-align:center; font-weight:normal; color:#FFF; line-height:23px; overflow:hidden; float:left;}
+#pt.kaiser_bm_cl_new .z				{ top:-2px;}
+#pt.kaiser_bm_cl_new .z em							{ width:auto; height:auto; background:none; line-height:16px; float:none;}
+#pt.kaiser_bm_cl_new .z a, #pt.kaiser_bm_cl_new .z em, #pt.kaiser_bm_cl_new .z span	{ float:none;}
 
 /*
 个人资料
