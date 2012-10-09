@@ -51,8 +51,8 @@
 	<div class="bod"></div>
 <!--{if $space['self']}-->
 	<ul class="ea">
-		<li<!--{if $_GET['do']=='pm'}--> class="pre_shouw" <!--{/if}-->><a href=""><b><img src="/template/we54/images/email.gif" width="16" height="16" border="0"/></b>私信</a></li>
-		<li<!--{if $_GET['do']=='notice'}--> class="pre_shouw" <!--{/if}-->><a href=""><b><img src="/template/we54/images/alert.gif" width="16" height="16" border="0"/></b>提醒</a></li>
+		<li<!--{if $_GET['do']=='pm'}--> class="pre_shouw" <!--{/if}-->><a href="/home.php?mod=space&do=pm"><b><img src="/template/we54/images/email.gif" width="16" height="16" border="0"/></b>私信</a></li>
+		<li<!--{if $_GET['do']=='notice'}--> class="pre_shouw" <!--{/if}-->><a href="/home.php?mod=space&do=notice"><b><img src="/template/we54/images/alert.gif" width="16" height="16" border="0"/></b>提醒</a></li>
 	</ul>
 	<div class="bod"></div>
 	<div<!--{if $_GET['mod'] == 'spacecp'&&($_GET['ac']=='profile'||$_GET['ac']=='plugin'||$_GET['ac']=='avatar')}--> class="pre_shouw" <!--{else}--> class="aset"<!--{/if}-->>
