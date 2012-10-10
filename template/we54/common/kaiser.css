@@ -186,6 +186,7 @@
 .tl .kaiser_list_pailie_th th		{ padding:0; border:none; line-height:32px;}
 .tl th, .tl td						{ padding:9px 0; border-bottom:1px solid #ededed;}
 .tl .th td, .tl .th th				{ height:auto; vertical-align:inherit;}
+.tl .th th							{ padding:0 0 0 10px;}
 .kaiser_list_bg						{ background:#f7f7f7;}
 .kaiser_list_bm_bw0_pgs_cl .pgb{ margin-top:26px;}
 .kaiser_list_bm_bw0_pgs_cl a:hover	{ text-decoration:none;}
@@ -226,13 +227,15 @@
 #backgroundPopup					{ display:none; position:fixed; _position:absolute; height:100%; width:100%; top:0; left:0; background:#000000; z-index:99999;}
 .kaiser_list_tp_pgt .pg				{ margin-top:0;}
 .kaiser_list_bottom_pgt .pg			{ margin-top:10px;}
+#pgt .kaiser_list_bottom_pgt .pg .pgb{ margin-top:0; float:left;}
+#pgt .kaiser_list_bottom_pgt .pg .pgb a{ font-family:"Î¢ÈíÑÅºÚ"; font-size:12px;}
 .kaiser_new_view a					{ width:82px; height:22px; margin:29px 10px 0 0; display:inline; background:#0080CC; border:1px solid #0080CC; color:#FFF; text-align:center; line-height:23px; overflow:hidden; float:left;}
 .kaiser_new_view a:hover			{ background:#ecf8ff; color:#0080cc; text-decoration:none;}
 .kaiser_new_view_ttp_bm_cl			{ width:600px; padding-top:0; border:none; float:left;}
 .kaiser_new_view_page				{ width:600px; float:left;}
 #pgt .kaiser_new_view_page .pg, #pgt .kaiser_new_view_page .pgb{ margin-top:17px;}
 .kaiser_new_view_tl_bm_bmw			{ border:none; border-top:2px solid #0080cc;}
-.kaiser_new_view_tl_bm_bmw .th		{ height:32px; padding:0 0 0 10px; background:#FFF;}
+.kaiser_new_view_tl_bm_bmw .th		{ height:32px; padding:0; background:#FFF; overflow:hidden;}
 .kaiser_new_view_ttp_bm_cl li		{ width:94px; height:24px; padding-bottom:0; overflow:hidden; float:left;}
 .kaiser_new_view_ttp_bm_cl li a		{ width:82px; height:22px; padding:0; background:#FFF; border:1px solid #cfcfcf; text-align:center; line-height:23px; overflow:hidden; float:left;}
 .kaiser_new_view_ttp_bm_cl li a:hover{ background:#ecf8ff; border:1px solid #0080cc; color:#0080cc; text-decoration:none;}
