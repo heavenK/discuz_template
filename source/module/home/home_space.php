@@ -111,7 +111,7 @@ if($do != 'index') {
 }
 //add by zh
 space_merge($space, 'profile');
-$spacecp = getuserbyuid($_G['uid']);
+$spacecp = getuserbyuid($uid);
 space_merge($spacecp, 'profile');
 space_merge($spacecp, 'count');
 //$data=C::t('common_usergroup')->findgroupid_by('认证会员','','',0,0,'icon');
@@ -119,7 +119,6 @@ if($_G['member']['groupid']==22||strpos($_G['member']['extgroupids'],'22')!==fal
 	$spacecp['vertifyico']='static/image/common/kaiser_ext.png';
 }
 
-//add
 $followerlist = C::t('home_follow')->fetch_all_following_by_uid($_G['uid']);
 foreach($followerlist as $k=>$val){
 	if($val['followuid']==$uid){
@@ -127,6 +126,33 @@ foreach($followerlist as $k=>$val){
 		break;
 	}
 }
+//私信
+$filter = in_array($_GET['filter'], array('newpm', 'privatepm', 'announcepm')) ? $_GET['filter'] : 'privatepm';
+$newpm = $newpmcount = 0;
+
+if($filter == 'privatepm' || $filter == 'announcepm' || $filter == 'newpm') {
+	$announcepm  = 0;
+	foreach(C::t('common_member_grouppm')->fetch_all_by_uid($_G['uid'], $filter == 'announcepm' ? 1 : 0) as $gpmid => $gpuser) {
+		$gpmstatus[$gpmid] = $gpuser['status'];
+		if($gpuser['status'] == 0) {
+			$announcepm ++;
+		}
+	}
+	$gpmids = array_keys($gpmstatus);
+	if($gpmids) {
+		foreach(C::t('common_grouppm')->fetch_all_by_id_authorid($gpmids) as $grouppm) {
+			$grouppm['message'] = cutstr(strip_tags($grouppm['message']), 100, '');
+			$grouppms[] = $grouppm;
+		}
+	}
+}
+loaducenter();
+
+if($filter == 'privatepm' || $filter == 'newpm') {
+	$newpmarr = uc_pm_checknew($uid, 1);
+	$newpm = $newpmarr['newpm'];
+}
+$newpmcount = $newpm + $announcepm;
 //end add
 require_once libfile('space/'.$do, 'include');
 
