@@ -6,9 +6,9 @@
 				.xl2 .xl2_r em { padding-right: 0; }
 			.xl2 .xl2_r i { padding-left: 10px; }
 </style>
-<div id="pt" class="bm cl">
+<div id="pt" class="bm cl kaiser_bm kaiser_bm_cl_new">
 	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><!--{if helper_access::check_module('guide')}--><em>&raquo;</em><a href="forum.php?mod=guide&view=index">{lang guide}</a><!--{/if}-->$navigation
+		<b>µ±«∞Œª÷√£∫</b><a href="http://www.we54.com/" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="./"{if $_G['setting']['forumjump']} id="fjump" onmouseover="delayShow(this, 'showForummenu($_G[fid])');" class="showmenu" {/if}>{$_G[setting][navs][2][navname]}</a>$navigation
 	</div>
 </div>
 <div class="boardnav">
@@ -48,7 +48,7 @@
                 <a onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav" class="kaiser_pn_post_btn"></a>
                 <div class="kaiser_new_view_page">
                     <!--{if helper_access::check_module('guide')}-->
-                    <span class="pgb y" style=" margin-top:17px;"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
+                    <span class="pgb y" style=" margin-top:17px; margin-right:4px;"><a href="forum.php?mod=guide">{lang guide_index}</a></span>
                     <!--{/if}-->
                     <span class="pgt kaiser_list_bottom_pgt">$multipage</span>
                 </div>
