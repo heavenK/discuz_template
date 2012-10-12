@@ -374,9 +374,9 @@ function checkinvite() {
 function checknickname(id) {
 	errormessage(id);
 	var nickname = trim($(id).value);
-	if (nickname.length>14)
+	if (nickname.length>7)
 	{
-		errormessage(id,'<img src="template/we54/common/images/register_no.png" />昵称不能大于14个字符');
+		errormessage(id,'<img src="template/we54/common/images/register_no.png" />昵称不能大于7个字符');
 		return;
 	}
 	if (nickname=='')
