@@ -98,6 +98,7 @@
 				</table>
 			</div>
 			<!--{hook/viewthread_avatar $postcount}-->
+            <p><!--{hook/viewthread_sidetop $postcount}--></p>
 			<p class="kaiser_member_font"><em><a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">{$post[authortitle]}</a></em></p>
 			<!--{if $post['customstatus']}--><p class="xg1">$post[customstatus]</p><!--{/if}-->
 			</div>
@@ -108,7 +109,7 @@
 					<div class="tip_c">$post['authortitle'], {lang credits} $post['credits'], {lang thread_groupupgrade} $post['upgradecredit'] {lang credits}</div>
 				</div>
 			<!--{/if}-->
-			<!--{hook/viewthread_sidetop $postcount}-->
+			
 			<!--{if $post[custominfo][left]}--><dl class="pil cl">{$post[custominfo][left]}</dl><!--{/if}-->
             <!--{if $post[authorid] != $_G[uid]}-->
 				<ul class="xl xl2 o cl" style=" margin:5px 0 5px 14px;">
