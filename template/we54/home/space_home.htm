@@ -500,6 +500,7 @@
 		</div>
 
 		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+		<!--{if !$_G[setting][homepagestyle]}-->
 		<div id="frame1_right" class="right_new">
 			<div class="block move-span">
 				<div class="blocktitle title"><span><!--{if $space['self']}-->我的<!--{else}-->TA的<!--{/if}-->{lang friends}</span></div>
@@ -515,7 +516,25 @@
 				</div>
 			</div>
 		</div>
+		<!--{/if}-->
 	</div>
+<!--{if $_G[setting][homepagestyle]}-->
+<div id="frame1_right" class="right_new">
+			<div class="block move-span">
+				<div class="blocktitle title"><span><!--{if $space['self']}-->我的<!--{else}-->TA的<!--{/if}-->{lang friends}</span></div>
+					<div class="dxb_bc">
+						$friendhtml
+					</div>
+			</div>
+			<div class="block move-span">
+				<div class="blocktitle title"><span>最近来访</span></div>
+					<div class="dxb_bc">
+						$visitorhtml
+					</div>
+				</div>
+			</div>
+		</div>
+<!--{/if}-->
 	<!--/content-->
 	
 </div>
@@ -527,21 +546,6 @@
 <!--{else}-->
 
 			</div>
-		<div id="frame1_right" class="right_new">
-			<div class="block move-span">
-				<div class="blocktitle title"><span><!--{if $space['self']}-->我的<!--{else}-->TA的<!--{/if}-->{lang friends}</span></div>
-					<div class="dxb_bc">
-						$friendhtml
-					</div>
-			</div>
-			<div class="block move-span">
-				<div class="blocktitle title"><span>最近来访</span></div>
-					<div class="dxb_bc">
-						$visitorhtml
-					</div>
-				</div>
-			</div>
-		</div>
 		</div>
 	<!--{if $_G[setting][homepagestyle]}-->
 	</div>
