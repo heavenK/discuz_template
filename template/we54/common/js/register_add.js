@@ -374,6 +374,11 @@ function checkinvite() {
 function checknickname(id) {
 	errormessage(id);
 	var nickname = trim($(id).value);
+	if (nickname.length>14)
+	{
+		errormessage(id,'<img src="template/we54/common/images/register_no.png" />昵称不能大于14个字符');
+		return;
+	}
 	if (nickname=='')
 	{
 		errormessage(id,'<img src="template/we54/common/images/register_no.png" />社区昵称不能为空');

@@ -29,7 +29,16 @@
 		<!--{if $leftside}-->
 			<div id="sd_bdl" class="bdl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'dz'});" style="width:{$_G['setting']['leftsidewidth']}px;margin-left:-{$_G['leftsidewidth_mwidth']}px; border:none; background:none;">
 				<!--[diy=diyleftsidetop]--><div id="diyleftsidetop" class="area"></div><!--[/diy]-->
-
+				<div class="kaiser_list_leftbav">
+                    <em>
+                        <!--{loop $_G['cache']['forums'] $bforum}-->
+                            <!--{if $bforum['fup'] == $_G['forum']['fup'] && $bforum['status']}-->
+                                <a href="forum.php?mod=forumdisplay&fid=$bforum[fid]" class="{if $_G['forum']['name'] == $bforum['name']}kaiser_list_leftbav_on{else}kaiser_list_leftbav_out{/if}">$bforum['name']</a>
+                            <!--{/if}-->
+                        <!--{/loop}-->
+                    </em>
+                    
+                </div>
 				<div class="kaiser_banzhu">
                     <div class="kaiser_banzhu_box">
                     	<!--{if $_G['forum']['moderators']}-->

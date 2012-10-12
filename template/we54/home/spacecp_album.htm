@@ -6,11 +6,7 @@
 <div id="ct" class="wp ct2 cl">
 	<div class="mn kaiser_mn">
 		<div class="bm bw0 zh_bm">
-				<div class="bm_h kaiser_bm_h">
-					<!--{if $space[self] && helper_access::check_module('album')}--><span class="xi2 y up_zh"><a href="home.php?mod=spacecp&ac=upload&wd=1" class="addnew a_zh" onclick="showWindow('album_create', this.href, 'get', 0);">创建新相册</a></span><span class="xi2 y up_zh"><a href="home.php?mod=spacecp&ac=upload" class="addnew a_zh">{lang upload_pic}</a></span><!--{/if}-->
-					<h1 class="mt mt_zh"><a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><!--{if $space['self']}-->我<!--{else}-->TA<!--{/if}-->的相册</a> <em>&rsaquo;</em>
-								<a href="home.php?mod=space&uid=$space[uid]&do=album&view=me&from=space"><b>$album[albumname]</b></a></h1>
-				</div>
+				<!--{template home/album_head}-->
 			
 <!--{/if}-->
 

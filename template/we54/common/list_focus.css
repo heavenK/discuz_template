@@ -1,6 +1,13 @@
 @charset "gb2312";
 /* CSS Document */
 
+/*×ó²àµ¼º½*/
+.kaiser_list_leftbav				{ width:196px; padding:1px 1px 0 1px; background:#FFF; border:1px solid #f3edda; border-bottom:none; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
+.kaiser_list_leftbav em				{ width:196px; padding:5px 0 17px 0; background:#f7f7ef; overflow:hidden; float:left;}
+.kaiser_list_leftbav em a			{ width:187px; height:38px; margin:3px 0 0 4px; display:inline; text-align:center; font-size:14px; font-weight:bold; line-height:35px; overflow:hidden; float:left;}
+.kaiser_list_leftbav_on				{ background:url(/template/we54/images/kaiser_list_leftbav_bg_on.png) no-repeat; color:#FFF;}
+.kaiser_list_leftbav_out			{ background:url(/template/we54/images/kaiser_list_leftbav_bg_out.png) no-repeat; color:#835b2b;}
+
 /*°æÖ÷*/
 .kaiser_banzhu						{ width:196px; padding:1px; background:#FFF; border:1px solid #f3edda; font-family:"Î¢ÈíÑÅºÚ"; float:left;}
 .kaiser_banzhu_box					{ width:196px; padding:0 0 10px 0; background:#f7f7ef; overflow:hidden; float:left;}

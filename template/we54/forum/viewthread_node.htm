@@ -25,7 +25,7 @@
 			<!--{if $_G['setting']['authoronleft']}-->
 				<div class="pi" style=" position:relative; overflow:visible; _padding:10px 0 8px 15px;">
                 	<div class="kaiser_viewthread_jiantou"><img src="template/we54/images/kaiser_viewthread_sanjiao.png" /></div>
-					<div class="authi"><a href="home.php?mod=space&uid=$post['authorid']" target="_blank" class="xw1">$post[field1]</a>$authorverifys</div>
+					<div class="authi"><a href="home.php?mod=space&uid=$post['authorid']" target="_blank" class="xw1" style="{if $post['gender'] == 1} color:#0066ff;{elseif $post['gender'] == 2} color:#d84d9c{/if}">$post[field1]</a>$authorverifys</div>
 				</div>
 			<!--{/if}-->
 			<div class="p_pop blk bui kaiser_p_pop_blk_bui" id="userinfo$post[pid]" style="display: none; {if $_G['setting']['authoronleft']}margin-top: -11px;{/if}">
