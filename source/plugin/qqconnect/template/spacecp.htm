@@ -570,9 +570,9 @@
 	<br />
 	<!--{/if}-->
 
-	<!--<h2>
+	<h2>
 		<a href="javascript:;" onclick="display('unbind');{if $_G[member][conisregister]}$('newpassword1').focus();{/if}" class="xi2">{lang qqconnect:connect_config_unbind}</a>
-	</h2>-->
+	</h2>
 
 	<!--{if $_G[member][conisregister]}-->
 		<div id="unbind" style="display:none;">
@@ -623,6 +623,7 @@
 		<div class="bm2_b bw0 hm kaiser_bm2_b_bw0_hm"></div>
 		<div class="bm2_b bm2_b_y bw0 kaiser_bm2_b_bm2_b_y_bw0">
 			<em class="xld">
+            <!--{eval echo $_G['connect']['loginbind_url']}-->
 				<span>点击按钮，立刻绑定QQ帐号</span>
                 <a href="{$_G['connect']['loginbind_url']}"><img src="{IMGDIR}/qq_bind.gif" /></a>
 				<i class="xg1">绑定以后就可以把帖子、回帖同步发到腾讯微博上啦，无需记住本站的帐号和密码，随时使用QQ帐号密码轻松登录</i>
