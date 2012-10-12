@@ -1,8 +1,10 @@
 @charset "gb2312";
 /* CSS Document */
-#ct				{background:url(../images/center_bg.png) repeat-y #fff !important;  border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7; }
-.ct2_a .right_zh		{width:580px !important;margin:0 27px 0 26px;float:left;}
-.right_new		{width:226px;height:870px;float:right;}
-.newbbda		{border-bottom:1px solid #e8e8e8;}
-.tle_zh			{border-bottom:2px solid #f1f1e3;}
-.tle_zh b		{font-size:18px;}
+#ct								{background:url(../images/center_bg.png) repeat-y #fff !important;  border-left:1px solid #e6e1c7; border-right:1px solid #e6e1c7; border-bottom:1px solid #e6e1c7; }
+.widthlimit						{width:580px !important;}
+.ct2_a .right_zh,.ct3_a .right_zh		{width:580px !important;margin:0 27px 0 26px;float:left;}
+.right_new						{width:226px;height:870px;float:right;}
+.newbbda						{border-bottom:1px solid #e8e8e8;}
+.tle_zh							{border-bottom:2px solid #f1f1e3;}
+.tle_zh b						{font-size:18px;}
+.showc							{display:none;}
