@@ -21,7 +21,7 @@ body{ background:#FFF;}
 <body>
     <div id="unbound" class="set-wrap">
     	<!--h3>新浪微博绑定设置</h3-->
-        <?php if ( $_GET['ac'] == "plugin_all" ):?>
+        <?php if ( $_GET['ac'] == 'plugin_all' ):?>
         <div class="main kaiser_sina_main">
         	<div class="con-l kaiser_sina_con-l">
                 <div class="binding"></div>
@@ -37,7 +37,7 @@ body{ background:#FFF;}
             </div>
         </div>
         <?php endif;?>
-        <?php if ( $_GET['ac'] !== "plugin_all" ):?>
+        <?php if ( $_GET['ac'] == 'plugin' ):?>
 			<?php if ( XWB_S_UID > 0 && ! empty($huwbUserRs) ):?>
             <div class="active-s1">
                 <h4>他们已经绑定微博了，你还不行动？</h4>
