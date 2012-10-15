@@ -33,6 +33,7 @@
 </head>
 <body>
     <div id="bound" class="set-wrap">
+    <?php var_dump($_GET); ?>
 		<h3><!--动态同步新浪微博--><span>把我的动态同步到新浪微博，让更多的朋友了解我，关注我<em>（设置后可选择是否同步）</em></span></h3>
         <div class="main">
         	<div class="con-l">
