@@ -51,7 +51,7 @@ body{ background:#FFF;}
             </div> 
             <div class="con-r kaiser_sina_con-r">
 				<h4>点击按钮，立刻绑定QQ帐号</h4>
-                <a class="binding-btn binding-w" href="http://dz.we54.com/home.php?mod=spacecp&ac=plugin&id=sina_xweibo_x2:home_binding" target="_parent">解除已绑定账号？</a>
+                <a class="binding-btn binding-w" href="home.php?mod=spacecp&ac=plugin&id=sina_xweibo_x2:home_binding" target="_parent">解除已绑定账号？</a>
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
