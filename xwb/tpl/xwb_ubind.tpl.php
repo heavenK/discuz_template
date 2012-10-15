@@ -36,7 +36,8 @@ body{ background:#FFF;}
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
-        <?php else:?>
+        <?php endif;?>
+        <?php if ( $_GET['ac'] !== "plugin_all" ):?>
 			<?php if ( XWB_S_UID > 0 && ! empty($huwbUserRs) ):?>
             <div class="active-s1">
                 <h4>他们已经绑定微博了，你还不行动？</h4>
