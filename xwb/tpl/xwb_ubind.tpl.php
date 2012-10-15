@@ -14,8 +14,7 @@ body{ background:#FFF;}
 #unbound .kaiser_sina_con-l .binding		{ width:64px; height:64px; padding:0; background:url(/template/we54/images/kiaser_space_bangding_sina.png) no-repeat; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r					{ width:80%; padding:4px 0 0 19px; font-family:"微软雅黑"; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r h4				{ padding:0 16px 0 0; font-size:12px; font-weight:normal; color:#999; line-height:24px; overflow:hidden; float:left;}
-#unbound .kaiser_sina_con-r a				{ width:131px; height:24px; background:none; font-size:12px; font-weight:normal; color:#006699; line-height:24px; overflow:hidden; float:left;}
-#unbound .kaiser_sina_con-r a:hover			{ text-decoration:underline;}
+#unbound .kaiser_sina_con-r a				{ width:131px; height:24px; background:none; overflow:hidden; float:left;}
 #unbound .kaiser_sina_con-r p				{ width:700px; margin-left:0; margin-top:10px; display:inline; font-size:12px; font-weight:normal; color:#999; line-height:16px; overflow:hidden; float:left;}
 </style>
 </head>
