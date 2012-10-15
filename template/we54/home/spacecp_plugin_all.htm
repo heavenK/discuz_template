@@ -1,0 +1,27 @@
+<!--{template common/header}-->
+<!--{template home/spacecp_header}-->
+<!--{if $op == 'credit'}-->
+	<!--{template home/spacecp_credit_header}-->
+<!--{/if}-->
+<!--{hook/spacecp_profile_top}-->
+<!--{subtemplate home/spacecp_profile_nav}-->
+<div class="mtw bm2 cl kaiser_mtw_bm2_cl">
+    <div class="bm2_b bw0 hm kaiser_bm2_b_bw0_hm"></div>
+    <div class="bm2_b bm2_b_y bw0 kaiser_bm2_b_bm2_b_y_bw0">
+        <em class="xld">
+            <span>点击按钮，立刻绑定QQ帐号</span>
+            <!--{if $_G['member']['conisbind']}-->
+            <a href="home.php?mod=spacecp&ac=plugin&id=qqconnect:spacecp" style=" line-height:24px;">解除已绑定账号？</a>
+            <!--{else}-->
+            <a href="{if $_G['member']['conisbind']}home.php?mod=spacecp&ac=plugin&id=qqconnect:spacecp{else}connect.php?mod=login&op=init&type=loginbind&referer=home.php%3Fmod%3Dspacecp%26ac%3Dplugin%26id%3Dqqconnect%3Aspacecp{/if}"><img src="{IMGDIR}/qq_bind.gif" /></a>
+            <!--{/if}-->
+            <i class="xg1">绑定以后就可以把帖子、回帖同步发到腾讯微博上啦，无需记住本站的帐号和密码，随时使用QQ帐号密码轻松登录</i>
+
+        </em>
+    </div>
+</div>
+<!--{eval include(template('sina_xweibo_x2:home_binding'));}-->
+</div></div>
+<!--{subtemplate home/space_left_nav}-->
+
+<!--{template common/footer}-->
