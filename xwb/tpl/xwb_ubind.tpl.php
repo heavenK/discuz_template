@@ -29,11 +29,7 @@ body{ background:#FFF;}
             </div> 
             <div class="con-r kaiser_sina_con-r">
 				<h4>点击按钮，立刻绑定QQ帐号</h4>
-                <?php if ( XWB_S_UID > 0 && ! empty($huwbUserRs) ):?>
-                <a class="binding-btn binding-w" href="http://dz.we54.com/home.php?mod=spacecp&ac=plugin&id=sina_xweibo_x2:home_binding">解除已绑定账号？</a>
-                <?php else:?>
                 <a class="binding-btn binding-w" href="javascript:void(0)" onclick="window.top.location='<?php echo XWB_plugin::getEntryURL('xwbAuth.login');?>'"><img src="template/we54/images/kaiser_sina_bangding_button.png" /></a>
-                <?php endif;?>
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
