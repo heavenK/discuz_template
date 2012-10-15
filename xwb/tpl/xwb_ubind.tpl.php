@@ -21,7 +21,7 @@ body{ background:#FFF;}
 <body>
     <div id="unbound" class="set-wrap">
     	<!--h3>新浪微博绑定设置</h3-->
-        <?php if ( empty($_GET['id']) ):?>
+        <?php if ( $_GET['ac'] == "plugin_all" ):?>
         <div class="main kaiser_sina_main">
         	<div class="con-l kaiser_sina_con-l">
                 <div class="binding"></div>
