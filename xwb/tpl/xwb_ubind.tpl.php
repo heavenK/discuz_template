@@ -21,7 +21,6 @@ body{ background:#FFF;}
 <body>
     <div id="unbound" class="set-wrap">
     	<!--h3>新浪微博绑定设置</h3-->
-        <?php if ( $_GET['ac'] == 'plugin_all' ):?>
         <div class="main kaiser_sina_main">
         	<div class="con-l kaiser_sina_con-l">
                 <div class="binding"></div>
@@ -32,7 +31,6 @@ body{ background:#FFF;}
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
-        <?php endif;?>
         <?php if ( $_GET['ac'] == 'plugin' ):?>
         	<div class="main kaiser_sina_main">
                 <div class="con-l kaiser_sina_con-l">
