@@ -433,6 +433,9 @@ $check[$filter] = $check[$_GET['orderby']] = $check[$_GET['ascdesc']] = 'selecte
 if($_G['forum']['status'] != 3 || !empty($_G['forum']['threadsorts']['templatelist'])) {
 	updatesession();
 	$onlinenum = C::app()->session->count_by_fid($_G['fid']);
+	
+	$onlinenum = rand(10,50) + $onlinenum;
+	
 	if(!IS_ROBOT && ($_G['setting']['whosonlinestatus'] == 2 || $_G['setting']['whosonlinestatus'] == 3)) {
 		$_G['setting']['whosonlinestatus'] = 1;
 		$detailstatus = $showoldetails == 'yes' || (((!isset($_G['cookie']['onlineforum']) && !$_G['setting']['whosonline_contract']) || $_G['cookie']['onlineforum']) && !$showoldetails);
