@@ -471,9 +471,17 @@ class register_ctl {
 				showmessage('not_open_registration_invite');
 			}
 
-			if($bbrules && $bbrulehash != $_POST['agreebbrule']) {
-				showmessage('register_rules_agree');
+			// For ios registe add by heavenK 
+			if(!$_GET['phone_reg']){
+				if($bbrules && $bbrulehash != $_POST['agreebbrule']) {
+					showmessage('register_rules_agree');
+				}
 			}
+			// end 
+
+			/*if($bbrules && $bbrulehash != $_POST['agreebbrule']) {
+				showmessage('register_rules_agree');
+			}*/
 
 			$activation = array();
 			if(isset($_GET['activationauth'])) {
