@@ -161,7 +161,8 @@ class passport{
 		}else{
 			$_G['referer']='http://'.$reurl['host']."/".$url;
 		}
-		return strip_tags($_G['referer']);
+		return $_G['referer'];
+	//	return strip_tags($_G['referer']);
 	}
 	function p_allowverify(){
 	    global $_G;
