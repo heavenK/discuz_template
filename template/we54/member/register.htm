@@ -93,6 +93,9 @@
 			<!--{subtemplate common/seccheck}-->
 			<!--{/if}-->
         </dl>
+		<!--{if $bbrules}--><span class="ruleshow">
+			<input type="checkbox" class="pc" name="agreebbrule" value="$bbrulehash" id="agreebbrule" checked="checked" /> <label for="agreebbrule">我已经阅读并完全{lang agree}<a href="javascript:;" onclick="showBBRule()">服务条款</a></label>
+		</span><!--{/if}-->
         <b><button type="submit" id="registerformsubmit" name="regsubmit" value="true" tabindex="1"><strong style="display:none;"><!--{if $_GET[action] == 'activation'}-->{lang activation}<!--{else}-->{lang submit}<!--{/if}--></strong></button></b>
     </div>
 </div>
@@ -106,6 +109,14 @@
 			<p class="alert_btnleft" id="messageright1"></p>
 		</div>
 	</div>
+</div>
+
+<div id="layer_bbrule" style="display: none">
+<div class="c" style="width:700px;height:350px;overflow:auto">$bbrulestxt</div>
+<p class="fsb pns cl hm">
+	<button class="pn pnc" onclick="$('agreebbrule').checked = true;hideMenu('fwin_dialog', 'dialog');{if $this->setting['sitemessage'][register] && ($bbrules && $bbrulesforce)}showRegprompt();{/if}"><span>{lang agree}</span></button>
+	<button class="pn" onclick="location.href='$_G[siteurl]'"><span>{lang disagree}</span></button>
+</p>
 </div>
 <script type="text/javascript">
 <!--{if $bbrules && $bbrulesforce}-->
