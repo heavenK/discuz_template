@@ -26,24 +26,27 @@ body{ background:#FFF;}
                 <div class="binding"></div>
             </div> 
             <div class="con-r kaiser_sina_con-r">
-				<h4>点击按钮，立刻绑定QQ帐号</h4><a class="binding-btn binding-w" href="javascript:void(0)" onclick="window.top.location='<?php echo XWB_plugin::getEntryURL('xwbAuth.login');?>'"><img src="template/we54/images/kaiser_sina_bangding_button.png" /></a>
+				<h4>点击按钮，立刻绑定新浪帐号</h4>
+                <a class="binding-btn binding-w" href="javascript:void(0)" onclick="window.top.location='<?php echo XWB_plugin::getEntryURL('xwbAuth.login');?>'"><img src="template/we54/images/kaiser_sina_bangding_button.png" /></a>
                 <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
             </div>
         </div>
-        <?php if ( XWB_S_UID > 0 && ! empty($huwbUserRs) ):?>
-        <div class="active-s1">
-        	<h4>他们已经绑定微博了，你还不行动？</h4>
-            <?php foreach ($huwbUserRs as $value):?>
-            <div class="users">
-                <a href="<?php echo XWB_plugin::getWeiboProfileLink($value['sina_uid']); ?>" target="_blank"><?php echo $value['avatar'];?></a>
-                <div class="user-info">
-                    <p><?php echo XWB_plugin::convertEncoding($value['username'], XWB_S_CHARSET, 'UTF-8');?></p>
-                    <a class="addfollow-btn" href="<?php echo XWB_plugin::getWeiboProfileLink($value['sina_uid']); ?>" target="_blank"></a>
-                    <a class="already-addfollow-btn hidden" href="javascript:void(0)#"></a>
+        <?php if ( $_GET['ac'] == 'plugin' ):?>
+			<?php if ( XWB_S_UID > 0 && ! empty($huwbUserRs) ):?>
+            <div class="active-s1">
+                <h4>他们已经绑定微博了，你还不行动？</h4>
+                <?php foreach ($huwbUserRs as $value):?>
+                <div class="users">
+                    <a href="<?php echo XWB_plugin::getWeiboProfileLink($value['sina_uid']); ?>" target="_blank"><?php echo $value['avatar'];?></a>
+                    <div class="user-info">
+                        <p><?php echo XWB_plugin::convertEncoding($value['username'], XWB_S_CHARSET, 'UTF-8');?></p>
+                        <a class="addfollow-btn" href="<?php echo XWB_plugin::getWeiboProfileLink($value['sina_uid']); ?>" target="_blank"></a>
+                        <a class="already-addfollow-btn hidden" href="javascript:void(0)#"></a>
+                    </div>
                 </div>
+                <?php endforeach;?>
             </div>
-            <?php endforeach;?>
-        </div>
+            <?php endif;?>
         <?php endif;?>
     </div>
 </body>

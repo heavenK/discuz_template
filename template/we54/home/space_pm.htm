@@ -376,7 +376,7 @@
                     	<div class="pgs pbm cl pm_op">
 							<!--{if $multi}-->$multi<!--{/if}-->
 							<!--{if $count || $grouppms}-->
-								<label for="delete_all" onclick="checkall(this.form, 'deletepm_');" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
+								<label for="delete_all" onclick="checkAll_0(this.form, 'deletepm_', 1);" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
 								<button class="pn" type="submit" name="deletepmsubmit_btn" value="true"><strong>{lang delete}</strong></button>
 								<button class="pn" type="button" name="markreadpm_btn" value="true" onclick="setpmstatus(this.form);"><strong>{lang change_old_pm}</strong></button>
 							<!--{/if}-->
@@ -492,10 +492,26 @@
 								</dl>
 							<!--{/loop}-->
 						</div>
+                        <script>
+						function checkAll_0(form, name, flag) {
+							
+							if(flag == 1) var button_e = form.elements['chkall'];
+							else	var button_e = form.elements['chkall_0'];
+							
+							for(var i = 0; i < form.elements.length; i++) {
+								var e = form.elements[i];
+								if(e.name.match(name)) {
+									e.checked = button_e.checked;
+								}
+							}
+							form.elements['chkall'].checked = button_e.checked;
+							form.elements['chkall_0'].checked = button_e.checked;
+						}
+						</script>
 						<div class="pgs pbm cl pm_op">
 							<!--{if $multi}-->$multi<!--{/if}-->
 							<!--{if $count || $grouppms}-->
-								<label for="delete_all" onclick="checkall(this.form, 'deletepm_');" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
+								<label for="delete_all" onclick="checkAll_0(this.form, 'deletepm_', 2);" style="margin-top:2px; display:inline; float:left; *margin-left:-4px !important;"><input type="checkbox" name="chkall_0" id="delete_all" class="pc" />{lang select_all}</label> &nbsp; 
 								<button class="pn" type="submit" name="deletepmsubmit_btn" value="true"><strong>{lang delete}</strong></button>
 								<button class="pn" type="button" name="markreadpm_btn" value="true" onclick="setpmstatus(this.form);"><strong>{lang change_old_pm}</strong></button>
 							<!--{/if}-->

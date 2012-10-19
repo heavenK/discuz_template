@@ -30,9 +30,34 @@
         setTimeout("window.location='<?php echo XWB_plugin::getEntryURL("xwbSiteInterface.bind");?>'", 100);
     }
 </script>
+<style>
+body{ background:#FFF;}
+#bound	{ padding-left:6px; padding-top:21px;}
+#bound .kaiser_sina_main					{ width:799px; padding:0;}
+#bound .kaiser_sina_con-l					{ width:64px; height:64px; margin-right:0; overflow:hidden; float:left;}
+#bound .kaiser_sina_con-l .binding			{ width:64px; height:64px; padding:0; background:url(/template/we54/images/kiaser_space_bangding_sina.png) no-repeat; overflow:hidden; float:left;}
+#bound .kaiser_sina_con-r					{ width:80%; padding:4px 0 0 19px; font-family:"微软雅黑"; overflow:hidden; float:left;}
+#bound .kaiser_sina_con-r h4				{ padding:0 16px 0 0; font-size:12px; font-weight:normal; color:#999; line-height:24px; overflow:hidden; float:left;}
+#bound .kaiser_sina_con-r a					{ width:131px; height:24px; background:none; font-size:12px; font-weight:normal; color:#006699; line-height:24px; overflow:hidden; float:left;}
+#bound .kaiser_sina_con-r a:hover			{ text-decoration:underline;}
+#bound .kaiser_sina_con-r p					{ width:700px; margin-left:0; margin-top:10px; display:inline; font-size:12px; font-weight:normal; color:#999; line-height:16px; overflow:hidden; float:left;}
+</style>
 </head>
 <body>
     <div id="bound" class="set-wrap">
+    	<?php if ( $_GET['ac'] == 'plugin_all' ):?>
+    	<div class="main kaiser_sina_main">
+        	<div class="con-l kaiser_sina_con-l">
+                <div class="binding"></div>
+            </div> 
+            <div class="con-r kaiser_sina_con-r">
+				<h4>点击按钮，立刻绑定新浪帐号</h4>
+                <a class="binding-btn binding-w" href="home.php?mod=spacecp&ac=plugin&id=sina_xweibo_x2:home_binding" target="_parent">解除已绑定账号？</a>
+                <p>绑定以后就可以把帖子、回帖同步发到新浪微博上啦，无需记住本站的帐号和密码，随时使用新浪帐号密码轻松登录</p>
+            </div>
+        </div>
+        <?php endif;?>
+        <?php if ( $_GET['ac'] == 'plugin' ):?>
 		<h3><!--动态同步新浪微博--><span>把我的动态同步到新浪微博，让更多的朋友了解我，关注我<em>（设置后可选择是否同步）</em></span></h3>
         <div class="main">
         	<div class="con-l">
@@ -117,6 +142,7 @@
                 <?php endif;?>
             </div>
         </div>
+        <?php endif;?>
     </div>
 <iframe src="" name="xwbSiteRegister" frameborder="0" height="0" width="0"></iframe>
 <!--保存设置成功提示-->
