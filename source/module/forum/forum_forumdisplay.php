@@ -859,8 +859,9 @@ if(!empty($_G['forum']['threadsorts']['templatelist']) && $_G['forum']['status']
 
 //add by kaiser
 $banzhuname = explode("\t", $_G['forum']['moderators']);
-$banzhulist = C::t('common_member')->fetch_all_by_username($banzhuname);
-
+foreach($banzhuname as $moderators){
+	$banzhulist[] = C::t('common_member')->fetch_by_username($moderators);
+}
 foreach($banzhulist as $val){
 	$kaiser_username = $val['username'];
 	$kaiser_uid = $val['uid'];
