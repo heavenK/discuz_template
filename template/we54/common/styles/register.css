@@ -23,7 +23,7 @@
 .register dl dd					{ width:715px; height:57px; padding:15px 0 0 135px; overflow:hidden; float:left;}
 .register dl dd img				{ float:left;}
 .register dl dd em a			{ margin:40px 0 0 4px; display:inline; color:#0078b6; float:left;}
-.register b						{ width:715px; height:32px; padding:39px 0 0 275px; overflow:hidden; float:left;}
+.register b						{ width:715px; height:32px; padding:20px 0 0 275px; overflow:hidden; float:left;}
 .register b button				{ width:160px; height:32px; background:url(../images/register_btn.png) no-repeat; cursor:pointer; overflow:hidden; float:left;}
 .register b a					{ width:160px; height:32px; margin:0 0 0 14px; display:inline; background:url(../images/register_btn.png) no-repeat 0 -62px; overflow:hidden; float:left;}
 .register ol					{ width:737px; height:210px; padding:305px 0 0 263px; background:url(../images/register_03_bg.png) no-repeat 307px 53px; overflow:hidden; float:left;}

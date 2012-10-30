@@ -15,7 +15,7 @@
 .guanzhu				{ width:63px; height:22px; overflow:hidden; float:left; background:url(../images/guanzhu.jpg) no-repeat; margin:0 0 6px 28px; display:inline; cursor:pointer;}
 .guanzhu:hover			{ background:url(../images/guanzhu02.jpg) no-repeat;}	
 .yguanzhu				{ width:63px; height:22px; overflow:hidden; float:left; background:url(../images/kaiser_flw_no.png) no-repeat; margin:0 0 6px 28px; display:inline; cursor:pointer;}
-.web_left ul			{ width:128px; height:230px; overflow:hidden; float:left; margin:6px 0 0 11px; display:inline;}
+.web_left ul			{ width:128px; overflow:hidden; float:left; margin:6px 0 0 11px; display:inline; padding:0 0 12px 0;}
 .web_left ul.ea			{ height:52px;margin-top:12px;margin-bottom:18px;}
 .web_left li			{ width:128px; height:30px; line-height:30px; overflow:hidden; float:left; }
 .pre_shouw				{ width:128px; height:30px;  background:url(../images/xinxi_bg.jpg) no-repeat; overflow:hidden; float:left; }
