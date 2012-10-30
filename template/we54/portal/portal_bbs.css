@@ -78,7 +78,7 @@ a:hover { text-decoration:underline; color:#FF6633;}
 	.nav_three { width:1000px; height:115px; background:url(/template/we54/por_images/xiala_nav_bg.jpg) no-repeat; overflow:hidden; float:left; }
 	.nav_three ul { width:1000px; height:66px; margin:35px 0 0 0; display:inline; overflow:hidden; float:left;}	
 	.nav_three ul li { width:125px; height:24px; overflow:hidden; float:left; font-size:14px; line-height:22px; text-align:center;}
-	.nav_three ul li a { text-decoration:none; color:#333; }
+	.nav_three ul li a { text-decoration:none; color:#663300; }
 	.nav_three ul li a:hover { text-decoration:none; color:#ff6600;}
 
 /*µÚÒ»°å¿é*/
