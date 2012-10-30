@@ -79,7 +79,7 @@ function sendsms($user, $pass, $mobile, $content, $checkmobile=true, $refno='', 
 			 'content'=>$content,//短信内容
 			 'smsid'=>'',
 			 'act'=>'send',//默认空 如果空返回系统生成的标识串 如果传值保证值唯一 成功则返回传入的值
-			 'ext'=>'5454'
+			 'ext'=>''
 		 );
 		 $result = httprequest($sendurl,$argv);
 //--------------------------------------------------------------------------------------------
