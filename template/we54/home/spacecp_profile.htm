@@ -68,7 +68,7 @@
 							<!--{if $_G['setting']['regverify'] == 1 && (($_G['group']['grouptype'] == 'member' && $_G['adminid'] == 0) || $_G['groupid'] == 8)}--><p class="d">{lang memcp_profile_email_comment}</p><!--{/if}-->
 						</td>
 					</tr>
-
+					<!--
 					<tr>
 						<th>{lang security_question}£º</th>
 						<td>
@@ -94,6 +94,7 @@
 							<p class="d">{lang memcp_profile_security_answer_comment}</p>
 						</td>
 					</tr>
+					-->
 					<!--{if checkperm('seccode') && ($secqaacheck || $seccodecheck)}-->
 					<!--{eval $sectpl = '<tr><th><sec>£º</th><td><sec><p class="d"><sec></p></td>';}-->
 					<!--{subtemplate common/seccheck}-->
