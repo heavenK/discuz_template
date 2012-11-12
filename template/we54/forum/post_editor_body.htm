@@ -13,6 +13,9 @@
 			<div class="z">
 				<span class="mbn"><a id="{$editorid}_fullswitcher"></a><a id="{$editorid}_simple"></a></span>
 				<label id="{$editorid}_switcher" class="bar_swch ptn"><input id="{$editorid}_switchercheck" type="checkbox" class="pc" name="checkbox" value="0" {if !$editor[editormode]}checked="checked"{/if} onclick="switchEditor(this.checked?0:1)" />{lang code}</label>
+                <!--{if ($_G['forum']['allowhtml'] || ($_GET[action] == 'edit' && ($orig['htmlon'] & 1))) && $_G['group']['allowhtml']}-->
+                    <input type="checkbox" name="htmlon" id="htmlon" class="pc" value="1" $htmloncheck /><label for="htmlon">HTML</label>
+                <!--{/if}-->
 			</div>
 		</div>
 		<!--{if !empty($_G[setting][pluginhooks][post_editorctrl_right])}-->

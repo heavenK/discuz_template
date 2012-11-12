@@ -6,6 +6,8 @@
  *
  *      $Id: class_member.php 30840 2012-06-25 09:12:00Z zhangjie $
  */
+ define('HOST', '.we54.com');
+ini_set("session.cookie_domain", HOST);
 session_start();//add
 if(!defined('IN_DISCUZ')) {
 	exit('Access Denied');
