@@ -34,6 +34,14 @@ class logging_ctl {
 		global $_G;
 		if($_G['uid']) {
 			$referer = dreferer();
+			//----------add by zh-------------
+			$passp=new passport();
+			$psptuser=$passp->passport_setsession($_G['member'], $_GET['cookietime'] ? 2592000 : 0,$_G['clientip']);
+			if($psptuser==false){
+				showmessage('login_passport_invalid');
+			}
+			
+			//--------add end-----------
 			$ucsynlogin = $this->setting['allowsynlogin'] ? uc_user_synlogin($_G['uid']) : '';
 			$param = array('username' => $_G['member']['username'], 'usergroup' => $_G['group']['grouptitle'], 'uid' => $_G['member']['uid']);
 			showmessage('login_succeed', $referer ? $referer : './', $param, array('showdialog' => 1, 'locationtime' => true, 'extrajs' => $ucsynlogin));
