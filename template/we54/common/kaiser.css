@@ -124,6 +124,8 @@
 .kaiser_viewthread_iphone			{ width:260px; height:32px; margin-bottom:10px; display:inline; *margin-bottom:0; padding-left:86px; background:url(/template/we54/images/kaiser_viewthread_iphone.png) no-repeat; font-family:"Œ¢»Ì—≈∫⁄"; font-size:14px; font-weight:bold; line-height:31px; overflow:hidden; float:left;}
 .kaiser_viewthread_iphone a			{ color:#a0732d; text-decoration:underline;}
 .kaiser_viewthread_iphone a:hover	{ text-decoration:none;}
+.t_f a								{ text-decoration:none;}
+.t_f a:hover						{ text-decoration:underline;}
 
 /*
 ¡–±Ì“≥
